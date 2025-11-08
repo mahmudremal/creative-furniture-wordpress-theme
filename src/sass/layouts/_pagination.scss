@@ -1,0 +1,117 @@
+.woocommerce-pagination {
+    margin: 40px 0;
+
+    ul.page-numbers {
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            .page-numbers,
+            a.page-numbers,
+            span.page-numbers {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #FFFFFF;
+                border: 1px solid #E5E5E5;
+                color: #333333;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background: #F5F5F5;
+                    border-color: #CCCCCC;
+                }
+
+                &.current {
+                    background: #9B8B7A;
+                    color: #FFFFFF;
+                    border-color: #9B8B7A;
+                    cursor: default;
+
+                    &:hover {
+                        background: #9B8B7A;
+                        border-color: #9B8B7A;
+                    }
+                }
+
+                &.dots {
+                    background: transparent;
+                    border: none;
+                    color: #999999;
+                    cursor: default;
+                    width: auto;
+
+                    &:hover {
+                        background: transparent;
+                        border: none;
+                    }
+                }
+
+                &.prev,
+                &.next {
+                    svg {
+                        width: 8px;
+                        height: 14px;
+                    }
+                }
+            }
+
+            span.page-numbers {
+                &:not(.current):not(.dots) {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                    pointer-events: none;
+
+                    &:hover {
+                        background: #FFFFFF;
+                        border-color: #E5E5E5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.theme-creative-furniture {
+    ul.products {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        @media (max-width: 1280px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+        
+        & > li.product {
+            width: 100%;
+            margin: auto;
+            padding: unset;
+        }
+    }
+}

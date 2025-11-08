@@ -47,11 +47,10 @@ function creative_furniture_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'creative-furniture' ),
-		)
-	);
+	register_nav_menus([
+		'top-left-header-menu' => esc_html__('Header Top Left Menu', 'creative-furniture'),
+		'header-mega-menu' => esc_html__('Header Mega Menu', 'creative-furniture'),
+	]);
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -59,7 +58,7 @@ function creative_furniture_setup() {
 		*/
 	add_theme_support(
 		'html5',
-		array(
+		[
 			'search-form',
 			'comment-form',
 			'comment-list',
@@ -67,7 +66,7 @@ function creative_furniture_setup() {
 			'caption',
 			'style',
 			'script',
-		)
+		]
 	);
 
 	// Set up the WordPress core custom background feature.
@@ -75,10 +74,10 @@ function creative_furniture_setup() {
 		'custom-background',
 		apply_filters(
 			'creative_furniture_custom_background_args',
-			array(
+			[
 				'default-color' => 'ffffff',
 				'default-image' => '',
-			)
+			]
 		)
 	);
 
@@ -92,12 +91,12 @@ function creative_furniture_setup() {
 	 */
 	add_theme_support(
 		'custom-logo',
-		array(
+		[
 			'height'      => 250,
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
-		)
+		]
 	);
 }
 add_action( 'after_setup_theme', 'creative_furniture_setup' );
@@ -121,7 +120,7 @@ add_action( 'after_setup_theme', 'creative_furniture_content_width', 0 );
  */
 function creative_furniture_widgets_init() {
 	register_sidebar(
-		array(
+		[
 			'name'          => esc_html__( 'Sidebar', 'creative-furniture' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'creative-furniture' ),
@@ -129,7 +128,7 @@ function creative_furniture_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		)
+		]
 	);
 }
 add_action( 'widgets_init', 'creative_furniture_widgets_init' );
@@ -138,10 +137,16 @@ add_action( 'widgets_init', 'creative_furniture_widgets_init' );
  * Enqueue scripts and styles.
  */
 function creative_furniture_scripts() {
-	wp_enqueue_style( 'creative-furniture-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'creative-furniture-style', get_stylesheet_uri(), [], _S_VERSION );
 	wp_style_add_data( 'creative-furniture-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true );
+	if (file_exists(get_template_directory() . '/dist/css/public.css')) {
+		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], null, 'all');
+	}
+	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], null, 'all');
+	
+	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -170,6 +175,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Block Patterns
+ */
+require get_template_directory() . '/inc/patterns.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -182,3 +192,34 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+
+function footer_block_svg_icon_print($icon) {
+	$icon_path = get_template_directory() . '/dist/icons/'. $icon .'.svg';
+	if (file_exists($icon_path)) {
+		echo file_get_contents($icon_path);return;
+	}
+	?>
+	<img src="<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/'. $icon .'.svg'); ?>" width="40" height="40" />
+	<?php
+}
+
+
+
+// function register_shop_filters_sidebar() {
+//     register_sidebar([
+//         'name' => 'Shop Filters',
+//         'id' => 'shop-filters',
+//         'before_widget' => '<div class="filter-widget %2$s">',
+//         'after_widget' => '</div>',
+//         'before_title' => '<h3 class="filter-title">',
+//         'after_title' => '</h3>',
+//     ]);
+// }
+// add_action('widgets_init', 'register_shop_filters_sidebar');
+
+// function custom_products_per_page() {
+//     return isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
+// }
+// add_filter('loop_shop_per_page', 'custom_products_per_page', 20);

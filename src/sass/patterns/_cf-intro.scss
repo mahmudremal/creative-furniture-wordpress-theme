@@ -1,0 +1,46 @@
+.cf-intro-section {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 0;
+
+  .cf-intro-text {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+    margin: 0 auto;
+    word-wrap: break-word;
+
+    .cf-aspekta-dark {
+      color: #2A2A2A;
+      font-family: 'Aspekta', sans-serif;
+      font-weight: 500;
+    }
+
+    .cf-playfair-dark {
+      color: #2A2A2A;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .cf-aspekta-gray {
+      color: #B7B7B7;
+      font-family: 'Aspekta', sans-serif;
+      font-weight: 500;
+    }
+
+    .cf-playfair-gray {
+      color: #B7B7B7;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cf-intro-section .cf-intro-text {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}

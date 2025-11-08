@@ -1,46 +1,73 @@
 {
-  "name": "underscores",
-  "version": "1.0.0",
-  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
-  "author": "Automattic Theme Team",
-  "license": "GPL-2.0-or-later",
-  "keywords": [
-    "WordPress",
-    "Theme"
-  ],
-  "homepage": "https://github.com/Automattic/_s#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
+  "scripts": {
+    "devserver": "webpack serve --config webpack.config.js --env NODE_ENV=development",
+    "build": "webpack --config webpack.config.js --env NODE_ENV=production",
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "anotherdev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode development --progress & tailwindcss -i ./src/input.css -o ./tailwind.css --watch",
+    "deva": "concurrently \"npm:webpack-dev\" \"npm:tailwind\"",
+    "dev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode development --progress",
+    "tailwindmini": "tailwindcss -i ./src/library/css/tailwind.css -o ./styling.css --minify",
+    "tailwind": "tailwindcss -i ./src/library/css/tailwind.css -o ./styling.css --watch",
+    "analyz": "webpack-bundle-analyzer dist/stats.json",
+    "server": "nodemon start.js",
+    "wa": "nodemon ./server/whastapp.js",
+    "ws": "nodemon ./bot/server.js"
   },
-  "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "axios": "^1.10.0",
+    "axios-cache-interceptor": "^1.8.3",
+    "body-parser": "^2.2.0",
+    "child_process": "^1.0.2",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "gsap": "^3.13.0",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.501.0",
+    "postcss-loader": "^8.2.0",
+    "react": "^19.1.0",
+    "react-date-range": "^2.0.1",
+    "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.5.1",
+    "sass-mq": "^7.0.0",
+    "sprintf-js": "^1.1.3",
+    "zod": "^3.25.72"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2",
-    "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
-    "rtlcss": "^3.5.0"
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.16",
+    "@types/node": "^24.0.10",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^9.1.2",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "daisyui": "^5.0.42",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "react-refresh": "^0.17.0",
+    "sass": "^1.86.3",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.6",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1",
+    "workbox-webpack-plugin": "^7.3.0"
   },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
-  "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
-  }
+  "name": "creative-furniture",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

@@ -1,0 +1,34 @@
+/* -------------------------
+   Aspekta Variable Font
+------------------------- */
+@font-face {
+  font-family: 'Aspekta';
+  src: url('./Aspekta-Font/fonts/variable/AspektaVF.woff2') format('woff2'),
+       url('./Aspekta-Font/fonts/variable/AspektaVF.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* -------------------------
+   Playfair Display Variable Font
+------------------------- */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+.font-italic-accent {
+  font-family: 'Playfair Display';
+}

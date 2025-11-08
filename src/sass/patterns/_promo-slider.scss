@@ -1,0 +1,82 @@
+.cf-promo-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.cf-promo-card {
+  width: 688px;
+  height: 393px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cf-promo-card .cf-promo-content {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 379px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cf-promo-heading {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 500;
+  color: #fff;
+}
+.cf-promo-heading .cf-playfair {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+.cf-promo-heading .cf-aspekta {
+  font-family: "Aspekta", sans-serif;
+}
+
+.cf-promo-button a {
+  padding: 10px 24px;
+  background: #fff;
+  color: #262626 !important;
+  font-family: "Aspekta", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 29px;
+  text-transform: capitalize;
+}
+
+.cf-promo-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.cf-promo-dots .dot {
+  width: 10px;
+  height: 10px;
+  background: #bebebe;
+  border-radius: 50%;
+}
+.cf-promo-dots .dot.active {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}
+
+@media (max-width: 1200px) {
+  .cf-promo-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cf-promo-card {
+    width: 100%;
+    max-width: 688px;
+  }
+}

@@ -1,0 +1,490 @@
+.cf-single-product {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.cf-product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.cf-product-gallery {
+    // .woocommerce-product-gallery {
+    //     width: 100%;
+    // }
+}
+
+.cf-product-details {
+    top: 0;
+    gap: 24px;
+    display: flex;
+    position: sticky;
+    height: fit-content;
+    flex-direction: column;
+    position: -webkit-sticky;
+}
+
+.cf-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cf-product-title {
+    flex: 1;
+    color: #1A1A1A;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0;
+}
+
+.cf-wishlist-btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background: #F6F6F6;
+    border: none;
+    border-radius: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        background: #e8e8e8;
+    }
+}
+
+.cf-product-price {
+    color: #3C3C3C;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+
+    .amount {
+        font-weight: 500;
+    }
+}
+
+.cf-variations-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cf-variation-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cf-variation-label {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.cf-color-swatches {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.cf-color-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 124px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &.active {
+        padding: 4px;
+        outline: 1px solid #AD907E;
+        outline-offset: -1px;
+    }
+}
+
+.cf-variation-select {
+    padding: 12px 20px;
+    border-radius: 140px;
+    border: 1px solid #C4C4C4;
+    color: #2B2B2B;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath d='M1 1L6 5L11 1' stroke='%232B2B2B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+
+    &:focus {
+        outline: 2px solid #9D8465;
+        outline-offset: 2px;
+    }
+}
+
+.cf-product-actions {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+    }
+}
+
+.cf-size-select,
+.cf-customization-btn {
+    flex: 1;
+    height: 48px;
+    padding: 12px 20px;
+    border-radius: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.cf-size-select {
+    background: white;
+    border: 1px solid #C4C4C4;
+    color: #2B2B2B;
+
+    &:hover {
+        border-color: #9D8465;
+    }
+}
+
+.cf-customization-btn {
+    background: #9D8465;
+    border: none;
+    color: white;
+
+    &:hover {
+        background: #8a7459;
+    }
+}
+
+.cf-payment-info {
+    padding: 12px 20px;
+    border-top: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.cf-payment-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.cf-payment-label {
+    color: #575757;
+    font-weight: 400;
+}
+
+.cf-payment-amount {
+    color: #2B2B2B;
+    font-weight: 500;
+}
+
+.cf-payment-link {
+    color: #2B2B2B;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.cf-payment-badge {
+    padding: 8px 10px;
+    background: #60FDB2;
+    border-radius: 130px;
+    display: flex;
+    align-items: center;
+
+    svg {
+        height: 28px;
+        width: auto;
+    }
+}
+
+.cf-cart-controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+    }
+}
+
+.cf-quantity-selector {
+    padding: 12px 16px;
+    border-radius: 210px 160px 160px 210px;
+    border: 1px solid #C4C4C4;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cf-qty-btn {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.cf-qty-input {
+    width: 40px;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    appearance: textfield;
+    border: 0px solid #ccc !important;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.cf-add-to-cart {
+    flex: 1;
+    height: 48px;
+    padding: 12px 20px;
+    background: #0C0A0A;
+    border: none;
+    border-radius: 140px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background: #2B2B2B;
+    }
+}
+
+.cf-product-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.cf-accordion-item {
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.cf-accordion-header {
+    width: 100%;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    text-align: left;
+
+    h3 {
+        color: #1F1F1F;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        margin: 0;
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+
+    &:hover h3 {
+        color: #9D8465;
+    }
+}
+
+.cf-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    .cf-accordion-active & {
+        max-height: 1000px;
+        padding-bottom: 20px;
+    }
+}
+
+.cf-description-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: #4C4C4C;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #B8B8B8;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.cf-related-products {
+    margin-top: 80px;
+}
+
+.cf-related-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+
+.cf-related-title {
+    gap: 10px;
+    margin: 0;
+    display: flex;
+    
+    .cf-title-regular {
+        color: #242424;
+        font-size: 28px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 44px;
+    }
+
+    .cf-title-italic {
+        color: #242424;
+        font-size: 28px;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 44px;
+    }
+}
+
+.cf-related-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cf-nav-btn {
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &.cf-nav-prev {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

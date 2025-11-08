@@ -1,0 +1,16 @@
+.git
+.vscode
+node_modules
+build
+.env
+dist
+.wwebjs_auth
+.wwebjs_cache
+.vscode
+assets
+uploads
+screenshots
+auth_info
+storage
+auth_info
+moonlitmeadow
