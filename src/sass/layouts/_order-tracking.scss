@@ -1,0 +1,375 @@
+.order-tracking-page {
+  padding: 60px 0;
+  background: #fff;
+
+  .tracking-form-wrapper {
+    gap: 32px;
+    margin: 0;
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+
+    .tracking-description {
+      color: #383838;
+      font-size: 16px;
+      font-family: 'Aspekta', sans-serif;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 24px;
+      margin: 0;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .tracking-error {
+      padding: 16px;
+      background: #fee;
+      border: 1px solid #fcc;
+      border-radius: 8px;
+      color: #c33;
+      font-family: 'Aspekta', sans-serif;
+      font-size: 14px;
+    }
+
+    .tracking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        label {
+          color: #031424;
+          font-size: 16px;
+          font-family: 'Aspekta', sans-serif;
+          font-weight: 500;
+          line-height: 24px;
+        }
+
+        input {
+          height: 56px;
+          padding: 16px;
+          border-radius: 8px;
+          border: 1px solid #CBCBCB;
+          outline: none;
+          font-size: 16px;
+          font-family: 'Aspekta', sans-serif;
+          font-weight: 400;
+          transition: border-color 0.3s;
+
+          &::placeholder {
+            color: #8A8A8A;
+          }
+
+          &:focus {
+            border-color: #9D8465;
+          }
+        }
+      }
+
+      .track-button {
+        padding: 13px 22px;
+        background: #9D8465;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        line-height: 32px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #8a7358;
+        }
+      }
+    }
+  }
+
+  .tracking-result {
+    .order-title {
+      font-size: 28px;
+      font-family: 'Aspekta', sans-serif;
+      font-weight: 600;
+      color: #031424;
+      margin: 0 0 40px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 450px;
+      gap: 60px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .result-left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      h2 {
+        font-size: 20px;
+        font-family: 'Aspekta', sans-serif;
+        font-weight: 600;
+        color: #031424;
+        margin: 0 0 24px;
+      }
+    }
+
+    .result-right {
+      top: 30px;
+      position: sticky;
+      height: fit-content;
+    }
+
+    .order-items {
+      .order-item {
+        display: flex;
+        gap: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid #EFEFEF;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        .item-image {
+          width: 80px;
+          height: 80px;
+          flex-shrink: 0;
+          position: relative;
+          background: #F5F5F5;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+
+          .placeholder-image {
+            width: 100%;
+            height: 100%;
+            background: #E0E0E0;
+          }
+
+          .item-quantity {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 24px;
+            height: 24px;
+            background: #031424;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+
+        .item-details {
+          flex: 1;
+
+          h3 {
+            font-size: 16px;
+            font-family: 'Aspekta', sans-serif;
+            font-weight: 500;
+            color: #031424;
+            margin: 0 0 8px;
+          }
+
+          .item-meta {
+            font-size: 14px;
+            color: #8A8A8A;
+            margin: 4px 0;
+            font-family: 'Aspekta', sans-serif;
+          }
+        }
+
+        .item-price {
+          font-size: 16px;
+          font-family: 'Aspekta', sans-serif;
+          font-weight: 600;
+          color: #031424;
+        }
+      }
+    }
+
+    .order-overview {
+      .overview-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #EFEFEF;
+        font-size: 14px;
+        font-family: 'Aspekta', sans-serif;
+
+        span:first-child {
+          color: #8A8A8A;
+          font-weight: 400;
+        }
+
+        span:last-child {
+          color: #031424;
+          font-weight: 500;
+          text-align: right;
+        }
+      }
+    }
+
+    .order-summary {
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #EFEFEF;
+        font-size: 14px;
+        font-family: 'Aspekta', sans-serif;
+
+        span:first-child {
+          color: #8A8A8A;
+          font-weight: 400;
+        }
+
+        span:last-child {
+          color: #031424;
+          font-weight: 500;
+        }
+
+        &.total {
+          padding-top: 20px;
+          margin-top: 12px;
+          border-top: 2px solid #031424;
+          border-bottom: none;
+
+          span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #031424;
+          }
+        }
+      }
+    }
+
+    .result-right {
+      .tracking-status {
+        background: #F9F9F9;
+        padding: 32px;
+        border-radius: 12px;
+
+        h2 {
+          font-size: 30px;
+          font-weight: 600;
+          color: #031424;
+          margin: 0 0 32px;
+          font-family: 'Aspekta', sans-serif;
+        }
+
+        .status-timeline {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #E0E0E0;
+            z-index: 0;
+          }
+
+          .status-item {
+            display: flex;
+            gap: 20px;
+            padding: 16px 0;
+            position: relative;
+            z-index: 1;
+
+            .status-indicator {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: #E0E0E0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+              transition: background 0.3s;
+
+              svg {
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                transition: opacity 0.3s;
+              }
+            }
+
+            .status-content {
+              flex: 1;
+              padding-top: 8px;
+
+              .status-time {
+                font-size: 14px;
+                font-family: 'Aspekta', sans-serif;
+                color: #031424;
+                font-weight: 500;
+                margin-bottom: 4px;
+
+                span {
+                  color: #8A8A8A;
+                  font-weight: 400;
+                  margin-left: 8px;
+                }
+              }
+
+              .status-label {
+                font-size: 16px;
+                font-family: 'Aspekta', sans-serif;
+                color: #8A8A8A;
+                font-weight: 400;
+              }
+            }
+
+            &.active {
+              .status-indicator {
+                background: #C5C5C5;
+
+                svg {
+                  opacity: 1;
+                }
+              }
+            }
+
+            &.current {
+              .status-indicator {
+                background: #9D8465;
+              }
+
+              .status-content .status-label {
+                color: #031424;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,51 +5,19 @@
     "appearanceTools": true,
     "color": {
       "palette": [
-        {
-          "name": "Primary Accent",
-          "slug": "primary-accent",
-          "color": "#4B2D0680"
-        },
-        {
-          "name": "Dark Base",
-          "slug": "dark-base",
-          "color": "#1B201E"
-        },
-        {
-          "name": "White",
-          "slug": "white",
-          "color": "#FFFFFF"
-        },
-        {
-          "name": "Font Gray",
-          "slug": "font-gray",
-          "color": "#B7B7B7"
-        },
-        {
-          "name": "Font Black",
-          "slug": "font-black",
-          "color": "#242424"
-        },
-        {
-          "name": "Secondary Background",
-          "slug": "secondary-bg",
-          "color": "#F4F1E9"
-        }
+        { "name": "Primary Accent", "slug": "primary-accent", "color": "#4B2D0680" },
+        { "name": "Dark Base", "slug": "dark-base", "color": "#1B201E" },
+        { "name": "White", "slug": "white", "color": "#FFFFFF" },
+        { "name": "Font Gray", "slug": "font-gray", "color": "#B7B7B7" },
+        { "name": "Font Black", "slug": "font-black", "color": "#242424" },
+        { "name": "Secondary Background", "slug": "secondary-bg", "color": "#F4F1E9" }
       ],
       "custom": false
     },
     "typography": {
       "fontFamilies": [
-        {
-          "fontFamily": "Aspekta, sans-serif",
-          "slug": "aspekta",
-          "name": "Aspekta"
-        },
-        {
-          "fontFamily": "Playfair Display, serif",
-          "slug": "playfair-display",
-          "name": "Playfair Display"
-        }
+        { "fontFamily": "Aspekta, sans-serif", "slug": "aspekta", "name": "Aspekta" },
+        { "fontFamily": "Playfair Display, serif", "slug": "playfair-display", "name": "Playfair Display" }
       ],
       "customFontSize": true,
       "fluid": true
@@ -57,9 +25,7 @@
     "spacing": {
       "units": [ "px", "em", "rem", "%" ],
       "customSpacingSize": true,
-      "spacingScale": {
-        "steps": 5
-      }
+      "spacingScale": { "steps": 5 }
     },
     "layout": {
       "contentSize": "1200px",

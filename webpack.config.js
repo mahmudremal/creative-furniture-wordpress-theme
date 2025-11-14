@@ -16,6 +16,8 @@ const SRC_DIR = path.resolve(__dirname, 'src');
 module.exports = {
   entry: {
     public: path.resolve(JS_DIR, 'public.js'),
+    admin: path.resolve(JS_DIR, 'admin.js'),
+    editor: path.resolve(JS_DIR, 'editor.js'),
   },
   output: {
     clean: true,

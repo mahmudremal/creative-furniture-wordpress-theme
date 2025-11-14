@@ -55,6 +55,10 @@ $bg-highlight: #F5F2E2;
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        h2 {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -601,10 +605,11 @@ $bg-highlight: #F5F2E2;
 }
 
 .checkout-actions {
+    gap: 44px;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: space-between;
-    gap: 44px;
 
     .back-link {
         display: flex;
@@ -640,9 +645,9 @@ $bg-highlight: #F5F2E2;
         cursor: pointer;
         transition: background 0.3s;
 
-        &:hover {
-            background: darken($primary-color, 10%);
-        }
+        // &:hover {
+        //     background: darken($primary-color, 10%);
+        // }
     }
 }
 
@@ -763,9 +768,9 @@ $bg-highlight: #F5F2E2;
         transition: background 0.3s;
         white-space: nowrap;
 
-        &:hover {
-            background: darken(#A4A4A3, 10%);
-        }
+        // &:hover {
+        //     background: darken(#A4A4A3, 10%);
+        // }
     }
 }
 

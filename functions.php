@@ -147,6 +147,11 @@ function creative_furniture_scripts() {
 	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], null, 'all');
 	
 	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], _S_VERSION, true );
+	wp_localize_script('creative-furniture-public', 'cfStore', [
+		'ajax_url' => admin_url('admin-ajax.php'),
+		'add_to_cart_nonce' => wp_create_nonce('cf-add-to-cart'),
+		'get_variation_nonce' => wp_create_nonce('cf-get-variation')
+	]);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -191,6 +196,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
+}
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/multi-currency.php';
 }
 
 

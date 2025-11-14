@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-// import './QuickView.scss';
+import { X } from 'lucide-react';
 
-export default function QuickView() {
+export default function ProductQuickView() {
+  const [isOpen, setIsOpen] = useState(false);
   const [productId, setProductId] = useState(null);
   const [product, setProduct] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState('');
-  const [selectedMaterial, setSelectedMaterial] = useState(4);
+  const [selectedMaterial, setSelectedMaterial] = useState('');
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const doms = document.querySelectorAll('[data-quickview]');
@@ -18,7 +19,6 @@ export default function QuickView() {
     };
 
     doms.forEach(el => el.addEventListener('click', handleClick));
-
     return () => {
       doms.forEach(el => el.removeEventListener('click', handleClick));
     };
@@ -26,7 +26,7 @@ export default function QuickView() {
 
   useEffect(() => {
     if (!productId) return;
-
+    
     const formData = new FormData();
     formData.append('action', 'get_product_quickview');
     formData.append('product_id', productId);
@@ -36,16 +36,23 @@ export default function QuickView() {
       body: formData
     })
       .then(res => res.json())
-      .then(data => setProduct(data))
+      .then(data => {
+        setProduct(data);
+        setSelectedSize('');
+        setSelectedMaterial('');
+        setQuantity(1);
+      })
       .catch(err => console.error(err));
   }, [productId]);
 
   const handleAddToCart = () => {
     const formData = new FormData();
-    formData.append('action', 'add_to_cart');
+    formData.append('action', 'add_to_cart_quickview');
     formData.append('product_id', productId);
-    formData.append('size', selectedSize);
-    formData.append('material', selectedMaterial);
+    formData.append('quantity', quantity);
+    
+    if (selectedSize) formData.append('size', selectedSize);
+    if (selectedMaterial) formData.append('material', selectedMaterial);
 
     fetch('/wp-admin/admin-ajax.php', {
       method: 'POST',
@@ -53,78 +60,95 @@ export default function QuickView() {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('Added to cart', data);
+        if (data.success) {
+          setIsOpen(false);
+        }
       })
       .catch(err => console.error(err));
   };
 
   if (!isOpen || !product) return null;
 
-  const materials = [
-    { id: 0, color: '#2F2D2D' },
-    { id: 1, color: '#483C35' },
-    { id: 2, color: '#3DADD5' },
-    { id: 3, color: '#E7F7AE' },
-    { id: 4, color: '#AD907E', bordered: true },
-    { id: 5, color: '#F8F3E7' }
-  ];
-
   return (
-    <div className="quickview-overlay" onClick={() => setIsOpen(false)}>
-      <div className="quickview" onClick={(e) => e.stopPropagation()}>
-        <div className="quickview__header">
-          <h1 className="quickview__title">
-            {product.title || 'Wooden Finish Veneer with Metal Frame'}
-          </h1>
-          <button className="quickview__close" onClick={() => setIsOpen(false)}>
-            <svg>close icon</svg>
-          </button>
-        </div>
+    <div onClick={() => setIsOpen(false)} className={`quickview-overlay ${isOpen ? 'active' : ''}`}>
+      <div className={`quickview-container ${isOpen ? 'active' : ''}`} onClick={e => e.stopPropagation()}>
+        <div className="quickview-content">
 
-        <div className="quickview__price">
-          {product.price || 'AED3,575.00'}
-        </div>
-
-        <div className="quickview__images">
-          <div className="quickview__image"></div>
-          <div className="quickview__image"></div>
-        </div>
-
-        <div className="quickview__description">
-          {product.description || 'Introducing the Santoor Design Series Online Sofa Sets in Dubai by Creative Furniture, the epitome of comfort and style. This sofa set is a popular choice from our catalog.. '}
-          <span className="quickview__read-more">Read more</span>
-        </div>
-
-        <div className="quickview__option">
-          <label className="quickview__label">Size</label>
-          <div className="quickview__select" onClick={() => {}}>
-            <span>{selectedSize || 'Choose an option'}</span>
-            <svg>chevron down icon</svg>
+          <div>
+            <div className="quickview-header">
+              <h2 className="quickview-title">
+                {product.title}
+              </h2>
+              <button type="button" onClick={() => setIsOpen(false)} className="quickview-close">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.6665 0.666016L0.666504 8.66602M0.666504 0.666016L8.6665 8.66602" stroke="#484848" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div className="quickview-price" dangerouslySetInnerHTML={{__html: product.price}}></div>
           </div>
-        </div>
 
-        <div className="quickview__option">
-          <label className="quickview__label">Material</label>
-          <div className="quickview__materials">
-            {materials.map(material => (
-              <div
-                key={material.id}
-                className={`quickview__material ${selectedMaterial === material.id ? 'active' : ''} ${material.bordered ? 'bordered' : ''}`}
-                style={{ backgroundColor: material.color }}
-                onClick={() => setSelectedMaterial(material.id)}
-              />
+          <div className="quickview-images">
+            {product.images?.slice(0, 2).map((img, idx) => (
+              <div key={idx} className="quickview-images-item">
+                {img ? <img src={img} alt="" /> : null}
+              </div>
             ))}
           </div>
-        </div>
 
-        <div className="quickview__actions">
-          <button className="quickview__btn quickview__btn--outline">
-            Full Details
-          </button>
-          <button className="quickview__btn quickview__btn--primary" onClick={handleAddToCart}>
-            <svg>cart icon</svg>
-            Add to Cart
-          </button>
+          <div className="quickview-description" dangerouslySetInnerHTML={{__html: `${product.description}${product.description?.length > 150 ? `<a href="${product.permalink}">Read more</a>` : null}`}}>
+          </div>
+
+          {product.variations?.size && (
+            <div className="quickview-field">
+              <label>Size</label>
+              <select
+                value={selectedSize}
+                onChange={(e) => setSelectedSize(e.target.value)}
+                className="quickview-select"
+              >
+                <option value="">Choose an option</option>
+                {product.variations.size.map((size, idx) => (
+                  <option key={idx} value={size}>{size}</option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {product.variations?.material && (
+            <div className="quickview-field">
+              <label>Material</label>
+              <div className="quickview-materials">
+                {product.variations.material.map((mat, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedMaterial(mat.name)}
+                    className={`quickview-material ${selectedMaterial === mat.name ? 'selected' : ''}`}
+                    style={{ backgroundColor: mat.color }}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="quickview-actions">
+            <a href={product.permalink} className="quickview-btn quickview-btn--outline">
+              Full Details
+            </a>
+            <button
+              type="button"
+              onClick={handleAddToCart}
+              className="quickview-btn quickview-btn--primary"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.25 6.39192V5.58358C6.25 3.70858 7.75833 1.86692 9.63333 1.69192C11.8667 1.47525 13.75 3.23358 13.75 5.42525V6.57525" stroke="white" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.49986 18.3327H12.4999C15.8499 18.3327 16.4499 16.991 16.6249 15.3577L17.2499 10.3577C17.4749 8.32435 16.8915 6.66602 13.3332 6.66602H6.66652C3.10819 6.66602 2.52486 8.32435 2.74986 10.3577L3.37486 15.3577C3.54986 16.991 4.14986 18.3327 7.49986 18.3327Z" stroke="white" stroke-width="1.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.9131 10.0007H12.9206" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.07859 10.0007H7.08608" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

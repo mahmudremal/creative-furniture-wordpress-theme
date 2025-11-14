@@ -75,22 +75,28 @@
                         </div>
 
                         <div class="currency-switcher">
-                            <select>
-                                <option>AED</option>
-                                <option>USD</option>
-                                <option>EUR</option>
-                            </select>
+                            <!-- <select>
+                                <?php
+                                // $current = isset($_COOKIE['mymc_currency']) ? strtoupper(sanitize_text_field($_COOKIE['mymc_currency'])) : 'AED';
+                                // foreach (['AED', 'USD', 'EUR'] as $currCode) {
+                                //     $selected = ($currCode === $current) ? ' selected' : '';
+                                //     echo '<option value="' . esc_attr($currCode) . '"' . $selected . '>' . esc_html($currCode) . '</option>';
+                                // }
+                                ?>
+                            </select> -->
+                            <?php echo do_shortcode('[mymc_currency_switcher]'); ?>
+
                         </div>
 
                         <a href="#" class="header-icon" aria-label="Wishlist">
                             <?php footer_block_svg_icon_print('heart'); ?>
                         </a>
 
-                        <a href="#" class="header-icon" aria-label="Account">
+                        <a href="<?php echo esc_url(get_permalink(wc_get_page_id('myaccount'))); ?>" class="header-icon" aria-label="Account">
                             <?php footer_block_svg_icon_print('user'); ?>
                         </a>
 
-                        <a href="#" class="header-icon" aria-label="Cart">
+                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header-icon" aria-label="Cart" data-cart-toggle="true">
                             <?php footer_block_svg_icon_print('bag'); ?>
                         </a>
                     </div>

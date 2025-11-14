@@ -1,0 +1,32 @@
+.woocommerce-account .woocommerce-MyAccount-content {
+  .woocommerce-info {
+    padding: 32px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    text-align: center;
+    color: #242424;
+    font-size: 18px;
+    font-family: Aspekta;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 20px;
+    a.button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: rgba(17, 17, 17, 0.80);
+      color: white;
+      text-decoration: none;
+      border-radius: 88px;
+      font-size: 16px;
+      font-family: Aspekta;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 32px;
+      transition: background 0.3s ease;
+      &:hover {
+        background: rgba(17, 17, 17, 1);
+      }
+    }
+  }
+}

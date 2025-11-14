@@ -1,0 +1,146 @@
+.woocommerce-form-login,
+.woocommerce-ResetPassword,
+.woocommerce-form-register {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #F9F9F9;
+  border-radius: 12px;
+  p {
+    margin-bottom: 22px;
+    color: #0A0909;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &.woocommerce-LostPassword {
+      text-align: center;
+      margin-top: 22px;
+      a {
+        color: #9D8465;
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .woocommerce-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+    &.form-row-first,
+    &.form-row-last {
+      flex: 1;
+    }
+    &.form-row-first,
+    &.form-row-last {
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 22px;
+      }
+    }
+    label {
+      color: #0A0909;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      word-wrap: break-word;
+      .required {
+        color: #ff0000;
+      }
+      .screen-reader-text {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 18px;
+      border-radius: 10px;
+      outline: 1px #CACACA solid;
+      outline-offset: -1px;
+      border: none;
+      color: #0A0909;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      word-wrap: break-word;
+      background: transparent;
+      &:focus {
+        outline: 1px #9D8465 solid;
+      }
+    }
+    .password-input {
+      position: relative;
+      input {
+        padding-right: 50px;
+      }
+      .show-password-input {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        &::after {
+          content: '👁️';
+          font-size: 18px;
+        }
+      }
+    }
+    .woocommerce-form__label-for-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        accent-color: #9D8465;
+      }
+      span {
+        color: #0A0909;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    button[type="submit"] {
+      padding: 14px 30px;
+      background: rgba(17, 17, 17, 0.80);
+      border-radius: 90px;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 34px;
+      word-wrap: break-word;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      align-self: flex-start;
+      &:hover {
+        background: rgba(17, 17, 17, 1);
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

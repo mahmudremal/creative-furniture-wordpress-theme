@@ -1,0 +1,219 @@
+.myaccount-body {
+  gap: 20px;
+  display: grid;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  grid-template-columns: 335px 1fr;
+
+  .woocommerce-MyAccount-navigation {
+    top: 30px;
+    width: 100%;
+    position: sticky;
+    min-height: 676px ;
+    height: fit-content;
+    border-radius: 12px;
+    background: #F4F1E9;
+
+    ul {
+      margin: 0;
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      padding: 24px 21.55px;
+
+      li {
+        a {
+          display: block;
+          font-size: 20px;
+          font-weight: 400;
+          color: #2B2B2B;
+          line-height: 30px;
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-decoration: none;
+          word-wrap: break-word;
+        }
+
+        &.is-active {
+          border-radius: 8px;
+          background: #9D8465;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    width: 100%;
+    font-size: 18px;
+
+    a {
+      color: #9D8465;
+    }
+
+    .woocommerce-Addresses {
+      gap: 20px;
+      display: flex;
+
+      .woocommerce-Address {
+        &-title {
+          h2 {
+            margin: auto;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #D4D4D4;
+          }
+        }
+
+        >address {
+          margin: 1.5em 0;
+        }
+      }
+
+      a {
+        &.edit {
+          display: block;
+          color: #1A1A1A;
+          width: fit-content;
+          padding: 12px 28px;
+          border-radius: 88px;
+          text-decoration: none;
+          border: 1px solid #111111CC;
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-EditAccountForm {
+
+  .account-section,
+  .password-section {
+    margin-bottom: 32px;
+
+    .section-header {
+      padding-bottom: 12px;
+      border-bottom: 1px #D4D4D4 solid;
+      margin-bottom: 32px;
+
+      .section-title {
+        color: #242424;
+        font-size: 28px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 44px;
+        word-wrap: break-word;
+      }
+    }
+
+    .fields-container {
+      .fields-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        .field {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .field-label {
+            color: #0A0909;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            word-wrap: break-word;
+          }
+
+          .field-input {
+            gap: 16px;
+            padding: 16px;
+            display: flex;
+            border-radius: 8px;
+            outline-offset: -1px;
+            align-items: center;
+            outline: 1px #CACACA solid;
+            // grid-template-columns: 1fr 30px;
+
+            input {
+              flex: 1;
+              border: none;
+              outline: none;
+              color: #0A0909;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              word-wrap: break-word;
+              background: transparent;
+            }
+
+            &-password {
+              display: block;
+
+              .password-input {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 30px;
+
+                .show-password-input {
+                  background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="white"/><path d="M2.01677 10.5937C1.90328 10.414 1.84654 10.3241 1.81477 10.1855C1.79091 10.0814 1.79091 9.91727 1.81477 9.81317C1.84654 9.67458 1.90328 9.58473 2.01677 9.40503C2.95461 7.92005 5.74617 4.16602 10.0003 4.16602C14.2545 4.16602 17.0461 7.92005 17.9839 9.40503C18.0974 9.58473 18.1541 9.67458 18.1859 9.81317C18.2098 9.91727 18.2098 10.0814 18.1859 10.1855C18.1541 10.3241 18.0974 10.414 17.9839 10.5937C17.0461 12.0786 14.2545 15.8327 10.0003 15.8327C5.74617 15.8327 2.95461 12.0786 2.01677 10.5937Z" stroke="%23525252" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.4993C11.381 12.4993 12.5003 11.3801 12.5003 9.99935C12.5003 8.61864 11.381 7.49935 10.0003 7.49935C8.61962 7.49935 7.50034 8.61864 7.50034 9.99935C7.50034 11.3801 8.61962 12.4993 10.0003 12.4993Z" stroke="%23525252" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>') center center no-repeat;
+
+                  &.display-password {
+                    background: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M10.7429 5.09232C11.1494 5.03223 11.5686 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7767C21.8518 11.9016 21.8517 12.0987 21.8231 12.2236C21.7849 12.3899 21.7164 12.4985 21.5792 12.7156C21.2793 13.1901 20.8222 13.8571 20.2165 14.5805M6.72432 6.71504C4.56225 8.1817 3.09445 10.2194 2.42111 11.2853C2.28428 11.5019 2.21587 11.6102 2.17774 11.7765C2.1491 11.9014 2.14909 12.0984 2.17771 12.2234C2.21583 12.3897 2.28393 12.4975 2.42013 12.7132C3.54554 14.4952 6.89541 19 12.0004 19C14.0588 19 15.8319 18.2676 17.2888 17.2766M3.00042 3L21.0004 21M9.8791 9.87868C9.3362 10.4216 9.00042 11.1716 9.00042 12C9.00042 13.6569 10.3436 15 12.0004 15C12.8288 15 13.5788 14.6642 14.1217 14.1213" stroke="%23525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>') center center no-repeat;
+                  }
+                }
+
+                // .password-toggle {
+                //     display: none;
+
+                //     .eye-icon {
+                //         width: 20px;
+                //         height: 20px;
+                //         background: white;
+                //         position: relative;
+                //         overflow: hidden;
+                //         cursor: pointer;
+
+                //         &::before {
+                //             content: '';
+                //             width: 16.41px;
+                //             height: 11.67px;
+                //             position: absolute;
+                //             left: 1.8px;
+                //             top: 4.17px;
+                //             outline: 1.67px #525252 solid;
+                //             outline-offset: -0.83px;
+                //         }
+                //     }
+                // }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .save-button {
+      display: flex;
+      justify-content: center;
+
+      button {
+        padding: 12px 28px;
+        background: rgba(17, 17, 17, 0.80);
+        border-radius: 88px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 32px;
+        word-wrap: break-word;
+        cursor: pointer;
+      }
+    }
+  }
+}

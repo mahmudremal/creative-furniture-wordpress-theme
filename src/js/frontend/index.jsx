@@ -2,7 +2,12 @@ import axios from 'axios';
 import { lazy, Suspense } from 'react';
 // import { __, tailwind_install } from '@js/utils';
 import { createRoot } from 'react-dom/client';
+import CartSidebar from './CartSidebar';
+import QuickView from './QuickView';
+import FiltersBar from './FiltersBar';
+import Slider from './slider';
 
+const __ = (t, d) => t;
 
 class SiteCore {
     constructor() {
@@ -16,19 +21,28 @@ class SiteCore {
 
     setup_hooks() {
         // tailwind_install();
+        this.init_sliders();
+        this.init_checkout();
         this.sc_store_frontend();
         this.product_card_slider();
+        this.init_single_product();
+        // this.init_currency_switcher();
+        this.single_product_accordion();
     }
 
     sc_store_frontend() {
-        [document.querySelector('.sc_store-front #ecommerce_root')].forEach(container => {
-            if (!container) return;
-            // const root = createRoot(container);root.render(
-            //     <Suspense fallback={<div className="xpo_text-center xpo_p-4">{__('Loading...')}</div>}>
-            //         <StoreFront />
-            //     </Suspense>
-            // );
-        });
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+        setTimeout(() => {
+            const root = createRoot(container);
+            root.render(
+                <Suspense fallback={<div>{__('Loading...')}</div>}>
+                    <CartSidebar />
+                    <FiltersBar />
+                    <QuickView />
+                </Suspense>
+            );
+        }, 1000);
     }
 
     product_card_slider() {
@@ -200,6 +214,197 @@ class SiteCore {
         });
     }
 
+    init_single_product() {
+        const form = document.querySelector('.cf-cart-form');
+        const qtyInput = document.querySelector('.cf-qty-input');
+        const minusBtn = document.querySelector('.cf-qty-minus');
+        const plusBtn = document.querySelector('.cf-qty-plus');
+        const addToCartBtn = document.querySelector('.cf-add-to-cart');
+        const variationSwatches = document.querySelectorAll('.cf-variation-swatch');
+        const variationSelects = document.querySelectorAll('.cf-variation-select');
+        const variationIdInput = document.querySelector('.cf-variation-id');
+        const priceElement = document.querySelector('.cf-product-price');
+
+        let selectedAttributes = {};
+
+        minusBtn?.addEventListener('click', () => {
+            const currentValue = parseInt(qtyInput.value) || 1;
+            if (currentValue > 1) {
+                qtyInput.value = currentValue - 1;
+            }
+        });
+
+        plusBtn?.addEventListener('click', () => {
+            const currentValue = parseInt(qtyInput.value) || 1;
+            qtyInput.value = currentValue + 1;
+        });
+
+        variationSwatches.forEach(swatch => {
+            swatch.addEventListener('click', (e) => {
+                const button = e.currentTarget;
+                const attributeName = button.getAttribute('name');
+                const value = button.dataset.value;
+                
+                document.querySelectorAll(`[name="${attributeName}"]`).forEach(s => s.classList.remove('active'));
+                button.classList.add('active');
+                
+                selectedAttributes[`attribute_${attributeName}`] = value;
+                updateVariation();
+            });
+        });
+
+        variationSelects.forEach(select => {
+            select.addEventListener('change', (e) => {
+                const attributeName = e.target.dataset.attribute_name;
+                const value = e.target.value;
+                
+                selectedAttributes[attributeName] = value;
+                updateVariation();
+            });
+        });
+
+        function updateVariation() {
+            const productId = document.querySelector('input[name="product_id"]')?.value;
+            
+            if (!productId) return;
+
+            const allSwatchesSelected = Array.from(variationSwatches).length === 0 || 
+                Array.from(document.querySelectorAll('.cf-variation-swatch.active')).length > 0;
+            const allSelectsSelected = Array.from(variationSelects).every(select => select.value);
+
+            if (!allSwatchesSelected || !allSelectsSelected) return;
+
+            axios.post(cfStore.ajax_url, new URLSearchParams({
+                action: 'cf_get_variation',
+                nonce: cfStore.get_variation_nonce,
+                product_id: productId,
+                attributes: JSON.stringify(selectedAttributes)
+            }))
+            .then(response => response.data)
+            .then(data => {
+                if (data.success) {
+                    if (variationIdInput) {
+                        variationIdInput.value = data.data.variation_id;
+                    }
+                    if (priceElement) {
+                        priceElement.innerHTML = data.data.price_html;
+                    }
+                    addToCartBtn.disabled = !data.data.is_in_stock;
+                }
+            })
+            .catch(error => {
+                console.error('Variation error:', error);
+            });
+        }
+
+        form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const productId = formData.get('product_id');
+            const quantity = formData.get('quantity');
+            const variationId = formData.get('variation_id');
+
+            if (variationIdInput && !variationId) {
+                alert('Please select all product options');
+                return;
+            }
+
+            addToCartBtn.disabled = true;
+            addToCartBtn.textContent = 'Adding...';
+
+            const postData = new URLSearchParams({
+                action: 'cf_add_to_cart',
+                nonce: cfStore.add_to_cart_nonce,
+                product_id: productId,
+                quantity: quantity,
+                variation_id: variationId || ''
+            });
+
+            Object.entries(selectedAttributes).forEach(([key, value]) => {
+                postData.append(`variation[${key}]`, value);
+            });
+
+            axios.post(cfStore.ajax_url, postData)
+            .then(response => response.data)
+            .then(data => {
+                if (data.success) {
+                    addToCartBtn.textContent = '✓ Added';
+                    
+                    const cartCount = document.querySelector('.cart-count');
+                    if (cartCount) {
+                        cartCount.textContent = data.data.cart_count;
+                    }
+
+                    setTimeout(() => {
+                        addToCartBtn.textContent = 'Add to Cart';
+                        addToCartBtn.disabled = false;
+                    }, 2000);
+                } else {
+                    throw new Error(data.data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Cart error:', error);
+                alert(error.message || 'Failed to add to cart');
+                addToCartBtn.textContent = 'Add to Cart';
+                addToCartBtn.disabled = false;
+            });
+        });
+    }
+
+    single_product_accordion() {
+        document.querySelectorAll('.cf-accordion-header').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                btn.parentElement.parentElement.querySelectorAll('.cf-accordion-active').forEach(el => el.classList.remove('cf-accordion-active'));
+                btn.parentElement.classList.toggle('cf-accordion-active');
+            });
+        });
+    }
+
+    init_checkout() {
+        const wrapper = document.querySelector('.billing-fields-wrapper');
+        document.querySelectorAll('[name=billing_address_type]').forEach(radio => {
+            if (!radio) return;
+            if (radio?.parentElement?.nextElementSibling?.style) {
+                if (radio.checked && radio?.value == 'different') {
+                    wrapper.style.display = 'block';
+                }
+            }
+            radio.addEventListener('change', e => {
+                console.log(e.target.value == 'different')
+                wrapper.style.display = (e.target.checked && e.target.value == 'different') ? 'block' : 'none';
+            });
+        });
+        // const saveInfo = document.querySelector('[name="save_info"]');
+        // saveInfo.addEventListener('click', e => {
+        //     e.target.checked = !e.target.checked;
+        // });
+    }
+
+    init_sliders() {
+        this.sliders = [];
+        document.querySelectorAll('.creative-slider').forEach(slider => {
+            const slides = new Slider(slider, {
+                arrow: false,
+                dots: true,
+                interval: 4000
+            });
+            this.sliders.push(slides);
+        })
+        
+    }
+
+    init_currency_switcher() {
+        document.querySelectorAll('.currency-switcher select').forEach(select => {
+            select.addEventListener('change', e => {
+                let url = new URL(window.location.href);
+                url.searchParams.set('currency',e.target.value);
+                window.location.href = url.toString();
+            })
+        })
+    }
 
 }
 

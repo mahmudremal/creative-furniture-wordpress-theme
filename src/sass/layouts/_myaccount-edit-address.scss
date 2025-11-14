@@ -1,0 +1,140 @@
+.woocommerce-MyAccount-content {
+    h2 {
+        color: #242424;
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 46px;
+        margin-bottom: 34px;
+        padding-bottom: 14px;
+        border-bottom: 1px #D4D4D4 solid;
+    }
+
+    form {
+        .woocommerce-address-fields {
+            .woocommerce-address-fields__field-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+
+                .form-row {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    // &.form-row-first,
+                    // &.form-row-last {
+                    //     flex: 1;
+                    // }
+
+                    // &.form-row-first,
+                    // &.form-row-last {
+                    //     @media (min-width: 768px) {
+                    //         flex-direction: row;
+                    //         gap: 22px;
+
+                    //         .form-row-first {
+                    //             margin-right: 12px;
+                    //         }
+
+                    //         .form-row-last {
+                    //             margin-left: 12px;
+                    //         }
+                    //     }
+                    // }
+
+                    label {
+                        color: #0A0909;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 26px;
+                        word-wrap: break-word;
+
+                        .required {
+                            color: #ff0000;
+                        }
+
+                        .optional {
+                            color: #666;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .woocommerce-input-wrapper {
+
+                        input,
+                        select {
+                            width: 100%;
+                            padding: 18px;
+                            border-radius: 10px;
+                            outline: 1px #CACACA solid;
+                            outline-offset: -1px;
+                            border: none;
+                            color: #0A0909;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 26px;
+                            word-wrap: break-word;
+                            background: transparent;
+
+                            &:focus {
+                                outline: 1px #9D8465 solid;
+                            }
+                        }
+
+                        .select2-container {
+                            width: 100% !important;
+
+                            .select2-selection {
+                                height: auto;
+                                padding: 18px;
+                                border-radius: 10px;
+                                outline: 1px #CACACA solid;
+                                outline-offset: -1px;
+                                background: transparent;
+
+                                .select2-selection__rendered {
+                                    color: #0A0909;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    line-height: 26px;
+                                    padding: 0;
+                                }
+
+                                .select2-selection__arrow {
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            p {
+                margin: 0;
+
+                button {
+                    margin-top: 30px;
+                    padding: 14px 30px;
+                    background: rgba(17, 17, 17, 0.80);
+                    border-radius: 90px;
+                    border: none;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    line-height: 34px;
+                    word-wrap: break-word;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+
+                    &:hover {
+                        background: rgba(17, 17, 17, 1);
+                    }
+                }
+            }
+        }
+    }
+}

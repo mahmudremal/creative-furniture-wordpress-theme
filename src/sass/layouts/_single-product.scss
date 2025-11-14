@@ -23,13 +23,19 @@
 }
 
 .cf-product-details {
-    top: 0;
+    top: 20px;
     gap: 24px;
     display: flex;
     position: sticky;
     height: fit-content;
     flex-direction: column;
     position: -webkit-sticky;
+    
+    .cf-cart-form {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .cf-product-header {
@@ -364,14 +370,40 @@
         margin: 0;
     }
 
-    svg {
-        width: 28px;
-        height: 28px;
-        flex-shrink: 0;
+    span {
+        svg {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            &.cf-accordion-icon {
+                &-minus {
+                    display: none;
+                }
+            }
+        }
     }
 
     &:hover h3 {
         color: #9D8465;
+    }
+}
+
+.cf-accordion {
+    &-active {
+        .cf-accordion-header {
+            span {
+                svg {
+                    &.cf-accordion-icon {
+                        &-plus {
+                            display: none;
+                        }
+                        &-minus {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -487,4 +519,107 @@
             transform: rotate(180deg);
         }
     }
+}
+
+.cf-variations-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cf-variation-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cf-variation-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
+}
+
+.cf-variation-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cf-variation-swatch {
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  border: 2px solid #e5e5e5;
+
+  &:hover {
+    border-color: #666;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 1px #1a1a1a;
+  }
+
+  &.has-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.has-color {
+    .cf-color-box {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &.has-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+
+    .cf-text-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.2;
+    }
+  }
+}
+
+.cf-variation-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: #666;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+  }
 }

@@ -54,19 +54,33 @@ do_action('woocommerce_before_cart');
                                         </div>
                                     </div>
 
+                                    
                                     <div class="cart-item-meta">
                                         <?php
-                                        $size = $_product->get_attribute('pa_size') ?: $_product->get_attribute('size');
-                                        $material = $_product->get_attribute('pa_material') ?: $_product->get_attribute('material');
-                                        
-                                        if ($size) {
-                                            echo '<div class="meta-item"><span class="meta-label">Size:</span> <span class="meta-value">' . esc_html($size) . '</span></div>';
-                                        }
-                                        if ($material) {
-                                            echo '<div class="meta-item"><span class="meta-label">Material:</span> <span class="meta-value">' . esc_html($material) . '</span></div>';
+                                        $product = $cart_item['data'];
+
+                                        if ( isset( $cart_item['variation'] ) && ! empty( $cart_item['variation'] ) ) {
+                                            // For variable products – get selected attributes from cart item
+                                            foreach ( $cart_item['variation'] as $attr_name => $attr_value ) {
+                                                $attr_label = wc_attribute_label( str_replace( 'attribute_', '', $attr_name ), $product );
+                                                echo '<div class="meta-item"><span class="meta-label">' . esc_html( $attr_label ) . ':</span> <span class="meta-value">' . esc_html( $attr_value ) . '</span></div>';
+                                            }
+                                        } else {
+                                            // For simple products – fallback to all attributes
+                                            $attributes = $product->get_attributes();
+                                            if ( ! empty( $attributes ) ) {
+                                                foreach ( $attributes as $attribute_name => $attribute ) {
+                                                    $attr_label = wc_attribute_label( $attribute_name, $product );
+                                                    $attr_value = $product->get_attribute( $attribute_name );
+                                                    if ( $attr_value ) {
+                                                        echo '<div class="meta-item"><span class="meta-label">' . esc_html( $attr_label ) . ':</span> <span class="meta-value">' . esc_html( $attr_value ) . '</span></div>';
+                                                    }
+                                                }
+                                            }
                                         }
                                         ?>
                                     </div>
+
 
                                     <div class="cart-item-actions">
                                         <div class="quantity-wrapper">

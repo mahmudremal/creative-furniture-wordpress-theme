@@ -1,7 +1,7 @@
 .site-header {
-  position: sticky;
   top: 0;
   z-index: 1000;
+  position: sticky;
   background: #fff;
 }
 
@@ -235,7 +235,7 @@
       display: flex;
       list-style: none;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
 
       li {
         position: relative;

@@ -44,7 +44,7 @@ if ( $product->is_type( 'variable' ) ) {
 				<?php footer_block_svg_icon_print('heart'); ?>
 			</button>
 
-			<button type="button" class="product-quick-view-btn" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Quick view">
+			<button type="button" class="product-quick-view-btn" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Quick view" data-quickview="true">
 				Quick View
 				<?php footer_block_svg_icon_print('plus'); ?>
 			</button>

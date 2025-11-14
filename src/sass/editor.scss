@@ -1,0 +1,23 @@
+@import "base";
+
+
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/pagination";
+@import "layouts/product-card";
+@import "layouts/single-product";
+@import "layouts/shop";
+@import "patterns";
+
+@import "layouts/cart";
+@import "layouts/checkout";
+@import "layouts/thankyou";
+@import "layouts/cart-sidebar";
+@import "layouts/order-tracking";
+@import "layouts/filters-sidebar";
+@import "layouts/product-quickview";
+@import "layouts/my-account";
+@import "layouts/myaccount-downloads";
+@import "layouts/myaccount-orders";
+@import "layouts/myaccount-edit-address";
+@import "layouts/myaccount-auth";

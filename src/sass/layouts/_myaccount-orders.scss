@@ -1,0 +1,295 @@
+.woocommerce-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  thead {
+    th {
+      background: #F4F1E9;
+      color: #242424;
+      font-size: 18px;
+      font-family: Aspekta;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 24px;
+      padding: 18px;
+      text-align: left;
+      border-bottom: 1px solid #D4D4D4;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #E5E5E5;
+      &:hover {
+        background: #FAFAFA;
+      }
+      th, td {
+        padding: 18px;
+        color: #0A0909;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 22px;
+        vertical-align: top;
+        a {
+          color: #9D8465;
+          text-decoration: none;
+          font-weight: 500;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .woocommerce-Price-amount {
+          font-family: PP Mori;
+          font-weight: 400;
+        }
+        .woocommerce-button {
+          padding: 8px 18px;
+          background: rgba(17, 17, 17, 0.80);
+          color: white;
+          border-radius: 88px;
+          text-decoration: none;
+          font-size: 16px;
+          font-family: Aspekta;
+          font-weight: 500;
+          text-transform: capitalize;
+          line-height: 22px;
+          display: inline-block;
+          transition: background 0.3s ease;
+          &:hover {
+            background: rgba(17, 17, 17, 1);
+          }
+        }
+      }
+      th {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.woocommerce-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 32px;
+  .woocommerce-button {
+    padding: 14px 24px;
+    background: rgba(17, 17, 17, 0.80);
+    color: white;
+    border-radius: 88px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Aspekta;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 24px;
+    transition: background 0.3s ease;
+    &:hover {
+      background: rgba(17, 17, 17, 1);
+    }
+  }
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  .woocommerce-info {
+    padding: 32px;
+    background: #F9F9F9;
+    border-radius: 8px;
+    text-align: center;
+    color: #242424;
+    font-size: 20px;
+    font-family: Aspekta;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 22px;
+    a.button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 24px;
+      background: rgba(17, 17, 17, 0.80);
+      color: white;
+      text-decoration: none;
+      border-radius: 88px;
+      font-size: 18px;
+      font-family: Aspekta;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 32px;
+      transition: background 0.3s ease;
+      &:hover {
+        background: rgba(17, 17, 17, 1);
+      }
+    }
+  }
+}
+
+
+
+.woocommerce-view-order .woocommerce-MyAccount-content {
+  p {
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 32px;
+    mark {
+      background: #9D8465;
+      color: white;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+  }
+  h2 {
+    color: #242424;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 44px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px #D4D4D4 solid;
+  }
+  .woocommerce-OrderUpdates {
+    margin-bottom: 32px;
+    .woocommerce-OrderUpdate {
+      background: #F9F9F9;
+      padding: 18px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      .woocommerce-OrderUpdate-meta {
+        color: #0A0909;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 8px;
+      }
+      .woocommerce-OrderUpdate-description {
+        color: #0A0909;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+  .woocommerce-order-details {
+    margin-bottom: 32px;
+    .woocommerce-table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        th {
+          background: #F4F1E9;
+          color: #242424;
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: capitalize;
+          line-height: 24px;
+          padding: 18px;
+          text-align: left;
+          border-bottom: 1px solid #D4D4D4;
+        }
+      }
+      tbody {
+        tr {
+          border-bottom: 1px solid #E5E5E5;
+          &:hover {
+            background: #FAFAFA;
+          }
+          td {
+            padding: 18px;
+            color: #0A0909;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            vertical-align: top;
+            a {
+              color: #9D8465;
+              text-decoration: none;
+              font-weight: 500;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .product-quantity {
+              font-weight: 500;
+            }
+            .woocommerce-Price-amount {
+              font-weight: 400;
+            }
+            .wc-item-meta {
+              margin-top: 8px;
+              li {
+                color: #0A0909;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+
+                p {
+                    margin: auto;
+                    display: inline;
+                    font-size: 14px;
+                }
+                
+                .wc-item-meta-label {
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+      tfoot {
+        tr {
+          border-bottom: 1px solid #E5E5E5;
+          th, td {
+            padding: 18px;
+            color: #0A0909;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+            .woocommerce-Price-amount {
+              font-weight: 400;
+            }
+            small {
+              color: #666;
+              font-size: 14px;
+            }
+          }
+          th {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .woocommerce-customer-details {
+    .woocommerce-columns {
+      display: flex;
+      gap: 32px;
+      .woocommerce-column {
+        flex: 1;
+        h2 {
+          margin-bottom: 18px;
+        }
+        address {
+          background: #F9F9F9;
+          padding: 18px;
+          border-radius: 8px;
+          color: #0A0909;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          p {
+            margin: 0;
+            color: #0A0909;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

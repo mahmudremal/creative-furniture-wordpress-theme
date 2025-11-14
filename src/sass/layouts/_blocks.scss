@@ -1,0 +1,88 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .slide {
+        display: none;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+
+        h2 {
+            margin: 0 0 20px 0;
+        }
+
+        .slide-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007cba;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.active {
+                background-color: white;
+            }
+        }
+    }
+}
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const containers = document.querySelectorAll('.slider-container');
+    containers.forEach(container => {
+        const slides = container.querySelectorAll('.slide');
+        const dots = container.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+        });
+
+        showSlide(currentIndex);
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 5000);
+    });
+});
+*/

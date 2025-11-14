@@ -35,3 +35,28 @@ function creative_furniture_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'creative_furniture_pingback_header' );
+
+
+
+
+
+function custom_order_tracking_rewrite_rule() {
+    add_rewrite_rule('^order-tracking/?$', 'index.php?custom_order_tracking=1', 'top');
+}
+add_action('init', 'custom_order_tracking_rewrite_rule');
+function custom_order_tracking_query_vars($vars) {
+    $vars[] = 'custom_order_tracking';
+    return $vars;
+}
+add_filter('query_vars', 'custom_order_tracking_query_vars');
+function custom_order_tracking_template_include($template) {
+    if (get_query_var('custom_order_tracking')) {
+        $new_template = locate_template('order-tracking.php');
+        if ($new_template) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'custom_order_tracking_template_include');
+?>
