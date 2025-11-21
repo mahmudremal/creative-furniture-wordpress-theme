@@ -21,13 +21,18 @@ class SiteCore {
 
     setup_hooks() {
         // tailwind_install();
+        this.init_cart();
         this.init_sliders();
         this.init_checkout();
         this.sc_store_frontend();
-        this.product_card_slider();
+        // this.product_card_slider();
         this.init_single_product();
         // this.init_currency_switcher();
         this.single_product_accordion();
+        this.init_hotspots();
+        this.init_client_sliders();
+        this.init_logout();
+        this.init_wishlist();
     }
 
     sc_store_frontend() {
@@ -148,42 +153,45 @@ class SiteCore {
         }
         
         function initWishlist() {
-            $('.product-wishlist-btn').on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const $btn = $(this);
-            const productId = $btn.data('product-id');
-            
-            $btn.toggleClass('active');
-            
-            const isActive = $btn.hasClass('active');
-            
-            $.ajax({
-                url: creativeFurnitureAjax.ajaxurl,
-                type: 'POST',
-                data: {
-                action: 'toggle_wishlist',
-                product_id: productId,
-                add: isActive ? 1 : 0,
-                nonce: creativeFurnitureAjax.nonce
-                },
-                success: function(response) {
-                if (response.success) {
-                    if (isActive) {
-                    $btn.attr('aria-label', 'Remove from wishlist');
-                    } else {
-                    $btn.attr('aria-label', 'Add to wishlist');
-                    }
+            const config = this.config;
+            document.querySelectorAll('.product-wishlist-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     
-                    $(document).trigger('wishlist_updated', [productId, isActive]);
-                }
-                },
-                error: function() {
-                $btn.toggleClass('active');
-                }
-            });
-            });
+                    const $btn = $(this);
+                    const productId = $btn.data('product-id');
+                    
+                    $btn.toggleClass('active');
+                    
+                    const isActive = $btn.hasClass('active');
+                    
+                    jQuery.ajax({
+                        url: config?.ajaxUrl,
+                        type: 'POST',
+                        data: {
+                            action: 'toggle_wishlist',
+                            product_id: productId,
+                            add: isActive ? 1 : 0,
+                            nonce: config?.ajax_nonce
+                        },
+                        success: function(response) {
+                        if (response.success) {
+                            if (isActive) {
+                                $btn.attr('aria-label', 'Remove from wishlist');
+                            } else {
+                                $btn.attr('aria-label', 'Add to wishlist');
+                            }
+                            
+                            $(document).trigger('wishlist_updated', [productId, isActive]);
+                        }
+                        },
+                        error: function() {
+                            $btn.toggleClass('active');
+                        }
+                    });
+                })
+            })
         }
         
         function loadWishlistState() {
@@ -344,6 +352,9 @@ class SiteCore {
                     throw new Error(data.data.message);
                 }
             })
+            .then(() => 
+                [...document.querySelectorAll('[data-cart-toggle]')].find(el => el?.nodeType)?.click?.()
+            )
             .catch(error => {
                 console.error('Cart error:', error);
                 alert(error.message || 'Failed to add to cart');
@@ -405,6 +416,272 @@ class SiteCore {
             })
         })
     }
+
+    init_cart() {
+        const _update_cart_item = (_item_key, _quantity) => {
+            return fetch(window?.cfStore?.ajax_url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                },
+                body: new URLSearchParams({
+                    action: 'update_cart_item',
+                    cart_item_key: _item_key,
+                    quantity: _quantity,
+                    nonce: window?.cfStore?.update_cart_nonce
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data?.success) {
+                    location.reload();
+                }
+            })
+            .catch(err => console.error('Cart update error:', err));
+        };
+        let updateTimer = null;
+        document.querySelectorAll('button.qty-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();e.stopPropagation();
+                const input = button.parentElement.querySelector('input.input-text.qty');
+                const _item_key = button.parentElement.parentElement.dataset.cartItem;
+                if (input) {
+                    input.value = button.classList.contains('plus') ? parseInt(input.value) + 1 : Math.max(1, parseInt(input.value) - 1);
+                    clearTimeout(updateTimer);
+                    updateTimer = setTimeout(() => {
+                        _update_cart_item(_item_key, input.value);
+                    }, 1000);
+                }
+            });
+        });
+        document.querySelectorAll('input.input-text.qty').forEach(input => {
+            input.addEventListener('change', (e) => {
+                const _item_key = input.parentElement.parentElement.parentElement.dataset.cartItem;
+                // console.log('Input value change: ', e.target.value);
+                _update_cart_item(_item_key, e.target.value);
+            });
+        });
+    }
+    
+    init_hotspots() {
+        document.querySelectorAll('.image-hotspot-container .hotspot').forEach(hotspot => {
+            const title = hotspot.dataset.productTitle;
+            const excerpt = hotspot.dataset.productExcerpt;
+            const link = hotspot.dataset.productLink;
+
+            const popup = document.createElement('a');
+            popup.className = 'hotspot-popup';
+            popup.href = link;
+
+            popup.innerHTML = `
+                <h4 class="hotspot-popup-title">${title}</h4>
+                <p class="hotspot-popup-excerpt">${excerpt.slice(0, 120)}</p>
+                <button type="button" class="hotspot-popup-button">View Product</button>
+            `;
+
+            hotspot.appendChild(popup);
+
+            // auto-position above; fallback below if not enough space
+            hotspot.addEventListener('mouseenter', () => {
+                const rect = hotspot.getBoundingClientRect();
+                const popupRect = popup.getBoundingClientRect();
+
+                const spaceAbove = rect.top;
+                const spaceBelow = window.innerHeight - rect.bottom;
+
+                if (spaceAbove > popupRect.height + 10) {
+                    popup.style.bottom = rect.height + 10 + 'px';
+                    popup.style.top = 'auto';
+                } else {
+                    popup.style.top = rect.height + 10 + 'px';
+                    popup.style.bottom = 'auto';
+                }
+            });
+        });
+    }
+
+    init_client_sliders() {
+        const sliders = document.querySelectorAll('.cf-client-logos-slider');
+
+        sliders.forEach(wrap => {
+            const items = [...wrap.querySelectorAll('.cf-client-logo-item')];
+            if (!items.length) return;
+
+            let speed = window.innerWidth <= 768 ? 0.25 : 0.55;
+            let paused = false;
+            let dragging = false;
+            let lastX = 0;
+            let positions = [];
+            let totalWidth = 0;
+
+            function setup() {
+                let x = 0;
+                positions = items.map(el => {
+                    const w = el.offsetWidth;
+                    const obj = { el, x, w };
+                    el.style.transform = `translateX(${x}px)`;
+                    x += w;
+                    return obj;
+                });
+                totalWidth = x;
+            }
+
+            function moveItems(dx) {
+                positions.forEach(p => {
+                    p.x += dx;
+                    if (p.x + p.w < 0) {
+                        const last = positions[positions.length - 1];
+                        p.x = last.x + last.w;
+                        positions.splice(positions.indexOf(p), 1);
+                        positions.push(p);
+                    }
+                    if (p.x > totalWidth - p.w) {
+                        const first = positions[0];
+                        p.x = first.x - p.w;
+                        positions.splice(positions.indexOf(p), 1);
+                        positions.unshift(p);
+                    }
+                });
+            }
+
+            function render() {
+                positions.forEach(p => {
+                    p.el.style.transform = `translateX(${p.x}px)`;
+                });
+            }
+
+            function loop() {
+                if (!paused && !dragging) moveItems(-speed);
+                render();
+                requestAnimationFrame(loop);
+            }
+
+            wrap.addEventListener('mouseenter', () => paused = true);
+            wrap.addEventListener('mouseleave', () => paused = false);
+
+            wrap.addEventListener('mousedown', e => {
+                dragging = true;
+                lastX = e.clientX;
+            });
+
+            window.addEventListener('mousemove', e => {
+                if (!dragging) return;
+                const dx = e.clientX - lastX;
+                lastX = e.clientX;
+                moveItems(dx);
+                render();
+            });
+
+            window.addEventListener('mouseup', () => dragging = false);
+
+            wrap.addEventListener('touchstart', e => {
+                const t = e.touches[0];
+                dragging = true;
+                lastX = t.clientX;
+            }, { passive: true });
+
+            wrap.addEventListener('touchmove', e => {
+                const t = e.touches[0];
+                if (!dragging) return;
+                const dx = t.clientX - lastX;
+                lastX = t.clientX;
+                moveItems(dx);
+            }, { passive: true });
+
+            wrap.addEventListener('touchend', () => dragging = false);
+
+            setup();
+            requestAnimationFrame(loop);
+        });
+    }
+
+    init_logout() {
+        document.querySelectorAll('.woocommerce-MyAccount-navigation-link--customer-logout a').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const confirmed = confirm('Are you sure you wanna loggedout?');
+                if(!confirmed) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                }
+            }, true);
+        });
+    }
+
+    init_wishlist() {
+        document.querySelectorAll('button.product-wishlist-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (!button?.dataset?.productId) return;
+                button.disabled = true;
+                const formData = new FormData();
+                formData.append('action', 'cf_wishlist_toggle');
+                formData.append('_nonce', cfStore.add_to_cart_nonce);
+                formData.append('product_id', button.dataset.productId);
+
+                return fetch(cfStore.ajax_url, {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    body: formData
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.status === 'added') {
+                        // handle added UI state
+                        button.classList.add('active');
+                    } else if (res.status === 'removed') {
+                        // handle removed UI state
+                        button.classList.remove('active');
+                    }
+                    return res;
+                })
+                .finally(() => {
+                    button.disabled = false;
+                })
+
+            });
+        });
+        document.querySelectorAll('#cf-wishlist-share-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+            const panel = document.querySelector('#cf-wishlist-share-panel');
+                panel.classList.toggle('active');
+            });
+        });
+        document.querySelectorAll('#cf-wishlist-copy-link').forEach(button => {
+            button.addEventListener('click', async (e) => {
+                const panel = document.querySelector('#cf-wishlist-share-panel');
+                const input = panel.querySelector('.cf-wishlist-share-link')
+                input.select();input.setSelectionRange(0, 99999);
+                try { await navigator.clipboard.writeText(input.value) } catch(e){}
+            });
+        });
+        document.querySelectorAll('#cf-wishlist-share-panel').forEach(panel => {
+            const nativeShare = document.createElement('button');
+            nativeShare.innerText = 'Share'
+            nativeShare.className = 'cf-wishlist-native-share'
+            panel.appendChild(nativeShare)
+            nativeShare.addEventListener('click', function () {
+                const url = panel.querySelector('.cf-wishlist-share-link').value
+                if (navigator.share) navigator.share({ title: 'Wishlist', url: url });
+            });
+        });
+
+        // fetch(cf_ajax.ajaxurl, {
+        //     method: 'POST',
+        //     body: new URLSearchParams({ action: 'cf_wishlist_share' })
+        // })
+        // .then(r=>r.json())
+        // .then(d=>{
+        //     if (d.status === 'ok') {
+        //         document.querySelector('.cf-wishlist-share-link').value = d.url
+        //     }
+        // })
+
+
+    }
+
+
+
 
 }
 

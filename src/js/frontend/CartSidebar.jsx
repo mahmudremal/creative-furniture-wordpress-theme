@@ -54,9 +54,9 @@ export default function CartSidebar() {
       method: 'POST',
       body: formData
     })
-      .then(res => res.json())
-      .then(() => fetchCart())
-      .catch(err => console.error(err));
+    .then(res => res.json())
+    .then(() => fetchCart())
+    .catch(err => console.error(err));
   };
 
   const removeItem = (itemKey) => {

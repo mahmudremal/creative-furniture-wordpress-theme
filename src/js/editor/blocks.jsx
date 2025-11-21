@@ -5,9 +5,7 @@
 document.addEventListener('DOMContentLoaded', e => {
 
 // (function () {
-    const { MediaUpload, MediaUploadCheck, useBlockProps, InspectorControls,
-        // ServerSideRender
-     } = window.wp.blockEditor;
+    const { MediaUpload, MediaUploadCheck, useBlockProps, InspectorControls } = window.wp.blockEditor;
     const { Button, SelectControl, PanelBody, RangeControl, QueryControls } = window.wp.components;
     var { createElement, Fragment, useState } = window.wp.element;
     const { registerBlockType } = window.wp.blocks;
@@ -204,9 +202,11 @@ document.addEventListener('DOMContentLoaded', e => {
                 });
             };
 
-            const updateHotspot = (index, productId) => {
+            const updateHotspot = (index, productId, product) => {
+                // console.log(product)
                 const newHotspots = [...hotspots];
                 newHotspots[index].productId = parseInt(productId);
+                newHotspots[index].product = { link: product.link, title: product.title?.raw, excerpt: product.excerpt?.raw };
                 setAttributes({ hotspots: newHotspots });
             };
 
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', e => {
                                             ? products.map(p => ({ label: p.title.rendered, value: p.id }))
                                             : []),
                                     ],
-                                    onChange: (value) => updateHotspot(index, value),
+                                    onChange: (value) => updateHotspot(index, value, products.find(p => p.id == value)),
                                 }),
                                 createElement(Button, {
                                     variant: 'link',
@@ -307,19 +307,20 @@ document.addEventListener('DOMContentLoaded', e => {
                         'data-x': hotspot.x,
                         'data-y': hotspot.y,
                         'data-product-id': hotspot.productId,
+                        'data-product-title': hotspot?.product?.title || '',
+                        'data-product-link': hotspot?.product?.link || '',
+                        'data-product-excerpt': hotspot?.product?.excerpt || '',
                         style: {
-                            position: 'absolute',
+                            // position: 'absolute',
                             left: `${hotspot.x}%`,
                             top: `${hotspot.y}%`,
-                            width: '20px',
-                            height: '20px',
-                            // background: 'red',
-                            borderRadius: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            cursor: 'pointer',
+                            // width: '20px',
+                            // height: '20px',
+                            // // background: 'red',
+                            // borderRadius: '50%',
+                            // transform: 'translate(-50%, -50%)',
+                            // cursor: 'pointer',
                         },
-                        // 'data-product': 
-                        // JSON.stringify(hotspot)
                     })
                 )
             );
@@ -711,8 +712,368 @@ document.addEventListener('DOMContentLoaded', e => {
         }
     });
 
+    registerBlockType('creative-furniture/client-logos', {
+        title: __('Client Logos', 'creative-furniture'),
+        icon: 'groups',
+        category: 'creative-furniture',
 
+        attributes: {
+            items: {
+                type: 'array',
+                default: [],
+            }
+        },
 
+        edit: function (props) {
+            const { attributes, setAttributes } = props;
+
+            const addItem = function () {
+                const newItems = attributes.items.slice();
+                newItems.push({
+                    image: '',
+                    link: ''
+                });
+                setAttributes({ items: newItems });
+            };
+
+            const updateItem = function (index, field, value) {
+                const newItems = attributes.items.slice();
+                newItems[index][field] = value;
+                setAttributes({ items: newItems });
+            };
+
+            const removeItem = function (index) {
+                const newItems = attributes.items.slice();
+                newItems.splice(index, 1);
+                setAttributes({ items: newItems });
+            };
+
+            return createElement(
+                Fragment,
+                null,
+                createElement(
+                    InspectorControls,
+                    null,
+                    createElement(
+                        PanelBody,
+                        { title: __('Add Logos', 'creative-furniture'), initialOpen: true },
+                        createElement(
+                            Button,
+                            {
+                                isPrimary: true,
+                                onClick: addItem
+                            },
+                            __('Add Logo', 'creative-furniture')
+                        )
+                    )
+                ),
+
+                createElement(
+                    'div',
+                    props.useBlockProps ? props.useBlockProps() : { className: 'cf-client-logos-editor' },
+
+                    attributes.items.map(function (item, index) {
+                        return createElement(
+                            'div',
+                            { className: 'cf-client-logo-item', key: index },
+
+                            // Image Upload
+                            createElement(
+                                MediaUploadCheck,
+                                null,
+                                createElement(MediaUpload, {
+                                    onSelect: function (media) {
+                                        updateItem(index, 'image', media.url);
+                                    },
+                                    allowedTypes: ['image'],
+                                    value: item.image,
+                                    render: function (obj) {
+                                        return createElement(
+                                            Button,
+                                            {
+                                                className: 'cf-client-logo-upload',
+                                                onClick: obj.open
+                                            },
+                                            item.image
+                                                ? createElement('img', { src: item.image, style: { width: '80px' } })
+                                                : __('Upload Logo', 'creative-furniture')
+                                        );
+                                    }
+                                })
+                            ),
+
+                            // Link Input
+                            createElement('input', {
+                                type: 'text',
+                                className: 'cf-client-logo-link-input',
+                                placeholder: __('Custom link (optional)', 'creative-furniture'),
+                                value: item.link,
+                                onChange: function (e) {
+                                    updateItem(index, 'link', e.target.value);
+                                }
+                            }),
+
+                            // Remove button
+                            createElement(
+                                Button,
+                                {
+                                    isDestructive: true,
+                                    onClick: function () { removeItem(index); }
+                                },
+                                __('Remove', 'creative-furniture')
+                            )
+                        );
+                    })
+                )
+            );
+        },
+
+        save: function (props) {
+            const items = props.attributes.items || [];
+
+            return createElement(
+                'div',
+                { className: 'cf-client-logos-slider' },
+
+                createElement(
+                    'div',
+                    { className: 'cf-client-logos-track' },
+
+                    items.map(function (item, index) {
+                        const img = createElement('img', {
+                            src: item.image,
+                            className: 'cf-client-logo-img',
+                            alt: ''
+                        });
+
+                        return createElement(
+                            'div',
+                            { className: 'cf-client-logo-wrapper', key: index },
+
+                            item.link
+                                ? createElement('a', { href: item.link, target: '_blank', rel: 'noopener' }, img)
+                                : img
+                        );
+                    })
+                )
+            );
+        }
+    });
+
+registerBlockType('creative-furniture/sell-with-us', {
+    title: __('Sell With US', 'creative-furniture'),
+    icon: 'feedback',
+    category: 'widgets',
+    edit() {
+        const blockProps = useBlockProps()
+        const [fullName, setFullName] = useState('')
+        const [email, setEmail] = useState('')
+        const [phone, setPhone] = useState('')
+        const [category, setCategory] = useState('')
+        const [description, setDescription] = useState('')
+
+        return createElement(
+            'div',
+            blockProps,
+            createElement(
+                'form',
+                { className: 'sell-with-us' },
+                createElement(
+                    'div',
+                    { className: 'form-row' },
+                    createElement('input', {
+                        type: 'text',
+                        placeholder: 'Full Name / Company Name *',
+                        value: fullName,
+                        onChange: e => setFullName(e.target.value)
+                    }),
+                    createElement('input', {
+                        type: 'email',
+                        placeholder: 'Business Email *',
+                        value: email,
+                        onChange: e => setEmail(e.target.value)
+                    })
+                ),
+                createElement(
+                    'div',
+                    { className: 'form-row' },
+                    createElement('input', {
+                        type: 'text',
+                        placeholder: 'Phone Number',
+                        value: phone,
+                        onChange: e => setPhone(e.target.value)
+                    }),
+                    createElement(
+                        'select',
+                        {
+                            value: category,
+                            onChange: e => setCategory(e.target.value)
+                        },
+                        createElement('option', { value: '' }, 'Select Services'),
+                        createElement('option', { value: 'design' }, 'Design'),
+                        createElement('option', { value: 'marketing' }, 'Marketing'),
+                        createElement('option', { value: 'consulting' }, 'Consulting')
+                    )
+                ),
+                createElement('textarea', {
+                    placeholder: 'Briefly describe your business *',
+                    value: description,
+                    onChange: e => setDescription(e.target.value)
+                }),
+                createElement(
+                    'div',
+                    { className: 'agree-row' },
+                    createElement('input', {
+                        type: 'checkbox'
+                    }),
+                    createElement(
+                        'span',
+                        null,
+                        'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                    )
+                ),
+                createElement(
+                    'button',
+                    { type: 'submit', className: 'submit-btn' },
+                    'Submit'
+                )
+            )
+        )
+    },
+    save() {
+        const blockProps = useBlockProps.save()
+        return createElement(
+            'div',
+            blockProps,
+            createElement(
+                'form',
+                { className: 'business-form' },
+                createElement(
+                    'div',
+                    { className: 'form-row' },
+                    createElement('input', {
+                        type: 'text',
+                        placeholder: 'Full Name / Company Name *'
+                    }),
+                    createElement('input', {
+                        type: 'email',
+                        placeholder: 'Business Email *'
+                    })
+                ),
+                createElement(
+                    'div',
+                    { className: 'form-row' },
+                    createElement('input', {
+                        type: 'text',
+                        placeholder: 'Phone Number'
+                    }),
+                    createElement(
+                        'select',
+                        null,
+                        createElement('option', { value: '' }, 'Select Services'),
+                        createElement('option', { value: 'design' }, 'Design'),
+                        createElement('option', { value: 'marketing' }, 'Marketing'),
+                        createElement('option', { value: 'consulting' }, 'Consulting')
+                    )
+                ),
+                createElement('textarea', {
+                    placeholder: 'Briefly describe your business *'
+                }),
+                createElement(
+                    'div',
+                    { className: 'agree-row' },
+                    createElement('input', {
+                        type: 'checkbox'
+                    }),
+                    createElement(
+                        'span',
+                        null,
+                        'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                    )
+                ),
+                createElement(
+                    'button',
+                    { type: 'submit', className: 'submit-btn' },
+                    'Submit'
+                )
+            )
+        )
+    }
+});
+
+registerBlockType('creative-furniture/contact-form', {
+    title: __('Contact Form', 'creative-furniture'),
+    icon: 'email',
+    category: 'widgets',
+    edit: () => {
+        const blockProps = useBlockProps();
+        const [firstName, setFirstName] = useState('');
+        const [lastName, setLastName] = useState('');
+        const [email, setEmail] = useState('');
+        const [phone, setPhone] = useState('');
+        const [message, setMessage] = useState('');
+        const [agree, setAgree] = useState(true);
+
+        return createElement('div', { ...blockProps, className: 'contact-form-block' },
+            createElement('div', { className: 'contact-form-row' },
+                createElement(TextControl, {
+                    label: 'First Name *',
+                    value: firstName,
+                    onChange: setFirstName
+                }),
+                createElement(TextControl, {
+                    label: 'Last Name *',
+                    value: lastName,
+                    onChange: setLastName
+                })
+            ),
+            createElement('div', { className: 'contact-form-row' },
+                createElement(TextControl, {
+                    label: 'Email Address *',
+                    value: email,
+                    onChange: setEmail
+                }),
+                createElement(TextControl, {
+                    label: 'Phone Number',
+                    value: phone,
+                    onChange: setPhone
+                })
+            ),
+            createElement(TextControl, {
+                label: 'Message *',
+                value: message,
+                onChange: setMessage,
+                multiline: true
+            }),
+            createElement(CheckboxControl, {
+                label: 'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.',
+                checked: agree,
+                onChange: setAgree
+            }),
+            createElement(Button, { isPrimary: true }, 'Submit')
+        );
+    },
+    save: () => {
+        return createElement('div', { className: 'contact-form-block' },
+            createElement('form', {},
+                createElement('div', { className: 'contact-form-row' },
+                    createElement('input', { type: 'text', placeholder: 'First Name', required: true }),
+                    createElement('input', { type: 'text', placeholder: 'Last Name', required: true })
+                ),
+                createElement('div', { className: 'contact-form-row' },
+                    createElement('input', { type: 'email', placeholder: 'Email Address', required: true }),
+                    createElement('input', { type: 'tel', placeholder: 'Phone Number' })
+                ),
+                createElement('textarea', { placeholder: 'Type your message here', required: true }),
+                createElement('label', {},
+                    createElement('input', { type: 'checkbox', required: true }),
+                    ' By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                ),
+                createElement('button', { type: 'submit' }, 'Submit')
+            )
+        );
+    }
+});
 
 
 

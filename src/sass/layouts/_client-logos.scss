@@ -1,0 +1,61 @@
+.cf-client-logos-slider {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.cf-client-logos-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    padding: 0 40px;
+}
+
+.cf-client-logo-wrapper {
+    flex: 0 0 auto;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img.cf-client-logo-img {
+        width: 110px;
+        height: auto;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/* Editor styles */
+.cf-client-logos-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cf-client-logo-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cf-client-logo-upload {
+    min-width: 100px;
+}
+
+.cf-client-logo-link-input {
+    width: 200px;
+}

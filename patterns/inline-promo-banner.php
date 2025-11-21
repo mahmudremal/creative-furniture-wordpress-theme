@@ -1,8 +1,10 @@
 <?php
 /**
  * Title: Promo Banner Section
- * Slug: yourtheme/promo-banner
- * Categories: banner, promotion
+ * Slug: creative-furniture/promo-banner
+ * Categories: banner, promotion, creative-furniture
+ * Keywords: furniture, hero, creative-furniture
+ * Description: Promo section for two block of offer
  */
 
 ?>

@@ -16,10 +16,16 @@
     }
 }
 
-.cf-product-gallery {
-    // .woocommerce-product-gallery {
-    //     width: 100%;
-    // }
+.cf-product {
+    &-gallery {
+        top: 2rem;
+        position: sticky;
+        height: fit-content;
+        
+        .woocommerce-product-gallery {
+            width: 100%;
+        }
+    }
 }
 
 .cf-product-details {

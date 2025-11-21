@@ -111,20 +111,27 @@
       height: 20px;
       color: #333;
       transition: all 0.2s;
+      path {
+        stroke: #717171;
+      }
     }
 
     &:hover {
       transform: scale(1.1);
       
       svg {
-        color: #e74c3c;
+        path {
+          stroke: #e74c3c;
+        }
       }
     }
 
     &.active {
       svg {
         fill: #e74c3c;
-        color: #e74c3c;
+        path {
+          stroke: #e74c3c;
+        }
       }
     }
   }

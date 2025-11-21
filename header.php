@@ -88,15 +88,15 @@
 
                         </div>
 
-                        <a href="#" class="header-icon" aria-label="Wishlist">
+                        <a href="<?php echo esc_url(home_url('/wishlist')); ?>" class="header-icon wishlist <?php echo esc_attr(function_exists('cf_wishlist_has_any') && cf_wishlist_has_any() ? 'contains' : ''); ?>" aria-label="Wishlist">
                             <?php footer_block_svg_icon_print('heart'); ?>
                         </a>
 
-                        <a href="<?php echo esc_url(get_permalink(wc_get_page_id('myaccount'))); ?>" class="header-icon" aria-label="Account">
+                        <a href="<?php echo esc_url(get_permalink(wc_get_page_id('myaccount'))); ?>" class="header-icon myaccount" aria-label="Account">
                             <?php footer_block_svg_icon_print('user'); ?>
                         </a>
 
-                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header-icon" aria-label="Cart" data-cart-toggle="true">
+                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="header-icon cart" aria-label="Cart" data-cart-toggle="true">
                             <?php footer_block_svg_icon_print('bag'); ?>
                         </a>
                     </div>

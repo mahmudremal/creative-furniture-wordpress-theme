@@ -219,6 +219,22 @@
       width: 24px;
       height: 24px;
     }
+
+    
+    &.wishlist {
+      svg {
+        path {
+          stroke: #717171;
+        }
+      }
+      &.contains {
+        svg {
+          path {
+            stroke: #e74c3c;
+          }
+        }
+      }
+    }
   }
 }
 

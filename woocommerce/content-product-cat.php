@@ -1,10 +1,4 @@
 <?php
-/**
- * Template for displaying product category thumbnails within loops
- * Copied and customized from WooCommerce
- *
- * @package YourTheme\WooCommerce
- */
 
 defined( 'ABSPATH' ) || exit;
 

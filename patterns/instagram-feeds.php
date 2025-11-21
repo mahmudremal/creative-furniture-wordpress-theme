@@ -11,7 +11,7 @@ $banner_bg = get_template_directory_uri() . '/dist/images/promo-banner.jpg';
 
 ?>
 <!-- wp:group {"align":"full","className":"creative-furniture-section"} -->
-<div class="wp-block-group alignfull creative-furniture-section">
+<div class="wp-block-group alignfull container-fluid creative-furniture-section">
     <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
     <div class="wp-block-group">
         <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->

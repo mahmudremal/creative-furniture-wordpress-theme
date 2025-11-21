@@ -40,7 +40,7 @@ if ( $product->is_type( 'variable' ) ) {
 				<span class="product-badge out-of-stock-badge"><?php esc_html_e( 'Out of Stock', 'creative-furniture' ); ?></span>
 			<?php endif; ?>
 
-			<button type="button" class="product-wishlist-btn" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Add to wishlist">
+			<button type="button" class="product-wishlist-btn <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Add to wishlist">
 				<?php footer_block_svg_icon_print('heart'); ?>
 			</button>
 

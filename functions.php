@@ -137,10 +137,10 @@ add_action( 'widgets_init', 'creative_furniture_widgets_init' );
  * Enqueue scripts and styles.
  */
 function creative_furniture_scripts() {
-	wp_enqueue_style( 'creative-furniture-style', get_stylesheet_uri(), [], _S_VERSION );
-	wp_style_add_data( 'creative-furniture-style', 'rtl', 'replace' );
+	// wp_enqueue_style( 'creative-furniture-style', get_stylesheet_uri(), [], _S_VERSION );
+	// wp_style_add_data( 'creative-furniture-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true );
+	// wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true );
 	if (file_exists(get_template_directory() . '/dist/css/public.css')) {
 		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], null, 'all');
 	}
@@ -150,7 +150,8 @@ function creative_furniture_scripts() {
 	wp_localize_script('creative-furniture-public', 'cfStore', [
 		'ajax_url' => admin_url('admin-ajax.php'),
 		'add_to_cart_nonce' => wp_create_nonce('cf-add-to-cart'),
-		'get_variation_nonce' => wp_create_nonce('cf-get-variation')
+		'get_variation_nonce' => wp_create_nonce('cf-get-variation'),
+		'update_cart_nonce' => is_cart() ? wp_create_nonce('update-cart') : '',
 	]);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -196,9 +197,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
-}
-if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/multi-currency.php';
+	require get_template_directory() . '/inc/wishlist.php';
+	require get_template_directory() . '/inc/seller-dashboard.php';
 }
 
 
@@ -212,7 +213,6 @@ function footer_block_svg_icon_print($icon) {
 	<img src="<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/'. $icon .'.svg'); ?>" width="40" height="40" />
 	<?php
 }
-
 
 
 // function register_shop_filters_sidebar() {
