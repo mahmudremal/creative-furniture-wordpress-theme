@@ -36,16 +36,17 @@
   }
 
   &__close {
+    padding: 0;
     width: 32px;
     height: 32px;
-    background: #F6F6F6;
     border: none;
-    border-radius: 90px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
     flex-shrink: 0;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 90px;
+    background: #F6F6F6;
+    justify-content: center;
 
     svg {
       width: 16px;
@@ -60,6 +61,108 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    .form {
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      
+      &-row {
+        gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      &-block {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &-starts {
+          gap: 15px;
+          display: flex;
+
+          &:hover {
+            path {
+              fill: #FD9C2D;
+            }
+          }
+          
+          > label {
+            svg {
+              cursor: pointer;
+              
+              path {
+                fill: #EAE0D5;
+              }
+            }
+            
+            &:hover {
+              ~ label path {
+                fill: #EAE0D5;
+              }
+            }
+            &.selected {
+              path {
+                fill: #FD9C2D;
+              }
+            }
+          }
+
+          &-input {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+
+        input[type=text], textarea {
+          width: 100%;
+          min-width: 100%;
+          padding: 5px 10px;
+          border-radius: 7px;
+        }
+      }
+    }
+
+    .review-success {
+      text-align: center;
+      padding: 30px 20px;
+
+      &__icon {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 20px;
+        border-radius: 100px;
+        background: #9D8465;
+        justify-content: center;
+        border: 8px solid #F6E8D6;
+
+        svg {
+          width: 34px;
+          height: 34px;
+        }
+      }
+
+      &__title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__footer {

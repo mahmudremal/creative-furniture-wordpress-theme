@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 // (function () {
     const { MediaUpload, MediaUploadCheck, useBlockProps, InspectorControls } = window.wp.blockEditor;
-    const { Button, SelectControl, PanelBody, RangeControl, QueryControls } = window.wp.components;
+    const { Button, SelectControl, PanelBody, RangeControl, QueryControls, TextControl } = window.wp.components;
     var { createElement, Fragment, useState } = window.wp.element;
     const { registerBlockType } = window.wp.blocks;
     const { useSelect } = window.wp.data;
@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', e => {
             );
         }
     });
+    
     registerBlockType('creative-furniture/image-hotspot', {
         title: __('Image Hotspot Block', 'creative-furniture'),
         icon: 'image-flip-horizontal',
@@ -326,6 +327,7 @@ document.addEventListener('DOMContentLoaded', e => {
             );
         },
     });
+
     registerBlockType('creative-furniture/video-promo-banner', {
         title: __('Video Promo Banner', 'creative-furniture'),
         icon: 'format-video',
@@ -860,146 +862,284 @@ document.addEventListener('DOMContentLoaded', e => {
         }
     });
 
-registerBlockType('creative-furniture/sell-with-us', {
-    title: __('Sell With US', 'creative-furniture'),
-    icon: 'feedback',
-    category: 'widgets',
-    edit() {
-        const blockProps = useBlockProps()
-        const [fullName, setFullName] = useState('')
-        const [email, setEmail] = useState('')
-        const [phone, setPhone] = useState('')
-        const [category, setCategory] = useState('')
-        const [description, setDescription] = useState('')
+    registerBlockType('creative-furniture/sell-with-us', {
+        title: __('Sell With US', 'creative-furniture'),
+        icon: 'feedback',
+        category: 'widgets',
+        edit: () => {
+            const blockProps = useBlockProps();
+            const [fullName, setFullName] = useState('');
+            const [email, setEmail] = useState('');
+            const [phone, setPhone] = useState('');
+            const [category, setCategory] = useState('');
+            const [description, setDescription] = useState('');
 
-        return createElement(
-            'div',
-            blockProps,
-            createElement(
-                'form',
-                { className: 'sell-with-us' },
+            return createElement(
+                'div',
+                blockProps,
                 createElement(
-                    'div',
-                    { className: 'form-row' },
-                    createElement('input', {
-                        type: 'text',
-                        placeholder: 'Full Name / Company Name *',
-                        value: fullName,
-                        onChange: e => setFullName(e.target.value)
-                    }),
-                    createElement('input', {
-                        type: 'email',
-                        placeholder: 'Business Email *',
-                        value: email,
-                        onChange: e => setEmail(e.target.value)
-                    })
-                ),
-                createElement(
-                    'div',
-                    { className: 'form-row' },
-                    createElement('input', {
-                        type: 'text',
-                        placeholder: 'Phone Number',
-                        value: phone,
-                        onChange: e => setPhone(e.target.value)
+                    'form',
+                    { className: 'sell-with-us' },
+                    createElement(
+                        'div',
+                        { className: 'form-row' },
+                        createElement('label', null, 'Full Name / Company Name *'),
+                        createElement('input', {
+                            type: 'text',
+                            name: 'full_name',
+                            placeholder: 'Full Name / Company Name *',
+                            value: fullName,
+                            onChange: e => setFullName(e.target.value)
+                        }),
+                        createElement('label', null, 'Business Email *'),
+                        createElement('input', {
+                            type: 'email',
+                            name: 'email',
+                            placeholder: 'Business Email *',
+                            value: email,
+                            onChange: e => setEmail(e.target.value)
+                        })
+                    ),
+                    createElement(
+                        'div',
+                        { className: 'form-row' },
+                        createElement('label', null, 'Phone Number'),
+                        createElement('input', {
+                            type: 'text',
+                            name: 'phone',
+                            placeholder: 'Phone Number',
+                            value: phone,
+                            onChange: e => setPhone(e.target.value)
+                        }),
+                        createElement('label', null, 'Select Services'),
+                        createElement(
+                            'select',
+                            {
+                                value: category,
+                                name: 'service',
+                                onChange: e => setCategory(e.target.value)
+                            },
+                            createElement('option', { value: '' }, 'Select Services'),
+                            createElement('option', { value: 'design' }, 'Design'),
+                            createElement('option', { value: 'marketing' }, 'Marketing'),
+                            createElement('option', { value: 'consulting' }, 'Consulting')
+                        )
+                    ),
+                    createElement('label', null, 'Briefly describe your business *'),
+                    createElement('textarea', {
+                        placeholder: 'Briefly describe your business *',
+                        value: description,
+                        name: 'brief',
+                        onChange: e => setDescription(e.target.value)
                     }),
                     createElement(
-                        'select',
-                        {
-                            value: category,
-                            onChange: e => setCategory(e.target.value)
-                        },
-                        createElement('option', { value: '' }, 'Select Services'),
-                        createElement('option', { value: 'design' }, 'Design'),
-                        createElement('option', { value: 'marketing' }, 'Marketing'),
-                        createElement('option', { value: 'consulting' }, 'Consulting')
-                    )
-                ),
-                createElement('textarea', {
-                    placeholder: 'Briefly describe your business *',
-                    value: description,
-                    onChange: e => setDescription(e.target.value)
-                }),
-                createElement(
-                    'div',
-                    { className: 'agree-row' },
-                    createElement('input', {
-                        type: 'checkbox'
-                    }),
+                        'label',
+                        { className: 'agree-row' },
+                        createElement('input', {
+                            type: 'checkbox',
+                            name: 'agree',
+                        }),
+                        createElement(
+                            'span',
+                            null,
+                            'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                        )
+                    ),
                     createElement(
-                        'span',
-                        null,
-                        'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                        'button',
+                        { type: 'submit', className: 'submit-btn' },
+                        'Submit'
                     )
-                ),
-                createElement(
-                    'button',
-                    { type: 'submit', className: 'submit-btn' },
-                    'Submit'
                 )
             )
-        )
-    },
-    save() {
-        const blockProps = useBlockProps.save()
-        return createElement(
-            'div',
-            blockProps,
-            createElement(
-                'form',
-                { className: 'business-form' },
+        },
+        save: () => {
+            const blockProps = useBlockProps.save()
+            return createElement(
+                'div',
+                blockProps,
                 createElement(
-                    'div',
-                    { className: 'form-row' },
-                    createElement('input', {
-                        type: 'text',
-                        placeholder: 'Full Name / Company Name *'
-                    }),
-                    createElement('input', {
-                        type: 'email',
-                        placeholder: 'Business Email *'
-                    })
-                ),
-                createElement(
-                    'div',
-                    { className: 'form-row' },
-                    createElement('input', {
-                        type: 'text',
-                        placeholder: 'Phone Number'
-                    }),
+                    'form',
+                    { className: 'sell-with-us' },
                     createElement(
-                        'select',
-                        null,
-                        createElement('option', { value: '' }, 'Select Services'),
-                        createElement('option', { value: 'design' }, 'Design'),
-                        createElement('option', { value: 'marketing' }, 'Marketing'),
-                        createElement('option', { value: 'consulting' }, 'Consulting')
-                    )
-                ),
-                createElement('textarea', {
-                    placeholder: 'Briefly describe your business *'
-                }),
-                createElement(
-                    'div',
-                    { className: 'agree-row' },
-                    createElement('input', {
-                        type: 'checkbox'
-                    }),
+                        'div',
+                        { className: 'form-row' },
+                        createElement('div', { className: 'form-block' },
+                            createElement('label', null, 'Full Name / Company Name *'),
+                            createElement('input', {
+                                type: 'text',
+                                name: 'full_name',
+                                placeholder: 'Full Name / Company Name *'
+                            }),
+                        ),
+                        createElement('div', { className: 'form-block' },
+                            createElement('label', null, 'Business Email *'),
+                            createElement('input', {
+                                type: 'email',
+                                name: 'email',
+                                placeholder: 'Business Email *'
+                            })
+                        )
+                    ),
                     createElement(
-                        'span',
-                        null,
-                        'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                        'div',
+                        { className: 'form-row' },
+                        createElement('div', { className: 'form-block' },
+                            createElement('label', null, 'Phone Number'),
+                            createElement('input', {
+                                type: 'text',
+                                name: 'phone',
+                                placeholder: 'Phone Number'
+                            })
+                        ),
+                        createElement('div', { className: 'form-block' },
+                            createElement('label', null, 'Select Services'),
+                            createElement(
+                                'select',
+                                { name: 'service' },
+                                createElement('option', { value: '' }, 'Select Services'),
+                                createElement('option', { value: 'design' }, 'Design'),
+                                createElement('option', { value: 'marketing' }, 'Marketing'),
+                                createElement('option', { value: 'consulting' }, 'Consulting')
+                            )
+                        )
+                    ),
+                    createElement('div', { className: 'form-block' },
+                        createElement('label', null, 'Briefly describe your business *'),
+                        createElement('textarea', {
+                            name: 'brief',
+                            placeholder: 'Briefly describe your business *'
+                        }),
+                    ),
+                    createElement('div', { className: 'form-block' },
+                        createElement(
+                            'label',
+                            { className: 'agree-row' },
+                            createElement('input', {
+                                name: 'agree',
+                                type: 'checkbox'
+                            }),
+                            createElement(
+                                'span',
+                                null,
+                                'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                            )
+                        ),
+                    ),
+                    createElement('div', { className: 'form-block' },
+                        createElement(
+                            'button',
+                            { type: 'submit', className: 'submit-btn' },
+                            'Submit'
+                        )
                     )
-                ),
-                createElement(
-                    'button',
-                    { type: 'submit', className: 'submit-btn' },
-                    'Submit'
                 )
             )
-        )
-    }
-});
+        }
+    });
+
+    registerBlockType('creative-furniture/google-map', {
+        title: __('Google Map', 'creative-furniture'),
+        icon: "location-alt",
+        category: "widgets",
+        attributes:{
+            mapTitle:{type:"string",default:"My Business Name"},
+            address:{type:"string",default:"1 Grafton Street, Dublin, Ireland"},
+            coordinates:{type:"string",default:""},
+            view:{type:"string",default:"Map"},
+            zoom:{type:"number",default:400},
+            height:{type:"number",default:600},
+            width:{type:"string",default:"100%"},
+            autofit:{type:"boolean",default:true}
+        },
+        edit:(props)=>{
+            const {attributes,setAttributes} = props
+            const blockProps = useBlockProps()
+            return(
+                createElement(Fragment,{},
+                    createElement(InspectorControls,{},
+                        createElement(PanelBody,{title:"Enter Your Settings"},
+                            createElement(TextControl,{
+                                label:"Title",
+                                value:attributes.mapTitle,
+                                onChange:(v)=>setAttributes({mapTitle:v})
+                            }),
+                            createElement(TextControl,{
+                                label:"Address",
+                                value:attributes.address,
+                                onChange:(v)=>setAttributes({address:v})
+                            }),
+                            createElement(TextControl,{
+                                label:"Coordinates (optional)",
+                                value:attributes.coordinates,
+                                onChange:(v)=>setAttributes({coordinates:v})
+                            }),
+                            createElement(SelectControl,{
+                                label:"Views",
+                                value:attributes.view,
+                                options:[
+                                    {label:"Map",value:"Map"}
+                                ],
+                                onChange:(v)=>setAttributes({view:v})
+                            }),
+                            createElement(RangeControl,{
+                                label:"Zoom",
+                                value:attributes.zoom,
+                                onChange:(v)=>setAttributes({zoom:v}),
+                                min:100,
+                                max:2000
+                            }),
+                            createElement(RangeControl,{
+                                label:"Height",
+                                value:attributes.height,
+                                onChange:(v)=>setAttributes({height:v}),
+                                min:200,
+                                max:1000
+                            }),
+                            createElement(TextControl,{
+                                label:"Width",
+                                value:attributes.width,
+                                onChange:(v)=>setAttributes({width:v})
+                            }),
+                            createElement(SelectControl,{
+                                label:"Auto-fit Width",
+                                value:attributes.autofit?"yes":"no",
+                                options:[{label:"Yes",value:"yes"},{label:"No",value:"no"}],
+                                onChange:(v)=>setAttributes({autofit:v==="yes"})
+                            })
+                        )
+                    ),
+                    createElement("div",{...blockProps,style:{width:attributes.autofit?"100%":attributes.width}},
+                        createElement("iframe",{
+                            width:"100%",
+                            height:attributes.height,
+                            frameBorder:"0",
+                            scrolling:"no",
+                            marginHeight:"0",
+                            marginWidth:"0",
+                            src:`https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
+                        })
+                    )
+                )
+            )
+        },
+        save:(props)=>{
+            const {attributes} = props
+            const blockProps = useBlockProps.save()
+            return createElement("div",{...blockProps,style:{width:attributes.autofit?"100%":attributes.width}},
+                createElement("iframe",{
+                    width:"100%",
+                    height:attributes.height,
+                    frameBorder:"0",
+                    scrolling:"no",
+                    marginHeight:"0",
+                    marginWidth:"0",
+                    src:`https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
+                })
+            )
+            // <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/de/evolkerung-auf-einer-karte-berechnen/">interaktive Bevölkerungskarte</a></iframe></div>
+        }
+    })
 
 registerBlockType('creative-furniture/contact-form', {
     title: __('Contact Form', 'creative-furniture'),
@@ -1074,6 +1214,7 @@ registerBlockType('creative-furniture/contact-form', {
         );
     }
 });
+
 
 
 

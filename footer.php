@@ -13,7 +13,7 @@
             <div class="newsletter-content">
                 <div class="newsletter-text">
                     <h2>Subscribe for Exclusive <em class="font-italic-accent">Deals <br />& Updates</em></h2>
-                    <p>Stay in the loop with discounts, decor ideas, and fresh collections.</p>
+                    <p><?php echo esc_html(__('Stay in the loop with discounts, decor ideas, and fresh collections.', 'creative-furniture')); ?></p>
                 </div>
                 <div class="newsletter-form">
                     <form method="post" action="#" class="subscribe-form">
@@ -35,8 +35,8 @@
                         <?php footer_block_svg_icon_print('free-shipping-car'); ?>
                     </div>
                     <div class="feature-content">
-                        <h4>Free Shipping</h4>
-                        <p>Orders Above AED 1500</p>
+                        <h4><?php echo esc_html(__('Free Shipping', 'creative-furniture')); ?></h4>
+                        <p><?php echo esc_html(__('Orders Above AED 1500', 'creative-furniture')); ?></p>
                     </div>
                 </div>
 
@@ -45,8 +45,8 @@
 						<?php footer_block_svg_icon_print('free-assembly-iocn'); ?>
                     </div>
                     <div class="feature-content">
-                        <h4>Free Assembly</h4>
-                        <p>On all orders</p>
+                        <h4><?php echo esc_html(__('Free Assembly', 'creative-furniture')); ?></h4>
+                        <p><?php echo esc_html(__('On all orders', 'creative-furniture')); ?></p>
                     </div>
                 </div>
 
@@ -55,8 +55,8 @@
 						<?php footer_block_svg_icon_print('warrenty-certificate'); ?>
                     </div>
                     <div class="feature-content">
-                        <h4>Warranty</h4>
-                        <p>One Year Warranty</p>
+                        <h4><?php echo esc_html(__('Warranty', 'creative-furniture')); ?></h4>
+                        <p><?php echo esc_html(__('One Year Warranty', 'creative-furniture')); ?></p>
                     </div>
                 </div>
 
@@ -65,8 +65,8 @@
                         <?php footer_block_svg_icon_print('secure-payment-icon'); ?>
                     </div>
                     <div class="feature-content">
-                        <h4>Secure Payment</h4>
-                        <p>Safe, Fast & Secure</p>
+                        <h4><?php echo esc_html(__('Secure Payment', 'creative-furniture')); ?></h4>
+                        <p><?php echo esc_html(__('Safe, Fast & Secure', 'creative-furniture')); ?></p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="footer-grid">
                 
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3><?php echo esc_html(__('Quick Links', 'creative-furniture')); ?></h3>
                     <?php
                     wp_nav_menu([
                         'theme_location' => 'footer-quick-links',
@@ -86,10 +86,10 @@
                         'menu_class'     => 'footer-menu',
                         'fallback_cb'    => function() {
                             echo '<ul class="footer-menu">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Shop All</a></li>
-                                <li><a href="#">Blog / Inspiration</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="' . esc_attr(home_url('/about-us')) . '">' . esc_html(__('About Us', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(wc_get_page_permalink('shop')) . '">' . esc_html(__('Shop All', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(get_option('page_for_posts')) . '">' . esc_html(__('Blog / Inspiration', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(home_url('/contact')) . '">' . esc_html(__('Contact Us', 'creative-furniture')) . '</a></li>
                             </ul>';
                         }
                     ]);
@@ -97,7 +97,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3>Customer Care</h3>
+                    <h3><?php echo esc_html(__('Customer Care', 'creative-furniture')); ?></h3>
                     <?php
                     wp_nav_menu([
                         'theme_location' => 'footer-customer-care',
@@ -105,10 +105,10 @@
                         'menu_class'     => 'footer-menu',
                         'fallback_cb'    => function() {
                             echo '<ul class="footer-menu">
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Shipping & Delivery</a></li>
-                                <li><a href="#">Returns & Refunds</a></li>
-                                <li><a href="#">Track Your Order</a></li>
+                                <li><a href="' . esc_attr(home_url('/faqs')) . '">' . esc_html(__('FAQs', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(home_url('/faqs')) . '">' . esc_html(__('Shipping & Delivery', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(get_privacy_policy_url()) . '">' . esc_html(__('Returns & Refunds', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(home_url('/order-tracking/')) . '">' . esc_html(__('Track Your Order', 'creative-furniture')) . '</a></li>
                             </ul>';
                         }
                     ]);
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3>Support</h3>
+                    <h3><?php echo esc_html(__('Support', 'creative-furniture')); ?></h3>
                     <?php
                     wp_nav_menu([
                         'theme_location' => 'footer-support',
@@ -124,10 +124,10 @@
                         'menu_class'     => 'footer-menu',
                         'fallback_cb'    => function() {
                             echo '<ul class="footer-menu">
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Cookie Policy</a></li>
+                                <li><a href="' . esc_attr(home_url('/help')) . '">' . esc_html(__('Help Center', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(get_privacy_policy_url()) . '">' . esc_html(__('Terms & Conditions', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(get_privacy_policy_url()) . '">' . esc_html(__('Privacy Policy', 'creative-furniture')) . '</a></li>
+                                <li><a href="' . esc_attr(get_privacy_policy_url()) . '">' . esc_html(__('Cookie Policy', 'creative-furniture')) . '</a></li>
                             </ul>';
                         }
                     ]);
@@ -135,13 +135,13 @@
                 </div>
 
                 <div class="footer-column footer-contact">
-                    <h3>Contact</h3>
+                    <h3><?php echo esc_html(__('Contact', 'creative-furniture')); ?></h3>
                     <div class="contact-info">
                         <div class="contact-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M10 2c-3.3 0-6 2.7-6 6 0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="currentColor"/>
                             </svg>
-                            <p>Office : Al Raihai Tower – Office No J512, 5th Floor – 46th St – next to Movenpick Hotel – Deira – The Town Square – Dubai</p>
+                            <p><?php echo esc_html(__('Office : Al Raihai Tower - Office No J512, 5th Floor - 46th St - next to Movenpick Hotel - Deira - The Town Square - Dubai', 'creative-furniture')); ?></p>
                         </div>
                         <div class="contact-item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -166,7 +166,7 @@
     <div class="footer-bottom">
         <div class="container-fluid">
             <div class="footer-bottom-content">
-                <p class="copyright">&copy; Copyright <?php echo date('Y'); ?> Creative Furniture All Rights Reserved</p>
+                <p class="copyright"><?php echo esc_html(sprintf(__('%s Copyright %s Creative Furniture All Rights Reserved', 'creative-furniture'), '&copy;', date('Y'))); ?></p>
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="Facebook">
                         <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">

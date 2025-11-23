@@ -30,7 +30,7 @@ export default function CartSidebar() {
     const formData = new FormData();
     formData.append('action', 'get_cart_items');
 
-    fetch('/wp-admin/admin-ajax.php', {
+    fetch(window?.cfStore?.ajax_url, {
       method: 'POST',
       body: formData
     })
@@ -50,7 +50,7 @@ export default function CartSidebar() {
     formData.append('cart_item_key', itemKey);
     formData.append('quantity', quantity);
 
-    fetch('/wp-admin/admin-ajax.php', {
+    fetch(window?.cfStore?.ajax_url, {
       method: 'POST',
       body: formData
     })
@@ -64,14 +64,18 @@ export default function CartSidebar() {
     formData.append('action', 'remove_cart_item');
     formData.append('cart_item_key', itemKey);
 
-    fetch('/wp-admin/admin-ajax.php', {
+    fetch(window?.cfStore?.ajax_url, {
       method: 'POST',
       body: formData
     })
-      .then(res => res.json())
-      .then(() => fetchCart())
-      .catch(err => console.error(err));
+    .then(res => res.json())
+    .then(() => fetchCart())
+    .catch(err => console.error(err));
   };
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

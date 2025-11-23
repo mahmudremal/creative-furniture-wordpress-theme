@@ -19,7 +19,7 @@ function add_seller_dashboard_link($items) {
     foreach($items as $key => $value) {
         $new_items[$key] = $value;
         if($key === 'dashboard') {
-            $new_items['seller-dashboard'] = __('Seller Dashboard', 'textdomain');
+            $new_items['seller-dashboard'] = __('Seller Dashboard', 'creative-furniture');
         }
     }
     return $new_items;
@@ -80,42 +80,47 @@ function handle_delete_seller_product() {
     wp_send_json_success('Product deleted successfully');
 }
 
-function get_seller_products($user_id) {
-    $args = array(
+function get_seller_products($user_id, $paged = 1) {
+    $args = [
         'post_type' => 'product',
-        'posts_per_page' => -1,
-        'meta_query' => array(
-            array(
+        'posts_per_page' => 50,
+        'paged' => (int) $paged,
+        'meta_query' => [
+            [
                 'key' => '_seller_id',
                 'value' => $user_id,
                 'compare' => '='
-            )
-        )
-    );
+            ]
+        ]
+    ];
     return get_posts($args);
 }
 
 function get_seller_recent_orders($user_id, $limit = 10) {
     global $wpdb;
     
-    $orders = wc_get_orders(array(
+    $orders = wc_get_orders([
         'limit' => $limit,
         'orderby' => 'date',
         'order' => 'DESC',
-        'status' => array('wc-processing', 'wc-completed', 'wc-pending')
-    ));
+        'status' => [
+            'wc-processing',
+            'wc-completed',
+            'wc-pending'
+        ]
+    ]);
     
-    $seller_orders = array();
+    $seller_orders = [];
     
     foreach($orders as $order) {
         foreach($order->get_items() as $item) {
             $product = $item->get_product();
             if($product && $product->get_meta('_seller_id') == $user_id) {
-                $seller_orders[] = array(
+                $seller_orders[] = [
                     'order' => $order,
                     'item' => $item,
                     'product' => $product
-                );
+                ];
                 break;
             }
         }

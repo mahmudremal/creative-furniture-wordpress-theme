@@ -2,10 +2,16 @@ import axios from 'axios';
 import { lazy, Suspense } from 'react';
 // import { __, tailwind_install } from '@js/utils';
 import { createRoot } from 'react-dom/client';
-import CartSidebar from './CartSidebar';
-import QuickView from './QuickView';
-import FiltersBar from './FiltersBar';
+// import CartSidebar from './CartSidebar';
+// import FiltersBar from './FiltersBar';
+// import QuickView from './QuickView';
+// import OrderView from './OrderView';
 import Slider from './slider';
+
+const CartSidebar = lazy(() => import('./CartSidebar'));
+const FiltersBar = lazy(() => import('./FiltersBar'));
+const QuickView = lazy(() => import('./QuickView'));
+const OrderView = lazy(() => import('./OrderView'));
 
 const __ = (t, d) => t;
 
@@ -32,7 +38,13 @@ class SiteCore {
         this.init_hotspots();
         this.init_client_sliders();
         this.init_logout();
+        this.init_filters();
         this.init_wishlist();
+        this.init_header();
+        this.init_quickview();
+        this.init_myaccount();
+        this.init_sell_with_us_form();
+        this.init_review_actions();
     }
 
     sc_store_frontend() {
@@ -43,8 +55,6 @@ class SiteCore {
             root.render(
                 <Suspense fallback={<div>{__('Loading...')}</div>}>
                     <CartSidebar />
-                    <FiltersBar />
-                    <QuickView />
                 </Suspense>
             );
         }, 1000);
@@ -462,6 +472,34 @@ class SiteCore {
             });
         });
     }
+
+    init_quickview() {
+        if (!document.querySelectorAll('.product-quick-view-btn')?.length) return;
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+        setTimeout(() => {
+            const root = createRoot(container);
+            root.render(
+                <Suspense fallback={<div>{__('Loading...')}</div>}>
+                    <QuickView />
+                </Suspense>
+            );
+        }, 1000);
+    }
+
+    init_filters() {
+        if (!document.querySelectorAll('.filters-toggle')?.length) return;
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+        setTimeout(() => {
+            const root = createRoot(container);
+            root.render(
+                <Suspense fallback={<div>{__('Loading...')}</div>}>
+                    <FiltersBar />
+                </Suspense>
+            );
+        }, 1000);
+    }
     
     init_hotspots() {
         document.querySelectorAll('.image-hotspot-container .hotspot').forEach(hotspot => {
@@ -680,7 +718,133 @@ class SiteCore {
 
     }
 
+    init_header() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const searchToggle = document.querySelector('.search-toggle');
+        const mobileSearchBar = document.querySelector('.mobile-search-bar');
 
+        const openMobileMenu = () => {
+            mobileMenu?.classList.add('active');
+            mobileMenuOverlay?.classList.add('active');
+            mobileMenuToggle?.classList.add('active');
+            document.body.classList.add('mobile-menu-open');
+        };
+
+        const closeMobileMenu = () => {
+            mobileMenu?.classList.remove('active');
+            mobileMenuOverlay?.classList.remove('active');
+            mobileMenuToggle?.classList.remove('active');
+            document.body.classList.remove('mobile-menu-open');
+        };
+
+        const toggleMobileSearch = () => {
+            mobileSearchBar?.classList.toggle('active');
+        };
+
+        mobileMenuToggle?.addEventListener('click', () => {
+            if (mobileMenu?.classList.contains('active')) {
+            closeMobileMenu();
+            } else {
+            openMobileMenu();
+            }
+        });
+
+        mobileMenuClose?.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+        searchToggle?.addEventListener('click', toggleMobileSearch);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu?.classList.contains('active')) {
+            closeMobileMenu();
+            }
+        });
+
+        let startX = 0;
+        let currentX = 0;
+
+        mobileMenu?.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        mobileMenu?.addEventListener('touchmove', (e) => {
+            currentX = e.touches[0].clientX;
+            const diff = startX - currentX;
+            
+            if (diff > 0) {
+            mobileMenu.style.transform = `translateX(-${diff}px)`;
+            }
+        });
+
+        mobileMenu?.addEventListener('touchend', () => {
+            const diff = startX - currentX;
+            
+            if (diff > 100) {
+            closeMobileMenu();
+            }
+            
+            mobileMenu.style.transform = '';
+            startX = 0;
+            currentX = 0;
+        });
+    }
+
+    init_sell_with_us_form() {
+        // Load CSS
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        // css.href = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css';
+        css.href = `${cfStore.dist}/library/css/intlTelInput.css`;
+        document.head.appendChild(css);
+
+        // Load JS
+        const script = document.createElement('script');
+        // script.src = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js';
+        script.src = `${cfStore.dist}/library/js/intlTelInput.min.js`;
+        script.onload = () => {
+            const input = document.querySelector('.sell-with-us [name="phone"]');
+            if (!input) return;
+
+            window.intlTelInput(input, {
+                loadUtils: () =>
+                    // import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js'),
+                    import(`${cfStore.dist}/library/js/utils.js`),
+            });
+        };
+        document.body.appendChild(script);
+    }
+
+    init_myaccount() {
+        if (!document.querySelectorAll('.woocommerce-orders-table__cell-order-actions .woocommerce-button.view')?.length) return;
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+        setTimeout(() => {
+            const root = createRoot(container);
+            root.render(
+                <Suspense fallback={<div>{__('Loading...')}</div>}>
+                    <OrderView />
+                </Suspense>
+            );
+        }, 1000);
+    }
+
+    init_review_actions() {
+        document.querySelectorAll('.review-actions .review-action').forEach(like => {
+            like.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                like.disabled = true;
+                setTimeout(() => {
+                    like.querySelectorAll('path[fill-rule]').forEach(path => {
+                        path.setAttribute('fill-rule', path.getAttribute('fill-rule') == 'evenodd' ? 'nonzero' : 'evenodd');
+                    });
+                    like.disabled = false;
+                }, 1500);
+            })
+        })
+    }
 
 
 }

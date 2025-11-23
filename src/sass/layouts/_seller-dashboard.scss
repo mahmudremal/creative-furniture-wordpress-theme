@@ -55,7 +55,7 @@
   &__icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9d8465 0%, #f4f1e9 100%);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -135,13 +135,13 @@
         font-size: 0.875rem;
 
         a {
-          color: #667eea;
+          color: #9d8465;
           text-decoration: none;
           font-weight: 500;
           transition: color 0.2s ease;
 
           &:hover {
-            color: #764ba2;
+            color: #f4f1e9;
           }
         }
 
@@ -220,7 +220,7 @@
   }
 
   &-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #9d8465 0%, #f4f1e9 100%);
     color: #fff;
 
     &:hover {
@@ -337,7 +337,7 @@
 
       &:focus {
         outline: none;
-        border-color: #667eea;
+        border-color: #9d8465;
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
       }
     }

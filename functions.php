@@ -152,10 +152,11 @@ function creative_furniture_scripts() {
 		'add_to_cart_nonce' => wp_create_nonce('cf-add-to-cart'),
 		'get_variation_nonce' => wp_create_nonce('cf-get-variation'),
 		'update_cart_nonce' => is_cart() ? wp_create_nonce('update-cart') : '',
+		'dist' => get_template_directory_uri() . '/dist',
 	]);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+		wp_enqueue_script('comment-reply');
 	}
 }
 add_action( 'wp_enqueue_scripts', 'creative_furniture_scripts' );

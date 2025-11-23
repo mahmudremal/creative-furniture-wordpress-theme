@@ -265,10 +265,9 @@ function creative_furniture_get_cart_items() {
     ]);
 }
 
-add_action('wp_ajax_get_product_quickview', 'creative_furniture_get_product_quickview');
-add_action('wp_ajax_nopriv_get_product_quickview', 'creative_furniture_get_product_quickview');
-
-function creative_furniture_get_product_quickview() {
+add_action('wp_ajax_get_product_quickview', 'cf_get_product_quickview');
+add_action('wp_ajax_nopriv_get_product_quickview', 'cf_get_product_quickview');
+function cf_get_product_quickview() {
     $product_id = isset($_POST['product_id']) ? intval($_POST['product_id']) : 0;
     
     if (!$product_id) {
@@ -292,24 +291,36 @@ function creative_furniture_get_product_quickview() {
     }
     
     $variations = [];
+
     if ($product->is_type('variable')) {
         $attributes = $product->get_variation_attributes();
-        
+
         foreach ($attributes as $attr_name => $options) {
             $attr_key = sanitize_title($attr_name);
             $variations[$attr_key] = [];
-            
-            if ($attr_key === 'pa_material' || $attr_key === 'material') {
-                foreach ($options as $option) {
-                    $term = get_term_by('slug', $option, $attr_name);
-                    $color = get_term_meta($term->term_id, 'color', true);
-                    $variations['material'][] = [
-                        'name' => $option,
-                        'color' => $color ?: '#cccccc'
+
+            foreach ($options as $option_slug) {
+                $term = get_term_by('slug', $option_slug, $attr_name);
+
+                if (!$term) {
+                    $variations[$attr_key][] = [
+                        'name' => $option_slug,
+                        'color' => null,
+                        'image' => null,
                     ];
+                    continue;
                 }
-            } else {
-                $variations[$attr_key] = $options;
+
+                $color = get_term_meta($term->term_id, 'color', true);
+                $image_id = get_term_meta($term->term_id, 'image', true);
+                $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'medium') : null;
+
+                $variations[$attr_key][] = [
+                    'name'  => $term->name,
+                    'slug'  => $option_slug,
+                    'color' => $color ?: null,
+                    'image' => $image_url,
+                ];
             }
         }
     }
@@ -317,7 +328,7 @@ function creative_furniture_get_product_quickview() {
     wp_send_json([
         'title' => $product->get_name(),
         'price' => $product->get_price_html(),
-        'description' => wp_trim_words($product->get_short_description() ?: $product->get_description(), 30),
+        'description' => wp_trim_words($product->get_short_description() ?: $product->get_description(), 300),
         'images' => $images,
         'variations' => $variations,
         'permalink' => get_permalink($product_id)
@@ -428,18 +439,54 @@ function cf_ajax_get_variation() {
     }
 }
 
+add_action('wp_ajax_cf_get_order_details', 'cf_ajax_get_order_details');
+// add_action('wp_ajax_nopriv_cf_get_order_details', 'cf_ajax_get_order_details');
+function cf_ajax_get_order_details() {
+    $order_id = !empty($_GET['order_id']) ? $_GET['order_id'] : null;
 
+    if (!$order_id) return wp_send_json_error(__('Invalid / Missing Order information.', 'creative-furniture'));
 
+    $order = wc_get_order($order_id);
 
+    if (!$order) return wp_send_json_error(__('Order not found.', 'creative-furniture'));
+    
+    $order_data = [
+        'id' => $order->get_id(),
+        'status' => $order->get_status(),
+        'number' => $order->get_order_number(),
+        'email' => $order->get_billing_email(),
+        'date' => $order->get_date_created()->format('M d, Y'),
+        'time' => $order->get_date_created()->format('g:i A'),
+        'tracking' => home_url('/order-tracking/'),
+        'review_done' => (bool) $order->get_meta('review_done'),
+        'payment_method' => $order->get_payment_method_title(),
+        'items' => array_map(function($item) {
+            $product = $item->get_product();
+            return [
+                'name' => $item->get_name(),
+                'quantity' => $item->get_quantity(),
+                // 'subtotal' => $order->get_formatted_line_subtotal($item),
+                'image' => wp_get_attachment_image_url($product->get_image_id(), 'thumbnail')
+            ];
+        }, array_values($order->get_items())),
+        'shipping' => [
+            'city' => $order->get_shipping_city(),
+            'state' => $order->get_shipping_state(),
+            'postcode' => $order->get_shipping_postcode(),
+            'address' => $order->get_shipping_address_1()
+        ],
+        'totals' => [
+            'shipping' => $order->get_shipping_total(),
+            'total' => $order->get_formatted_order_total(),
+        ]
+    ];
+    
+    wp_send_json_success(['order' => $order_data]);
+}
 
-
-
-
-
-add_action('wp_ajax_get_product_filters', 'get_product_filters_handler');
-add_action('wp_ajax_nopriv_get_product_filters', 'get_product_filters_handler');
-
-function get_product_filters_handler() {
+add_action('wp_ajax_get_product_filters', 'cf_get_product_filters_handler');
+add_action('wp_ajax_nopriv_get_product_filters', 'cf_get_product_filters_handler');
+function cf_get_product_filters_handler() {
     check_ajax_referer('filters_nonce', 'nonce');
     
     $categories = get_terms([
@@ -518,88 +565,183 @@ function get_product_filters_handler() {
     wp_send_json_success($response);
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_filters_scripts');
-function enqueue_filters_scripts() {
-    wp_localize_script('your-react-bundle', 'wpFilters', [
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'nonce' => wp_create_nonce('filters_nonce')
+
+add_action('wp_ajax_customer_order_review', 'cf_handle_customer_order_review');
+add_action('wp_ajax_nopriv_customer_order_review', 'cf_handle_customer_order_review');
+function cf_handle_customer_order_review() {
+    $order_id  = isset($_POST['order_id']) ? intval($_POST['order_id']) : 0;
+    $rating    = isset($_POST['rating']) ? intval($_POST['rating']) : 0;
+    $title     = isset($_POST['title']) ? sanitize_text_field($_POST['title']) : '';
+    $message   = isset($_POST['message']) ? wp_kses_post($_POST['message']) : '';
+
+    if (!$order_id || !$rating) {
+        wp_send_json_error(['msg' => 'Invalid data']);
+    }
+
+    $order = wc_get_order($order_id);
+
+    if (!$order) {
+        wp_send_json_error(['msg' => 'Order not found']);
+    }
+
+    foreach ($order->get_items() as $item) {
+
+        $product_id = $item->get_product_id();
+
+        if (!$product_id) {
+            continue;
+        }
+
+        $commentdata = [
+            'comment_post_ID'      => $product_id,
+            'comment_author'       => $order->get_billing_first_name() . ' ' . $order->get_billing_last_name(),
+            'comment_author_email' => $order->get_billing_email(),
+            'comment_content'      => $message,
+            'comment_type'         => 'review',
+            'comment_approved'     => 1,
+        ];
+
+        $comment_id = wp_insert_comment($commentdata);
+
+        if ($comment_id) {
+            update_comment_meta($comment_id, 'rating', $rating);
+            update_comment_meta($comment_id, 'title', $title);
+        }
+    }
+
+    $timestamp = time();
+    $order->update_meta_data('review_done', $timestamp);
+    $order->save();
+
+    wp_send_json_success([
+        'msg'          => 'Review submitted',
+        'review_done'  => $timestamp,
     ]);
 }
 
-add_action('pre_get_posts', 'apply_product_filters');
-function apply_product_filters($query) {
-    if (!is_admin() && $query->is_main_query() && (is_shop() || is_product_category())) {
-        
-        if (isset($_GET['category'])) {
-            $cats = explode(',', sanitize_text_field($_GET['category']));
-            $query->set('tax_query', array_merge(
-                $query->get('tax_query') ?: [],
-                [[
-                    'taxonomy' => 'product_cat',
-                    'field' => 'slug',
-                    'terms' => $cats
-                ]]
-            ));
+
+
+add_action('pre_get_posts', 'cf_apply_custom_product_filters');
+function cf_apply_custom_product_filters($query) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if (!is_post_type_archive('product') && !is_tax(get_object_taxonomies('product'))) {
+        return;
+    }
+
+    $tax_query = $query->get('tax_query') ?: [];
+    $meta_query = $query->get('meta_query') ?: [];
+
+    if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
+        $categories = is_array($_GET['product_cat']) 
+            ? $_GET['product_cat'] 
+            : explode(',', $_GET['product_cat']);
+        $tax_query[] = [
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => array_map('sanitize_text_field', $categories),
+            'operator' => 'IN',
+        ];
+    }
+
+    if (isset($_GET['product_tag']) && !empty($_GET['product_tag'])) {
+        $tags = is_array($_GET['product_tag']) 
+            ? $_GET['product_tag'] 
+            : explode(',', $_GET['product_tag']);
+        $tax_query[] = [
+            'taxonomy' => 'product_tag',
+            'field' => 'slug',
+            'terms' => array_map('sanitize_text_field', $tags),
+            'operator' => 'IN',
+        ];
+    }
+
+    $attributes = wc_get_attribute_taxonomies();
+    foreach ($attributes as $attribute) {
+        $taxonomy = 'pa_' . $attribute->attribute_name;
+        if (isset($_GET[$taxonomy]) && !empty($_GET[$taxonomy])) {
+            $terms = is_array($_GET[$taxonomy]) 
+                ? $_GET[$taxonomy] 
+                : explode(',', $_GET[$taxonomy]);
+            $tax_query[] = [
+                'taxonomy' => $taxonomy,
+                'field' => 'slug',
+                'terms' => array_map('sanitize_text_field', $terms),
+                'operator' => 'IN',
+            ];
         }
-        
-        if (isset($_GET['color'])) {
-            $colors = explode(',', sanitize_text_field($_GET['color']));
-            $query->set('tax_query', array_merge(
-                $query->get('tax_query') ?: [],
-                [[
-                    'taxonomy' => 'pa_color',
-                    'field' => 'slug',
-                    'terms' => $colors
-                ]]
-            ));
+    }
+
+    if (!empty($tax_query)) {
+        $tax_query['relation'] = 'AND';
+        $query->set('tax_query', $tax_query);
+    }
+
+    $min_price = isset($_GET['min_price']) ? floatval($_GET['min_price']) : '';
+    $max_price = isset($_GET['max_price']) ? floatval($_GET['max_price']) : '';
+
+    if ($min_price !== '' || $max_price !== '') {
+        $price_query = ['relation' => 'AND'];
+
+        if ($min_price !== '') {
+            $price_query[] = [
+                'key' => '_price',
+                'value' => $min_price,
+                'type' => 'NUMERIC',
+                'compare' => '>=',
+            ];
         }
-        
-        if (isset($_GET['finish'])) {
-            $finishes = explode(',', sanitize_text_field($_GET['finish']));
-            $query->set('tax_query', array_merge(
-                $query->get('tax_query') ?: [],
-                [[
-                    'taxonomy' => 'pa_finish',
-                    'field' => 'slug',
-                    'terms' => $finishes
-                ]]
-            ));
+
+        if ($max_price !== '') {
+            $price_query[] = [
+                'key' => '_price',
+                'value' => $max_price,
+                'type' => 'NUMERIC',
+                'compare' => '<=',
+            ];
         }
+
+        $meta_query[] = $price_query;
+        $query->set('meta_query', $meta_query);
+    }
+
+    if (isset($_GET['orderby'])) {
+        $orderby = sanitize_text_field($_GET['orderby']);
         
-        if (isset($_GET['tag'])) {
-            $tags = explode(',', sanitize_text_field($_GET['tag']));
-            $query->set('tax_query', array_merge(
-                $query->get('tax_query') ?: [],
-                [[
-                    'taxonomy' => 'product_tag',
-                    'field' => 'slug',
-                    'terms' => $tags
-                ]]
-            ));
-        }
-        
-        if (isset($_GET['min_price']) || isset($_GET['max_price'])) {
-            $meta_query = $query->get('meta_query') ?: [];
-            
-            if (isset($_GET['min_price'])) {
-                $meta_query[] = [
-                    'key' => '_price',
-                    'value' => floatval($_GET['min_price']),
-                    'compare' => '>=',
-                    'type' => 'NUMERIC'
-                ];
-            }
-            
-            if (isset($_GET['max_price'])) {
-                $meta_query[] = [
-                    'key' => '_price',
-                    'value' => floatval($_GET['max_price']),
-                    'compare' => '<=',
-                    'type' => 'NUMERIC'
-                ];
-            }
-            
-            $query->set('meta_query', $meta_query);
+        switch ($orderby) {
+            case 'popularity':
+                $query->set('meta_key', 'total_sales');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'DESC');
+                break;
+            case 'rating':
+                $query->set('meta_key', '_wc_average_rating');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'DESC');
+                break;
+            case 'date':
+                $query->set('orderby', 'date');
+                $query->set('order', 'DESC');
+                break;
+            case 'price':
+                $query->set('meta_key', '_price');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'ASC');
+                break;
+            case 'price-desc':
+                $query->set('meta_key', '_price');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'DESC');
+                break;
+            default:
+                $query->set('orderby', 'menu_order');
+                $query->set('order', 'ASC');
+                break;
         }
     }
 }
+
+
+
