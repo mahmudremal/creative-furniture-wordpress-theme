@@ -6,3 +6,13 @@ h5,
 h6 {
 	clear: both;
 }
+
+.wp-block-heading {
+	font-size: 30px;
+	font-weight: 600;
+	font-family: "Aspekta", sans-serif;
+
+	em {
+		font-family: 'Playfair Display', serif;
+	}
+}

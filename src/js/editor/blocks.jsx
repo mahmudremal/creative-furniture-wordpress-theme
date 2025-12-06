@@ -4,9 +4,9 @@
 
 document.addEventListener('DOMContentLoaded', e => {
 
-// (function () {
+    // (function () {
     const { MediaUpload, MediaUploadCheck, useBlockProps, InspectorControls } = window.wp.blockEditor;
-    const { Button, SelectControl, PanelBody, RangeControl, QueryControls, TextControl } = window.wp.components;
+    const { Button, SelectControl, PanelBody, RangeControl, QueryControls, TextControl, CheckboxControl } = window.wp.components;
     var { createElement, Fragment, useState } = window.wp.element;
     const { registerBlockType } = window.wp.blocks;
     const { useSelect } = window.wp.data;
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', e => {
             );
         }
     });
-    
+
     registerBlockType('creative-furniture/image-hotspot', {
         title: __('Image Hotspot Block', 'creative-furniture'),
         icon: 'image-flip-horizontal',
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
             return createElement('div', { className: 'cf-video-hover-bg editor-view', style: { minHeight: '300px', padding: '20px', border: '1px dashed #ccc', backgroundImage: imageUrl ? `url(${imageUrl})` : 'none', backgroundSize: 'cover' } },
                 createElement('h4', null, __('Video Background Block')),
-                
+
                 createElement(MediaUploadCheck, null,
                     createElement(MediaUpload, {
                         onSelect: onSelectImage,
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', e => {
                         render: ({ open }) => createElement(Button, { isPrimary: true, onClick: open }, imageUrl ? __('Change Image Thumbnail') : __('Select Image Thumbnail'))
                     })
                 ),
-                
+
                 createElement(MediaUploadCheck, null,
                     createElement(MediaUpload, {
                         onSelect: onSelectVideo,
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', e => {
                         render: ({ open }) => createElement(Button, { isSecondary: true, onClick: open, style: { marginLeft: '10px' } }, videoUrl ? __('Change Video URL') : __('Select Video Background'))
                     })
                 ),
-                
+
                 imageUrl && createElement('p', null, `Image URL: ${imageUrl}`),
                 videoUrl && createElement('p', null, `Video URL: ${videoUrl}`)
             );
@@ -373,38 +373,38 @@ document.addEventListener('DOMContentLoaded', e => {
         save: function (props) {
             const { attributes } = props;
             const { imageUrl, videoUrl } = attributes;
-            
+
             if (!imageUrl || !videoUrl) return null;
 
             return createElement('div', { className: 'cf-video-hover-bg' },
-                
-                createElement('video', { 
-                    className: 'bg-video', 
-                    autoPlay: true, 
-                    loop: true, 
+
+                createElement('video', {
+                    className: 'bg-video',
+                    autoPlay: true,
+                    loop: true,
                     muted: true,
                     src: videoUrl,
                     style: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1, transition: 'opacity 0.5s' }
                 }),
 
-                createElement('div', { 
-                    className: 'bg-image', 
-                    style: { 
-                        backgroundImage: `url(${imageUrl})`, 
-                        position: 'absolute', 
-                        top: 0, 
-                        left: 0, 
-                        width: '100%', 
-                        height: '100%', 
-                        backgroundSize: 'cover', 
-                        backgroundPosition: 'center', 
-                        zIndex: 2, 
-                        transition: 'opacity 0.5s' 
-                    } 
+                createElement('div', {
+                    className: 'bg-image',
+                    style: {
+                        backgroundImage: `url(${imageUrl})`,
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        zIndex: 2,
+                        transition: 'opacity 0.5s'
+                    }
                 }),
-                
+
                 createElement('div', { className: 'play-overlay', style: { zIndex: 3 } },
-                    createElement('span', { className: 'play-button-placeholder' }, __('WATCH THE VIDEO')) 
+                    createElement('span', { className: 'play-button-placeholder' }, __('WATCH THE VIDEO'))
                 ),
 
                 createElement('div', { className: 'block-content', style: { zIndex: 4 } },
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', e => {
             // document.querySelectorAll('.cf-video-hover-bg').forEach(block => {
             //     const image = block.querySelector('.bg-image');
             //     const video = block.querySelector('.bg-video');
-                
+
             //     block.addEventListener('click', function(e) {
             //         e.preventDefault();
             //         if (video && video.paused) {
@@ -427,199 +427,9 @@ document.addEventListener('DOMContentLoaded', e => {
             //     });
             //     if (video) video.style.opacity = '0';
             // });
-            
+
         }
     });
-    // registerBlockType('creative-furniture/category-tabs', {
-    //     title: __('Category Tabs', 'creative-furniture'),
-    //     icon: 'category',
-    //     category: 'widgets',
-    //     attributes: {
-    //         categories: {
-    //             type: 'array',
-    //             default: ['Home', 'Office', 'Hospitality', 'Outdoor', 'Unique'],
-    //         },
-    //         selectedCategory: {
-    //             type: 'string',
-    //             default: 'All Products',
-    //         },
-    //     },
-    //     edit: ({ attributes, setAttributes }) => {
-    //         const { categories, selectedCategory } = attributes;
-
-    //         const handleCategoryClick = (category) => {
-    //             setAttributes({ selectedCategory: category });
-    //         };
-
-    //         return (
-    //             <Fragment>
-    //                 <InspectorControls>
-    //                     <PanelBody title={__('Category Settings', 'creative-furniture')}>
-    //                         <SelectControl
-    //                             label={__('Default Selected Category', 'creative-furniture')}
-    //                             value={selectedCategory}
-    //                             options={[
-    //                                 { label: __('All Products', 'creative-furniture'), value: 'All Products' },
-    //                                 ...categories.map((category) => ({
-    //                                     label: category,
-    //                                     value: category,
-    //                                 })),
-    //                             ]}
-    //                             onChange={(value) => setAttributes({ selectedCategory: value })}
-    //                         />
-    //                     </PanelBody>
-    //                 </InspectorControls>
-
-    //                 <div className="category-tabs">
-    //                     <div className="category-tabs__header">
-    //                         <span className="heading-normal">{__('Explore our', 'creative-furniture')}</span>{' '}
-    //                         <span className="heading-italic">{__('collections', 'creative-furniture')}</span>
-    //                     </div>
-
-    //                     <div className="category-tabs__nav">
-    //                         {['All Products', ...categories].map((category, index) => (
-    //                             <div
-    //                                 key={index}
-    //                                 role="button"
-    //                                 className={`category-tabs__item ${
-    //                                     selectedCategory === category ? 'is-active' : ''
-    //                                 }`}
-    //                                 onClick={() => handleCategoryClick(category)}
-    //                             >
-    //                                 {category}
-    //                             </div>
-    //                         ))}
-    //                     </div>
-
-    //                     <div className="category-tabs__button">
-    //                         <Button
-    //                             className="see-all-btn"
-    //                             variant="primary"
-    //                             onClick={() =>
-    //                                 window.location.href = `/category/${selectedCategory
-    //                                     .toLowerCase()
-    //                                     .replace(/\s+/g, '-')}`
-    //                             }
-    //                         >
-    //                             {__('See All Product', 'creative-furniture')}
-    //                         </Button>
-    //                     </div>
-    //                 </div>
-    //             </Fragment>
-    //         );
-    //     },
-
-    //     save: () => null,
-    // });
-    // registerBlockType('creative-furniture/shop-by-categories', {
-    //     title: 'Shop by Categories',
-    //     icon: 'grid-view',
-    //     category: 'widgets',
-    //     attributes: {
-    //         categories: {
-    //             type: 'array',
-    //             default: [
-    //                 { name: 'Office furniture', link: '#', image: 'https://placehold.co/336x340' },
-    //                 { name: 'Home furniture', link: '#', image: 'https://placehold.co/336x340' },
-    //                 { name: 'Hospitality furniture', link: '#', image: 'https://placehold.co/336x340' },
-    //                 { name: 'Unique furniture', link: '#', image: 'https://placehold.co/336x340' }
-    //             ]
-    //         },
-    //         currentIndex: { type: 'number', default: 0 }
-    //     },
-    //     edit: ({ attributes, setAttributes }) => {
-    //         const { categories, currentIndex } = attributes
-    //         const addCategory = () => {
-    //             const newCats = [...categories, { name: 'New Category', link: '#', image: 'https://placehold.co/336x340' }]
-    //             setAttributes({ categories: newCats })
-    //         }
-    //         const updateCategory = (index, key, value) => {
-    //             const newCats = [...categories]
-    //             newCats[index][key] = value
-    //             setAttributes({ categories: newCats })
-    //         }
-    //         const prevSlide = () => {
-    //             const newIndex = currentIndex === 0 ? categories.length - 1 : currentIndex - 1
-    //             setAttributes({ currentIndex: newIndex })
-    //         }
-    //         const nextSlide = () => {
-    //             const newIndex = currentIndex === categories.length - 1 ? 0 : currentIndex + 1
-    //             setAttributes({ currentIndex: newIndex })
-    //         }
-    //         return (
-    //             <div className="shop-by-categories-block">
-    //                 <div className="shop-header">
-    //                     <div className="shop-title">
-    //                         <span>Shop by </span>
-    //                         <span className="italic">category</span>
-    //                     </div>
-    //                     <div className="arrows">
-    //                         <button onClick={prevSlide} className="arrow prev"></button>
-    //                         <button onClick={nextSlide} className="arrow next"></button>
-    //                     </div>
-    //                 </div>
-    //                 <div className="shop-slider">
-    //                     {categories.map((cat, index) => (
-    //                         <div
-    //                             key={index}
-    //                             className={`shop-card ${index === currentIndex ? 'active' : ''}`}
-    //                             style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
-    //                         >
-    //                             <img src={cat.image} alt={cat.name} />
-    //                             <input
-    //                                 type="text"
-    //                                 value={cat.name}
-    //                                 onChange={(e) => updateCategory(index, 'name', e.target.value)}
-    //                                 placeholder="Category name"
-    //                             />
-    //                             <input
-    //                                 type="text"
-    //                                 value={cat.link}
-    //                                 onChange={(e) => updateCategory(index, 'link', e.target.value)}
-    //                                 placeholder="Category link"
-    //                             />
-    //                             <input
-    //                                 type="text"
-    //                                 value={cat.image}
-    //                                 onChange={(e) => updateCategory(index, 'image', e.target.value)}
-    //                                 placeholder="Image URL"
-    //                             />
-    //                         </div>
-    //                     ))}
-    //                 </div>
-    //                 <button className="add-category" onClick={addCategory}>Add Category</button>
-    //             </div>
-    //         )
-    //     },
-    //     save: ({ attributes }) => {
-    //         const { categories } = attributes
-    //         return (
-    //             <div className="shop-by-categories-block">
-    //                 <div className="shop-header">
-    //                     <div className="shop-title">
-    //                         <span>Shop by </span>
-    //                         <span className="italic">category</span>
-    //                     </div>
-    //                     <div className="arrows">
-    //                         <button className="arrow prev"></button>
-    //                         <button className="arrow next"></button>
-    //                     </div>
-    //                 </div>
-    //                 <div className="shop-slider">
-    //                     {categories.map((cat, index) => (
-    //                         <a key={index} href={cat.link} className="shop-card">
-    //                             <img src={cat.image} alt={cat.name} />
-    //                             <div className="shop-card-title">{cat.name}</div>
-    //                         </a>
-    //                     ))}
-    //                 </div>
-    //             </div>
-    //         )
-    //     }
-    // });
-// 
-
-// 
 
     registerBlockType('creative-furniture/woo-products', {
         title: __('Woo Products', 'creative-furniture'),
@@ -674,31 +484,31 @@ document.addEventListener('DOMContentLoaded', e => {
                         }),
 
                         productType === 'category' &&
-                            createElement(SelectControl, {
-                                label: __('Categories', 'creative-furniture'),
-                                multiple: true,
-                                value: categories,
-                                options: [],
-                                onChange: (value) => setAttributes({ categories: value })
-                            }),
+                        createElement(SelectControl, {
+                            label: __('Categories', 'creative-furniture'),
+                            multiple: true,
+                            value: categories,
+                            options: [],
+                            onChange: (value) => setAttributes({ categories: value })
+                        }),
 
                         productType === 'tag' &&
-                            createElement(SelectControl, {
-                                label: __('Tags', 'creative-furniture'),
-                                multiple: true,
-                                value: tags,
-                                options: [],
-                                onChange: (value) => setAttributes({ tags: value })
-                            }),
+                        createElement(SelectControl, {
+                            label: __('Tags', 'creative-furniture'),
+                            multiple: true,
+                            value: tags,
+                            options: [],
+                            onChange: (value) => setAttributes({ tags: value })
+                        }),
 
                         productType === 'custom' &&
-                            createElement(SelectControl, {
-                                label: __('Products', 'creative-furniture'),
-                                multiple: true,
-                                value: includeProducts,
-                                options: [],
-                                onChange: (value) => setAttributes({ includeProducts: value })
-                            })
+                        createElement(SelectControl, {
+                            label: __('Products', 'creative-furniture'),
+                            multiple: true,
+                            value: includeProducts,
+                            options: [],
+                            onChange: (value) => setAttributes({ includeProducts: value })
+                        })
                     )
                 ),
 
@@ -1042,178 +852,229 @@ document.addEventListener('DOMContentLoaded', e => {
         title: __('Google Map', 'creative-furniture'),
         icon: "location-alt",
         category: "widgets",
-        attributes:{
-            mapTitle:{type:"string",default:"My Business Name"},
-            address:{type:"string",default:"1 Grafton Street, Dublin, Ireland"},
-            coordinates:{type:"string",default:""},
-            view:{type:"string",default:"Map"},
-            zoom:{type:"number",default:400},
-            height:{type:"number",default:600},
-            width:{type:"string",default:"100%"},
-            autofit:{type:"boolean",default:true}
+        attributes: {
+            mapTitle: { type: "string", default: "My Business Name" },
+            address: { type: "string", default: "1 Grafton Street, Dublin, Ireland" },
+            coordinates: { type: "string", default: "" },
+            view: { type: "string", default: "Map" },
+            zoom: { type: "number", default: 400 },
+            height: { type: "number", default: 600 },
+            width: { type: "string", default: "100%" },
+            autofit: { type: "boolean", default: true }
         },
-        edit:(props)=>{
-            const {attributes,setAttributes} = props
+        edit: (props) => {
+            const { attributes, setAttributes } = props
             const blockProps = useBlockProps()
-            return(
-                createElement(Fragment,{},
-                    createElement(InspectorControls,{},
-                        createElement(PanelBody,{title:"Enter Your Settings"},
-                            createElement(TextControl,{
-                                label:"Title",
-                                value:attributes.mapTitle,
-                                onChange:(v)=>setAttributes({mapTitle:v})
+            return (
+                createElement(Fragment, {},
+                    createElement(InspectorControls, {},
+                        createElement(PanelBody, { title: "Enter Your Settings" },
+                            createElement(TextControl, {
+                                label: "Title",
+                                value: attributes.mapTitle,
+                                onChange: (v) => setAttributes({ mapTitle: v })
                             }),
-                            createElement(TextControl,{
-                                label:"Address",
-                                value:attributes.address,
-                                onChange:(v)=>setAttributes({address:v})
+                            createElement(TextControl, {
+                                label: "Address",
+                                value: attributes.address,
+                                onChange: (v) => setAttributes({ address: v })
                             }),
-                            createElement(TextControl,{
-                                label:"Coordinates (optional)",
-                                value:attributes.coordinates,
-                                onChange:(v)=>setAttributes({coordinates:v})
+                            createElement(TextControl, {
+                                label: "Coordinates (optional)",
+                                value: attributes.coordinates,
+                                onChange: (v) => setAttributes({ coordinates: v })
                             }),
-                            createElement(SelectControl,{
-                                label:"Views",
-                                value:attributes.view,
-                                options:[
-                                    {label:"Map",value:"Map"}
+                            createElement(SelectControl, {
+                                label: "Views",
+                                value: attributes.view,
+                                options: [
+                                    { label: "Map", value: "Map" }
                                 ],
-                                onChange:(v)=>setAttributes({view:v})
+                                onChange: (v) => setAttributes({ view: v })
                             }),
-                            createElement(RangeControl,{
-                                label:"Zoom",
-                                value:attributes.zoom,
-                                onChange:(v)=>setAttributes({zoom:v}),
-                                min:100,
-                                max:2000
+                            createElement(RangeControl, {
+                                label: "Zoom",
+                                value: attributes.zoom,
+                                onChange: (v) => setAttributes({ zoom: v }),
+                                min: 100,
+                                max: 2000
                             }),
-                            createElement(RangeControl,{
-                                label:"Height",
-                                value:attributes.height,
-                                onChange:(v)=>setAttributes({height:v}),
-                                min:200,
-                                max:1000
+                            createElement(RangeControl, {
+                                label: "Height",
+                                value: attributes.height,
+                                onChange: (v) => setAttributes({ height: v }),
+                                min: 200,
+                                max: 1000
                             }),
-                            createElement(TextControl,{
-                                label:"Width",
-                                value:attributes.width,
-                                onChange:(v)=>setAttributes({width:v})
+                            createElement(TextControl, {
+                                label: "Width",
+                                value: attributes.width,
+                                onChange: (v) => setAttributes({ width: v })
                             }),
-                            createElement(SelectControl,{
-                                label:"Auto-fit Width",
-                                value:attributes.autofit?"yes":"no",
-                                options:[{label:"Yes",value:"yes"},{label:"No",value:"no"}],
-                                onChange:(v)=>setAttributes({autofit:v==="yes"})
+                            createElement(SelectControl, {
+                                label: "Auto-fit Width",
+                                value: attributes.autofit ? "yes" : "no",
+                                options: [{ label: "Yes", value: "yes" }, { label: "No", value: "no" }],
+                                onChange: (v) => setAttributes({ autofit: v === "yes" })
                             })
                         )
                     ),
-                    createElement("div",{...blockProps,style:{width:attributes.autofit?"100%":attributes.width}},
-                        createElement("iframe",{
-                            width:"100%",
-                            height:attributes.height,
-                            frameBorder:"0",
-                            scrolling:"no",
-                            marginHeight:"0",
-                            marginWidth:"0",
-                            src:`https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
+                    createElement("div", { ...blockProps, style: { width: attributes.autofit ? "100%" : attributes.width } },
+                        createElement("iframe", {
+                            width: "100%",
+                            height: attributes.height,
+                            frameBorder: "0",
+                            scrolling: "no",
+                            marginHeight: "0",
+                            marginWidth: "0",
+                            src: `https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
                         })
                     )
                 )
             )
         },
-        save:(props)=>{
-            const {attributes} = props
+        save: (props) => {
+            const { attributes } = props
             const blockProps = useBlockProps.save()
-            return createElement("div",{...blockProps,style:{width:attributes.autofit?"100%":attributes.width}},
-                createElement("iframe",{
-                    width:"100%",
-                    height:attributes.height,
-                    frameBorder:"0",
-                    scrolling:"no",
-                    marginHeight:"0",
-                    marginWidth:"0",
-                    src:`https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
+            return createElement("div", { ...blockProps, style: { width: attributes.autofit ? "100%" : attributes.width } },
+                createElement("iframe", {
+                    width: "100%",
+                    height: attributes.height,
+                    frameBorder: "0",
+                    scrolling: "no",
+                    marginHeight: "0",
+                    marginWidth: "0",
+                    src: `https://maps.google.com/maps?width=100%25&height=${attributes.height}&hl=en&q=${encodeURIComponent(attributes.address)}&t=&z=14&ie=UTF8&iwloc=B&output=embed`
                 })
             )
             // <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/de/evolkerung-auf-einer-karte-berechnen/">interaktive Bevölkerungskarte</a></iframe></div>
         }
     })
 
-registerBlockType('creative-furniture/contact-form', {
-    title: __('Contact Form', 'creative-furniture'),
-    icon: 'email',
-    category: 'widgets',
-    edit: () => {
-        const blockProps = useBlockProps();
-        const [firstName, setFirstName] = useState('');
-        const [lastName, setLastName] = useState('');
-        const [email, setEmail] = useState('');
-        const [phone, setPhone] = useState('');
-        const [message, setMessage] = useState('');
-        const [agree, setAgree] = useState(true);
+    registerBlockType('creative-furniture/contact-form', {
+        title: __('Contact Form', 'creative-furniture'),
+        icon: 'email',
+        category: 'widgets',
+        edit: (props) => {
+            const { attributes, setAttributes } = props;
+            const { termsLink, privacyLink } = attributes;
 
-        return createElement('div', { ...blockProps, className: 'contact-form-block' },
-            createElement('div', { className: 'contact-form-row' },
-                createElement(TextControl, {
-                    label: 'First Name *',
-                    value: firstName,
-                    onChange: setFirstName
-                }),
-                createElement(TextControl, {
-                    label: 'Last Name *',
-                    value: lastName,
-                    onChange: setLastName
-                })
-            ),
-            createElement('div', { className: 'contact-form-row' },
-                createElement(TextControl, {
-                    label: 'Email Address *',
-                    value: email,
-                    onChange: setEmail
-                }),
-                createElement(TextControl, {
-                    label: 'Phone Number',
-                    value: phone,
-                    onChange: setPhone
-                })
-            ),
-            createElement(TextControl, {
-                label: 'Message *',
-                value: message,
-                onChange: setMessage,
-                multiline: true
-            }),
-            createElement(CheckboxControl, {
-                label: 'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.',
-                checked: agree,
-                onChange: setAgree
-            }),
-            createElement(Button, { isPrimary: true }, 'Submit')
-        );
-    },
-    save: () => {
-        return createElement('div', { className: 'contact-form-block' },
-            createElement('form', {},
+            const blockProps = useBlockProps();
+            const [firstName, setFirstName] = useState('');
+            const [lastName, setLastName] = useState('');
+            const [email, setEmail] = useState('');
+            const [phone, setPhone] = useState('');
+            const [message, setMessage] = useState('');
+            const [agree, setAgree] = useState(true);
+
+            return createElement('div', { ...blockProps, className: 'contact-form-block' },
                 createElement('div', { className: 'contact-form-row' },
-                    createElement('input', { type: 'text', placeholder: 'First Name', required: true }),
-                    createElement('input', { type: 'text', placeholder: 'Last Name', required: true })
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement(TextControl, {
+                            label: 'First Name *',
+                            value: firstName,
+                            onChange: setFirstName
+                        })
+                    ),
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement(TextControl, {
+                            label: 'Last Name *',
+                            value: lastName,
+                            onChange: setLastName
+                        })
+                    )
                 ),
                 createElement('div', { className: 'contact-form-row' },
-                    createElement('input', { type: 'email', placeholder: 'Email Address', required: true }),
-                    createElement('input', { type: 'tel', placeholder: 'Phone Number' })
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement(TextControl, {
+                            label: 'Email Address *',
+                            value: email,
+                            onChange: setEmail
+                        })
+                    ),
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement(TextControl, {
+                            label: 'Phone Number',
+                            value: phone,
+                            onChange: setPhone
+                        })
+                    )
                 ),
-                createElement('textarea', { placeholder: 'Type your message here', required: true }),
-                createElement('label', {},
-                    createElement('input', { type: 'checkbox', required: true }),
-                    ' By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                createElement('div', { className: 'contact-form-field' },
+                    createElement(TextControl, {
+                        label: 'Message *',
+                        value: message,
+                        onChange: setMessage,
+                        multiline: true
+                    })
                 ),
-                createElement('button', { type: 'submit' }, 'Submit')
-            )
-        );
-    }
-});
+
+                createElement('div', { className: 'contact-form-row' },
+                    createElement(CheckboxControl, {
+                        label: 'By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.',
+                        checked: agree,
+                        onChange: setAgree
+                    })
+                ),
+                createElement('div', { className: 'contact-form-field' },
+                    createElement(Button, { isPrimary: true }, 'Submit')
+                )
+            );
+        },
+        save: ({ attributes }) => {
+            const { termsLink, privacyLink } = attributes;
+
+            return createElement('div', { className: 'contact-form-block' },
+                createElement('form', {},
+                    createElement('div', { className: 'contact-form-row' },
+                        createElement('div', { className: 'contact-form-field' },
+                            createElement('label', {}, 'First Name'),
+                            createElement('input', { type: 'text', placeholder: 'First Name', required: true })
+                        ),
+                        createElement('div', { className: 'contact-form-field' },
+                            createElement('label', {}, 'Last Name'),
+                            createElement('input', { type: 'text', placeholder: 'Last Name', required: true })
+                        )
+                    ),
+                    createElement('div', { className: 'contact-form-row' },
+                        createElement('div', { className: 'contact-form-field' },
+                            createElement('label', {}, 'Email Address'),
+                            createElement('input', { type: 'email', placeholder: 'Email Address', required: true })
+                        ),
+                        createElement('div', { className: 'contact-form-field' },
+                            createElement('label', {}, 'Phone Number'),
+                            createElement('input', { type: 'tel', placeholder: 'Phone Number' })
+                        )
+                    ),
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement('label', {}, 'Message'),
+                        createElement('textarea', { placeholder: 'Type your message here', required: true })
+                    ),
+                    // createElement('div', { className: 'contact-form-field' },
+                    //     createElement('label', {},
+                    //         createElement('input', { type: 'checkbox', required: true }),
+                    //         ' By Submitting, You Agree To Our Terms & Conditions And Privacy Policy.'
+                    //     )
+                    // ),
+
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement('label', {},
+                            createElement('input', { type: 'checkbox', required: true }),
+                            ' By Submitting, You Agree To Our ',
+                            createElement('a', { href: '/terms-conditions', target: "_blank", rel: "noopener" }, 'Terms & Conditions'),
+                            ' And ',
+                            createElement('a', { href: '/privacy-policy', target: "_blank", rel: "noopener" }, 'Privacy Policy'),
+                            '.'
+                        )
+                    ),
+
+                    createElement('div', { className: 'contact-form-field' },
+                        createElement('button', { type: 'submit' }, 'Submit')
+                    )
+                )
+            );
+        }
+    });
 
 
 

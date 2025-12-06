@@ -3,6 +3,34 @@
   display: flex;
   flex-direction: column;
 
+  &-4points {
+    padding: 30px 20px;
+
+    .wp-block {
+      &-heading:not(h2) {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 10px;
+
+        + p {
+          font-size: 16px;
+          margin-block-start: 10px;
+        }
+      }
+      &-column {
+        text-align: center;
+      }
+      
+      &-image {
+
+        img {
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+
   label {
     display: block;
     margin-bottom: 0.25rem;
@@ -77,18 +105,53 @@
   }
 
   .submit-btn {
-    padding: 0.75rem 1.5rem;
-    background: #000;
-    color: #fff;
-    font-weight: 600;
+    width: 100%;
     border: none;
-    border-radius: 8px;
+    color: #fff;
     cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
     text-align: center;
+    background: #000;
+    border-radius: 100px;
+    padding: 0.75rem 1.5rem;
     transition: background 0.2s;
 
     &:hover {
       background: #333;
     }
+  }
+}
+
+.clients-slider-block {
+  margin: 70px auto;
+
+  h2.wp-block-heading {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+.max-width-800 {
+  width: 100%;
+  margin: 70px auto !important;
+  
+  .wp-block-heading {
+    font-size: 30px;
+    font-weight: 600;
+    
+    + .wp-block-heading {
+      margin: auto !important;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: 500;
   }
 }
