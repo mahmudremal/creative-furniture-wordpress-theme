@@ -23,6 +23,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
 ?>
 
 <div class="order-tracking-page">
+    <?php if (!$order): ?>
+        <div class="hero-cover" style="min-height: 300px;margin-bottom: 50px;">
+            <img decoding="async" alt="" src="<?php echo get_template_directory_uri(); ?>/dist/images/shop-bg.jpg" data-object-fit="cover">
+            <span aria-hidden="true"></span>
+            <div>
+                <div class="hero-content" style="top: 50%;width: 100%;color: #fff;display: block;max-width: unset;position: absolute;text-align: center;transform: translateY(-50%);">
+                    <h2 style="margin: auto;font-size: 52px;text-align: center;">Order Tracking</h2>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    
     <div class="container-fluid">
         <?php if (!$order): ?>
             <div class="tracking-form-wrapper">

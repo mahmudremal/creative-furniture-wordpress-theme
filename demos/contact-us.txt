@@ -1,0 +1,87 @@
+<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover"} -->
+<div class="wp-block-cover alignfull hero-cover"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+<div class="wp-block-group hero-content"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Contact Us</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:columns {"className":"container-fluid contact-information"} -->
+<div class="wp-block-columns container-fluid contact-information"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Contact <em>Information</em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Office</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Al Raihan Tower – Office No J512, 5th Floor – 46th St – next to Movenpick Hotel – Deira – The Town Square – Dubai</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Mail Address</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>info@creativefurniture.ae</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Phone</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>971566736852</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:spacer {"height":"15px"} -->
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Social <em>Info</em></h4>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:social-links -->
+<ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://www.facebook.com/creativefurnitureae","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"https://x.com/creativefurnit7","service":"x"} /-->
+
+<!-- wp:social-link {"url":"https://www.instagram.com/creativefurniture.ae/","service":"instagram"} /-->
+
+<!-- wp:social-link {"url":"https://www.pinterest.com/creativefurniture_ae/","service":"pinterest"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"layout":{"type":"default"}} -->
+<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/contact-us-right-banner.jpg" alt=""/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"className":"container-fluid send-us-message"} -->
+<div class="wp-block-columns container-fluid send-us-message"><!-- wp:column {"verticalAlignment":"top","className":"container-fluid"} -->
+<div class="wp-block-column is-vertically-aligned-top container-fluid"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Send Us a <em>Message</em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:creative-furniture/contact-form -->
+<div class="wp-block-creative-furniture-contact-form contact-form-block"><form><div class="contact-form-row"><div class="contact-form-field"><label>First Name</label><input type="text" placeholder="First Name" required/></div><div class="contact-form-field"><label>Last Name</label><input type="text" placeholder="Last Name" required/></div></div><div class="contact-form-row"><div class="contact-form-field"><label>Email Address</label><input type="email" placeholder="Email Address" required/></div><div class="contact-form-field"><label>Phone Number</label><input type="tel" placeholder="Phone Number"/></div></div><div class="contact-form-field"><label>Message</label><textarea placeholder="Type your message here" required></textarea></div><div class="contact-form-field"><label><input type="checkbox" required/> By Submitting, You Agree To Our <a href="/terms-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a> And <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</label></div><div class="contact-form-field"><button type="submit">Submit</button></div></form></div>
+<!-- /wp:creative-furniture/contact-form --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:creative-furniture/google-map -->
+<div class="wp-block-creative-furniture-google-map" style="width:100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+<!-- /wp:creative-furniture/google-map -->
