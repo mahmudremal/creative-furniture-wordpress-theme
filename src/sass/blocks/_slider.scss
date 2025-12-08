@@ -22,17 +22,17 @@
     }
 
     .slide-content {
-      position: absolute;
-      top: 50%;
+      top: 0;
       left: 10%;
-      transform: translateY(-50%);
       color: #fff;
       max-width: 500px;
       text-align: left;
+      position: absolute;
+      transform: translateY(20%);
 
       h2 {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.3;
         margin-bottom: 1rem;
         font-family: 'Georgia', serif;

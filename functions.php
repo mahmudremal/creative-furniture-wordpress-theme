@@ -216,6 +216,53 @@ function footer_block_svg_icon_print($icon) {
 }
 
 
+// add_filter( 'woocommerce_enable_setup_wizard', '__return_false' );
+// add_filter( 'woocommerce_admin_disabled', '__return_true' );
+// update_option('woocommerce_onboarding_opt_out_given', 'yes');
+// delete_option('woocommerce_setup_page_redirect');
+// add_action( 'init', function () {
+
+//     // Prevent running again
+//     if ( get_option( 'rimu_wc_onboarding_done' ) ) {
+//         return;
+//     }
+
+//     // Dummy store settings
+//     update_option( 'woocommerce_store_address', '123 Demo Street' );
+//     update_option( 'woocommerce_store_address_2', '' );
+//     update_option( 'woocommerce_store_city', 'Dhaka' );
+//     update_option( 'woocommerce_default_country', 'BD:D' );
+//     update_option( 'woocommerce_store_postcode', '1200' );
+//     update_option( 'woocommerce_currency', 'USD' );
+//     update_option( 'woocommerce_product_type', 'physical' );
+
+//     // Mark onboarding wizard as completed
+//     update_option( 'woocommerce_onboarding_profile', array(
+//         'completed'     => true,
+//         'industry'      => array( 'other' ),
+//         'product_types' => array( 'physical' ),
+//         'selling_venues'=> array(),
+//         'setup_client'  => false,
+//     ) );
+
+//     // Hide WooCommerce task list
+//     update_option( 'woocommerce_task_list_hidden', 'yes' );
+//     update_option( 'woocommerce_task_list_tracked_started_tasks', array() );
+//     update_option( 'woocommerce_task_list_completed_tasks', array(
+//         'store_details',
+//         'purchase',
+//         'products',
+//         'appearance',
+//         'shipping',
+//         'tax',
+//         'marketing',
+//         'payments'
+//     ) );
+
+//     update_option( 'rimu_wc_onboarding_done', 1 );
+// });
+
+
 // function register_shop_filters_sidebar() {
 //     register_sidebar([
 //         'name' => 'Shop Filters',

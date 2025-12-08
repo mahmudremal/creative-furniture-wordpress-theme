@@ -1,5 +1,5 @@
 <!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover"} -->
-<div class="wp-block-cover alignfull hero-cover"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull hero-cover" style="max-height:unset"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group hero-content"><!-- wp:heading {"className":"wp-block-heading hero-title has-text-align-center"} -->
 <h2 class="wp-block-heading hero-title has-text-align-center">
                 <span class="part1">Upgrade Your Space —</span>
@@ -24,7 +24,7 @@
 
 <!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/intro-section","name":"Intro Section"},"align":"full","className":"cf-intro-section","layout":{"type":"constrained","justifyContent":"center"}} -->
 <div class="wp-block-group alignfull cf-intro-section"><!-- wp:paragraph {"align":"center","className":"cf-intro-text"} -->
-<p class="has-text-align-center cf-intro-text">
+<p class="has-text-align-center cf-intro-text" style="width:700px;margin-bottom:50px;">
         <span class="cf-aspekta-dark">Creative Furniture is a </span>
         <span class="cf-playfair-dark">Dubai-based</span>
         <span class="cf-aspekta-dark"> store offering </span>
@@ -51,7 +51,7 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"className":"container-fluid"} -->
-<h2 class="wp-block-heading container-fluid">Shop by <em>category</em></h2>
+<h2 class="wp-block-heading container-fluid" style="margin-bottom:20px;">Shop by <em>category</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
@@ -115,7 +115,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:heading {"textAlign":"center","className":"container-fluid"} -->
-<h2 class="wp-block-heading has-text-align-center container-fluid">Trending <em>Products</em></h2>
+<h2 class="wp-block-heading has-text-align-center container-fluid" style="margin:50px auto 20px auto">Trending <em>Products</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:creative-furniture/woo-products {"productsPerPage":4,"productsPerRow":4,"productType":"best_selling","className":"container-fluid"} /-->
@@ -132,7 +132,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"promo-banner__subtitle"} -->
-<p class="promo-banner__subtitle">This Week Only! Use Code: STYLE40</p>
+<p class="promo-banner__subtitle">This Week Only! Use Code:STYLE40</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"promo-banner__btn"} -->
@@ -150,7 +150,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"promo-banner__subtitle"} -->
-<p class="promo-banner__subtitle">Use Code: HOME15</p>
+<p class="promo-banner__subtitle">Use Code:HOME15</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"promo-banner__btn"} -->
@@ -161,7 +161,7 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"className":"container-fluid"} -->
-<h2 class="wp-block-heading container-fluid">Shop the <em>LOOKS</em></h2>
+<h2 class="wp-block-heading container-fluid" style="margin:50px auto 20px auto">Shop the <em>LOOKS</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
@@ -176,14 +176,41 @@
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column" style="display: flex"><!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg","hotspots":[{"x":25.873007651295808,"y":46.92506722971848,"productId":0,"product":{"link":"https://creative.wp.local/product/logo-collection/","title":"Logo Collection","excerpt":"This is a grouped product."}},{"x":37.29023449019509,"y":51.736151642976345,"productId":2787,"product":{"link":"https://creative.wp.local/product/long-sleeve-tee/","title":"Long Sleeve Tee","excerpt":"This is a simple product."}},{"x":67.7324082010066,"y":49.18610717595338,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":48.344655111439494,"y":80.80665856703813,"productId":2790,"product":{"link":"https://creative.wp.local/product/single/","title":"Single","excerpt":"This is a simple, virtual product."}}]} -->
-<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg" style="width:100%"/><div class="hotspot" data-x="25.873007651295808" data-y="46.92506722971848" data-product-id="0" data-product-title="Logo Collection" data-product-link="https://creative.wp.local/product/logo-collection/" data-product-excerpt="This is a grouped product." style="left:25.873007651295808%;top:46.92506722971848%"></div><div class="hotspot" data-x="37.29023449019509" data-y="51.736151642976345" data-product-id="2787" data-product-title="Long Sleeve Tee" data-product-link="https://creative.wp.local/product/long-sleeve-tee/" data-product-excerpt="This is a simple product." style="left:37.29023449019509%;top:51.736151642976345%"></div><div class="hotspot" data-x="67.7324082010066" data-y="49.18610717595338" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:67.7324082010066%;top:49.18610717595338%"></div><div class="hotspot" data-x="48.344655111439494" data-y="80.80665856703813" data-product-id="2790" data-product-title="Single" data-product-link="https://creative.wp.local/product/single/" data-product-excerpt="This is a simple, virtual product." style="left:48.344655111439494%;top:80.80665856703813%"></div></div>
+<div class="wp-block-column" style="display:flex"><!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg","hotspots":[{"x":25.873007651295808,"y":46.92506722971848,"productId":0,"product":{"link":"https://creative.wp.local/product/logo-collection/","title":"Logo Collection","excerpt":"This is a grouped product."}},{"x":37.29023449019509,"y":51.736151642976345,"productId":2787,"product":{"link":"https://creative.wp.local/product/long-sleeve-tee/","title":"Long Sleeve Tee","excerpt":"This is a simple product."}},{"x":67.7324082010066,"y":49.18610717595338,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":48.344655111439494,"y":80.80665856703813,"productId":2790,"product":{"link":"https://creative.wp.local/product/single/","title":"Single","excerpt":"This is a simple, virtual product."}}]} -->
+<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg" style="width:100%;height:100%"/><div class="hotspot" data-x="25.873007651295808" data-y="46.92506722971848" data-product-id="0" data-product-title="Logo Collection" data-product-link="https://creative.wp.local/product/logo-collection/" data-product-excerpt="This is a grouped product." style="left:25.873007651295808%;top:46.92506722971848%"></div><div class="hotspot" data-x="37.29023449019509" data-y="51.736151642976345" data-product-id="2787" data-product-title="Long Sleeve Tee" data-product-link="https://creative.wp.local/product/long-sleeve-tee/" data-product-excerpt="This is a simple product." style="left:37.29023449019509%;top:51.736151642976345%"></div><div class="hotspot" data-x="67.7324082010066" data-y="49.18610717595338" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:67.7324082010066%;top:49.18610717595338%"></div><div class="hotspot" data-x="48.344655111439494" data-y="80.80665856703813" data-product-id="2790" data-product-title="Single" data-product-link="https://creative.wp.local/product/single/" data-product-excerpt="This is a simple, virtual product." style="left:48.344655111439494%;top:80.80665856703813%"></div></div>
 <!-- /wp:creative-furniture/image-hotspot --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column">
+    <!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg","dimRatio":0,"isDark":false,"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner"} -->
+    <div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container vpp-center-buttons"></div></div>
+    <!-- /wp:cover -->
+
+
+    <p style="font-size:18px;font-weight:400;max-width:560px;">Transform your home with beautifully crafted furniture designed for comfort, style, and everyday living. Discover timeless</p>
+    <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"black","className":"hero-button"} -->
+        <div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="#">Shop Now</a></div>
+    <!-- /wp:button --></div>
+</div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+
+<!-- wp:columns -->
+<div class="wp-block-columns" style="margin:50px auto 20px;"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"className":"container-fluid"} -->
+<h2 class="wp-block-heading container-fluid">Best Selling <em>Products</em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:creative-furniture/woo-products {"productsPerPage":8,"productsPerRow":4,"productType":"best_selling"} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
 <!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg","dimRatio":0,"isDark":false,"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner"} -->
-<div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:html -->
+<div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container vpp-center-buttons"><!-- wp:html -->
 <button class="video-promo-banner__play" aria-label="Play Video">
             <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M40 39.9895C40 39.0183 40 38.5328 40.2025 38.2651C40.3789 38.0319 40.6485 37.8876 40.9404 37.8702C41.2754 37.8502 41.6795 38.1195 42.4875 38.6582L53.0031 45.6686C53.6708 46.1137 54.0046 46.3363 54.1209 46.6168C54.2227 46.8621 54.2227 47.1377 54.1209 47.383C54.0046 47.6635 53.6708 47.886 53.0031 48.3312L42.4875 55.3415C41.6795 55.8802 41.2754 56.1496 40.9404 56.1296C40.6485 56.1122 40.3789 55.9679 40.2025 55.7347C40 55.467 40 54.9814 40 54.0103V39.9895Z" fill="white"/>
@@ -196,12 +223,9 @@
 <!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/instagram-feeds","name":"Instagram Feed Section"},"align":"full","className":"container-fluid creative-furniture-section"} -->
 <div class="wp-block-group alignfull container-fluid creative-furniture-section"><!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
 <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"creativefurniture-hashtag"} -->
-<p class="creativefurniture-hashtag">#creativefurniture</p>
-<!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"creativefurniture-subtext"} -->
-<p class="creativefurniture-subtext">Inspiration, straight from your home. See it, share it, shop it.</p>
+<p class="creativefurniture-subtext"><span class="creativefurniture-hashtag">#creativefurniture</span> Inspiration, straight from your home. See it, share it, shop it.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -220,7 +244,16 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt=""/></figure>
-<!-- /wp:image --></div>
+<!-- /wp:image -->
+<div>
+    <h2 class="wp-block-heading hero-title has-text-align-left">
+        <span class="part1">Upgrade Your Space —</span>
+        <span class="part2"></span>
+        <em class="part3">Save More Today!</em>
+    </h2>
+</div>
+
+</div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
@@ -240,13 +273,3 @@
 <!-- wp:paragraph -->
 <p></p>
 <!-- /wp:paragraph -->
-
-<!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"className":"container-fluid"} -->
-<h2 class="wp-block-heading container-fluid">Best Selling Products</h2>
-<!-- /wp:heading -->
-
-<!-- wp:creative-furniture/woo-products {"productsPerPage":8,"productsPerRow":4,"productType":"best_selling"} /--></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->

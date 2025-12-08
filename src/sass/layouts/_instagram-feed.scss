@@ -1,7 +1,9 @@
 .creative-furniture-section {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px auto 30px auto;
 
   .wp-block-group:first-child {
     display: flex;
@@ -26,16 +28,18 @@
     font-weight: 400;
     text-transform: capitalize;
     line-height: 44px;
+    display: block;
   }
 
   .creativefurniture-link {
-    color: #242424;
+    margin-top: 0;
     font-size: 20px;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    color: #242424;
     font-weight: 500;
-    text-transform: capitalize;
     line-height: 44px;
+    font-style: italic;
+    text-transform: capitalize;
+    font-family: 'Playfair Display', serif;
 
     a {
       color: inherit;
