@@ -87,7 +87,7 @@ function cf_wishlist_get_items(){
 }
 function cf_wishlist_render_page() {
     $items = cf_wishlist_get_items();
-    echo '<div class="cf-wishlist-wrapper">';
+    echo '<div class="cf-wishlist-wrapper container-fluid">';
     echo '<div class="cf-wishlist-left">';
     echo '<h2>Your Wishlist (' . count($items) . ')</h2>';
     echo '<div class="cf-wishlist-list">';
@@ -123,7 +123,7 @@ function cf_wishlist_render_page() {
     echo '<button class="cf-wishlist-share-btn" id="cf-wishlist-share-btn">Share Wishlist</button>';
     echo '</div>';
     echo '<div class="cf-wishlist-share-panel" id="cf-wishlist-share-panel">';
-    echo '<input type="text" readonly value="'.esc_url(add_query_arg('wishlist', implode(',', $items), home_url())).'" class="cf-wishlist-share-link">';
+    echo '<input type="text" readonly value="'.esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())).'" class="cf-wishlist-share-link">';
     echo '<button class="cf-wishlist-copy-link" id="cf-wishlist-copy-link">Copy Link</button>';
     echo '</div>';
     echo '</div>';

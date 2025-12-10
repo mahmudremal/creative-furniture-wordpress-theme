@@ -456,3 +456,12 @@
         }
     }
 }
+
+@media print {
+    .woocommerce-order-received {
+        .site-header, .site-footer,
+        .order-overview .action-buttons {
+            display: none;
+        }
+    }
+}

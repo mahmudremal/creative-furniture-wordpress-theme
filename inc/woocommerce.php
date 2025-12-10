@@ -382,12 +382,26 @@ function cf_ajax_add_to_cart() {
     $product_id = absint($_POST['product_id']);
     $quantity = absint($_POST['quantity']);
     $variation_id = isset($_POST['variation_id']) ? absint($_POST['variation_id']) : 0;
-    $variation = isset($_POST['variation']) ? $_POST['variation'] : [];
+    $variation    = isset($_POST['variation']) && is_array($_POST['variation']) ? $_POST['variation'] : [];
 
     if ($variation_id) {
-        $added = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variation);
+        if (empty($variation)) {
+            $variation = wc_get_product_variation_attributes($variation_id);
+        }
+
+        $added = WC()->cart->add_to_cart(
+            $product_id,
+            $quantity,
+            $variation_id,
+            $variation
+        );
+
     } else {
-        $added = WC()->cart->add_to_cart($product_id, $quantity);
+
+        $added = WC()->cart->add_to_cart(
+            $product_id,
+            $quantity
+        );
     }
 
     if ($added) {
@@ -397,8 +411,16 @@ function cf_ajax_add_to_cart() {
             'cart_url' => wc_get_cart_url()
         ]);
     } else {
+        $_error_message = __('Failed to add product to cart', 'creative-furniture');
+        $errors = wc_get_notices('error');
+        if (!empty($errors)) {
+            foreach ($errors as $error) {
+                $_error_message = isset($error['notice']) ? $error['notice'] : $error;
+            }
+        }
         wp_send_json_error([
-            'message' => __('Failed to add product to cart', 'creative-furniture')
+            'message' => $_error_message,
+            'error' => $added
         ]);
     }
 }
@@ -744,4 +766,152 @@ function cf_apply_custom_product_filters($query) {
 }
 
 
+
+add_action( 'wp_enqueue_scripts', 'disable_select2_on_checkout', 99 );
+function disable_select2_on_checkout() {
+
+    if ( is_checkout() ) {
+
+        // Remove Select2 JS
+        wp_dequeue_script( 'selectWoo' );
+        wp_dequeue_script( 'select2' );
+
+        // Remove Select2 CSS
+        wp_dequeue_style( 'select2' );
+        wp_dequeue_style( 'selectWoo' );
+    }
+}
+
+
+
+
+
+
+
+function explore_products_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'categories' => '',
+        'products_per_page' => 8,
+    ), $atts);
+
+    $categories = !empty($atts['categories']) 
+        ? array_map('trim', explode(',', $atts['categories'])) 
+        : array();
+
+    ob_start();
+    ?>
+    <section class="explore_products">
+        <div class="explore_products__header">
+            <h2 class="explore_products__title">
+                Explore Our <em>Collections</em>
+            </h2>
+            <nav class="explore_products__tabs">
+                <button class="explore_products__tab active" data-category="all">
+                    All Products
+                </button>
+                <?php
+                if (!empty($categories)) {
+                    foreach ($categories as $cat_slug) {
+                        $category = get_term_by('slug', $cat_slug, 'product_cat');
+                        if ($category) {
+                            echo '<button class="explore_products__tab" data-category="' . esc_attr($cat_slug) . '">';
+                            echo esc_html($category->name);
+                            echo '</button>';
+                        }
+                    }
+                }
+                ?>
+                <a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>" class="explore_products__see_all">
+                    <?php echo esc_html__('See All Product', 'creative-furniture'); ?>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+
+        <div class="explore_products__grid" data-products-per-page="<?php echo esc_attr($atts['products_per_page']); ?>">
+            <?php
+            $args = [
+                'post_type' => 'product',
+                'posts_per_page' => $atts['products_per_page'],
+                'post_status' => 'publish',
+                'orderby' => 'date',
+                'order' => 'DESC'
+            ];
+
+            $loop = new WP_Query($args);
+            if ($loop->have_posts()) {
+                ob_start();
+                woocommerce_product_loop_start();
+                
+                while ($loop->have_posts()) {
+                    $loop->the_post();
+                    wc_get_template_part('content', 'product');
+                }
+                
+                woocommerce_product_loop_end();
+                $html = ob_get_clean();
+
+                wp_reset_postdata();
+
+                echo $html;
+            }
+            ?>
+            <div class="explore_products__loading">
+                <svg width="40" height="40" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M512 64a32 32 0 0 1 32 32v192a32 32 0 0 1-64 0V96a32 32 0 0 1 32-32zm0 640a32 32 0 0 1 32 32v192a32 32 0 1 1-64 0V736a32 32 0 0 1 32-32zm448-192a32 32 0 0 1-32 32H736a32 32 0 1 1 0-64h192a32 32 0 0 1 32 32zm-640 0a32 32 0 0 1-32 32H96a32 32 0 0 1 0-64h192a32 32 0 0 1 32 32zM195.2 195.2a32 32 0 0 1 45.248 0L376.32 331.008a32 32 0 0 1-45.248 45.248L195.2 240.448a32 32 0 0 1 0-45.248zm452.544 452.544a32 32 0 0 1 45.248 0L828.8 783.552a32 32 0 0 1-45.248 45.248L647.744 692.992a32 32 0 0 1 0-45.248zM828.8 195.264a32 32 0 0 1 0 45.184L692.992 376.32a32 32 0 0 1-45.248-45.248l135.808-135.808a32 32 0 0 1 45.248 0zm-452.544 452.48a32 32 0 0 1 0 45.248L240.448 828.8a32 32 0 0 1-45.248-45.248l135.808-135.808a32 32 0 0 1 45.248 0z"/></svg>
+            </div>
+        </div>
+    </section>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('explore_products', 'explore_products_shortcode');
+
+function load_products_ajax() {
+    check_ajax_referer('cf-get-variation', 'nonce');
+
+    $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : 'all';
+    $per_page = isset($_POST['per_page']) ? intval($_POST['per_page']) : 8;
+
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $per_page,
+        'post_status' => 'publish',
+    );
+
+    if ($category !== 'all') {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => $category,
+            ),
+        );
+    }
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        ob_start();
+        woocommerce_product_loop_start();
+        
+        while ($query->have_posts()) {
+            $query->the_post();
+            wc_get_template_part('content', 'product');
+        }
+        
+        woocommerce_product_loop_end();
+        $html = ob_get_clean();
+        
+        wp_send_json_success(array('html' => $html));
+    } else {
+        wp_send_json_success(array('html' => '<p class="explore_products__empty">No products found.</p>'));
+    }
+
+    wp_reset_postdata();
+    wp_die();
+}
+add_action('wp_ajax_load_products', 'load_products_ajax');
+add_action('wp_ajax_nopriv_load_products', 'load_products_ajax');
 

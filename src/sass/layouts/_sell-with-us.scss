@@ -135,6 +135,10 @@
 .max-width-800 {
   width: 100%;
   margin: 70px auto !important;
+
+  @media (max-width: 750px) {
+    font-size: 15px;
+  }
   
   .wp-block-heading {
     font-size: 30px;

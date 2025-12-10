@@ -22,13 +22,13 @@
 }
 
 .hero-content {
+  gap: 28px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
   max-width: 655px;
   text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   @media (max-width: 768px) {
     gap: 24px;
@@ -65,7 +65,7 @@
    
     color: white;
     font-size: 48px;
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
     font-style: italic;
     font-weight: 700;
     line-height: 62px;
@@ -126,4 +126,9 @@
       font-size: 16px;
     }
   }
+}
+
+
+.hero-cover.big-hero-banner {
+  min-height: 673px;
 }

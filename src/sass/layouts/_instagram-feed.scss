@@ -1,14 +1,16 @@
 .creative-furniture-section {
     gap: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 50px auto 30px auto;
-
-  .wp-block-group:first-child {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+    margin: 100px auto 30px auto !important;
+
+  > .wp-block-group:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .creativefurniture-hashtag {
@@ -52,8 +54,12 @@
   }
 
   .creativefurniture-gallery {
-    display: flex;
     gap: 16px;
+    width: 100%;
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-block-start: 0;
 
     .wp-block-column {
       flex: 1;

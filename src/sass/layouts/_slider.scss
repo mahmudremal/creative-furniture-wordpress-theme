@@ -65,13 +65,13 @@
     .slider-dot {
       width: 12px;
       height: 12px;
+      cursor: pointer;
       border-radius: 50%;
       background: #ccc;
-      cursor: pointer;
       transition: background 0.3s ease;
 
       &.active {
-        background: #333;
+        background: #fff;
       }
     }
   }

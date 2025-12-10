@@ -73,27 +73,30 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 
                     <div class="checkout-section billing-section">
                         <div class="section-header-simple">
-                            <h2>Billing Address</h2>
+                            <h2>Shipping Address</h2>
                             <p>Select the address that matches your card or payment method.</p>
                         </div>
 
-                        <div class="billing-options">
-                            <label class="radio-option">
-                                <input type="radio" name="billing_address_type" value="shipping" checked>
-                                <span class="radio-custom"></span>
-                                <span>Same as shipping address</span>
-                            </label>
+                        <?php if ( $checkout->get_checkout_fields() ) : ?>
+                            <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+                            <div class="billing-options">
+                                
+                                <div class="billing-fields-wrapper">
+                                    <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+                                </div>
 
-                            <label class="radio-option">
-                                <input type="radio" name="billing_address_type" value="different">
-                                <span class="radio-custom"></span>
-                                <span>Use a different billing address</span>
-                            </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="billing_address_type" value="different">
+                                    <span class="checkbox-custom"></span>
+                                    <span>Use a different billing address</span>
+                                </label>
 
-                            <div class="billing-fields-wrapper">
-                                <?php do_action('woocommerce_checkout_billing'); ?>
+                                <div class="billing-fields-wrapper" style="display: none;">
+                                    <?php do_action('woocommerce_checkout_billing'); ?>
+                                </div>
                             </div>
-                        </div>
+                            <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+                        <?php endif; ?>
                     </div>
 
                     <div class="checkout-section remember-section">

@@ -45,6 +45,7 @@ class SiteCore {
         this.init_myaccount();
         this.init_sell_with_us_form();
         this.init_review_actions();
+        this.init_explore_products();
     }
 
     sc_store_frontend() {
@@ -315,6 +316,7 @@ class SiteCore {
                 });
         }
 
+        // return;
         form?.addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -385,16 +387,16 @@ class SiteCore {
     }
 
     init_checkout() {
-        const wrapper = document.querySelector('.billing-fields-wrapper');
-        document.querySelectorAll('[name=billing_address_type]').forEach(radio => {
-            if (!radio) return;
-            if (radio?.parentElement?.nextElementSibling?.style) {
-                if (radio.checked && radio?.value == 'different') {
+        // const wrapper = document.querySelector('.billing-fields-wrapper');
+        document.querySelectorAll('[name=billing_address_type]').forEach(checkbox => {
+            if (!checkbox) return;
+            const wrapper = checkbox.parentElement?.nextElementSibling;
+            if (wrapper?.style) {
+                if (checkbox.checked && checkbox?.value == 'different') {
                     wrapper.style.display = 'block';
                 }
             }
-            radio.addEventListener('change', e => {
-                console.log(e.target.value == 'different')
+            checkbox.addEventListener('change', e => {
                 wrapper.style.display = (e.target.checked && e.target.value == 'different') ? 'block' : 'none';
             });
         });
@@ -402,6 +404,22 @@ class SiteCore {
         // saveInfo.addEventListener('click', e => {
         //     e.target.checked = !e.target.checked;
         // });
+        document.querySelectorAll('input[name=shipping_first_name], input[name=shipping_last_name]').forEach(input => {
+            input.addEventListener('input', e => {
+                if (document.querySelector('[name="billing_address_type"]:checked')?.value !== 'different') {
+                    switch (e.target.name) {
+                        case 'shipping_first_name':
+                            document.querySelector('input[name="billing_first_name"]').value = e.target.value;
+                            break;
+                        case 'shipping_last_name':
+                            document.querySelector('input[name="billing_last_name"]').value = e.target.value;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+        });
     }
 
     init_sliders() {
@@ -792,7 +810,8 @@ class SiteCore {
     }
 
     init_sell_with_us_form() {
-        const phoneInputs = document.querySelectorAll('.sell-with-us [name="phone"]');
+        const phoneInputs = document.querySelectorAll('.sell-with-us [name="phone"], .contact-form-field input[type="tel"]');
+        console.log('phoneInputs', phoneInputs)
         if (!phoneInputs?.length) return;
         // Load CSS
         const css = document.createElement('link');
@@ -808,6 +827,7 @@ class SiteCore {
         script.onload = () => {
             phoneInputs.forEach(input => {
                 window.intlTelInput(input, {
+                    initialCountry: 'ae',
                     loadUtils: () =>
                         // import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js')
                         import(`${cfStore.dist}/library/js/utils.js`)
@@ -845,6 +865,56 @@ class SiteCore {
                 }, 1500);
             })
         })
+    }
+
+    init_explore_products() {
+        const section = document.querySelector('.explore_products');
+        if (!section) return;
+
+        const tabs = section.querySelectorAll('.explore_products__tab');
+        const grid = section.querySelector('.explore_products__grid');
+        const perPage = grid.dataset.productsPerPage || 8;
+
+        const loadProducts = async (category) => {
+            grid.classList.add('loading');
+
+            const formData = new FormData();
+            formData.append('action', 'load_products');
+            formData.append('category', category);
+            formData.append('per_page', perPage);
+            formData.append('nonce', cfStore.get_variation_nonce);
+
+            try {
+                const response = await axios.post(cfStore.ajax_url, formData);
+
+                if (response.data.success) {
+                    const list = [...grid.children].find(el => el.tagName === 'UL');
+                    if (list) {
+                        list.outerHTML = response.data.data.html;
+                    } else {
+                        grid.innerHTML = response.data.data.html;
+                    }
+                }
+            } catch (error) {
+                grid.innerHTML = '<p class="explore_products__error">Failed to load products.</p>';
+            } finally {
+                grid.classList.remove('loading');
+            }
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.dataset.category;
+                loadProducts(category);
+            });
+        });
+
+        // loadProducts('all');
     }
 
 

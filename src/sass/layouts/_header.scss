@@ -1,8 +1,15 @@
 .site-header {
   top: 0;
   z-index: 1000;
-  position: sticky;
+  // position: sticky;
   background: #fff;
+
+  #mega-menu {
+    & > li.menu-item {
+      &:first-child {padding-left: 0;}
+      &:last-child {padding-right: 0;}
+    }
+  }
 }
 
 .desktop-only {
@@ -121,18 +128,22 @@
 }
 
 .top-bar {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
   padding: 8px 0;
   font-size: 14px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
 
   &-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 40px;
+    max-width: 1600px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      padding: 0 20px;
+    }
+    
   }
 
   &-left,
@@ -353,8 +364,9 @@
 }
 
 .mega-menu-bar {
-  background: #1a1a1a;
   padding: 14px 0;
+  position: relative;
+  background: #1a1a1a;
   border-bottom: 1px solid #333;
 
   .mega-menu-nav {
@@ -368,7 +380,7 @@
       justify-content: space-between;
 
       li {
-        position: relative;
+        // position: relative;
 
         a {
           color: #fff;
@@ -636,9 +648,9 @@ body.mobile-menu-open {
 
   .top-bar {
     &-content {
-      flex-direction: column;
       gap: 6px;
       padding: 0 20px;
+      flex-direction: column;
     }
 
     &-left,
@@ -734,3 +746,5 @@ body.mobile-menu-open {
     max-width: 320px;
   }
 }
+
+

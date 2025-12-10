@@ -41,11 +41,14 @@
     }
 
     .wp-block-button__link {
+      gap: 5px;
       color: #000;
+      display: flex;
       font-size: 14px;
       font-weight: 500;
-      border-radius: 4px;
       background: #fff;
+      align-items: center;
+      border-radius: 150px;
       text-decoration: none;
       padding: 0.75em 1.5em;
     }

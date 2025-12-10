@@ -196,12 +196,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load WooCommerce compatibility file.
  */
-if ( class_exists( 'WooCommerce' ) ) {
+// if ( class_exists( 'WooCommerce' ) ) {
 	require_once get_template_directory() . '/inc/woocommerce.php';
 	require_once get_template_directory() . '/inc/multi-currency.php';
 	require_once get_template_directory() . '/inc/wishlist.php';
 	require_once get_template_directory() . '/inc/seller-dashboard.php';
-}
+// }
 
 
 
@@ -214,6 +214,9 @@ function footer_block_svg_icon_print($icon) {
 	<img src="<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/'. $icon .'.svg'); ?>" width="40" height="40" />
 	<?php
 }
+add_action('init', function() {
+    header("Access-Control-Allow-Credentials: true");
+});
 
 
 // add_filter( 'woocommerce_enable_setup_wizard', '__return_false' );
@@ -279,3 +282,37 @@ function footer_block_svg_icon_print($icon) {
 //     return isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
 // }
 // add_filter('loop_shop_per_page', 'custom_products_per_page', 20);
+
+
+
+
+
+
+
+
+function my_custom_menu_scripts_and_styles( $hook_suffix ) {
+    if ( 'nav-menus.php' !== $hook_suffix ) {
+        return;
+    }
+    wp_enqueue_style(
+        'creative-admin',
+        get_template_directory_uri() . '/dist/css/admin.css',
+        array(),
+        '1.0.0'
+    );
+    wp_enqueue_script(
+        'creative-admin',
+        get_template_directory_uri() . '/dist/js/admin.js',
+        array( 'jquery' ),
+        '1.0.0',
+        true
+    );
+
+	wp_localize_script('creative-admin', 'csStore', [
+		'ajax_url' => admin_url('admin-ajax.php'),
+		'mega_menu_nonce' => wp_create_nonce('save-mega-menu-content'),
+	]);
+}
+add_action( 'admin_enqueue_scripts', 'my_custom_menu_scripts_and_styles' );
+
+

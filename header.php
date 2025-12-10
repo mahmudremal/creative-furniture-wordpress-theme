@@ -119,7 +119,8 @@
                         'theme_location' => 'header-mega-menu',
                         'menu_id'        => 'mega-menu',
                         'container'      => false,
-                        'fallback_cb'    => false,
+                        // 'fallback_cb'    => false,
+                        'walker'         => new \CF_MegaMenuWalker()
                     ]);
                     ?>
                 </nav>

@@ -76,3 +76,40 @@ if ( ! function_exists( 'creative_furniture_header_style' ) ) :
 		<?php
 	}
 endif;
+
+require_once __DIR__ . '/MegaMenuWalker.php';
+// add_filter('wp_edit_nav_menu_walker', function () {
+//     return 'CF_MegaMenuWalker';
+// });
+
+add_action('wp_ajax_mega_menu_content', function () {
+    // check_ajax_referer('save-mega-menu-content');
+    $id      = intval($_GET['menu_item_id']);
+    $content = get_post_meta($id, '_mega_menu_content', true);
+
+    wp_send_json_success(['content' => (string) $content]);
+});
+add_action('wp_ajax_save_mega_menu_content', function () {
+    // check_ajax_referer('save-mega-menu-content');
+    $id      = intval($_POST['menu_item_id']);
+    $content = wp_kses_post($_POST['content']);
+
+    update_post_meta($id, '_mega_menu_content', $content);
+
+    wp_send_json_success();
+});
+
+add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $args) {
+
+    if ($args->menu_id !== 'mega-menu') return $item_output;
+
+    $content = get_post_meta($item->ID, '_mega_menu_content', true);
+
+    if ($content) {
+        $item_output .= '<div class="mega-menu-panel">' . do_shortcode($content) . '</div>';
+    }
+
+    return $item_output;
+
+}, 10, 4);
+

@@ -20,6 +20,7 @@ $plus_minus_icons = '
 <div class="cf-single-product">
     <?php while (have_posts()) : the_post(); global $product; ?>
         
+    
         <div class="cf-product-container">
             <div class="cf-product-gallery">
                 <?php // woocommerce_show_product_images(); ?>
@@ -27,7 +28,10 @@ $plus_minus_icons = '
             </div>
 
             <div class="cf-product-details">
-                <form class="cf-cart-form" method="post" enctype="multipart/form-data">
+                <form class="cart cf-cart-form" action="<?php echo esc_url( admin_url('admin-ajax.php?action=cf_add_to_cart') ); ?>" method="post" enctype='multipart/form-data'>
+                    <input type="hidden" name="action" value="cf_add_to_cart">
+                    <?php wp_nonce_field( 'cf_add_to_cart_nonce' ); ?>
+
                     <div class="cf-product-header">
                         <h1 class="cf-product-title"><?php the_title(); ?></h1>
                         <button type="button" class="cf-wishlist-btn" aria-label="<?php esc_attr_e('Add to wishlist', 'creative-furniture'); ?>">
@@ -120,21 +124,6 @@ $plus_minus_icons = '
                         </div>
                     <?php endif; ?>
                     <!--  -->
-                    
-                    <div class="cf-product-actions">
-                        <!-- <button type="button" class="cf-size-select">
-                            <span><?php esc_html_e('Select Size', 'creative-furniture'); ?></span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 9L12 15L18 9" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button> -->
-                        <button type="button" class="cf-customization-btn">
-                            <span><?php esc_html_e('Customization Size', 'creative-furniture'); ?></span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
 
                     <?php if (function_exists('wc_get_template')) : ?>
                         <div class="cf-payment-info">
@@ -177,6 +166,14 @@ $plus_minus_icons = '
                     <?php if ($product->is_type('variable')) : ?>
                         <input type="hidden" name="variation_id" class="cf-variation-id" value="">
                     <?php endif; ?>
+
+                    
+                    <div class="cf-product-actions">
+                        <a href="https://wa.me/971566736852" class="cf-customization-btn">
+                            <span><?php esc_html_e('WhatsApp us for Customization', 'creative-furniture'); ?></span>
+                        </a>
+                    </div>
+
                 </form>
 
                 <div class="cf-product-accordion">

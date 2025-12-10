@@ -179,7 +179,7 @@
     border-radius: 140px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
@@ -203,9 +203,11 @@
 }
 
 .cf-customization-btn {
-    background: #9D8465;
     border: none;
     color: white;
+    text-decoration: none;
+    background: #9D8465;
+    transition: background 0.3s;
 
     &:hover {
         background: #8a7459;

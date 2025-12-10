@@ -1,22 +1,16 @@
-<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover"} -->
-<div class="wp-block-cover alignfull hero-cover" style="max-height: 540px;"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover big-hero-banner"} -->
+<div class="wp-block-cover alignfull hero-cover big-hero-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group hero-content"><!-- wp:heading {"className":"wp-block-heading hero-title has-text-align-center"} -->
-<h2 class="wp-block-heading hero-title has-text-align-center">
-                <span class="part1" style="font-weight: 500">Upgrade Your Space —</span>
-                <span class="part2" style="font-weight: 500"></span>
-                <em class="part3" style="font-weight: 500">Save More Today!</em>
-            </h2>
+<h2 class="wp-block-heading hero-title has-text-align-center">Sell Your Furniture on <br><em>Creative Furniture</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"hero-subtitle"} -->
-<p class="has-text-align-center hero-subtitle">
-                Transform your home with beautifully crafted furniture designed for comfort, style, and everyday living. Discover timeless pieces that blend elegance and functionality.
-            </p>
+<p class="has-text-align-center hero-subtitle">Showcase your designs to a wider audience. We handle the marketing, you focus on creating quality furniture.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"black","className":"hero-button"} -->
-<div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="#">Start Selling</a></div>
+<div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="#formsectiontosell">Start Selling</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div>
@@ -32,12 +26,12 @@
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:columns {"className":"container-fluid sell-with-us-4points"} -->
 <div class="wp-block-columns container-fluid sell-with-us-4points"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading -->
-<h2 class="wp-block-heading has-text-align-left">Why Sell With <em>Us</em></h2>
+<div class="wp-block-column"><!-- wp:heading {"className":"has-text-align-left","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+<h2 class="wp-block-heading has-text-align-left" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">Why Sell With <em>Us</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
-<div class="wp-block-columns container-fluid" style="margin: 30px auto;"><!-- wp:column -->
+<div class="wp-block-columns container-fluid"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
 <figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/largest-customer-research.png" alt=""/></figure>
 <!-- /wp:image -->
@@ -99,16 +93,16 @@
 <!-- /wp:columns -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
-<div class="wp-block-columns container-fluid"><!-- wp:column {"className":"container-fluid"} -->
-<div class="wp-block-column container-fluid"><!-- wp:columns -->
+<div class="wp-block-columns container-fluid"><!-- wp:column {"className":"container-fluid","style":{"spacing":{"padding":{"top":"var:preset|spacing|70"}}}} -->
+<div class="wp-block-column container-fluid" style="padding-top:var(--wp--preset--spacing--70)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
 <figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/start-selling-cta-banner.jpg" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textAlign":"center"} -->
+<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40","top":"0","bottom":"0"}}}} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:var(--wp--preset--spacing--40);padding-bottom:0;padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center"} -->
 <h2 class="wp-block-heading has-text-align-center">Together, We Build <em>Beautiful Spaces</em></h2>
 <!-- /wp:heading -->
 
@@ -130,28 +124,28 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:columns {"className":"container-fluid clients-slider-block"} -->
-<div class="wp-block-columns container-fluid clients-slider-block"><!-- wp:column {"width":"100%"} -->
+<!-- wp:columns {"className":"container-fluid clients-slider-block","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+<div class="wp-block-columns container-fluid clients-slider-block" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:heading {"textAlign":"center"} -->
 <h2 class="wp-block-heading has-text-align-center">Trusted by Leading <em>Furniture Brands</em></h2>
 <!-- /wp:heading -->
 
-<!-- wp:creative-furniture/client-logos {"items":[{"image":"https://creative.wp.local/wp-content/uploads/2025/12/cap-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/belt-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/sunglasses-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-pocket-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-zipper-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-logo-2.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/t-shirt-with-logo-1.jpg","link":""},{"image":"https://creative.wp.local/wp-content/uploads/2025/12/polo-2.jpg","link":""}],"className":"container-fluid"} -->
-<div class="wp-block-creative-furniture-client-logos cf-client-logos-slider container-fluid"><div class="cf-client-logos-track"><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/cap-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/belt-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/sunglasses-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-pocket-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-zipper-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/hoodie-with-logo-2.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/t-shirt-with-logo-1.jpg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/uploads/2025/12/polo-2.jpg" class="cf-client-logo-img" alt=""/></div></div></div>
+<!-- wp:creative-furniture/client-logos {"items":[{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-1.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-2.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-3.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-3.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-4.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-5.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-6.svg","link":""},{"image":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-1.svg","link":""}],"className":"container-fluid"} -->
+<div class="wp-block-creative-furniture-client-logos cf-client-logos-slider container-fluid"><div class="cf-client-logos-track"><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-1.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-2.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-3.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-3.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-4.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-5.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-6.svg" class="cf-client-logo-img" alt=""/></div><div class="cf-client-logo-wrapper"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/icons/clients/client-1.svg" class="cf-client-logo-img" alt=""/></div></div></div>
 <!-- /wp:creative-furniture/client-logos --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:columns {"className":"container-fluid align-items-center"} -->
-<div class="wp-block-columns container-fluid align-items-center"><!-- wp:column {"width":"50%"} -->
-<div class="wp-block-column" style="flex-basis:50%"><!-- wp:heading {"fontSize":"large"} -->
+<!-- wp:columns {"verticalAlignment":"center","className":"container-fluid align-items-center"} -->
+<div class="wp-block-columns are-vertically-aligned-center container-fluid align-items-center"><!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:var(--wp--preset--spacing--40);padding-bottom:0;padding-left:var(--wp--preset--spacing--40);flex-basis:50%"><!-- wp:heading {"fontSize":"large"} -->
 <h2 class="wp-block-heading has-large-font-size">Frequently Asked <em>Questions</em></h2>
 <!-- /wp:heading -->
 
-<!-- wp:woocommerce/accordion-group -->
-<div class="wp-block-woocommerce-accordion-group"><!-- wp:woocommerce/accordion-item -->
-<div class="wp-block-woocommerce-accordion-item"><!-- wp:woocommerce/accordion-header -->
-<h3 class="wp-block-woocommerce-accordion-header accordion-item__heading"><button class="accordion-item__toggle"><span>What kind of products can i sell?</span><span class="accordion-item__toggle-icon has-icon-plus" style="width:1.2em;height:1.2em"><svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" fill="currentColor"></path></svg></span></button></h3>
+<!-- wp:woocommerce/accordion-group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-woocommerce-accordion-group" style="margin-top:var(--wp--preset--spacing--40)"><!-- wp:woocommerce/accordion-item -->
+<div class="wp-block-woocommerce-accordion-item"><!-- wp:woocommerce/accordion-header {"fontSize":"medium"} -->
+<h3 class="wp-block-woocommerce-accordion-header has-medium-font-size accordion-item__heading"><button class="accordion-item__toggle"><span>What kind of products can i sell?</span><span class="accordion-item__toggle-icon has-icon-plus" style="width:1.2em;height:1.2em"><svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" fill="currentColor"></path></svg></span></button></h3>
 <!-- /wp:woocommerce/accordion-header -->
 
 <!-- wp:woocommerce/accordion-panel -->
@@ -191,17 +185,17 @@
 <!-- /wp:woocommerce/accordion-group --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"50%"} -->
-<div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/sell-with-us-faq.jpg" alt=""/></figure>
+<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"width":"auto","height":"600px","sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/sell-with-us-faq.jpg" alt="" style="width:auto;height:600px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"className":"container-fluid max-width-800","layout":{"type":"constrained","wideSize":"800px"}} -->
+<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|70"}}}} -->
+<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:column {"className":"container-fluid max-width-800","layout":{"type":"constrained","wideSize":"800px"}} -->
 <div class="wp-block-column container-fluid max-width-800"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Grow your furniture Brand with</h2>
+<h2 class="wp-block-heading has-text-align-center" id="formsectiontosell">Grow your furniture Brand with</h2>
 <!-- /wp:heading -->
 
 <!-- wp:heading {"textAlign":"center"} -->
@@ -211,6 +205,10 @@
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">Tell us about your products and business. Our team will review your application and get back to you within 3 - 5 business days.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"backgroundColor":"white"} -->
+<hr class="wp-block-separator has-text-color has-white-color has-alpha-channel-opacity has-white-background-color has-background" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"/>
+<!-- /wp:separator -->
 
 <!-- wp:creative-furniture/sell-with-us -->
 <div class="wp-block-creative-furniture-sell-with-us"><form class="sell-with-us"><div class="form-row"><div class="form-block"><label>Full Name / Company Name *</label><input type="text" name="full_name" placeholder="Full Name / Company Name *"/></div><div class="form-block"><label>Business Email *</label><input type="email" name="email" placeholder="Business Email *"/></div></div><div class="form-row"><div class="form-block"><label>Phone Number</label><input type="text" name="phone" placeholder="Phone Number"/></div><div class="form-block"><label>Select Services</label><select name="service"><option value="">Select Services</option><option value="design">Design</option><option value="marketing">Marketing</option><option value="consulting">Consulting</option></select></div></div><div class="form-block"><label>Briefly describe your business *</label><textarea name="brief" placeholder="Briefly describe your business *"></textarea></div><div class="form-block"><label class="agree-row"><input name="agree" type="checkbox"/><span>By Submitting, You Agree To Our Terms &amp; Conditions And Privacy Policy.</span></label></div><div class="form-block"><button type="submit" class="submit-btn">Submit</button></div></form></div>

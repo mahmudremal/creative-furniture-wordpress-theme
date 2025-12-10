@@ -1,5 +1,5 @@
-<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover"} -->
-<div class="wp-block-cover alignfull hero-cover" style="max-height:unset"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg","dimRatio":50,"overlayColor":"black","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/hero-section","name":"Hero Section"},"align":"full","className":"hero-cover big-hero-banner"} -->
+<div class="wp-block-cover alignfull hero-cover big-hero-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/shop-bg.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group hero-content"><!-- wp:heading {"className":"wp-block-heading hero-title has-text-align-center"} -->
 <h2 class="wp-block-heading hero-title has-text-align-center">
                 <span class="part1">Upgrade Your Space —</span>
@@ -16,15 +16,15 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"black","className":"hero-button"} -->
-<div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="#">Shop Now</a></div>
+<div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="https://creative.wp.local/shop/">Shop Now</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
 
 <!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/intro-section","name":"Intro Section"},"align":"full","className":"cf-intro-section","layout":{"type":"constrained","justifyContent":"center"}} -->
-<div class="wp-block-group alignfull cf-intro-section"><!-- wp:paragraph {"align":"center","className":"cf-intro-text"} -->
-<p class="has-text-align-center cf-intro-text" style="width:700px;margin-bottom:50px;">
+<div class="wp-block-group alignfull cf-intro-section"><!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><p class="has-text-align-center cf-intro-text" style="width:700px;margin-bottom:50px;">
         <span class="cf-aspekta-dark">Creative Furniture is a </span>
         <span class="cf-playfair-dark">Dubai-based</span>
         <span class="cf-aspekta-dark"> store offering </span>
@@ -32,39 +32,42 @@
         <span class="cf-aspekta-dark">,</span>
         <span class="cf-aspekta-gray"> customizable, and modern </span>
         <span class="cf-playfair-gray">furniture</span>
-    </p>
+    </p></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
 <div class="wp-block-columns container-fluid"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:creative-furniture/slider {"slides":[{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"#"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Learn More","buttonLink":"#"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"See More","buttonLink":"#"}]} -->
-<div class="wp-block-creative-furniture-slider creative-slider"><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="#" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="#" class="btn">Learn More</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="#" class="btn">See More</a></div></div></div>
+<div class="wp-block-column"><!-- wp:creative-furniture/slider {"slides":[{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"}]} -->
+<div class="wp-block-creative-furniture-slider creative-slider"><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div></div>
 <!-- /wp:creative-furniture/slider --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:creative-furniture/slider {"slides":[{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"#"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"New Slide","buttonText":"Learn More","buttonLink":"#"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"New Slide","buttonText":"Learn More","buttonLink":"#"}]} -->
-<div class="wp-block-creative-furniture-slider creative-slider"><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="#" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>New Slide</h2><a href="#" class="btn">Learn More</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>New Slide</h2><a href="#" class="btn">Learn More</a></div></div></div>
+<div class="wp-block-column"><!-- wp:creative-furniture/slider {"slides":[{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"},{"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg","title":"Save 20% This Weekend Only!","buttonText":"Shop Now","buttonLink":"https://creative.wp.local/shop/"}]} -->
+<div class="wp-block-creative-furniture-slider creative-slider"><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div><div class="slide" data-bg="https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg" style="background-image:url(https://creative.wp.local/wp-content/uploads/2025/12/home-slider-1.jpg)"><div class="slide-overlay"></div><div class="slide-content"><h2>Save 20% This Weekend Only!</h2><a href="https://creative.wp.local/shop/" class="btn">Shop Now</a></div></div></div>
 <!-- /wp:creative-furniture/slider --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"className":"container-fluid"} -->
-<h2 class="wp-block-heading container-fluid" style="margin-bottom:20px;">Shop by <em>category</em></h2>
+<!-- wp:heading {"className":"container-fluid","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
+<h2 class="wp-block-heading container-fluid" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)">Shop by <em>category</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns {"className":"container-fluid"} -->
 <div class="wp-block-columns container-fluid"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/category-card","name":"Category Card Block"},"className":"category-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group category-card"><!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/category-card","name":"Category Card Block"},"className":"category-card"} -->
-<div class="wp-block-group category-card"><!-- wp:image {"sizeSlug":"large","className":"category-image"} -->
-<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt="Home Furniture"/><figcaption class="wp-element-caption">Office furniture</figcaption></figure>
+<div class="wp-block-group category-card"><!-- wp:image {"id":29,"sizeSlug":"large","linkDestination":"none","className":"category-image"} -->
+<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/uploads/2025/12/category-5-1024x683.jpg" alt="" class="wp-image-29"/><figcaption class="wp-element-caption">Office furniture</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:buttons {"className":"overlay-buttons"} -->
 <div class="wp-block-buttons overlay-buttons"><!-- wp:button {"className":"see-collections"} -->
-<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="#">See Collections</a></div>
+<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">See Collections<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12L10 8L6 4" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -73,13 +76,16 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/category-card","name":"Category Card Block"},"className":"category-card"} -->
-<div class="wp-block-group category-card"><!-- wp:image {"sizeSlug":"large","className":"category-image"} -->
-<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt="Home Furniture"/><figcaption class="wp-element-caption">Home Furniture</figcaption></figure>
+<div class="wp-block-group category-card"><!-- wp:image {"id":27,"sizeSlug":"large","linkDestination":"none","className":"category-image"} -->
+<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/uploads/2025/12/category-2-819x1024.jpg" alt="" class="wp-image-27"/><figcaption class="wp-element-caption">Home Furniture</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:buttons {"className":"overlay-buttons"} -->
-<div class="wp-block-buttons overlay-buttons"><!-- wp:button {"className":"see-collections"} -->
-<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="#">See Collections</a></div>
+<div class="wp-block-buttons overlay-buttons"><!-- wp:button {"className":"see-collections is-style-fill"} -->
+<div class="wp-block-button see-collections is-style-fill"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">See Collections<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12L10 8L6 4" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -87,13 +93,16 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/category-card","name":"Category Card Block"},"className":"category-card"} -->
-<div class="wp-block-group category-card"><!-- wp:image {"sizeSlug":"large","className":"category-image"} -->
-<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt="Home Furniture"/><figcaption class="wp-element-caption">Hospitality furniture</figcaption></figure>
+<div class="wp-block-group category-card"><!-- wp:image {"id":28,"sizeSlug":"large","linkDestination":"none","className":"category-image"} -->
+<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/uploads/2025/12/category-4-684x1024.jpg" alt="" class="wp-image-28"/><figcaption class="wp-element-caption">Hospitality furniture</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:buttons {"className":"overlay-buttons"} -->
 <div class="wp-block-buttons overlay-buttons"><!-- wp:button {"className":"see-collections"} -->
-<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="#">See Collections</a></div>
+<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">See Collections<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12L10 8L6 4" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -101,28 +110,36 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/category-card","name":"Category Card Block"},"className":"category-card"} -->
-<div class="wp-block-group category-card"><!-- wp:image {"sizeSlug":"large","className":"category-image"} -->
-<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt="Home Furniture"/><figcaption class="wp-element-caption">Unique furniture</figcaption></figure>
+<div class="wp-block-group category-card"><!-- wp:image {"id":115,"sizeSlug":"large","linkDestination":"none","className":"category-image"} -->
+<figure class="wp-block-image size-large category-image"><img src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-juan-tapias-695500451-29559671-682x1024.jpg" alt="" class="wp-image-115"/><figcaption class="wp-element-caption">Unique furniture</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:buttons {"className":"overlay-buttons"} -->
 <div class="wp-block-buttons overlay-buttons"><!-- wp:button {"className":"see-collections"} -->
-<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="#">See Collections</a></div>
+<div class="wp-block-button see-collections"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">See Collections<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12L10 8L6 4" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:heading {"textAlign":"center","className":"container-fluid"} -->
-<h2 class="wp-block-heading has-text-align-center container-fluid" style="margin:50px auto 20px auto">Trending <em>Products</em></h2>
+<!-- wp:heading {"textAlign":"center","className":"container-fluid","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+<h2 class="wp-block-heading has-text-align-center container-fluid" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">Trending <em>Products</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:creative-furniture/woo-products {"productsPerPage":4,"productsPerRow":4,"productType":"best_selling","className":"container-fluid"} /-->
 
-<!-- wp:paragraph -->
-<p>/</p>
-<!-- /wp:paragraph -->
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"><!-- wp:button {"textAlign":"center"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">See All Product<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12L10 8L6 4" stroke="#111111" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 
 <!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/promo-banner","name":"Promo Banner Section"},"className":"promo-banner"} -->
 <div class="wp-block-group promo-banner"><!-- wp:group {"className":"promo-banner__wrapper","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","orientation":"horizontal"}} -->
@@ -136,7 +153,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"promo-banner__btn"} -->
-<div class="wp-block-button promo-banner__btn"><a class="wp-block-button__link wp-element-button">Shop Now</a></div>
+<div class="wp-block-button promo-banner__btn"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">Shop Now</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:group -->
 
@@ -154,117 +171,137 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"promo-banner__btn"} -->
-<div class="wp-block-button promo-banner__btn"><a class="wp-block-button__link wp-element-button">Shop Now</a></div>
+<div class="wp-block-button promo-banner__btn"><a class="wp-block-button__link wp-element-button" href="https://creative.wp.local/shop/">Shop Now</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"className":"container-fluid"} -->
-<h2 class="wp-block-heading container-fluid" style="margin:50px auto 20px auto">Shop the <em>LOOKS</em></h2>
+<!-- wp:heading {"className":"container-fluid","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
+<h2 class="wp-block-heading container-fluid" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)">Shop the <em>LOOKS</em></h2>
 <!-- /wp:heading -->
 
-<!-- wp:columns {"className":"container-fluid"} -->
-<div class="wp-block-columns container-fluid"><!-- wp:column -->
+<!-- wp:columns {"className":"container-fluid","style":{"spacing":{"margin":{"top":"0","bottom":"3rem"}}}} -->
+<div class="wp-block-columns container-fluid" style="margin-top:0;margin-bottom:3rem"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-2.jpg","hotspots":[{"x":51.72335029411572,"y":55.48500246862502,"productId":2800,"product":{"link":"https://creative.wp.local/product/wordpress-pennant/","title":"WordPress Pennant","excerpt":"This is an external product."}},{"x":29.126980411557525,"y":16.492814137493973,"productId":2786,"product":{"link":"https://creative.wp.local/product/hoodie-with-zipper/","title":"Hoodie with Zipper","excerpt":"This is a simple product."}},{"x":26.746028277751037,"y":72.82942073259343,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":58.208610045908195,"y":84.01611660140411,"productId":2781,"product":{"link":"https://creative.wp.local/product/beanie/","title":"Beanie","excerpt":"This is a simple product."}}]} -->
 <div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-2.jpg" style="width:100%"/><div class="hotspot" data-x="51.72335029411572" data-y="55.48500246862502" data-product-id="2800" data-product-title="WordPress Pennant" data-product-link="https://creative.wp.local/product/wordpress-pennant/" data-product-excerpt="This is an external product." style="left:51.72335029411572%;top:55.48500246862502%"></div><div class="hotspot" data-x="29.126980411557525" data-y="16.492814137493973" data-product-id="2786" data-product-title="Hoodie with Zipper" data-product-link="https://creative.wp.local/product/hoodie-with-zipper/" data-product-excerpt="This is a simple product." style="left:29.126980411557525%;top:16.492814137493973%"></div><div class="hotspot" data-x="26.746028277751037" data-y="72.82942073259343" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:26.746028277751037%;top:72.82942073259343%"></div><div class="hotspot" data-x="58.208610045908195" data-y="84.01611660140411" data-product-id="2781" data-product-title="Beanie" data-product-link="https://creative.wp.local/product/beanie/" data-product-excerpt="This is a simple product." style="left:58.208610045908195%;top:84.01611660140411%"></div></div>
 <!-- /wp:creative-furniture/image-hotspot -->
 
 <!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-2.jpg","hotspots":[{"x":51.72335029411572,"y":55.48500246862502,"productId":2800,"product":{"link":"https://creative.wp.local/product/wordpress-pennant/","title":"WordPress Pennant","excerpt":"This is an external product."}},{"x":29.126980411557525,"y":16.492814137493973,"productId":2786,"product":{"link":"https://creative.wp.local/product/hoodie-with-zipper/","title":"Hoodie with Zipper","excerpt":"This is a simple product."}},{"x":26.746028277751037,"y":72.82942073259343,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":58.208610045908195,"y":84.01611660140411,"productId":2781,"product":{"link":"https://creative.wp.local/product/beanie/","title":"Beanie","excerpt":"This is a simple product."}}]} -->
-<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-2.jpg" style="width:100%;height:100%"/><div class="hotspot" data-x="51.72335029411572" data-y="55.48500246862502" data-product-id="2800" data-product-title="WordPress Pennant" data-product-link="https://creative.wp.local/product/wordpress-pennant/" data-product-excerpt="This is an external product." style="left:51.72335029411572%;top:55.48500246862502%"></div><div class="hotspot" data-x="29.126980411557525" data-y="16.492814137493973" data-product-id="2786" data-product-title="Hoodie with Zipper" data-product-link="https://creative.wp.local/product/hoodie-with-zipper/" data-product-excerpt="This is a simple product." style="left:29.126980411557525%;top:16.492814137493973%"></div><div class="hotspot" data-x="26.746028277751037" data-y="72.82942073259343" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:26.746028277751037%;top:72.82942073259343%"></div><div class="hotspot" data-x="58.208610045908195" data-y="84.01611660140411" data-product-id="2781" data-product-title="Beanie" data-product-link="https://creative.wp.local/product/beanie/" data-product-excerpt="This is a simple product." style="left:58.208610045908195%;top:84.01611660140411%"></div></div>
+<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-2.jpg" style="width:100%"/><div class="hotspot" data-x="51.72335029411572" data-y="55.48500246862502" data-product-id="2800" data-product-title="WordPress Pennant" data-product-link="https://creative.wp.local/product/wordpress-pennant/" data-product-excerpt="This is an external product." style="left:51.72335029411572%;top:55.48500246862502%"></div><div class="hotspot" data-x="29.126980411557525" data-y="16.492814137493973" data-product-id="2786" data-product-title="Hoodie with Zipper" data-product-link="https://creative.wp.local/product/hoodie-with-zipper/" data-product-excerpt="This is a simple product." style="left:29.126980411557525%;top:16.492814137493973%"></div><div class="hotspot" data-x="26.746028277751037" data-y="72.82942073259343" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:26.746028277751037%;top:72.82942073259343%"></div><div class="hotspot" data-x="58.208610045908195" data-y="84.01611660140411" data-product-id="2781" data-product-title="Beanie" data-product-link="https://creative.wp.local/product/beanie/" data-product-excerpt="This is a simple product." style="left:58.208610045908195%;top:84.01611660140411%"></div></div>
 <!-- /wp:creative-furniture/image-hotspot --></div>
 <!-- /wp:column -->
 
-<!-- wp:column -->
-<div class="wp-block-column" style="display:flex"><!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg","hotspots":[{"x":25.873007651295808,"y":46.92506722971848,"productId":0,"product":{"link":"https://creative.wp.local/product/logo-collection/","title":"Logo Collection","excerpt":"This is a grouped product."}},{"x":37.29023449019509,"y":51.736151642976345,"productId":2787,"product":{"link":"https://creative.wp.local/product/long-sleeve-tee/","title":"Long Sleeve Tee","excerpt":"This is a simple product."}},{"x":67.7324082010066,"y":49.18610717595338,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":48.344655111439494,"y":80.80665856703813,"productId":2790,"product":{"link":"https://creative.wp.local/product/single/","title":"Single","excerpt":"This is a simple, virtual product."}}]} -->
-<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg" style="width:100%;height:100%"/><div class="hotspot" data-x="25.873007651295808" data-y="46.92506722971848" data-product-id="0" data-product-title="Logo Collection" data-product-link="https://creative.wp.local/product/logo-collection/" data-product-excerpt="This is a grouped product." style="left:25.873007651295808%;top:46.92506722971848%"></div><div class="hotspot" data-x="37.29023449019509" data-y="51.736151642976345" data-product-id="2787" data-product-title="Long Sleeve Tee" data-product-link="https://creative.wp.local/product/long-sleeve-tee/" data-product-excerpt="This is a simple product." style="left:37.29023449019509%;top:51.736151642976345%"></div><div class="hotspot" data-x="67.7324082010066" data-y="49.18610717595338" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:67.7324082010066%;top:49.18610717595338%"></div><div class="hotspot" data-x="48.344655111439494" data-y="80.80665856703813" data-product-id="2790" data-product-title="Single" data-product-link="https://creative.wp.local/product/single/" data-product-excerpt="This is a simple, virtual product." style="left:48.344655111439494%;top:80.80665856703813%"></div></div>
+<!-- wp:column {"layout":{"type":"default"}} -->
+<div class="wp-block-column"><!-- wp:creative-furniture/image-hotspot {"bgImage":"https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg","hotspots":[{"x":25.873007651295808,"y":46.92506722971848,"productId":0,"product":{"link":"https://creative.wp.local/product/logo-collection/","title":"Logo Collection","excerpt":"This is a grouped product."}},{"x":37.29023449019509,"y":51.736151642976345,"productId":2787,"product":{"link":"https://creative.wp.local/product/long-sleeve-tee/","title":"Long Sleeve Tee","excerpt":"This is a simple product."}},{"x":67.7324082010066,"y":49.18610717595338,"productId":2780,"product":{"link":"https://creative.wp.local/product/t-shirt/","title":"T-Shirt","excerpt":"This is a simple product."}},{"x":48.344655111439494,"y":80.80665856703813,"productId":2790,"product":{"link":"https://creative.wp.local/product/single/","title":"Single","excerpt":"This is a simple, virtual product."}},{"x":22.981851488816503,"y":98.97997637660222,"productId":0}],"className":"full-height"} -->
+<div class="wp-block-creative-furniture-image-hotspot image-hotspot-container full-height" style="position:relative"><img src="https://creative.wp.local/wp-content/uploads/2025/12/imagehotspot-banner-3.jpg" style="width:100%"/><div class="hotspot" data-x="25.873007651295808" data-y="46.92506722971848" data-product-id="0" data-product-title="Logo Collection" data-product-link="https://creative.wp.local/product/logo-collection/" data-product-excerpt="This is a grouped product." style="left:25.873007651295808%;top:46.92506722971848%"></div><div class="hotspot" data-x="37.29023449019509" data-y="51.736151642976345" data-product-id="2787" data-product-title="Long Sleeve Tee" data-product-link="https://creative.wp.local/product/long-sleeve-tee/" data-product-excerpt="This is a simple product." style="left:37.29023449019509%;top:51.736151642976345%"></div><div class="hotspot" data-x="67.7324082010066" data-y="49.18610717595338" data-product-id="2780" data-product-title="T-Shirt" data-product-link="https://creative.wp.local/product/t-shirt/" data-product-excerpt="This is a simple product." style="left:67.7324082010066%;top:49.18610717595338%"></div><div class="hotspot" data-x="48.344655111439494" data-y="80.80665856703813" data-product-id="2790" data-product-title="Single" data-product-link="https://creative.wp.local/product/single/" data-product-excerpt="This is a simple, virtual product." style="left:48.344655111439494%;top:80.80665856703813%"></div><div class="hotspot" data-x="22.981851488816503" data-y="98.97997637660222" data-product-id="0" data-product-title="" data-product-link="" data-product-excerpt="" style="left:22.981851488816503%;top:98.97997637660222%"></div></div>
 <!-- /wp:creative-furniture/image-hotspot --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column">
-    <!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg","dimRatio":0,"isDark":false,"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner"} -->
-    <div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container vpp-center-buttons"></div></div>
-    <!-- /wp:cover -->
-
-
-    <p style="font-size:18px;font-weight:400;max-width:560px;">Transform your home with beautifully crafted furniture designed for comfort, style, and everyday living. Discover timeless</p>
-    <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"black","className":"hero-button"} -->
-        <div class="wp-block-button hero-button"><a class="wp-block-button__link has-black-color has-white-background-color has-text-color has-background wp-element-button" href="#">Shop Now</a></div>
-    <!-- /wp:button --></div>
-</div>
+<!-- wp:columns {"className":"container-fluid"} -->
+<div class="wp-block-columns container-fluid"><!-- wp:column {"style":{"spacing":{"padding":{"top":"40px","bottom":"40px"}}}} -->
+<div class="wp-block-column" style="padding-top:40px;padding-bottom:40px"><!-- wp:shortcode -->
+[explore_products categories="home,office,hospitality,outdoor,unique" products_per_page="8"]
+<!-- /wp:shortcode --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
+<!-- wp:columns {"className":"upgrade-space-banner-promo"} -->
+<div class="wp-block-columns upgrade-space-banner-promo"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg","dimRatio":0,"isUserOverlayColor":true,"isDark":false,"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner height-full-justify-between"} -->
+<div class="wp-block-cover is-light video-promo-banner height-full-justify-between"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"className":"container-fluid"} -->
+<div class="wp-block-columns container-fluid"><!-- wp:column {"verticalAlignment":"stretch"} -->
+<div class="wp-block-column is-vertically-aligned-stretch"><!-- wp:heading {"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size">Upgrade Your Space — <br><em>Save More Today!</em></h2>
+<!-- /wp:heading -->
 
 <!-- wp:columns -->
-<div class="wp-block-columns" style="margin:50px auto 20px;"><!-- wp:column -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>Transform your home with beautifully crafted furniture designed for comfort, style, and everyday living. Discover timeless</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","backgroundColor":"white","textColor":"font-black","className":"is-style-fill","style":{"elements":{"link":{"color":{"text":"var:preset|color|font-black"}}}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-font-black-color has-white-background-color has-text-color has-background has-link-color has-text-align-center wp-element-button" href="https://creative.wp.local/shop/">Shop Now</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
+<!-- /wp:cover --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"className":"best-selling-products"} -->
+<div class="wp-block-columns best-selling-products"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"className":"container-fluid"} -->
 <h2 class="wp-block-heading container-fluid">Best Selling <em>Products</em></h2>
 <!-- /wp:heading -->
 
-<!-- wp:creative-furniture/woo-products {"productsPerPage":8,"productsPerRow":4,"productType":"best_selling"} /--></div>
+<!-- wp:creative-furniture/woo-products {"productsPerPage":4,"productsPerRow":4,"productType":"best_selling"} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:cover {"url":"https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg","dimRatio":0,"isDark":false,"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner"} -->
-<div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background" alt="" src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container vpp-center-buttons"><!-- wp:html -->
+<!-- wp:cover {"url":"https://creative.wp.local/wp-content/uploads/2025/12/pexels-fotoaibe-1643383-1024x674.jpg","id":103,"dimRatio":0,"customOverlayColor":"#9a928b","isUserOverlayColor":false,"isDark":false,"sizeSlug":"large","metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/video-promo-banner","name":"Video Promo Banner"},"className":"video-promo-banner"} -->
+<div class="wp-block-cover is-light video-promo-banner"><img class="wp-block-cover__image-background wp-image-103 size-large" alt="" src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-fotoaibe-1643383-1024x674.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#9a928b"></span><div class="wp-block-cover__inner-container"><!-- wp:html -->
 <button class="video-promo-banner__play" aria-label="Play Video">
-            <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40 39.9895C40 39.0183 40 38.5328 40.2025 38.2651C40.3789 38.0319 40.6485 37.8876 40.9404 37.8702C41.2754 37.8502 41.6795 38.1195 42.4875 38.6582L53.0031 45.6686C53.6708 46.1137 54.0046 46.3363 54.1209 46.6168C54.2227 46.8621 54.2227 47.1377 54.1209 47.383C54.0046 47.6635 53.6708 47.886 53.0031 48.3312L42.4875 55.3415C41.6795 55.8802 41.2754 56.1496 40.9404 56.1296C40.6485 56.1122 40.3789 55.9679 40.2025 55.7347C40 55.467 40 54.9814 40 54.0103V39.9895Z" fill="white"/>
-                <path d="M70.1203 20.7036L72.6152 14.9983L67.7756 18.9167L66.4633 17.9165L69.4705 10.2505L70.7129 11.1973L68.27 16.9977L73.145 13.051L74.3611 13.9778L71.8483 19.7248L76.7933 15.8314L78.0356 16.7782L71.4413 21.7105L70.1203 20.7036ZM77.1864 28.1953L78.2153 26.5732L76.1185 23.8423L74.2857 24.4175L73.3545 23.2048L81.4987 20.8069L82.5438 22.1679L78.1444 29.443L77.1864 28.1953ZM77.4032 23.4384L78.9373 25.4363L80.9219 22.3315L77.4032 23.4384ZM79.3624 31.9629L85.3151 29.1379L84.2303 26.8522L85.4328 26.2816L88.2484 32.2144L87.0459 32.785L85.9565 30.4894L80.0038 33.3144L79.3624 31.9629ZM81.9934 39.9472C81.4155 37.439 82.9364 35.7113 85.1017 35.2124C87.2669 34.7135 89.3905 35.6013 89.9685 38.1096C90.4056 40.0069 89.4809 41.5294 87.9216 42.1596L87.5857 40.7018C88.4523 40.2989 88.9218 39.4457 88.6822 38.406C88.3092 36.7874 86.9052 36.3772 85.4474 36.7131C83.9896 37.049 82.9068 38.0323 83.2797 39.6508C83.5366 40.7656 84.4368 41.2919 85.4839 41.2313L85.8173 42.6784C84.0446 42.8724 82.4504 41.9303 81.9934 39.9472ZM83.0111 49.5157L86.399 49.5022L86.3844 45.8172L82.9964 45.8307L82.9905 44.3567L90.9105 44.3252L90.9163 45.7991L87.7264 45.8118L87.741 49.4968L90.931 49.4841L90.9369 50.9691L83.017 51.0006L83.0111 49.5157ZM81.9397 56.6231L88.2817 58.41L88.9679 55.9748L90.249 56.3358L88.468 62.6567L87.1869 62.2957L87.876 59.8499L81.5339 58.063L81.9397 56.6231ZM78.0771 65.8322L81.0743 67.412L82.7926 64.1522L79.7954 62.5724L80.4827 61.2684L87.489 64.9614L86.8017 66.2654L83.9797 64.7779L82.2615 68.0378L85.0834 69.5253L84.391 70.8389L77.3847 67.1459L78.0771 65.8322ZM76.6461 68.2438L82.7343 73.3094L79.0195 77.7741L77.9963 76.9228L80.7684 73.5912L79.3224 72.3881L76.7544 75.4744L75.7735 74.6583L78.3416 71.572L76.7265 70.2282L73.9685 73.5428L72.9454 72.6915L76.6461 68.2438ZM68.4655 76.3036L75.3987 81.1355L74.1057 82.0312L68.5341 77.9288L70.4525 84.5618L69.1594 85.4575L67.0639 77.2745L68.4655 76.3036ZM63.9595 79.2982L67.4221 86.4212L66.0964 87.0656L62.6339 79.9426L63.9595 79.2982ZM61.372 80.4424L63.7283 88.0038L60.9348 88.8743C58.3409 89.6827 56.6161 88.3998 55.955 86.2784C55.2939 84.157 55.9845 82.1214 58.5785 81.313L61.372 80.4424ZM60.3476 82.1097L58.9614 82.5417C57.3126 83.0555 56.9801 84.392 57.4252 85.8202C57.8703 87.2485 58.9031 88.1594 60.5519 87.6456L61.9382 87.2136L60.3476 82.1097ZM53.7824 82.6607L54.5328 90.545L48.7509 91.0953L48.6248 89.7703L52.9393 89.3597L52.7611 87.4871L48.7641 87.8676L48.6432 86.5973L52.6402 86.2169L52.4411 84.1253L48.1485 84.5339L48.0224 83.2089L53.7824 82.6607ZM43.4816 82.5927C46.0368 82.9036 47.143 84.9221 46.8746 87.1278C46.6061 89.3335 45.0481 91.0277 42.4929 90.7167C39.9487 90.4071 38.8315 88.3873 39.0999 86.1816C39.3684 83.9759 40.9374 82.283 43.4816 82.5927ZM45.3459 86.9417C45.5266 85.4567 44.971 84.1037 43.3222 83.903C41.6733 83.7023 40.8094 84.8826 40.6287 86.3677C40.4479 87.8527 41.0035 89.2057 42.6524 89.4064C44.3012 89.6071 45.1651 88.4268 45.3459 86.9417ZM32.8983 83.5374C33.1029 83.7508 33.2826 83.9099 33.4373 84.0148C33.5892 84.1265 33.7395 84.2136 33.8882 84.2762C34.0775 84.3558 34.3011 84.3823 34.559 84.3556C34.8168 84.3288 35.0625 84.2651 35.2958 84.1644L34.8691 85.1783C34.6329 85.2858 34.3916 85.3393 34.1451 85.339C33.8957 85.3455 33.646 85.2961 33.3959 85.1908C33.1999 85.1083 33.0124 85.0056 32.8335 84.8825C32.6545 84.7595 32.4346 84.5635 32.1738 84.2946C31.976 84.0841 31.8012 83.923 31.6493 83.8113C31.4945 83.7064 31.3428 83.6227 31.1941 83.5601C30.998 83.4776 30.7745 83.4511 30.5233 83.4807C30.2655 83.5074 30.0198 83.5711 29.7865 83.6718L30.2089 82.6681C30.4451 82.5606 30.6879 82.5037 30.9372 82.4972C31.1866 82.4908 31.4363 82.5402 31.6864 82.6454C31.8757 82.7251 32.0631 82.8279 32.2488 82.9537C32.4249 83.0835 32.6414 83.2781 32.8983 83.5374ZM22.1055 71.7265L18.9235 77.0791L24.211 73.79L25.3894 74.9449L21.4562 82.1797L20.3406 81.0864L23.4828 75.6331L18.1567 78.9459L17.0647 77.8757L20.2696 72.484L14.8807 75.7352L13.7651 74.6418L20.9193 70.5639L22.1055 71.7265ZM16.0472 63.4026L14.8185 64.8791L16.5471 67.8567L18.4386 67.5217L19.2063 68.844L10.8215 70.1759L9.95998 68.6919L15.2574 62.0422L16.0472 63.4026ZM15.2211 68.0923L13.9564 65.9138L11.5894 68.738L15.2211 68.0923ZM14.3726 59.3856L8.10637 61.4226L8.88854 63.8287L7.62274 64.2402L5.59252 57.9949L6.85831 57.5834L7.64388 59.9999L13.9101 57.9629L14.3726 59.3856ZM12.772 51.1321C13.0334 53.6928 11.3094 55.2178 9.09888 55.4434C6.88837 55.6691 4.89175 54.5239 4.63035 51.9632C4.43262 50.0263 5.53961 48.6307 7.16522 48.1993L7.31714 49.6876C6.40708 49.9795 5.83517 50.7677 5.94353 51.8292C6.11221 53.4816 7.45422 54.0633 8.94249 53.9114C10.4308 53.7595 11.6275 52.9186 11.4589 51.2662C11.3427 50.1281 10.515 49.4938 9.46847 49.4238L9.31766 47.9464C11.1007 47.9745 12.5654 49.1076 12.772 51.1321ZM12.9705 41.5135L9.60846 41.0951L9.15337 44.7519L12.5154 45.1703L12.3334 46.633L4.47402 45.6549L4.65606 44.1922L7.82164 44.5862L8.27674 40.9294L5.11116 40.5354L5.29455 39.0618L13.1539 40.0399L12.9705 41.5135ZM14.9271 34.5971L8.86481 32.0158L7.87366 34.3436L6.64905 33.8222L9.22173 27.7801L10.4463 28.3015L9.45088 30.6394L15.5132 33.2207L14.9271 34.5971ZM19.9364 25.9564L17.1665 24.0055L15.0446 27.0182L17.8145 28.9692L16.9657 30.1742L10.4906 25.6136L11.3393 24.4085L13.9474 26.2455L16.0693 23.2327L13.4613 21.3958L14.3164 20.1817L20.7915 24.7423L19.9364 25.9564ZM21.6641 23.7465L16.2628 17.9541L20.5105 13.9931L21.4182 14.9666L18.2485 17.9223L19.5313 19.298L22.4677 16.5598L23.338 17.493L20.4016 20.2312L21.8344 21.7678L24.988 18.8271L25.8958 19.8005L21.6641 23.7465ZM30.7914 16.7799L24.5352 11.0986L25.9325 10.3762L30.9318 15.1594L29.88 8.33512L31.2773 7.61266L32.3059 15.9968L30.7914 16.7799ZM35.6433 14.386L33.0981 6.88613L34.4939 6.41243L37.0391 13.9123L35.6433 14.386ZM38.3534 13.5758L36.9784 5.77611L39.8599 5.26811C42.5357 4.7964 44.0832 6.28838 44.469 8.47664C44.8547 10.6649 43.9107 12.5961 41.235 13.0678L38.3534 13.5758ZM39.5816 12.0525L41.0115 11.8004C42.7123 11.5005 43.2121 10.2173 42.9524 8.74401C42.6926 7.27072 41.7841 6.23573 40.0834 6.53557L38.6534 6.78765L39.5816 12.0525ZM46.164 12.34L46.4073 4.42374L52.2125 4.60215L52.1716 5.93252L47.8397 5.79939L47.7819 7.67951L51.795 7.80283L51.7558 9.07823L47.7427 8.9549L47.6782 11.0549L51.9882 11.1874L51.9473 12.5177L46.164 12.34ZM56.3738 13.7034C53.8786 13.0715 53.0367 10.9292 53.5822 8.77522C54.1277 6.62122 55.8877 5.13791 58.383 5.76982C60.8675 6.39903 61.72 8.54396 61.1745 10.698C60.629 12.852 58.8584 14.3326 56.3738 13.7034ZM55.0751 9.15329C54.7078 10.6035 55.0877 12.016 56.6979 12.4238C58.308 12.8315 59.3144 11.7701 59.6817 10.3199C60.0489 8.86968 59.6691 7.4572 58.0589 7.04942C56.4487 6.64165 55.4424 7.70307 55.0751 9.15329Z" fill="white"/>
+            <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg" class="animate-spin">
+                
+                <path d="M70.1203 20.7036L72.6152 14.9983L67.7756 18.9167L66.4633 17.9165L69.4705 10.2505L70.7129 11.1973L68.27 16.9977L73.145 13.051L74.3611 13.9778L71.8483 19.7248L76.7933 15.8314L78.0356 16.7782L71.4413 21.7105L70.1203 20.7036ZM77.1864 28.1953L78.2153 26.5732L76.1185 23.8423L74.2857 24.4175L73.3545 23.2048L81.4987 20.8069L82.5438 22.1679L78.1444 29.443L77.1864 28.1953ZM77.4032 23.4384L78.9373 25.4363L80.9219 22.3315L77.4032 23.4384ZM79.3624 31.9629L85.3151 29.1379L84.2303 26.8522L85.4328 26.2816L88.2484 32.2144L87.0459 32.785L85.9565 30.4894L80.0038 33.3144L79.3624 31.9629ZM81.9934 39.9472C81.4155 37.439 82.9364 35.7113 85.1017 35.2124C87.2669 34.7135 89.3905 35.6013 89.9685 38.1096C90.4056 40.0069 89.4809 41.5294 87.9216 42.1596L87.5857 40.7018C88.4523 40.2989 88.9218 39.4457 88.6822 38.406C88.3092 36.7874 86.9052 36.3772 85.4474 36.7131C83.9896 37.049 82.9068 38.0323 83.2797 39.6508C83.5366 40.7656 84.4368 41.2919 85.4839 41.2313L85.8173 42.6784C84.0446 42.8724 82.4504 41.9303 81.9934 39.9472ZM83.0111 49.5157L86.399 49.5022L86.3844 45.8172L82.9964 45.8307L82.9905 44.3567L90.9105 44.3252L90.9163 45.7991L87.7264 45.8118L87.741 49.4968L90.931 49.4841L90.9369 50.9691L83.017 51.0006L83.0111 49.5157ZM81.9397 56.6231L88.2817 58.41L88.9679 55.9748L90.249 56.3358L88.468 62.6567L87.1869 62.2957L87.876 59.8499L81.5339 58.063L81.9397 56.6231ZM78.0771 65.8322L81.0743 67.412L82.7926 64.1522L79.7954 62.5724L80.4827 61.2684L87.489 64.9614L86.8017 66.2654L83.9797 64.7779L82.2615 68.0378L85.0834 69.5253L84.391 70.8389L77.3847 67.1459L78.0771 65.8322ZM76.6461 68.2438L82.7343 73.3094L79.0195 77.7741L77.9963 76.9228L80.7684 73.5912L79.3224 72.3881L76.7544 75.4744L75.7735 74.6583L78.3416 71.572L76.7265 70.2282L73.9685 73.5428L72.9454 72.6915L76.6461 68.2438ZM68.4655 76.3036L75.3987 81.1355L74.1057 82.0312L68.5341 77.9288L70.4525 84.5618L69.1594 85.4575L67.0639 77.2745L68.4655 76.3036ZM63.9595 79.2982L67.4221 86.4212L66.0964 87.0656L62.6339 79.9426L63.9595 79.2982ZM61.372 80.4424L63.7283 88.0038L60.9348 88.8743C58.3409 89.6827 56.6161 88.3998 55.955 86.2784C55.2939 84.157 55.9845 82.1214 58.5785 81.313L61.372 80.4424ZM60.3476 82.1097L58.9614 82.5417C57.3126 83.0555 56.9801 84.392 57.4252 85.8202C57.8703 87.2485 58.9031 88.1594 60.5519 87.6456L61.9382 87.2136L60.3476 82.1097ZM53.7824 82.6607L54.5328 90.545L48.7509 91.0953L48.6248 89.7703L52.9393 89.3597L52.7611 87.4871L48.7641 87.8676L48.6432 86.5973L52.6402 86.2169L52.4411 84.1253L48.1485 84.5339L48.0224 83.2089L53.7824 82.6607ZM43.4816 82.5927C46.0368 82.9036 47.143 84.9221 46.8746 87.1278C46.6061 89.3335 45.0481 91.0277 42.4929 90.7167C39.9487 90.4071 38.8315 88.3873 39.0999 86.1816C39.3684 83.9759 40.9374 82.283 43.4816 82.5927ZM45.3459 86.9417C45.5266 85.4567 44.971 84.1037 43.3222 83.903C41.6733 83.7023 40.8094 84.8826 40.6287 86.3677C40.4479 87.8527 41.0035 89.2057 42.6524 89.4064C44.3012 89.6071 45.1651 88.4268 45.3459 86.9417ZM32.8983 83.5374C33.1029 83.7508 33.2826 83.9099 33.4373 84.0148C33.5892 84.1265 33.7395 84.2136 33.8882 84.2762C34.0775 84.3558 34.3011 84.3823 34.559 84.3556C34.8168 84.3288 35.0625 84.2651 35.2958 84.1644L34.8691 85.1783C34.6329 85.2858 34.3916 85.3393 34.1451 85.339C33.8957 85.3455 33.646 85.2961 33.3959 85.1908C33.1999 85.1083 33.0124 85.0056 32.8335 84.8825C32.6545 84.7595 32.4346 84.5635 32.1738 84.2946C31.976 84.0841 31.8012 83.923 31.6493 83.8113C31.4945 83.7064 31.3428 83.6227 31.1941 83.5601C30.998 83.4776 30.7745 83.4511 30.5233 83.4807C30.2655 83.5074 30.0198 83.5711 29.7865 83.6718L30.2089 82.6681C30.4451 82.5606 30.6879 82.5037 30.9372 82.4972C31.1866 82.4908 31.4363 82.5402 31.6864 82.6454C31.8757 82.7251 32.0631 82.8279 32.2488 82.9537C32.4249 83.0835 32.6414 83.2781 32.8983 83.5374ZM22.1055 71.7265L18.9235 77.0791L24.211 73.79L25.3894 74.9449L21.4562 82.1797L20.3406 81.0864L23.4828 75.6331L18.1567 78.9459L17.0647 77.8757L20.2696 72.484L14.8807 75.7352L13.7651 74.6418L20.9193 70.5639L22.1055 71.7265ZM16.0472 63.4026L14.8185 64.8791L16.5471 67.8567L18.4386 67.5217L19.2063 68.844L10.8215 70.1759L9.95998 68.6919L15.2574 62.0422L16.0472 63.4026ZM15.2211 68.0923L13.9564 65.9138L11.5894 68.738L15.2211 68.0923ZM14.3726 59.3856L8.10637 61.4226L8.88854 63.8287L7.62274 64.2402L5.59252 57.9949L6.85831 57.5834L7.64388 59.9999L13.9101 57.9629L14.3726 59.3856ZM12.772 51.1321C13.0334 53.6928 11.3094 55.2178 9.09888 55.4434C6.88837 55.6691 4.89175 54.5239 4.63035 51.9632C4.43262 50.0263 5.53961 48.6307 7.16522 48.1993L7.31714 49.6876C6.40708 49.9795 5.83517 50.7677 5.94353 51.8292C6.11221 53.4816 7.45422 54.0633 8.94249 53.9114C10.4308 53.7595 11.6275 52.9186 11.4589 51.2662C11.3427 50.1281 10.515 49.4938 9.46847 49.4238L9.31766 47.9464C11.1007 47.9745 12.5654 49.1076 12.772 51.1321ZM12.9705 41.5135L9.60846 41.0951L9.15337 44.7519L12.5154 45.1703L12.3334 46.633L4.47402 45.6549L4.65606 44.1922L7.82164 44.5862L8.27674 40.9294L5.11116 40.5354L5.29455 39.0618L13.1539 40.0399L12.9705 41.5135ZM14.9271 34.5971L8.86481 32.0158L7.87366 34.3436L6.64905 33.8222L9.22173 27.7801L10.4463 28.3015L9.45088 30.6394L15.5132 33.2207L14.9271 34.5971ZM19.9364 25.9564L17.1665 24.0055L15.0446 27.0182L17.8145 28.9692L16.9657 30.1742L10.4906 25.6136L11.3393 24.4085L13.9474 26.2455L16.0693 23.2327L13.4613 21.3958L14.3164 20.1817L20.7915 24.7423L19.9364 25.9564ZM21.6641 23.7465L16.2628 17.9541L20.5105 13.9931L21.4182 14.9666L18.2485 17.9223L19.5313 19.298L22.4677 16.5598L23.338 17.493L20.4016 20.2312L21.8344 21.7678L24.988 18.8271L25.8958 19.8005L21.6641 23.7465ZM30.7914 16.7799L24.5352 11.0986L25.9325 10.3762L30.9318 15.1594L29.88 8.33512L31.2773 7.61266L32.3059 15.9968L30.7914 16.7799ZM35.6433 14.386L33.0981 6.88613L34.4939 6.41243L37.0391 13.9123L35.6433 14.386ZM38.3534 13.5758L36.9784 5.77611L39.8599 5.26811C42.5357 4.7964 44.0832 6.28838 44.469 8.47664C44.8547 10.6649 43.9107 12.5961 41.235 13.0678L38.3534 13.5758ZM39.5816 12.0525L41.0115 11.8004C42.7123 11.5005 43.2121 10.2173 42.9524 8.74401C42.6926 7.27072 41.7841 6.23573 40.0834 6.53557L38.6534 6.78765L39.5816 12.0525ZM46.164 12.34L46.4073 4.42374L52.2125 4.60215L52.1716 5.93252L47.8397 5.79939L47.7819 7.67951L51.795 7.80283L51.7558 9.07823L47.7427 8.9549L47.6782 11.0549L51.9882 11.1874L51.9473 12.5177L46.164 12.34ZM56.3738 13.7034C53.8786 13.0715 53.0367 10.9292 53.5822 8.77522C54.1277 6.62122 55.8877 5.13791 58.383 5.76982C60.8675 6.39903 61.72 8.54396 61.1745 10.698C60.629 12.852 58.8584 14.3326 56.3738 13.7034ZM55.0751 9.15329C54.7078 10.6035 55.0877 12.016 56.6979 12.4238C58.308 12.8315 59.3144 11.7701 59.6817 10.3199C60.0489 8.86968 59.6691 7.4572 58.0589 7.04942C56.4487 6.64165 55.4424 7.70307 55.0751 9.15329Z" fill="white" style="
+"></path>
+            </svg><svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+">
+                <path d="M40 39.9895C40 39.0183 40 38.5328 40.2025 38.2651C40.3789 38.0319 40.6485 37.8876 40.9404 37.8702C41.2754 37.8502 41.6795 38.1195 42.4875 38.6582L53.0031 45.6686C53.6708 46.1137 54.0046 46.3363 54.1209 46.6168C54.2227 46.8621 54.2227 47.1377 54.1209 47.383C54.0046 47.6635 53.6708 47.886 53.0031 48.3312L42.4875 55.3415C41.6795 55.8802 41.2754 56.1496 40.9404 56.1296C40.6485 56.1122 40.3789 55.9679 40.2025 55.7347C40 55.467 40 54.9814 40 54.0103V39.9895Z" fill="white"></path>
+                
             </svg>
         </button>
 <!-- /wp:html --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/instagram-feeds","name":"Instagram Feed Section"},"align":"full","className":"container-fluid creative-furniture-section"} -->
-<div class="wp-block-group alignfull container-fluid creative-furniture-section"><!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
+<!-- wp:group {"metadata":{"categories":["creative-furniture"],"patternName":"creative-furniture/instagram-feeds","name":"Instagram Feed Section"},"align":"full","className":"container-fluid creative-furniture-section","style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"0"}}}} -->
+<div class="wp-block-group alignfull container-fluid creative-furniture-section" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:0"><!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
 <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-
-<!-- wp:paragraph {"className":"creativefurniture-subtext"} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"creativefurniture-subtext"} -->
 <p class="creativefurniture-subtext"><span class="creativefurniture-hashtag">#creativefurniture</span> Inspiration, straight from your home. See it, share it, shop it.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"className":"creativefurniture-link"} -->
-<p class="creativefurniture-link"><a href="#">The Instagram Shop &gt;</a></p>
+<p class="creativefurniture-link"><a href="https://www.instagram.com/creativefurniture.ae/" data-type="link" data-id="https://www.instagram.com/creativefurniture.ae/" target="_blank" rel="noreferrer noopener">The Instagram Shop &gt;</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:columns {"className":"creativefurniture-gallery"} -->
-<div class="wp-block-columns creativefurniture-gallery"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt=""/></figure>
+<!-- wp:columns {"className":"creativefurniture-gallery container-fluid"} -->
+<div class="wp-block-columns creativefurniture-gallery container-fluid"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":117,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-kindelmedia-7688071-1024x768.jpg" alt="" class="wp-image-117"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt=""/></figure>
-<!-- /wp:image -->
-<div>
-    <h2 class="wp-block-heading hero-title has-text-align-left">
-        <span class="part1">Upgrade Your Space —</span>
-        <span class="part2"></span>
-        <em class="part3">Save More Today!</em>
-    </h2>
-</div>
-
-</div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt=""/></figure>
+<div class="wp-block-column"><!-- wp:image {"id":120,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-heyho-11701158-683x1024.jpg" alt="" class="wp-image-120"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/promo-banner.jpg" alt=""/></figure>
+<div class="wp-block-column"><!-- wp:image {"id":121,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-teona-swift-6912829-1024x683.jpg" alt="" class="wp-image-121"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":122,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/uploads/2025/12/pexels-element5-1125135-819x1024.jpg" alt="" class="wp-image-122"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

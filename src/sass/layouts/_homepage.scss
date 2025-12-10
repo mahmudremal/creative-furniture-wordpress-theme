@@ -1,0 +1,45 @@
+.best-selling-products {
+    display: block;
+    margin-top: 40px;
+
+    h2.wp-block-heading.container-fluid {
+        margin: 30px auto;
+    }
+}
+
+// .upgrade-space-banner-promo {
+
+// }
+
+.height-full-justify-between {
+    .wp-block-cover {
+        &__background {
+            opacity: 1 !important;
+            background-color: #4B2D0680 !important;
+        }
+        &__inner-container {
+            height: 100%;
+
+            > .wp-block-columns {
+                height: 100%;
+                color: #fff;
+                padding: 30px 20px;
+
+                > .wp-block-column {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+.hero-cover {
+    .wp-block-cover {
+        &__background {
+            opacity: 1 !important;
+            background-color: #4B2D0680 !important;
+        }
+    }
+}

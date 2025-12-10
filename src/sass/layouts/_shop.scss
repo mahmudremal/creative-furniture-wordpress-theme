@@ -91,6 +91,10 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .toolbar-meta {
@@ -99,7 +103,7 @@
     align-items: center;
 
     @media (max-width: 768px) {
-      width: 100%;
+      // width: 100%;
       justify-content: space-between;
     }
 

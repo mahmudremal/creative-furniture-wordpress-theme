@@ -19,7 +19,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Al Raihan Tower – Office No J512, 5th Floor – 46th St – next to Movenpick Hotel – Deira – The Town Square – Dubai</p>
+<p>Al Raihan Tower – Office No J512, 5th Floor – 46th St – next to <br>Movenpick Hotel – Deira – The Town Square – Dubai</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":4} -->
@@ -62,8 +62,8 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"layout":{"type":"default"}} -->
-<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/contact-us-right-banner.jpg" alt=""/></figure>
+<div class="wp-block-column"><!-- wp:image {"width":"auto","height":"600px","sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="https://creative.wp.local/wp-content/themes/creative-furniture/dist/images/contact-us-right-banner.jpg" alt="" style="width:auto;height:600px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

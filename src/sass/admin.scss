@@ -1,0 +1,78 @@
+.mega-menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Ensure it's on top */
+
+  .mega-menu-modal-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 90%;
+    position: relative; /* For positioning child elements if needed */
+
+    .mega-menu-loading {
+      text-align: center;
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .mega-menu-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    .button {
+      &.mega-menu-update {
+        background-color: #007cba;
+        color: #fff;
+        border-color: #007cba;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+
+        &:hover {
+          background-color: #006ba1;
+          border-color: #006ba1;
+        }
+
+        &:disabled {
+          background-color: #a0a5aa;
+          border-color: #a0a5aa;
+          cursor: not-allowed;
+        }
+      }
+
+      &.mega-menu-close {
+        background-color: #f3f3f3;
+        color: #32373c;
+        border-color: #c3c4c7;
+        margin-left: 10px;
+
+        &:hover {
+          background-color: #e0e0e0;
+          border-color: #b4b9be;
+          color: #1e1e1e;
+        }
+      }
+    }
+  }
+}
+
+fieldset.field-move {
+  .button {
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+}

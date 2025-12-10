@@ -1,7 +1,7 @@
 // Scripts
-import './backend';
+import "./backend";
 
 // Images.
-import '../img/shop-bg.jpg';
+import "../img/shop-bg.jpg";
 
-import '@sass/frontend.scss';
+import "@sass/admin.scss";

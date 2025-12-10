@@ -16,6 +16,10 @@ $bg-highlight: #F5F2E2;
 }
 
 .checkout {
+    gap: 44px;
+    display: flex;
+    flex-direction: column;
+    
     &-main {
         display: flex;
         gap: 40px;
@@ -57,7 +61,7 @@ $bg-highlight: #F5F2E2;
         gap: 16px;
 
         h2 {
-            margin-bottom: 0;
+            margin: 0;
         }
     }
 }
@@ -85,8 +89,8 @@ $bg-highlight: #F5F2E2;
 
     &::before,
     &::after {
-        content: '';
         flex: 1;
+        content: '';
         height: 1px;
         background: $border-secondary;
     }
@@ -101,19 +105,19 @@ $bg-highlight: #F5F2E2;
 }
 
 .section-header {
+    gap: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
 
     h2 {
-        font-family: Aspekta, sans-serif;
+        margin: 0;
         font-size: 20px;
+        color: #111111;
         font-weight: 500;
         line-height: 30px;
-        color: #111111;
         text-transform: capitalize;
-        margin: 0;
+        font-family: Aspekta, sans-serif;
     }
 
     .login-prompt {
@@ -166,10 +170,11 @@ $bg-highlight: #F5F2E2;
 }
 
 .checkout-fields,
-.woocommerce-billing-fields__field-wrapper {
-    display: flex;
-    flex-direction: column;
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-shipping-fields__field-wrapper {
     gap: 14px;
+    display: flex;
+    flex-wrap: wrap;
 
     .form-row {
         margin: 0;
@@ -246,8 +251,9 @@ $bg-highlight: #F5F2E2;
 
     .form-row-first,
     .form-row-last {
-        width: calc(50% - 7px);
         display: inline-block;
+        width: calc(50% - 7px);
+        margin-right: 0 !important;
 
         &.form-row-first {
             margin-right: 14px;
@@ -297,7 +303,7 @@ $bg-highlight: #F5F2E2;
     }
 }
 
-.radio-option {
+.checkbox-option {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -321,11 +327,11 @@ $bg-highlight: #F5F2E2;
         border-bottom-right-radius: 12px;
     }
 
-    input[type="radio"] {
+    input[type="checkbox"] {
         display: none;
     }
 
-    .radio-custom {
+    .checkbox-custom {
         width: 20px;
         height: 20px;
         border: 1px solid #CFCFCF;
@@ -337,7 +343,7 @@ $bg-highlight: #F5F2E2;
         flex-shrink: 0;
     }
 
-    input[type="radio"]:checked ~ .radio-custom {
+    input[type="checkbox"]:checked ~ .checkbox-custom {
         border-color: $primary-color;
 
         &::after {
@@ -349,7 +355,7 @@ $bg-highlight: #F5F2E2;
         }
     }
 
-    input[type="radio"]:checked {
+    input[type="checkbox"]:checked {
         & ~ span {
             color: $text-secondary;
         }
@@ -373,8 +379,8 @@ $bg-highlight: #F5F2E2;
 
     .billing-fields-wrapper {
         padding: 16px;
+        // display: none;
         background: $bg-light;
-        display: none;
     }
 
     input[type="radio"]:checked ~ .billing-fields-wrapper {

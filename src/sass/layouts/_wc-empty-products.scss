@@ -1,0 +1,50 @@
+.wc-empty-products {
+    padding: 120px 0;
+    text-align: center;
+    background: #faf7f2;
+
+    .wc-empty-inner {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .wc-empty-icon {
+        margin-bottom: 25px;
+        color: #c7c3bc;
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .wc-empty-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    .wc-empty-text {
+        font-size: 17px;
+        color: #555;
+        margin-bottom: 35px;
+        line-height: 1.6;
+    }
+
+    .wc-empty-btn {
+        display: inline-block;
+        padding: 14px 32px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 15px;
+        transition: all .25s ease;
+
+        &:hover {
+            background: #333;
+        }
+    }
+}

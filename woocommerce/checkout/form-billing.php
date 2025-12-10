@@ -87,8 +87,15 @@ $checkout = WC()->checkout();
                     $field['label'] = 'Phone Number';
                     $field['placeholder'] = 'Phone Number';
                 }
-                
-                woocommerce_form_field($key, $field, $checkout->get_value($key));
+                if ($key === 'billing_first_name' || $key === 'billing_last_name') {
+                    ?>
+                    <!-- <div class="form-row"> -->
+                        <?php echo woocommerce_form_field($key, $field, $checkout->get_value($key)); ?>
+                    <!-- </div> -->
+                    <?php
+                } else {
+                    echo woocommerce_form_field($key, $field, $checkout->get_value($key));
+                }
             }
         }
         ?>
