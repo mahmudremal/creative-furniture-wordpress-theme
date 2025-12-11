@@ -46,6 +46,8 @@ class SiteCore {
         this.init_sell_with_us_form();
         this.init_review_actions();
         this.init_explore_products();
+
+        this.init_tabby();
     }
 
     sc_store_frontend() {
@@ -355,6 +357,9 @@ class SiteCore {
                         if (cartCount) {
                             cartCount.textContent = data.data.cart_count;
                         }
+
+                        document.querySelector('.header-icon.cart')?.classList?.add?.('shake');
+                        setTimeout(() => document.querySelector('.header-icon.cart')?.classList?.remove?.('shake'), 1000);
 
                         setTimeout(() => {
                             addToCartBtn.textContent = 'Add to Cart';
@@ -683,12 +688,12 @@ class SiteCore {
                     .then(r => r.json())
                     .then(res => {
                         if (res.status === 'added') {
-                            // handle added UI state
                             button.classList.add('active');
                         } else if (res.status === 'removed') {
-                            // handle removed UI state
                             button.classList.remove('active');
                         }
+                        document.querySelector('.header-icon.cart')?.classList?.add?.('shake');
+                        setTimeout(() => document.querySelector('.header-icon.cart')?.classList?.remove?.('shake'), 1000);
                         return res;
                     })
                     .finally(() => {
@@ -811,7 +816,6 @@ class SiteCore {
 
     init_sell_with_us_form() {
         const phoneInputs = document.querySelectorAll('.sell-with-us [name="phone"], .contact-form-field input[type="tel"]');
-        console.log('phoneInputs', phoneInputs)
         if (!phoneInputs?.length) return;
         // Load CSS
         const css = document.createElement('link');
@@ -917,6 +921,18 @@ class SiteCore {
         // loadProducts('all');
     }
 
+    init_tabby() {
+        document.querySelectorAll('.tabbyCalc').forEach(select => {
+            select.addEventListener('change', (e) => {
+                var price = parseFloat(select.dataset.price);
+                var down = parseFloat(select.dataset.down);
+                var months = parseInt(e.target.value);
+                var remaining = down > 0 ? price - down : price;
+                var installment = remaining / months;
+                document.querySelector('.cf-payment-amount span').innerHTML = installment.toFixed(2);
+            });
+        });
+    }
 
 }
 

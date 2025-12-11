@@ -7,8 +7,8 @@ function cf_wishlist_activate(){
     $charset=$wpdb->get_charset_collate();
     $sql="CREATE TABLE IF NOT EXISTS $table (id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,user_id BIGINT UNSIGNED NULL,session_key VARCHAR(255) NULL,product_id BIGINT UNSIGNED NOT NULL,created_at DATETIME NOT NULL,PRIMARY KEY(id)) $charset;";
     require_once ABSPATH.'wp-admin/includes/upgrade.php';
-    wp_die($sql);
-    // dbDelta($sql);
+    // wp_die($sql);
+    dbDelta($sql);
     global $wpdb;
     $table = $wpdb->prefix . 'cf_wishlist_share_tokens';
     $charset = $wpdb->get_charset_collate();
@@ -23,13 +23,39 @@ function cf_wishlist_activate(){
     dbDelta($sql);
 
 }
-add_action('init','cf_wishlist_start_session');
-function cf_wishlist_start_session(){
-    if(!session_id())session_start();
-}
 function cf_wishlist_get_session(){
-    if(!isset($_SESSION['cf_wishlist_session']))$_SESSION['cf_wishlist_session']=wp_generate_uuid4();
-    return $_SESSION['cf_wishlist_session'];
+    if ( function_exists('WC') && WC()->session ) {
+        if ( ! WC()->session->has_session() ) {
+            WC()->session->set_customer_session_cookie( true );
+        }
+
+        $session_key = WC()->session->get('cf_wishlist_session');
+
+        if( empty($session_key) ) {
+            $session_key = wp_generate_uuid4();
+            WC()->session->set('cf_wishlist_session', $session_key);
+        }
+        
+        return $session_key;
+    }
+    
+    // Fallback to a simple cookie if WC session is not available for any reason.
+    $cookie_name = 'cf_wishlist_session';
+    if (!empty($_COOKIE[$cookie_name])) {
+        return $_COOKIE[$cookie_name];
+    }
+    
+    $session_key = wp_generate_uuid4();
+    
+    if (!headers_sent()) {
+        $expires = time() + YEAR_IN_SECONDS;
+        setcookie($cookie_name, $session_key, $expires, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), true);
+    }
+    
+    // Make the cookie available to the current request.
+    $_COOKIE[$cookie_name] = $session_key;
+
+    return $session_key;
 }
 add_action('wp_ajax_cf_wishlist_toggle','cf_wishlist_toggle');
 add_action('wp_ajax_nopriv_cf_wishlist_toggle','cf_wishlist_toggle');
@@ -86,13 +112,13 @@ function cf_wishlist_get_items(){
     }
 }
 function cf_wishlist_render_page() {
-    $items = cf_wishlist_get_items();
+    $items = !empty($_GET['wishlist']) ? explode(',', $_GET['wishlist']) : cf_wishlist_get_items();
     echo '<div class="cf-wishlist-wrapper container-fluid">';
     echo '<div class="cf-wishlist-left">';
-    echo '<h2>Your Wishlist (' . count($items) . ')</h2>';
+    echo '<h2>'. (!empty($_GET['wishlist']) ? __('Shared Wishlist','creative-furniture') : __('Your Wishlist','creative-furniture')) .' (' . count($items) . ')</h2>';
     echo '<div class="cf-wishlist-list">';
     foreach ($items as $pid) {
-        $p = wc_get_product($pid);
+        $p = wc_get_product((int) $pid);
         if ($p) {
             echo '<div class="cf-wishlist-item">';
             echo '<div class="cf-wishlist-thumb"><a href="'.get_permalink($pid).'">'.get_the_post_thumbnail($pid, 'medium').'</a></div>';
@@ -117,14 +143,14 @@ function cf_wishlist_render_page() {
 
     echo '<div class="cf-wishlist-right">';
     echo '<div class="cf-wishlist-summary">';
-    echo '<h3>Wishlist Summary</h3>';
-    echo '<div class="cf-wishlist-summary-row"><span>Total Items</span><span>'.count($items).'</span></div>';
-    echo '<div class="cf-wishlist-summary-row"><span>Total Cost</span><span>'.wc_price($total).'</span></div>';
-    echo '<button class="cf-wishlist-share-btn" id="cf-wishlist-share-btn">Share Wishlist</button>';
+    echo '<h3>'.__('Wishlist Summary','creative-furniture').'</h3>';
+    echo '<div class="cf-wishlist-summary-row"><span>'.__('Total Items','creative-furniture').'</span><span>'.count($items).'</span></div>';
+    echo '<div class="cf-wishlist-summary-row"><span>'.__('Total Cost','creative-furniture').'</span><span>'.wc_price($total).'</span></div>';
+    echo '<button class="cf-wishlist-share-btn" id="cf-wishlist-share-btn">'.__('Share Wishlist','creative-furniture').'</button>';
     echo '</div>';
     echo '<div class="cf-wishlist-share-panel" id="cf-wishlist-share-panel">';
     echo '<input type="text" readonly value="'.esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())).'" class="cf-wishlist-share-link">';
-    echo '<button class="cf-wishlist-copy-link" id="cf-wishlist-copy-link">Copy Link</button>';
+    echo '<button class="cf-wishlist-copy-link" id="cf-wishlist-copy-link">'.__('Copy Link','creative-furniture').'</button>';
     echo '</div>';
     echo '</div>';
 

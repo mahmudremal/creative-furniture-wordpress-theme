@@ -3,10 +3,20 @@
     display: flex;
     padding: 40px 0;
     min-height: 600px;
+
+    @media (max-width: 750px) {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
 }
 
 .cf-wishlist-left {
     width: 65%;
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
 }
 
 .cf-wishlist-left h2 {
@@ -36,36 +46,38 @@
 }
 
 .cf-wishlist-info {
+    gap: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cf-wishlist-title {
+    color: #333;
+    display: block;
     font-size: 18px;
     font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
+    text-decoration: none;
 }
 
 .cf-wishlist-price {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .cf-wishlist-actions {
+    gap: 15px;
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .cf-wishlist-remove {
-    background: none;
+    padding: 0;
     border: none;
-    font-size: 14px;
     color: #d00;
+    font-size: 14px;
     cursor: pointer;
+    background: none;
 }
 
 .cf-wishlist-right {
@@ -73,6 +85,10 @@
     position: sticky;
     top: 40px;
     align-self: flex-start;
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
 }
 
 .cf-wishlist-summary {
@@ -107,10 +123,10 @@
 }
 
 .cf-wishlist-share-panel {
-    margin-top: 20px;
+    gap: 10px;
     display: none;
     flex-direction: column;
-    gap: 10px;
+    padding: 30px 20px 20px 20px;
 }
 
 .cf-wishlist-share-panel.active {

@@ -104,11 +104,14 @@ function mymc_currency_symbol($symbol, $currency){
 }
 
 function mymc_currency_switcher_shortcode($atts){
-    $atts = shortcode_atts(array('show_label' => 'yes'), $atts, 'mymc_currency_switcher');
+    $atts = shortcode_atts(['show_label' => 'yes'], $atts, 'mymc_currency_switcher');
     $current = mymc_current_currency();
     $allowed = mymc_allowed_currencies();
     $out = '<form method="get" id="mymc-switcher" style="display:inline-block;">';
-    $out .= '<select name="mymc_currency" onchange="this.form.submit();">';
+    if ('yes' === $atts['show_label']) {
+        $out .= '<label for="mymc_currency_select" style="margin-right: 5px;font-size: 0;">' . esc_html__('Currency:', 'woocommerce') . '</label>';
+    }
+    $out .= '<select name="mymc_currency" id="mymc_currency_select" onchange="this.form.submit();">';
     foreach($allowed as $c){
         $sel = $c === $current ? ' selected' : '';
         $out .= '<option value="'.esc_attr($c).'"'.$sel.'>'.esc_html($c).'</option>';

@@ -16,6 +16,9 @@
  *
  * @return void
  */
+
+include_once 'tabby.php';
+
 function creative_furniture_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',

@@ -81,6 +81,24 @@
     &:hover {
         background: #e8e8e8;
     }
+    &:hover {
+      transform: scale(1.1);
+      
+      svg {
+        path {
+          stroke: #e74c3c;
+        }
+      }
+    }
+
+    &.active {
+      svg {
+        fill: #e74c3c;
+        path {
+          stroke: #e74c3c;
+        }
+      }
+    }
 }
 
 .cf-product-price {
@@ -148,7 +166,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    background: white;
+    background: #fff;
     cursor: pointer;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath d='M1 1L6 5L11 1' stroke='%232B2B2B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
@@ -193,7 +211,7 @@
 }
 
 .cf-size-select {
-    background: white;
+    background: #fff;
     border: 1px solid #C4C4C4;
     color: #2B2B2B;
 
@@ -204,12 +222,13 @@
 
 .cf-customization-btn {
     border: none;
-    color: white;
+    color: #fff;
     text-decoration: none;
     background: #9D8465;
     transition: background 0.3s;
 
     &:hover {
+        color: #fff;
         background: #8a7459;
     }
 }
@@ -238,6 +257,11 @@
 .cf-payment-label {
     color: #575757;
     font-weight: 400;
+
+    .tabbyCalc {
+        border: none;
+        background: none;
+    }
 }
 
 .cf-payment-amount {
@@ -337,7 +361,7 @@
     background: #0C0A0A;
     border: none;
     border-radius: 140px;
-    color: white;
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
