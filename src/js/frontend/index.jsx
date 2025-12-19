@@ -7,6 +7,8 @@ import { createRoot } from 'react-dom/client';
 // import QuickView from './QuickView';
 // import OrderView from './OrderView';
 import Slider from './slider';
+import setup_sliders from './cards4slider';
+const simpleslider = require('simple-slider');
 
 const CartSidebar = lazy(() => import('./CartSidebar'));
 const FiltersBar = lazy(() => import('./FiltersBar'));
@@ -436,8 +438,9 @@ class SiteCore {
                 interval: 4000
             });
             this.sliders.push(slides);
-        })
+        });
 
+        setup_sliders();
     }
 
     init_currency_switcher() {

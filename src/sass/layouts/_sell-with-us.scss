@@ -20,9 +20,8 @@
       &-column {
         text-align: center;
       }
-      
-      &-image {
 
+      &-image {
         img {
           width: 40px;
           height: auto;
@@ -64,7 +63,9 @@
 
     select {
       appearance: none;
-      background: #fff url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23333" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>') no-repeat right 1rem center;
+      background: #fff
+        url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23333" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>')
+        no-repeat right 1rem center;
       background-size: 1rem;
     }
     .form-block {
@@ -98,7 +99,7 @@
     font-size: 0.875rem;
     color: #555;
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       width: 1rem;
       height: 1rem;
     }
@@ -139,11 +140,11 @@
   @media (max-width: 750px) {
     font-size: 15px;
   }
-  
+
   .wp-block-heading {
     font-size: 30px;
     font-weight: 600;
-    
+
     + .wp-block-heading {
       margin: auto !important;
     }
@@ -157,5 +158,20 @@
   label {
     font-size: 18px;
     font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media (max-width: 750px) {
+      font-size: 15px;
+      max-width: 200px;
+    }
+  }
+}
+.accordion-item {
+  &__toggle {
+    & >span {
+      font-size: 20px;
+    }
   }
 }

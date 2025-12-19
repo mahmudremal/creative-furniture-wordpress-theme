@@ -142,11 +142,11 @@ function creative_furniture_scripts() {
 
 	// wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true );
 	if (file_exists(get_template_directory() . '/dist/css/public.css')) {
-		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], null, 'all');
+		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], filemtime(get_template_directory() . '/dist/css/public.css'), 'all');
 	}
-	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], null, 'all');
+	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], filemtime(get_template_directory() . '/dist/library/fonts/fonts.css'), 'all');
 	
-	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], _S_VERSION, true );
+	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], filemtime(get_template_directory() . '/dist/js/public.js'), true );
 	wp_localize_script('creative-furniture-public', 'cfStore', [
 		'ajax_url' => admin_url('admin-ajax.php'),
 		'add_to_cart_nonce' => wp_create_nonce('cf-add-to-cart'),

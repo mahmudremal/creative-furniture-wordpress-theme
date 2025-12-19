@@ -76,3 +76,50 @@
     }
   }
 }
+
+.cf-4cards-slider {
+  &_container {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  &_arrows {
+    right: 0;
+    gap: 10px;
+    top: -50px;
+    display: flex;
+    position: absolute;
+    justify-content: end;
+    & > div {
+      cursor: pointer;
+      &:hover,
+      &.active {
+        svg {
+          path {
+            stroke: #111111;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+  &_wrapper {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+
+    & > .wp-block-column {
+      min-width: calc(25% - 7px) !important;
+
+      @media (max-width: 750px) {
+        flex-basis: 47%!important;
+      }
+    }
+  }
+}

@@ -180,10 +180,10 @@
   border-bottom: 1px solid #e5e5e5;
 
   .header-wrapper {
+    gap: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
   }
 
   .header-nav-left {
@@ -689,6 +689,8 @@ body.mobile-menu-open {
 
     .header-wrapper {
       gap: 16px;
+      display: grid;
+      grid-template-columns: 120px 1fr 120px;
     }
 
     .header-logo {
