@@ -52,6 +52,7 @@ class CF_MegaMenuWalker extends Walker_Nav_Menu {
 
     public function end_el( &$output, $item, $depth = 0, $args = [] ) {
         $output .= "</li>";
+        $output .= '<li class="nav_devider"></li>';
     }
 
 }

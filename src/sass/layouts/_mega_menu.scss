@@ -5,8 +5,25 @@
 
   > li {
     // position: relative;
-    padding: 15px 20px;
+    padding: 15px 5px;
     display: inline-block;
+    &.menu-item {
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &.nav_devider {
+        &:not(:last-child) {
+            padding: 0;
+            width: 2px;
+            height: 25px;
+            background: #939393;
+        }
+        &:last-child {
+            display: none;
+        }
+    }
 
     .mega-menu {
         left: 0;

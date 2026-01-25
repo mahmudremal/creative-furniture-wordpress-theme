@@ -109,7 +109,7 @@ function mymc_currency_switcher_shortcode($atts){
     $allowed = mymc_allowed_currencies();
     $out = '<form method="get" id="mymc-switcher" style="display:inline-block;">';
     if ('yes' === $atts['show_label']) {
-        $out .= '<label for="mymc_currency_select" style="margin-right: 5px;font-size: 0;">' . esc_html__('Currency:', 'woocommerce') . '</label>';
+        // $out .= '<label for="mymc_currency_select" style="margin-right: 5px;font-size: 0;">' . esc_html__('Currency:', 'woocommerce') . '</label>';
     }
     $out .= '<select name="mymc_currency" id="mymc_currency_select" onchange="this.form.submit();">';
     foreach($allowed as $c){

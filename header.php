@@ -80,6 +80,17 @@
                         </div>
 
                         <div class="currency-switcher desktop-only">
+                            <?php
+                                wp_nav_menu([
+                                    'theme_location' => 'language-switcher-menu',
+                                    'menu_id'        => 'language-switcher-menu',
+                                    'container'      => false,
+                                    'fallback_cb'    => false,
+                                ]);
+                            ?>
+                        </div>
+
+                        <div class="currency-switcher desktop-only">
                             <?php echo do_shortcode('[mymc_currency_switcher]'); ?>
                         </div>
 

@@ -48,6 +48,7 @@ function creative_furniture_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus([
+		'language-switcher-menu' => esc_html__('Language Switcher Menu', 'creative-furniture'),
 		'top-left-header-menu' => esc_html__('Header Top Left Menu', 'creative-furniture'),
 		'header-mega-menu' => esc_html__('Header Mega Menu', 'creative-furniture'),
 	]);
