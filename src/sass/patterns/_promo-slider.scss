@@ -31,18 +31,18 @@
   color: #fff;
 }
 .cf-promo-heading .cf-playfair {
-  font-family: "Playfair Display", serif;
+  font-family: $font-secondary;
   font-style: italic;
 }
 .cf-promo-heading .cf-aspekta {
-  font-family: "Aspekta", sans-serif;
+  font-family: $font__main;
 }
 
 .cf-promo-button a {
   padding: 10px 24px;
   background: #fff;
   color: #262626 !important;
-  font-family: "Aspekta", sans-serif;
+  font-family: $font__main;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;

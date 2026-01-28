@@ -14,5 +14,7 @@ import "../img/marketing-promotion.png";
 import "../img/start-selling-cta-banner.jpg";
 import "../img/largest-customer-research.png";
 import "../img/contact-us-right-banner.jpg";
+import "../img/megamenucard.jpg";
+import "../img/arrow-right.png";
 
 import "../sass/frontend.scss";

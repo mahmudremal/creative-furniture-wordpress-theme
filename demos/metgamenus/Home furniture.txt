@@ -1,0 +1,55 @@
+<div class="grid121 container-fluid">
+    <div class="cf-mega-left">
+        <h4>Décor &amp; Accessories</h4>
+        <a href="#">Shop All</a>
+    </div>
+    <div class="cf-mega-cols">
+
+    <div class="cf-mega-col">
+        <h5>Storage</h5>
+        <ul>
+        <li><a href="#">Photo Frames</a></li>
+        <li><a href="#">Clocks</a></li>
+        <li><a href="#">Vases</a></li>
+        <li><a href="#">Bowls &amp; Trays</a></li>
+        <li><a href="#">Planters &amp; Urns</a></li>
+        </ul>
+    </div>
+
+    <div class="cf-mega-col">
+        <h5>Decor Items</h5>
+        <ul>
+        <li><a href="#">Artificial Flowers</a></li>
+        <li><a href="#">Figurines &amp; Ornaments</a></li>
+        <li><a href="#">Fountains</a></li>
+        <li><a href="#">Lanterns</a></li>
+        <li><a href="#">Candle Holders</a></li>
+        </ul>
+    </div>
+
+    <div class="cf-mega-col">
+        <h5>Utilities</h5>
+        <ul>
+        <li><a href="#">Coat Hangers</a></li>
+        <li><a href="#">Home Utilities</a></li>
+        <li><a href="#">Home Improvement</a></li>
+        <li><a href="#">Shop Online Exclusive</a></li>
+        <li><a href="#">Shop New Arrivals</a></li>
+        </ul>
+    </div>
+
+    </div>
+    <div class="cf-mega-images">
+
+    <a href="#" class="cf-mega-card">
+        <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="">
+        <p>VASES</p>
+    </a>
+
+    <a href="#" class="cf-mega-card">
+        <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="">
+        <p>CANDLEHOLDERS</p>
+    </a>
+
+    </div>
+</div>

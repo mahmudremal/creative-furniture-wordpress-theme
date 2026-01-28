@@ -39,6 +39,7 @@
     "sass-mq": "^7.0.0",
     "simple-slider": "^1.0.1",
     "sprintf-js": "^1.1.3",
+    "toastify-js": "^1.12.0",
     "zod": "^3.25.72"
   },
   "devDependencies": {

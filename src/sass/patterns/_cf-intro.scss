@@ -12,13 +12,13 @@
 
     .cf-aspekta-dark {
       color: #2A2A2A;
-      font-family: 'Aspekta', sans-serif;
+      font-family: $font__main;
       font-weight: 500;
     }
 
     .cf-playfair-dark {
       color: #2A2A2A;
-      // font-family: 'Playfair Display', serif;
+      // font-family: $font-secondary;
       // font-style: italic;
       font-weight: 500;
     }
@@ -26,12 +26,12 @@
     .cf-aspekta-gray {
       color: #B7B7B7;
       font-weight: 500;
-      font-family: 'Aspekta', sans-serif;
+      font-family: $font__main;
     }
 
     .cf-playfair-gray {
       color: #B7B7B7;
-      // font-family: 'Playfair Display', serif;
+      // font-family: $font-secondary;
       // font-style: italic;
       font-weight: 500;
     }

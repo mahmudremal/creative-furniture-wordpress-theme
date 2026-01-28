@@ -6,7 +6,8 @@ dfn,
 cite,
 em,
 i {
-	font-style: italic;
+	font-family: $font-secondary;
+	font-style: normal;
 }
 
 blockquote {
@@ -42,7 +43,8 @@ acronym {
 
 mark,
 ins {
-	background: $color__background-ins;
+	// background: $color__background-ins;
+	background: none;
 	text-decoration: none;
 }
 

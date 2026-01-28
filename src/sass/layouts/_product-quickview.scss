@@ -55,7 +55,7 @@
     color: #4A4A4A;
     line-height: 1.4;
     text-transform: uppercase;
-    font-family: 'Aspekta', sans-serif;
+    font-family: $font__main;
   }
 
   &-close {
@@ -88,7 +88,7 @@
     color: #212121;
     font-weight: 400;
     line-height: 1.25rem;
-    font-family: 'Aspekta', sans-serif;
+    font-family: $font__main;
   }
 
   &-images {
@@ -120,7 +120,7 @@
   &-description {
     color: #505050;
     font-size: 0.875rem;
-    font-family: 'Aspekta', sans-serif;
+    font-family: $font__main;
     font-weight: 400;
     line-height: 1.25rem;
 
@@ -148,7 +148,7 @@
     label {
       color: #363636;
       font-size: 0.875rem;
-      font-family: 'Aspekta', sans-serif;
+      font-family: $font__main;
       font-weight: 500;
       line-height: 1.25rem;
       display: block;
@@ -162,7 +162,7 @@
     border-radius: 9999px;
     color: #2B2B2B;
     font-size: 0.875rem;
-    font-family: 'Aspekta', sans-serif;
+    font-family: $font__main;
     font-weight: 500;
     line-height: 1.25rem;
     background: white;
@@ -215,7 +215,7 @@
     padding: 0.75rem 0.875rem;
     border-radius: 9999px;
     font-size: 18px;
-    font-family: 'Aspekta', sans-serif;
+    font-family: $font__main;
     font-weight: 500;
     line-height: 1.5rem;
     cursor: pointer;

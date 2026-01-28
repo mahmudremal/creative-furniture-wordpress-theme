@@ -10,9 +10,9 @@ h6 {
 .wp-block-heading {
 	font-size: 30px;
 	font-weight: 600;
-	font-family: "Aspekta", sans-serif;
+	font-family: $font__main;
 
 	em {
-		font-family: 'Playfair Display', serif;
+		font-family: $font-secondary;
 	}
 }

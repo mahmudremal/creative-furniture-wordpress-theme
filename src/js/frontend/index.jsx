@@ -10,6 +10,8 @@ import Slider from './slider';
 import setup_sliders from './cards4slider';
 const simpleslider = require('simple-slider');
 
+import { toast } from '../utils';
+
 const CartSidebar = lazy(() => import('./CartSidebar'));
 const FiltersBar = lazy(() => import('./FiltersBar'));
 const QuickView = lazy(() => import('./QuickView'));
@@ -50,6 +52,7 @@ class SiteCore {
         this.init_explore_products();
 
         this.init_tabby();
+        this.init_animation();
     }
 
     sc_store_frontend() {
@@ -532,16 +535,26 @@ class SiteCore {
             const title = hotspot.dataset.productTitle;
             const excerpt = hotspot.dataset.productExcerpt;
             const link = hotspot.dataset.productLink;
+            const price = hotspot.dataset?.productPrice;
+            const currency = hotspot.dataset?.productCurrency;
+
 
             const popup = document.createElement('a');
             popup.className = 'hotspot-popup';
             popup.href = link;
 
             popup.innerHTML = `
-                <h4 class="hotspot-popup-title">${title}</h4>
-                <p class="hotspot-popup-excerpt">${excerpt.slice(0, 120)}</p>
-                <button type="button" class="hotspot-popup-button">View Product</button>
+                <div class="hotspot-popup-divide">
+                    <div>
+                        <h4 class="hotspot-popup-title">${title}</h4>
+                        ${price ? `<p class="hotspot-popup-price">${currency} ${price}</p>` : (excerpt ? `<p class="hotspot-popup-excerpt">${excerpt.slice(0, 120)}</p>` : '')}
+                    </div>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.50757 15.0063L12.505 10.0038L7.50244 5.00635" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             `;
+            // <button type="button" class="hotspot-popup-button">View Product</button>
 
             hotspot.appendChild(popup);
 
@@ -685,19 +698,27 @@ class SiteCore {
 
                 return fetch(cfStore.ajax_url, {
                     method: 'POST',
-                    credentials: 'same-origin',
-                    body: formData
+                    body: formData,
+                    credentials: 'same-origin'
                 })
                     .then(r => r.json())
                     .then(res => {
+                        const { product_title = '' } = res;
                         if (res.status === 'added') {
                             button.classList.add('active');
+                            toast.success(`Product <strong>${product_title}</strong> Added to wishlist`, { enableHtml: true });
                         } else if (res.status === 'removed') {
                             button.classList.remove('active');
+                            toast.error(`Product <strong>${product_title}</strong> Removed from wishlist`, { enableHtml: true });
+                        } else {
+                            toast.error(res?.message || 'Something went wrong');
                         }
                         document.querySelector('.header-icon.cart')?.classList?.add?.('shake');
                         setTimeout(() => document.querySelector('.header-icon.cart')?.classList?.remove?.('shake'), 1000);
                         return res;
+                    })
+                    .catch(err => {
+                        toast.error(err?.message || 'Something went wrong');
                     })
                     .finally(() => {
                         button.disabled = false;
@@ -935,6 +956,31 @@ class SiteCore {
                 document.querySelector('.cf-payment-amount span').innerHTML = installment.toFixed(2);
             });
         });
+    }
+
+    init_animation() {
+        document.addEventListener('DOMContentLoaded', () => {
+            Array.from(document.querySelectorAll('.wp-block-image')).map(i => { i.dataset.animation = 'toggle-ease'; return i; });
+            const items = document.querySelectorAll('.wp-block-image, [class^="wp-block"], [data-animate]');
+            [...items].filter(i => i.nodeType).map(e => { e.dataset.animate = true });
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.dataset.animation === 'toggle-ease') {
+                            entry.target.classList.add('is-active');
+                        }
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            items.forEach(el => observer.observe(el));
+
+
+        });
+
     }
 
 }

@@ -204,10 +204,10 @@ document.addEventListener('DOMContentLoaded', e => {
             };
 
             const updateHotspot = (index, productId, product) => {
-                // console.log(product)
                 const newHotspots = [...hotspots];
                 newHotspots[index].productId = parseInt(productId);
-                newHotspots[index].product = { link: product.link, title: product.title?.raw, excerpt: product.excerpt?.raw };
+                const price_data = product.price_data;
+                newHotspots[index].product = { link: product.link, title: product.title?.raw, excerpt: product.excerpt?.raw, ...price_data };
                 setAttributes({ hotspots: newHotspots });
             };
 
@@ -308,9 +308,13 @@ document.addEventListener('DOMContentLoaded', e => {
                         'data-x': hotspot.x,
                         'data-y': hotspot.y,
                         'data-product-id': hotspot.productId,
-                        'data-product-title': hotspot?.product?.title || '',
-                        'data-product-link': hotspot?.product?.link || '',
-                        'data-product-excerpt': hotspot?.product?.excerpt || '',
+                        'data-product-title': hotspot?.product?.title ?? '',
+                        'data-product-link': hotspot?.product?.link ?? '',
+                        'data-product-excerpt': hotspot?.product?.excerpt ?? '',
+                        'data-product-price': hotspot?.product?.price ?? '',
+                        'data-product-currency': hotspot?.product?.currency ?? '',
+                        'data-product-on_sale': hotspot?.product?.on_sale ?? '',
+                        'data-product-regular_price': hotspot?.product?.regular_price ?? '',
                         style: {
                             // position: 'absolute',
                             left: `${hotspot.x}%`,

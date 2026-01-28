@@ -65,23 +65,24 @@ function cf_wishlist_toggle(){
     $pid=intval($_POST['product_id']);
     $uid=get_current_user_id();
     $session=cf_wishlist_get_session();
+    $product_title = get_the_title($pid);
     if($uid){
         $row=$wpdb->get_row($wpdb->prepare("SELECT id FROM $table WHERE product_id=%d AND user_id=%d",$pid,$uid));
         if($row){
             $wpdb->delete($table,['id'=>$row->id]);
-            wp_send_json(['status'=>'removed']);
+            wp_send_json(['status'=>'removed', 'product_title' => $product_title]);
         } else {
             $wpdb->insert($table,['user_id'=>$uid,'session_key'=>null,'product_id'=>$pid,'created_at'=>current_time('mysql')]);
-            wp_send_json(['status'=>'added']);
+            wp_send_json(['status'=>'added', 'product_title' => $product_title]);
         }
     } else {
         $row=$wpdb->get_row($wpdb->prepare("SELECT id FROM $table WHERE product_id=%d AND session_key=%s",$pid,$session));
         if($row){
             $wpdb->delete($table,['id'=>$row->id]);
-            wp_send_json(['status'=>'removed']);
+            wp_send_json(['status'=>'removed', 'product_title' => $product_title]);
         } else {
             $wpdb->insert($table,['user_id'=>null,'session_key'=>$session,'product_id'=>$pid,'created_at'=>current_time('mysql')]);
-            wp_send_json(['status'=>'added']);
+            wp_send_json(['status'=>'added', 'product_title' => $product_title]);
         }
     }
 }

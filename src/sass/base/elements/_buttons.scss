@@ -19,3 +19,22 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.wp-block-buttons .wp-block-button__link {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+	svg {
+		path {
+			&[stroke] {
+				stroke: currentColor;
+			}
+		}
+	}
+
+	&:hover {
+		color: #fff;
+	}
+}

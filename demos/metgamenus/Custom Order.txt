@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
+        <h4>Custom Order</h4>
+        <a href="#">Request a Custom Piece</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>Furniture Type</h5>
+                <ul>
+                    <li><a href="#">Living Room</a></li>
+                    <li><a href="#">Bedroom</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                    <li><a href="#">Unique Pieces</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Materials &amp; Finishes</h5>
+                <ul>
+                    <li><a href="#">Wood Types</a></li>
+                    <li><a href="#">Metal Finishes</a></li>
+                    <li><a href="#">Upholstery Fabrics</a></li>
+                    <li><a href="#">Glass &amp; Acrylic Options</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Customization Process</h5>
+                <ul>
+                    <li><a href="#">Design Consultation</a></li>
+                    <li><a href="#">3D Mockups</a></li>
+                    <li><a href="#">Production Timeline</a></li>
+                    <li><a href="#">Delivery &amp; Installation</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Custom Sofa" style="width: 200px;height: auto">
+                <p>CUSTOM SOFAS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Custom Desk" style="width: 200px;height: auto">
+                <p>CUSTOM DESKS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Custom Chair" style="width: 200px;height: auto">
+                <p>CUSTOM CHAIRS</p>
+            </a>
+        </div>
+    </div>
+</div>

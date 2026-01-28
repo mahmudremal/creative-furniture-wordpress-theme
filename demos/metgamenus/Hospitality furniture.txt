@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
+        <h4>Hospitality Furniture</h4>
+        <a href="#">Shop All</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>Seating</h5>
+                <ul>
+                    <li><a href="#">Hotel Chairs</a></li>
+                    <li><a href="#">Restaurant Seating</a></li>
+                    <li><a href="#">Lounge Sofas</a></li>
+                    <li><a href="#">Outdoor Seating</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Tables</h5>
+                <ul>
+                    <li><a href="#">Dining Tables</a></li>
+                    <li><a href="#">Coffee Tables</a></li>
+                    <li><a href="#">Bar Tables</a></li>
+                    <li><a href="#">Side Tables</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Storage &amp; Accessories</h5>
+                <ul>
+                    <li><a href="#">Cabinets &amp; Sideboards</a></li>
+                    <li><a href="#">Trolleys &amp; Carts</a></li>
+                    <li><a href="#">Shelving Units</a></li>
+                    <li><a href="#">Decorative Accessories</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Lobby Sofa" style="width: 200px;height: auto">
+                <p>LOBBY SOFAS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Restaurant Tables" style="width: 200px;height: auto">
+                <p>RESTAURANT TABLES</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Outdoor Seating" style="width: 200px;height: auto">
+                <p>OUTDOOR SEATING</p>
+            </a>
+        </div>
+    </div>
+</div>

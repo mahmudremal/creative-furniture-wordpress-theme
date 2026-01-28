@@ -24,13 +24,13 @@
             }
             &-popup {
                 opacity: 0;
-                padding: 5px;
-                color: #333;
+                padding: 10px;
+                color: #FFFFFF;
                 // display: none;
-                max-width: 300px;
+                max-width: 250px;
                 border-radius: 7px;
                 width: max-content;
-                background: #fff;
+                background: #000000;
                 position: absolute;
                 text-decoration: none;
                 transition: all .7s ease;
@@ -39,11 +39,22 @@
 
                 &-title {
                     margin: unset;
-                    font-size: 16px;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+
                 }
                 &-excerpt {
                     margin: 0;
-                    font-size: 14px;
+                    font-size: 10px;
+                }
+                &-price {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 600;
                 }
                 &-button {
                     margin: 0;
@@ -52,6 +63,32 @@
                     font-size: 12px;
                     cursor: pointer;
                     background: none;
+                }
+                &-divide {
+                    gap: 5px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                     svg {
+                            width: 30px;
+                            height: 30px;
+                     }
+                }
+
+                &:before {
+                    left: 20px;
+                    z-index: -1;
+                    content: "";
+                    width: 22px;
+                    height: 22px;
+                    bottom: -20px;
+                    position: absolute;
+                    background: #000000;
+                    transition: all .7s ease;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                > * {
+                    z-index: 1;
                 }
             }
 

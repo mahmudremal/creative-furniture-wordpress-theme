@@ -23,7 +23,7 @@
     flex-wrap: wrap;
 
     .promo-banner__title {
-      font-family: 'Playfair Display', serif;
+      font-family: $font-secondary;
       font-style: italic;
       font-weight: 500;
       font-size: 20px;
@@ -32,7 +32,7 @@
     }
 
     .promo-banner__subtitle {
-      font-family: 'Aspekta', sans-serif;
+      font-family: $font__main;
       font-weight: 500;
       font-size: 20px;
       line-height: 28px;
@@ -42,7 +42,7 @@
     .promo-banner__btn .wp-element-button {
       background: #fff;
       color: #202020;
-      font-family: 'Aspekta', sans-serif;
+      font-family: $font__main;
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;

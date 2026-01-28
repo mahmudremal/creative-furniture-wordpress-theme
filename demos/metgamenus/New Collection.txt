@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
+        <h4>New Collection</h4>
+        <a href="#">Shop All</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>Living Room</h5>
+                <ul>
+                    <li><a href="#">Sofas &amp; Sectionals</a></li>
+                    <li><a href="#">Coffee &amp; Side Tables</a></li>
+                    <li><a href="#">TV Units &amp; Consoles</a></li>
+                    <li><a href="#">Accent Chairs</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Bedroom</h5>
+                <ul>
+                    <li><a href="#">Beds &amp; Headboards</a></li>
+                    <li><a href="#">Nightstands</a></li>
+                    <li><a href="#">Dressers &amp; Chests</a></li>
+                    <li><a href="#">Wardrobes</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Office &amp; Workspace</h5>
+                <ul>
+                    <li><a href="#">Desks</a></li>
+                    <li><a href="#">Office Chairs</a></li>
+                    <li><a href="#">Storage &amp; Shelving</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="New Sofa" style="width: 200px;height: auto">
+                <p>NEW SOFAS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="New Bed" style="width: 200px;height: auto">
+                <p>NEW BEDS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="New Office Desk" style="width: 200px;height: auto">
+                <p>NEW OFFICE DESKS</p>
+            </a>
+        </div>
+    </div>
+</div>

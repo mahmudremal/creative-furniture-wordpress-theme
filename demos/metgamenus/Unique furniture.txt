@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
+        <h4>Unique Furniture</h4>
+        <a href="#">Shop All</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>Living Room</h5>
+                <ul>
+                    <li><a href="#">Statement Sofas</a></li>
+                    <li><a href="#">Accent Chairs</a></li>
+                    <li><a href="#">Designer Coffee Tables</a></li>
+                    <li><a href="#">Sculptural Side Tables</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Bedroom</h5>
+                <ul>
+                    <li><a href="#">Platform Beds</a></li>
+                    <li><a href="#">Unique Nightstands</a></li>
+                    <li><a href="#">Chests &amp; Dressers</a></li>
+                    <li><a href="#">Vanity Tables</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Office &amp; Study</h5>
+                <ul>
+                    <li><a href="#">Designer Desks</a></li>
+                    <li><a href="#">Creative Office Chairs</a></li>
+                    <li><a href="#">Bookshelves &amp; Display Units</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Statement Sofa" style="width: 200px;height: auto">
+                <p>STATEMENT SOFAS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Designer Chair" style="width: 200px;height: auto">
+                <p>DESIGNER CHAIRS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Accent Tables" style="width: 200px;height: auto">
+                <p>ACCENT TABLES</p>
+            </a>
+        </div>
+    </div>
+</div>

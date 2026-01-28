@@ -317,3 +317,22 @@ function my_custom_menu_scripts_and_styles( $hook_suffix ) {
 add_action( 'admin_enqueue_scripts', 'my_custom_menu_scripts_and_styles' );
 
 
+add_action('rest_api_init', function () {
+    register_rest_field('product', 'price_data', [
+        'get_callback' => function ($post) {
+            $product = wc_get_product($post['id']);
+            if (!$product) return null;
+
+            return [
+                'price'         => $product->get_price(),
+                'regular_price' => $product->get_regular_price(),
+                'sale_price'    => $product->get_sale_price(),
+                'on_sale'       => $product->is_on_sale(),
+                'currency'      => get_woocommerce_currency(),
+            ];
+        },
+        'schema' => null,
+    ]);
+});
+
+
