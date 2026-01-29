@@ -78,7 +78,9 @@
 
 
 
-
+.display-none {
+  display: none !important;
+}
 
 .hospitality {
     font-family: $font__main;
@@ -115,9 +117,9 @@
 
     &__main {
       flex: 1;
+      gap: 12px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
     }
 
     &__promo {
@@ -189,6 +191,7 @@
       }
 
       h4 {
+        margin-top: 0;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 20px;

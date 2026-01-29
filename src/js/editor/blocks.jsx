@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', e => {
                     bgImage: '',
                     title: __('Save 20% This Weekend Only!', 'creative-furniture'),
                     buttonText: __('Shop Now', 'creative-furniture'),
-                    buttonLink: '#'
+                    buttonLink: '#',
+                    subTitle: ''
                 }]
             }
         },
@@ -52,9 +53,10 @@ document.addEventListener('DOMContentLoaded', e => {
                         ...slides,
                         {
                             bgImage: '',
+                            buttonLink: '#',
                             title: __('New Slide', 'creative-furniture'),
-                            buttonText: __('Learn More', 'creative-furniture'),
-                            buttonLink: '#'
+                            subTitle: __('New Slide', 'creative-furniture'),
+                            buttonText: __('Learn More', 'creative-furniture')
                         }
                     ]
                 });
@@ -93,6 +95,13 @@ document.addEventListener('DOMContentLoaded', e => {
                             type: 'text',
                             value: slide.title,
                             onChange: (e) => updateSlide(index, 'title', e.target.value),
+                            style: { width: '100%' }
+                        }),
+                        createElement('label', { style: { marginTop: '10px', display: 'block' } }, __('Sub Title:', 'creative-furniture')),
+                        createElement('input', {
+                            type: 'text',
+                            value: slide.subTitle,
+                            onChange: (e) => updateSlide(index, 'subTitle', e.target.value),
                             style: { width: '100%' }
                         }),
                         createElement('label', { style: { marginTop: '10px', display: 'block' } }, __('Button Text:', 'creative-furniture')),
@@ -135,6 +144,7 @@ document.addEventListener('DOMContentLoaded', e => {
                             },
                                 createElement('div', { className: 'slide-content' },
                                     createElement('h2', {}, slide.title),
+                                    createElement('p', null, slide.subTitle),
                                     createElement('a', { href: slide.buttonLink, className: 'btn' }, slide.buttonText)
                                 )
                             )
@@ -160,6 +170,7 @@ document.addEventListener('DOMContentLoaded', e => {
                         createElement('div', { className: 'slide-overlay' }),
                         createElement('div', { className: 'slide-content' }, [
                             createElement('h2', {}, slide.title),
+                            createElement('p', null, slide.subTitle),
                             createElement('a', { href: slide.buttonLink, className: 'btn' }, slide.buttonText)
                         ])
                     ])
