@@ -49,3 +49,10 @@
 		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+<style>
+	.not-found {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		text-align: center;
+	}
+</style>

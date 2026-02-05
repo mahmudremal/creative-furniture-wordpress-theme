@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
+        <h4>Outdoor Furniture</h4>
+        <a href="#">Shop All</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>Seating</h5>
+                <ul>
+                    <li><a href="#">Outdoor Sofas</a></li>
+                    <li><a href="#">Patio Chairs</a></li>
+                    <li><a href="#">Benches</a></li>
+                    <li><a href="#">Hammocks &amp; Swings</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Tables</h5>
+                <ul>
+                    <li><a href="#">Dining Tables</a></li>
+                    <li><a href="#">Coffee &amp; Side Tables</a></li>
+                    <li><a href="#">Bar &amp; Bistro Tables</a></li>
+                    <li><a href="#">Picnic Tables</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>Outdoor Essentials</h5>
+                <ul>
+                    <li><a href="#">Umbrellas &amp; Shades</a></li>
+                    <li><a href="#">Storage Boxes</a></li>
+                    <li><a href="#">Planters &amp; Pots</a></li>
+                    <li><a href="#">Outdoor Rugs</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Patio Sofa" style="width: 200px;height: auto">
+                <p>PATIO SOFAS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Outdoor Dining" style="width: 200px;height: auto">
+                <p>OUTDOOR DINING</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Outdoor Chairs" style="width: 200px;height: auto">
+                <p>OUTDOOR CHAIRS</p>
+            </a>
+        </div>
+    </div>
+</div>

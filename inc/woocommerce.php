@@ -646,127 +646,127 @@ function cf_handle_customer_order_review() {
 
 
 
-add_action('pre_get_posts', 'cf_apply_custom_product_filters');
-function cf_apply_custom_product_filters($query) {
-    if (is_admin() || !$query->is_main_query()) {
-        return;
-    }
+// add_action('pre_get_posts', 'cf_apply_custom_product_filters');
+// function cf_apply_custom_product_filters($query) {
+//     if (is_admin() || !$query->is_main_query()) {
+//         return;
+//     }
 
-    if (!is_post_type_archive('product') && !is_tax(get_object_taxonomies('product'))) {
-        return;
-    }
+//     if (!is_post_type_archive('product') && !is_tax(get_object_taxonomies('product'))) {
+//         return;
+//     }
 
-    $tax_query = $query->get('tax_query') ?: [];
-    $meta_query = $query->get('meta_query') ?: [];
+//     $tax_query = $query->get('tax_query') ?: [];
+//     $meta_query = $query->get('meta_query') ?: [];
 
-    if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
-        $categories = is_array($_GET['product_cat']) 
-            ? $_GET['product_cat'] 
-            : explode(',', $_GET['product_cat']);
-        $tax_query[] = [
-            'taxonomy' => 'product_cat',
-            'field' => 'slug',
-            'terms' => array_map('sanitize_text_field', $categories),
-            'operator' => 'IN',
-        ];
-    }
+//     if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
+//         $categories = is_array($_GET['product_cat']) 
+//             ? $_GET['product_cat'] 
+//             : explode(',', $_GET['product_cat']);
+//         $tax_query[] = [
+//             'taxonomy' => 'product_cat',
+//             'field' => 'slug',
+//             'terms' => array_map('sanitize_text_field', $categories),
+//             'operator' => 'IN',
+//         ];
+//     }
 
-    if (isset($_GET['product_tag']) && !empty($_GET['product_tag'])) {
-        $tags = is_array($_GET['product_tag']) 
-            ? $_GET['product_tag'] 
-            : explode(',', $_GET['product_tag']);
-        $tax_query[] = [
-            'taxonomy' => 'product_tag',
-            'field' => 'slug',
-            'terms' => array_map('sanitize_text_field', $tags),
-            'operator' => 'IN',
-        ];
-    }
+//     if (isset($_GET['product_tag']) && !empty($_GET['product_tag'])) {
+//         $tags = is_array($_GET['product_tag']) 
+//             ? $_GET['product_tag'] 
+//             : explode(',', $_GET['product_tag']);
+//         $tax_query[] = [
+//             'taxonomy' => 'product_tag',
+//             'field' => 'slug',
+//             'terms' => array_map('sanitize_text_field', $tags),
+//             'operator' => 'IN',
+//         ];
+//     }
 
-    $attributes = wc_get_attribute_taxonomies();
-    foreach ($attributes as $attribute) {
-        $taxonomy = 'pa_' . $attribute->attribute_name;
-        if (isset($_GET[$taxonomy]) && !empty($_GET[$taxonomy])) {
-            $terms = is_array($_GET[$taxonomy]) 
-                ? $_GET[$taxonomy] 
-                : explode(',', $_GET[$taxonomy]);
-            $tax_query[] = [
-                'taxonomy' => $taxonomy,
-                'field' => 'slug',
-                'terms' => array_map('sanitize_text_field', $terms),
-                'operator' => 'IN',
-            ];
-        }
-    }
+//     $attributes = wc_get_attribute_taxonomies();
+//     foreach ($attributes as $attribute) {
+//         $taxonomy = 'pa_' . $attribute->attribute_name;
+//         if (isset($_GET[$taxonomy]) && !empty($_GET[$taxonomy])) {
+//             $terms = is_array($_GET[$taxonomy]) 
+//                 ? $_GET[$taxonomy] 
+//                 : explode(',', $_GET[$taxonomy]);
+//             $tax_query[] = [
+//                 'taxonomy' => $taxonomy,
+//                 'field' => 'slug',
+//                 'terms' => array_map('sanitize_text_field', $terms),
+//                 'operator' => 'IN',
+//             ];
+//         }
+//     }
 
-    if (!empty($tax_query)) {
-        $tax_query['relation'] = 'AND';
-        $query->set('tax_query', $tax_query);
-    }
+//     if (!empty($tax_query)) {
+//         $tax_query['relation'] = 'AND';
+//         $query->set('tax_query', $tax_query);
+//     }
 
-    $min_price = isset($_GET['min_price']) ? floatval($_GET['min_price']) : '';
-    $max_price = isset($_GET['max_price']) ? floatval($_GET['max_price']) : '';
+//     $min_price = isset($_GET['min_price']) ? floatval($_GET['min_price']) : '';
+//     $max_price = isset($_GET['max_price']) ? floatval($_GET['max_price']) : '';
 
-    if ($min_price !== '' || $max_price !== '') {
-        $price_query = ['relation' => 'AND'];
+//     if ($min_price !== '' || $max_price !== '') {
+//         $price_query = ['relation' => 'AND'];
 
-        if ($min_price !== '') {
-            $price_query[] = [
-                'key' => '_price',
-                'value' => $min_price,
-                'type' => 'NUMERIC',
-                'compare' => '>=',
-            ];
-        }
+//         if ($min_price !== '') {
+//             $price_query[] = [
+//                 'key' => '_price',
+//                 'value' => $min_price,
+//                 'type' => 'NUMERIC',
+//                 'compare' => '>=',
+//             ];
+//         }
 
-        if ($max_price !== '') {
-            $price_query[] = [
-                'key' => '_price',
-                'value' => $max_price,
-                'type' => 'NUMERIC',
-                'compare' => '<=',
-            ];
-        }
+//         if ($max_price !== '') {
+//             $price_query[] = [
+//                 'key' => '_price',
+//                 'value' => $max_price,
+//                 'type' => 'NUMERIC',
+//                 'compare' => '<=',
+//             ];
+//         }
 
-        $meta_query[] = $price_query;
-        $query->set('meta_query', $meta_query);
-    }
+//         $meta_query[] = $price_query;
+//         $query->set('meta_query', $meta_query);
+//     }
 
-    if (isset($_GET['orderby'])) {
-        $orderby = sanitize_text_field($_GET['orderby']);
+//     if (isset($_GET['orderby'])) {
+//         $orderby = sanitize_text_field($_GET['orderby']);
         
-        switch ($orderby) {
-            case 'popularity':
-                $query->set('meta_key', 'total_sales');
-                $query->set('orderby', 'meta_value_num');
-                $query->set('order', 'DESC');
-                break;
-            case 'rating':
-                $query->set('meta_key', '_wc_average_rating');
-                $query->set('orderby', 'meta_value_num');
-                $query->set('order', 'DESC');
-                break;
-            case 'date':
-                $query->set('orderby', 'date');
-                $query->set('order', 'DESC');
-                break;
-            case 'price':
-                $query->set('meta_key', '_price');
-                $query->set('orderby', 'meta_value_num');
-                $query->set('order', 'ASC');
-                break;
-            case 'price-desc':
-                $query->set('meta_key', '_price');
-                $query->set('orderby', 'meta_value_num');
-                $query->set('order', 'DESC');
-                break;
-            default:
-                $query->set('orderby', 'menu_order');
-                $query->set('order', 'ASC');
-                break;
-        }
-    }
-}
+//         switch ($orderby) {
+//             case 'popularity':
+//                 $query->set('meta_key', 'total_sales');
+//                 $query->set('orderby', 'meta_value_num');
+//                 $query->set('order', 'DESC');
+//                 break;
+//             case 'rating':
+//                 $query->set('meta_key', '_wc_average_rating');
+//                 $query->set('orderby', 'meta_value_num');
+//                 $query->set('order', 'DESC');
+//                 break;
+//             case 'date':
+//                 $query->set('orderby', 'date');
+//                 $query->set('order', 'DESC');
+//                 break;
+//             case 'price':
+//                 $query->set('meta_key', '_price');
+//                 $query->set('orderby', 'meta_value_num');
+//                 $query->set('order', 'ASC');
+//                 break;
+//             case 'price-desc':
+//                 $query->set('meta_key', '_price');
+//                 $query->set('orderby', 'meta_value_num');
+//                 $query->set('order', 'DESC');
+//                 break;
+//             default:
+//                 $query->set('orderby', 'menu_order');
+//                 $query->set('order', 'ASC');
+//                 break;
+//         }
+//     }
+// }
 
 
 

@@ -1,0 +1,55 @@
+<div class="grid121 container-fluid">
+    <div class="cf-mega-left">
+        <h4>Office Furniture</h4>
+        <a href="#">Shop All</a>
+    </div>
+    <div class="cf-mega-cols">
+
+        <div class="cf-mega-col">
+            <h5>Desks &amp; Workstations</h5>
+            <ul>
+                <li><a href="#">Executive Desks</a></li>
+                <li><a href="#">Standing Desks</a></li>
+                <li><a href="#">Computer Desks</a></li>
+                <li><a href="#">Corner Desks</a></li>
+                <li><a href="#">Adjustable Desks</a></li>
+            </ul>
+        </div>
+
+        <div class="cf-mega-col">
+            <h5>Seating</h5>
+            <ul>
+                <li><a href="#">Office Chairs</a></li>
+                <li><a href="#">Ergonomic Chairs</a></li>
+                <li><a href="#">Visitor Chairs</a></li>
+                <li><a href="#">Stools &amp; Benches</a></li>
+                <li><a href="#">Recliners</a></li>
+            </ul>
+        </div>
+
+        <div class="cf-mega-col">
+            <h5>Storage &amp; Organization</h5>
+            <ul>
+                <li><a href="#">Filing Cabinets</a></li>
+                <li><a href="#">Bookcases</a></li>
+                <li><a href="#">Shelving Units</a></li>
+                <li><a href="#">Drawer Units</a></li>
+                <li><a href="#">Office Organizers</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="cf-mega-images">
+
+        <a href="#" class="cf-mega-card">
+            <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Office Desk">
+            <p>DESKS</p>
+        </a>
+
+        <a href="#" class="cf-mega-card">
+            <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Office Chair">
+            <p>CHAIRS</p>
+        </a>
+
+    </div>
+</div>

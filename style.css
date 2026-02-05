@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Creative Furniture
 Theme URI: https://www.mahmudremal.com/
 Author: Remal Mahmud
@@ -965,3 +965,99 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/*--------------------------------------------------------------
+# Search Results
+--------------------------------------------------------------*/
+.search-result-card {
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-result-card:hover {
+	box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.search-result-card .post-thumbnail {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.search-result-card .post-thumbnail img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+}
+
+.search-result-card:hover .post-thumbnail img {
+	transform: scale(1.05);
+}
+
+.search-result-card .entry-wrapper {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.search-result-card .entry-header {
+	margin-bottom: 15px;
+}
+
+.search-result-card .entry-title {
+	font-size: 1.25rem;
+	margin-bottom: 10px;
+}
+
+.search-result-card .entry-title a {
+	text-decoration: none;
+	color: #333;
+}
+
+.search-result-card .entry-title a:hover {
+	color: #C19A6B;
+}
+
+.search-result-card .entry-meta {
+	font-size: 0.875rem;
+	color: #777;
+}
+
+.search-result-card .entry-meta .byline {
+	margin-left: 10px;
+}
+
+.search-result-card .entry-summary {
+	flex-grow: 1;
+	margin-bottom: 20px;
+}
+
+.search-result-card .entry-footer .read-more-link {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	font-weight: 600;
+	color: #C19A6B;
+	transition: color 0.3s ease;
+}
+
+.search-result-card .entry-footer .read-more-link:hover {
+	color: #333;
+}
+
+.search-result-card .entry-footer .arrow {
+	margin-left: 8px;
+	transition: transform 0.3s ease;
+}
+
+.search-result-card .entry-footer .read-more-link:hover .arrow {
+	transform: translateX(5px);
+}
+

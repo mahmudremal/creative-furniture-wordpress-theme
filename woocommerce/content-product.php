@@ -12,6 +12,29 @@ $product_id = $product->get_id();
 $gallery_ids = $product->get_gallery_image_ids();
 $sale_percentage = 0;
 
+$product_thumbnail_imgs = [];
+
+
+$feat_image_id = get_post_thumbnail_id($product_id);
+
+if ( !empty($feat_image_id) ) {
+	$image = wp_get_attachment_image( $feat_image_id, 'woocommerce_thumbnail' );
+	if (!empty($image)) {
+		$product_thumbnail_imgs[] = $image;
+	}
+}
+if ( ! empty( $gallery_ids ) ) {
+	foreach ($gallery_ids as $gallery_id) {
+		$image = wp_get_attachment_image( $gallery_id, 'woocommerce_thumbnail' );
+		if (!empty($image)) {
+			$product_thumbnail_imgs[] = $image;
+		}
+	}
+}
+if (empty($product_thumbnail_imgs)) {
+	$product_thumbnail_imgs[] = $product->get_image( 'woocommerce_thumbnail' );
+}
+
 if ( $product->is_on_sale() ) {
 	$regular_price = (float) $product->get_regular_price();
 	$sale_price = (float) $product->get_sale_price();
@@ -54,11 +77,11 @@ if ( $product->is_type( 'variable' ) ) {
 				<a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>" class="product-image-link">
 					<div class="product-images-hover">
 						<div class="product-image-main">
-							<?php echo wp_kses_post( $product->get_image( 'woocommerce_thumbnail' ) ); ?>
+							<?php echo wp_kses_post($product_thumbnail_imgs[0]); ?>
 						</div>
-						<?php if ( ! empty( $gallery_ids ) ) : ?>
+						<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
 							<div class="product-image-hover">
-								<?php echo wp_get_attachment_image( $gallery_ids[0], 'woocommerce_thumbnail' ); ?>
+								<?php echo wp_kses_post($product_thumbnail_imgs[1]); ?>
 							</div>
 						<?php endif; ?>
 					</div>
@@ -70,19 +93,19 @@ if ( $product->is_type( 'variable' ) ) {
 					<div class="slider-container">
 						<div class="slider-track">
 							<div class="slider-item">
-								<?php echo wp_kses_post( $product->get_image( 'woocommerce_thumbnail' ) ); ?>
+								<?php echo wp_kses_post($product_thumbnail_imgs[0]); ?>
 							</div>
-							<?php if ( ! empty( $gallery_ids ) ) : ?>
-								<?php foreach ( $gallery_ids as $gallery_id ) : ?>
+							<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
+								<?php foreach ( $product_thumbnail_imgs as $product_thumbnail_img ) : ?>
 									<div class="slider-item">
-										<?php echo wp_get_attachment_image( $gallery_id, 'woocommerce_thumbnail' ); ?>
+										<?php echo wp_kses_post($product_thumbnail_img); ?>
 									</div>
 								<?php endforeach; ?>
 							<?php endif; ?>
 						</div>
 					</div>
 					
-					<?php if ( ! empty( $gallery_ids ) ) : ?>
+					<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
 						<button type="button" class="slider-btn slider-prev" aria-label="Previous image">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
 								<path d="M12 4L6 10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

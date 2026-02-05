@@ -1,55 +1,131 @@
-<div class="grid121 container-fluid">
-    <div class="cf-mega-left">
-        <h4>Décor &amp; Accessories</h4>
-        <a href="#">Shop All</a>
-    </div>
-    <div class="cf-mega-cols">
+<div class="hospitality container-fluid">
+  <div class="hospitality__cta">
+    <span>View All Hospitality Furniture</span>
+  </div>
 
-    <div class="cf-mega-col">
-        <h5>Storage</h5>
+  <div class="hospitality__content">
+    <!-- Left Menu -->
+    <aside class="hospitality__sidebar">
+      <div class="sidebar__group">
+        <a href="#" class="sidebar__title">
+          <span>Hotel Bedroom Set</span>
+          <button class="sidebar__btn">
+            View All
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </button>
+        </a>
+
+        <a href="#" class="sidebar__title">
+          <span>Hospitality Furniture</span>
+          <button class="sidebar__btn">
+            View All
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </button>
+        </a>
+        <a href="#" class="sidebar__title">
+          <span>University Furniture</span>
+          <button class="sidebar__btn">
+            View All
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </button>
+        </a>
+        <a href="#" class="sidebar__title">
+          <span>Medical Center Furniture</span>
+          <button class="sidebar__btn">
+            View All
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </button>
+        </a>
+        <a href="#" class="sidebar__title">
+          <span>Bank Furniture</span>
+          <button class="sidebar__btn">
+            View All
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </button>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="hospitality__main">
+      <div class="columns">
+        <div class="column">
+          <h4>Sofa</h4>
+          <ul>
+            <li><a href="#">Sofa Sets</a></li>
+            <li><a href="#">L Shape Sofa</a></li>
+            <li><a href="#">Sofa Cum Bed</a></li>
+            <li><a href="#">Chaise Lounge</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>Seating &amp; Chair</h4>
+          <ul>
+            <li><a href="#">Sofa Sets</a></li>
+            <li><a href="#">L Shape Sofa</a></li>
+            <li><a href="#">Sofa Cum Bed</a></li>
+            <li><a href="#">Chaise Lounge</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <h4>Accent Table</h4>
+          <ul>
+            <li><a href="#">Sofa Sets</a></li>
+            <li><a href="#">L Shape Sofa</a></li>
+            <li><a href="#">Sofa Cum Bed</a></li>
+            <li><a href="#">Chaise Lounge</a></li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>Mirror</h4>
+          <ul>
+            <li><a href="#">Sofa Sets</a></li>
+            <li><a href="#">L Shape Sofa</a></li>
+            <li><a href="#">Sofa Cum Bed</a></li>
+            <li><a href="#">Chaise Lounge</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column full">
+        <h4>Utility Tables + Storage</h4>
         <ul>
-        <li><a href="#">Photo Frames</a></li>
-        <li><a href="#">Clocks</a></li>
-        <li><a href="#">Vases</a></li>
-        <li><a href="#">Bowls &amp; Trays</a></li>
-        <li><a href="#">Planters &amp; Urns</a></li>
+          <li><a href="#">Sofa Sets</a></li>
+          <li><a href="#">L Shape Sofa</a></li>
+          <li><a href="#">Sofa Cum Bed</a></li>
+          <li><a href="#">Chaise Lounge</a></li>
         </ul>
-    </div>
+      </div>
+    </section>
 
-    <div class="cf-mega-col">
-        <h5>Decor Items</h5>
-        <ul>
-        <li><a href="#">Artificial Flowers</a></li>
-        <li><a href="#">Figurines &amp; Ornaments</a></li>
-        <li><a href="#">Fountains</a></li>
-        <li><a href="#">Lanterns</a></li>
-        <li><a href="#">Candle Holders</a></li>
-        </ul>
-    </div>
-
-    <div class="cf-mega-col">
-        <h5>Utilities</h5>
-        <ul>
-        <li><a href="#">Coat Hangers</a></li>
-        <li><a href="#">Home Utilities</a></li>
-        <li><a href="#">Home Improvement</a></li>
-        <li><a href="#">Shop Online Exclusive</a></li>
-        <li><a href="#">Shop New Arrivals</a></li>
-        </ul>
-    </div>
-
-    </div>
-    <div class="cf-mega-images">
-
-    <a href="#" class="cf-mega-card">
-        <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="">
-        <p>VASES</p>
-    </a>
-
-    <a href="#" class="cf-mega-card">
-        <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="">
-        <p>CANDLEHOLDERS</p>
-    </a>
-
-    </div>
+    <!-- Right Promo -->
+    <aside class="hospitality__promo">
+      <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg" alt="" />
+      <ul class="apromo__links">
+        <li>
+          <a href="#">
+            Sofa Sets
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            L Shape Sofa
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Sofa Cum Bed
+            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
 </div>

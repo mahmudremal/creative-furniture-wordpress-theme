@@ -215,9 +215,7 @@ function footer_block_svg_icon_print($icon) {
 	<img src="<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/'. $icon .'.svg'); ?>" width="40" height="40" />
 	<?php
 }
-add_action('init', function() {
-    header("Access-Control-Allow-Credentials: true");
-});
+
 
 
 // add_filter( 'woocommerce_enable_setup_wizard', '__return_false' );
@@ -335,4 +333,23 @@ add_action('rest_api_init', function () {
     ]);
 });
 
+/**
+ * Include products and posts in search results, exclude pages.
+ */
+function creative_furniture_search_filter($query) {
+    if ($query->is_search && !is_admin() && $query->is_main_query()) {
+        $query->set('post_type', array('post', 'product', 'page'));
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'creative_furniture_search_filter');
+function get_id_by_postmeta($value) {
+    global $wpdb;
 
+    return (int) $wpdb->get_var(
+		$wpdb->prepare(
+			"SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'src_site_obj_id' AND meta_value = %s LIMIT 1",
+			$value
+		)
+	);
+}

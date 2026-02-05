@@ -15,9 +15,10 @@ $plus_minus_icons = '
 </span>
 ';
 
+$setTransparent = get_post_meta(get_the_ID(), '_cf_set_transparent', true);
 ?>
 
-<div class="cf-single-product">
+<div class="cf-single-product container-fluid <?php echo esc_attr($setTransparent ? '' : 'cf-set-transparent'); ?>">
     <?php while (have_posts()) : the_post(); global $product; ?>
         
     

@@ -75,7 +75,7 @@
                                         <path d="M14 14L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                     </svg>
                                 </button>
-                                <input type="search" class="search-field" placeholder="What are you looking for?" name="s">
+                                <input type="search" class="search-field" placeholder="What are you looking for?" name="s" value="<?php echo esc_attr(get_search_query()); ?>">
                             </form>
                         </div>
 
@@ -116,7 +116,7 @@
                                 <path d="M14 14L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
-                        <input type="search" class="search-field" placeholder="What are you looking for?" name="s">
+                        <input type="search" class="search-field" placeholder="What are you looking for?" name="s" value="<?php echo esc_attr(get_search_query()); ?>">
                     </form>
                 </div>
             </div>

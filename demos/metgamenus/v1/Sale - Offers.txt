@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;justify-content: space-between">
+        <h4>Sale &amp; Offers</h4>
+        <a href="#">View All Deals</a>
+    </div>
+
+    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
+        <div class="is-layout-flex" style="gap: 20px">
+            <div style="margin-bottom: 20px">
+                <h5>By Category</h5>
+                <ul>
+                    <li><a href="#">Living Room</a></li>
+                    <li><a href="#">Bedroom</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                    <li><a href="#">Unique Furniture</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <h5>By Discount</h5>
+                <ul>
+                    <li><a href="#">Up to 20' Off</a></li>
+                    <li><a href="#">Up to 40' Off</a></li>
+                    <li><a href="#">Up to 60' Off</a></li>
+                    <li><a href="#">Clearance Sale</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="is-layout-flex" style="gap: 20px">
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Living Room Sale" style="width: 200px;height: auto">
+                <p>LIVING ROOM DEALS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Bedroom Sale" style="width: 200px;height: auto">
+                <p>BEDROOM DEALS</p>
+            </a>
+
+            <a href="#" style="text-align: center">
+                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Office Sale" style="width: 200px;height: auto">
+                <p>OFFICE DEALS</p>
+            </a>
+        </div>
+    </div>
+</div>

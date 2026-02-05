@@ -1,14 +1,13 @@
 .cf-single-product {
-    max-width: 1440px;
     margin: 0 auto;
-    padding: 40px 20px;
 }
 
 .cf-product-container {
+    gap: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
     margin-bottom: 80px;
+    padding-top: 40px;
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
@@ -480,6 +479,18 @@
             margin-top: 8px;
             flex-shrink: 0;
         }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            h3, h4, h5, h6 {
+                margin: 0;
+            }
+        }
+    }
+    a {
+        color: #424242;
     }
 }
 

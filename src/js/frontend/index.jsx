@@ -53,6 +53,7 @@ class SiteCore {
 
         this.init_tabby();
         this.init_animation();
+        this.init_image_transparency();
     }
 
     sc_store_frontend() {
@@ -981,6 +982,54 @@ class SiteCore {
 
         });
 
+    }
+
+    init_image_transparency() {
+        const images = [...document.querySelectorAll('.cf-single-product.cf-set-transparent .cf-product-gallery img:not(.cf-lightbox-img)')].map(el => el.src);
+        if (!images?.length) return;
+        this.checkImageTransparency(images)
+            .then((list) => {
+                console.log(list);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+    checkImageTransparency(urlArray) {
+        const checkSingleImage = (url) => {
+            return new Promise((resolve) => {
+                const img = new Image();
+                // Required if images are on a different domain (like your WooCommerce CDN)
+                img.crossOrigin = "Anonymous";
+
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    ctx.drawImage(img, 0, 0);
+
+                    // Get RGBA data: [R, G, B, A, R, G, B, A...]
+                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                    let hasTransparency = false;
+
+                    // Check every 4th value (the Alpha channel)
+                    for (let i = 3; i < imageData.length; i += 4) {
+                        if (imageData[i] < 255) { // 255 is fully opaque
+                            hasTransparency = true;
+                            break;
+                        }
+                    }
+                    resolve({ url, isTransparent: hasTransparency });
+                };
+
+                img.onerror = () => resolve({ url, isTransparent: null, error: "Load failed" });
+                img.src = url;
+            });
+        };
+
+        return Promise.all(urlArray.map(url => checkSingleImage(url)));
     }
 
 }
