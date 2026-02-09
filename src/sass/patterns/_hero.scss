@@ -45,7 +45,7 @@
    
     color: white;
     font-size: 48px;
-    font-family: Aspekta, sans-serif;
+    font-family: $font__main;
     font-weight: 600;
     line-height: 62px;
     word-wrap: break-word;
@@ -55,7 +55,7 @@
    
     color: white;
     font-size: 48px;
-    font-family: Aspekta, sans-serif;
+    font-family: $font__main;
     font-weight: 500;
     line-height: 62px;
     word-wrap: break-word;
@@ -87,7 +87,7 @@
   text-align: center;
   color: white;
   font-size: 16px;
-  font-family: Aspekta, sans-serif;
+  font-family: $font__main;
   font-weight: 400;
   line-height: 24px;
   word-wrap: break-word;
@@ -106,7 +106,7 @@
     border-radius: 45px;
     color: #2a2a2a;
     font-size: 18px;
-    font-family: Aspekta, sans-serif;
+    font-family: $font__main;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 24px;

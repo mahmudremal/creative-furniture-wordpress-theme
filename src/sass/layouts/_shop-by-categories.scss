@@ -8,13 +8,13 @@
         justify-content: space-between;
         align-items: center;
         .shop-title {
-            font-family: Aspekta;
+            font-family: $font__main;
             font-size: 28px;
             color: #242424;
             font-weight: 500;
             text-transform: capitalize;
             .italic {
-                font-family: 'Playfair Display';
+                font-family: $font-secondary;
                 font-style: italic;
                 font-weight: 500;
             }
@@ -54,7 +54,7 @@
             .shop-card-title {
                 color: #2a2a2a;
                 font-size: 20px;
-                font-family: 'Playfair Display';
+                font-family: $font-secondary;
                 font-style: italic;
                 font-weight: 500;
                 line-height: 30px;

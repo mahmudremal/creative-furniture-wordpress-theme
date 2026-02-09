@@ -10,7 +10,7 @@
         .heading-normal {
             color: #242424;
             font-size: 28px;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-weight: 500;
             text-transform: capitalize;
             line-height: 44px;
@@ -37,7 +37,7 @@
         .category-tabs__item {
             padding: 8px 16px;
             border-radius: 100px;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-weight: 500;
             font-size: 16px;
             text-transform: capitalize;
@@ -62,7 +62,7 @@
             border: none;
             border-radius: 150px;
             color: white !important;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-weight: 500;
             font-size: 12px;
             text-transform: capitalize;

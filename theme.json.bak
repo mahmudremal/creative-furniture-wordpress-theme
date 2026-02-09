@@ -16,8 +16,8 @@
     },
     "typography": {
       "fontFamilies": [
-        { "fontFamily": "Aspekta, sans-serif", "slug": "aspekta", "name": "Aspekta" },
-        { "fontFamily": "Playfair Display, serif", "slug": "playfair-display", "name": "Playfair Display" }
+        { "fontFamily": "Arimo, sans-serif", "slug": "aspekta", "name": "Arimo" },
+        { "fontFamily": "Arimo, serif", "slug": "playfair-display", "name": "Arimo" }
       ],
       "customFontSize": true,
       "fluid": true
@@ -38,7 +38,7 @@
       "text": "#242424"
     },
     "typography": {
-      "fontFamily": "Aspekta, sans-serif",
+      "fontFamily": "Arimo, sans-serif",
       "fontSize": "16px",
       "lineHeight": "1.6"
     }

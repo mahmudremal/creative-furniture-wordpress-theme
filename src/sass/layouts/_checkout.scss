@@ -46,7 +46,7 @@ $bg-highlight: #F5F2E2;
     }
 
     &-title {
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 28px;
         font-weight: 500;
         line-height: 44px;
@@ -96,7 +96,7 @@ $bg-highlight: #F5F2E2;
     }
 
     span {
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -117,14 +117,14 @@ $bg-highlight: #F5F2E2;
         font-weight: 500;
         line-height: 30px;
         text-transform: capitalize;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
     }
 
     .login-prompt {
         display: flex;
         align-items: center;
         gap: 8px;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 16px;
         line-height: 24px;
 
@@ -160,7 +160,7 @@ $bg-highlight: #F5F2E2;
     }
 
     p {
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -183,7 +183,7 @@ $bg-highlight: #F5F2E2;
 
         label {
             position: absolute;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-size: 12px;
             line-height: 16px;
             color: $text-muted;
@@ -209,7 +209,7 @@ $bg-highlight: #F5F2E2;
             background: #fff;
             border: 1px solid $border-color;
             border-radius: 12px;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-size: 16px;
             line-height: 24px;
             color: #111111;
@@ -309,7 +309,7 @@ $bg-highlight: #F5F2E2;
     gap: 12px;
     padding: 16px;
     cursor: pointer;
-    font-family: Aspekta, sans-serif;
+    font-family: $font__main;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -421,7 +421,7 @@ $bg-highlight: #F5F2E2;
                 align-items: center;
                 padding: 16px;
                 cursor: pointer;
-                font-family: Aspekta, sans-serif;
+                font-family: $font__main;
                 font-size: 16px;
                 line-height: 24px;
                 color: #333333;
@@ -476,7 +476,7 @@ $bg-highlight: #F5F2E2;
                 
                 p {
                     margin: 0 0 14px;
-                    font-family: Aspekta, sans-serif;
+                    font-family: $font__main;
                     font-size: 14px;
                     line-height: 24px;
                     color: $text-tertiary;
@@ -516,7 +516,7 @@ $bg-highlight: #F5F2E2;
 
             label {
                 position: absolute;
-                font-family: Aspekta, sans-serif;
+                font-family: $font__main;
                 font-size: 12px;
                 line-height: 16px;
                 color: $text-muted;
@@ -535,7 +535,7 @@ $bg-highlight: #F5F2E2;
                 background: #fff;
                 border: 1px solid $border-color;
                 border-radius: 12px;
-                font-family: Aspekta, sans-serif;
+                font-family: $font__main;
                 font-size: 16px;
                 line-height: 24px;
                 color: #111111;
@@ -601,7 +601,7 @@ $bg-highlight: #F5F2E2;
             height: 16px;
             background: #fff;
             border-radius: 2px;
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-size: 10px;
             line-height: 18px;
             color: $primary-color;
@@ -621,7 +621,7 @@ $bg-highlight: #F5F2E2;
         display: flex;
         align-items: center;
         gap: 4px;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 14px;
         line-height: 24px;
         color: $primary-color;
@@ -643,7 +643,7 @@ $bg-highlight: #F5F2E2;
         background: $primary-color;
         border: none;
         border-radius: 8px;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -707,7 +707,7 @@ $bg-highlight: #F5F2E2;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-family: Aspekta, sans-serif;
+                font-family: $font__main;
                 font-size: 16px;
                 line-height: 18px;
                 color: #fff;
@@ -719,7 +719,7 @@ $bg-highlight: #F5F2E2;
             flex: 1;
 
             h3 {
-                font-family: Aspekta, sans-serif;
+                font-family: $font__main;
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 24px;
@@ -729,7 +729,7 @@ $bg-highlight: #F5F2E2;
         }
 
         .item-price {
-            font-family: Aspekta, sans-serif;
+            font-family: $font__main;
             font-size: 16px;
             font-weight: 500;
             line-height: 24px;
@@ -753,7 +753,7 @@ $bg-highlight: #F5F2E2;
         background: #fff;
         border-radius: 12px;
         border: 1px solid $border-color;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
 
         &::placeholder {
             color: $text-muted;
@@ -765,7 +765,7 @@ $bg-highlight: #F5F2E2;
         background: #A4A4A3;
         border: none;
         border-radius: 8px;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -801,7 +801,7 @@ $bg-highlight: #F5F2E2;
         align-items: center;
         text-transform: uppercase;
         justify-content: space-between;
-        font-family: Aspekta, sans-serif;
+        font-family: $font__main;
     }
 
     .order-total {

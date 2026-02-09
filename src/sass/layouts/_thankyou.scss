@@ -48,7 +48,7 @@
                 text-align: center;
                 color: #242424;
                 font-size: 28px;
-                font-family: Aspekta;
+                font-family: $font__main;
                 font-weight: 500;
                 text-transform: capitalize;
                 line-height: 44px;
@@ -64,7 +64,7 @@
                 &:nth-child(2) {
                     color: #6E6E6E;
                     font-size: 14px;
-                    font-family: Aspekta;
+                    font-family: $font__main;
                     font-weight: 400;
                     line-height: 20px;
                     word-wrap: break-word;
@@ -73,7 +73,7 @@
                 &:nth-child(3) {
                     color: #2A2A2A;
                     font-size: 18px;
-                    font-family: Aspekta;
+                    font-family: $font__main;
                     font-weight: 500;
                     line-height: 26px;
                     word-wrap: break-word;
@@ -102,7 +102,7 @@
                 border-bottom: 1px #D9D9D9 solid;
                 color: #363636;
                 font-size: 18px;
-                font-family: Aspekta;
+                font-family: $font__main;
                 font-weight: 600;
                 line-height: 24px;
                 word-wrap: break-word;
@@ -145,7 +145,7 @@
                         align-self: stretch;
                         color: black;
                         font-size: 16px;
-                        font-family: Aspekta;
+                        font-family: $font__main;
                         font-weight: 500;
                         line-height: 24px;
                         word-wrap: break-word;
@@ -175,7 +175,7 @@
                                 &:first-child {
                                     color: #363636;
                                     font-size: 12px;
-                                    font-family: Aspekta;
+                                    font-family: $font__main;
                                     font-weight: 500;
                                     line-height: 18px;
                                     word-wrap: break-word;
@@ -184,7 +184,7 @@
                                 &:last-child {
                                     color: #6E6E6E;
                                     font-size: 12px;
-                                    font-family: Aspekta;
+                                    font-family: $font__main;
                                     font-weight: 400;
                                     line-height: 18px;
                                     word-wrap: break-word;
@@ -199,7 +199,7 @@
                     text-align: right;
                     color: rgba(0, 0, 0, 0.70);
                     font-size: 16px;
-                    font-family: Aspekta;
+                    font-family: $font__main;
                     font-weight: 500;
                     line-height: 24px;
                     word-wrap: break-word;
@@ -226,7 +226,7 @@
                         text-align: center;
                         color: white;
                         font-size: 16px;
-                        font-family: Aspekta;
+                        font-family: $font__main;
                         font-weight: 400;
                         line-height: 18px;
                         word-wrap: break-word;
@@ -260,7 +260,7 @@
                     border-bottom: 1px #D9D9D9 solid;
                     color: #363636;
                     font-size: 18px;
-                    font-family: Aspekta;
+                    font-family: $font__main;
                     font-weight: 600;
                     line-height: 24px;
                     word-wrap: break-word;
@@ -284,7 +284,7 @@
                         label {
                             color: #333333;
                             font-size: 16px;
-                            font-family: Aspekta;
+                            font-family: $font__main;
                             font-weight: 500;
                             text-transform: capitalize;
                             line-height: 24px;
@@ -295,7 +295,7 @@
                             // text-align: right;
                             color: #696969;
                             font-size: 14px;
-                            font-family: Aspekta;
+                            font-family: $font__main;
                             font-weight: 400;
                             line-height: 20px;
                             word-wrap: break-word;
@@ -330,7 +330,7 @@
                     border-bottom: 1px #D9D9D9 solid;
                     color: #363636;
                     font-size: 18px;
-                    font-family: Aspekta;
+                    font-family: $font__main;
                     font-weight: 600;
                     line-height: 24px;
                     word-wrap: break-word;
@@ -357,7 +357,7 @@
                             &:first-child {
                                 color: #373737;
                                 font-size: 14px;
-                                font-family: Aspekta;
+                                font-family: $font__main;
                                 font-weight: 500;
                                 text-transform: capitalize;
                                 line-height: 20px;
@@ -368,7 +368,7 @@
                                 text-align: right;
                                 color: #464646;
                                 font-size: 14px;
-                                font-family: Aspekta;
+                                font-family: $font__main;
                                 font-weight: 400;
                                 line-height: 20px;
                                 word-wrap: break-word;
@@ -416,7 +416,7 @@
                     span {
                         text-align: center;
                         font-size: 16px;
-                        font-family: Aspekta;
+                        font-family: $font__main;
                         font-weight: 500;
                         line-height: 24px;
                         word-wrap: break-word;
