@@ -1,131 +1,591 @@
-<div class="hospitality container-fluid">
+
+<div class="hospitality container-fluid" data-menu-id="0">
   <div class="hospitality__cta">
-    <span>View All Hospitality Furniture</span>
+    <a href="https://creativefurniture.ae/product-category/ct-b-home-furniture/">View All Home Furniture</a>
   </div>
 
   <div class="hospitality__content">
-    <!-- Left Menu -->
     <aside class="hospitality__sidebar">
       <div class="sidebar__group">
-        <a href="#" class="sidebar__title">
-          <span>Hotel Bedroom Set</span>
-          <button class="sidebar__btn">
+        
+        <div class="sidebar__title active">
+            <span>Living Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
             View All
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </button>
-        </a>
-
-        <a href="#" class="sidebar__title">
-          <span>Hospitality Furniture</span>
-          <button class="sidebar__btn">
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Study & Home Office Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
             View All
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </button>
-        </a>
-        <a href="#" class="sidebar__title">
-          <span>University Furniture</span>
-          <button class="sidebar__btn">
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Washroom Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
             View All
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </button>
-        </a>
-        <a href="#" class="sidebar__title">
-          <span>Medical Center Furniture</span>
-          <button class="sidebar__btn">
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Bedroom Set</span>
+            <a href="#" class="sidebar__btn" target="_blank">
             View All
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </button>
-        </a>
-        <a href="#" class="sidebar__title">
-          <span>Bank Furniture</span>
-          <button class="sidebar__btn">
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Bedroom Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
             View All
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </button>
-        </a>
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Kids Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
+            View All
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Dining Room Set</span>
+            <a href="#" class="sidebar__btn" target="_blank">
+            View All
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
+        <div class="sidebar__title ">
+            <span>Dining Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
+            View All
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
+            </a>
+        </div>
       </div>
     </aside>
 
-    <!-- Main Content -->
-    <section class="hospitality__main">
-      <div class="columns">
-        <div class="column">
-          <h4>Sofa</h4>
-          <ul>
-            <li><a href="#">Sofa Sets</a></li>
-            <li><a href="#">L Shape Sofa</a></li>
-            <li><a href="#">Sofa Cum Bed</a></li>
-            <li><a href="#">Chaise Lounge</a></li>
-          </ul>
-        </div>
+    <div class="hospitality__blocks">
+      
+      <div class="hospitality__block active">
 
-        <div class="column">
-          <h4>Seating &amp; Chair</h4>
-          <ul>
-            <li><a href="#">Sofa Sets</a></li>
-            <li><a href="#">L Shape Sofa</a></li>
-            <li><a href="#">Sofa Cum Bed</a></li>
-            <li><a href="#">Chaise Lounge</a></li>
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                <h4>Accent Furniture</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03a-tv-units-media-console-lv/">TV Unit/Media Console</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac04-shoe-racks-cabinets/">Shoe Racks</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac05-wall-shelves_1/">Wall Shelves</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/">Display Unit/Bookshelf</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01b-coffee-table-lv/">Coffee Table</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02b-side-end-tables-lv/">Side & End Table</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st07-low-hieght-storages/st07b-credenza-console-tables/">Credenza/Console Table</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Sofa Seating</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss01-sofa-sets/ss01a-sofa-sets-lv/">Sofa Set</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss02-l-shape-sofas/ss02a-l-shape-sofas-lv/">Lshape-Sofa</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss03-sofa-cum-beds/">Sofa Cum Bed</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/ss04a-chaise-lounge-sun-loungers-lv/">Chaise Lounge/Sun Lounger</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Seating & Chair</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/">Bench with Storage</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/">Ottomans/Bench without Storage</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss06-pouffs-stool/ss06a-pouffs-stool-lv/">Pouff/Stool</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/">Single Seater Swings/Bucket Swings</a></li><li><a href="https://creativefurniture.ae/product-category/c00-chairs/c01-arm-chair/c01a-arm-chair-lv/">Arm Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss08-bean-bags/">Bean Bags</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Temples/Mandir</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ac09-mandir-temples/ac09a-mandir-temples-wall-hung/">Wall Hung Temple</a></li><li><a href="https://creativefurniture.ae/product-category/ac09-mandir-temples/ac09b-mandir-temples-free-standing/">Free Standing Temple</a></li><li><a href="https://creativefurniture.ae/product-category/ac09-mandir-temples/ac10-altars/">Altars/Home Chappels</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Mirrors</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-creativefurniture-category/w01-wall-mirrors/">Wall Mirrors</a></li><li><a href="https://creativefurniture.ae/product-category/w01-wall-mirrors/w00-mirrors/w02-back-lit-mirrors/">Back Lit Mirrors</a></li><li><a href="https://creativefurniture.ae/product-category/w01-wall-mirrors/w00-mirrors/w03-floor-standing-mirrors/">Floor Standing Mirrors</a></li><li><a href="https://creativefurniture.ae/product-category/w01-wall-mirrors/w00-mirrors/w04-wall-decor-mirrors/">Wall Decor Mirrors</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
           </ul>
-        </div>
+        </aside>
       </div>
+      
+      <div class="hospitality__block ">
 
-      <div class="columns">
-        <div class="column">
-          <h4>Accent Table</h4>
-          <ul>
-            <li><a href="#">Sofa Sets</a></li>
-            <li><a href="#">L Shape Sofa</a></li>
-            <li><a href="#">Sofa Cum Bed</a></li>
-            <li><a href="#">Chaise Lounge</a></li>
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                <h4>Desk</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/d00-desk/d07-sit-stand-desk/">Sit & Stand Desk</a></li><li><a href="https://creativefurniture.ae/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/">Study Tables</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Chairs</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/">Study Chair</a></li><li><a href="https://creativefurniture.ae/product-category/c00-chairs/c03a-modular-chairs/c03b-mesh-chairs/">Mesh Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss08-bean-bags/">Bean Bags</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Storage</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/">Book Shelves/Display Unit</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/">Full Height Closed Cabinet</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st07-low-hieght-storages/st07a-low-height-closed-cabinets/">Low Height Closed Cabinet</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
           </ul>
-        </div>
+        </aside>
+      </div>
+      
+      <div class="hospitality__block ">
 
-        <div class="column">
-          <h4>Mirror</h4>
-          <ul>
-            <li><a href="#">Sofa Sets</a></li>
-            <li><a href="#">L Shape Sofa</a></li>
-            <li><a href="#">Sofa Cum Bed</a></li>
-            <li><a href="#">Chaise Lounge</a></li>
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/st00-storages/st09-vanities/st09a-under-counter-vanities-with-basin/">Under Counter Vanities with Basin</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st09-vanities/st09b-under-counter-vanities-without-basin/">Under Counter Vanities without Basin</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st06-wall-cabinets/">Wall Cabinet</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac05-wall-shelves/">Wall Shelves</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
           </ul>
-        </div>
+        </aside>
       </div>
+      
+      <div class="hospitality__block ">
 
-      <div class="column full">
-        <h4>Utility Tables + Storage</h4>
-        <ul>
-          <li><a href="#">Sofa Sets</a></li>
-          <li><a href="#">L Shape Sofa</a></li>
-          <li><a href="#">Sofa Cum Bed</a></li>
-          <li><a href="#">Chaise Lounge</a></li>
-        </ul>
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-01-hayden-series/">SBD-01-Hayden</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-07-aldino-series/">SBD-07-Aldino</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-03-odmo-series/">SSH-03-Odmo</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-09-brealy-series/">SSH-09-Brealy</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-15-volen-series/">SSH-15-Volen</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-02-zey-series/">SBD-02-Zey</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-08-classy-series/">SBD-08-Classy</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-04-cances-series/">SSH-04-Cances</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-10-loma-series/">SSH-10-Loma</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/ssh-00-standard-hotel-room-set/ssh-16-cince-series/">SSH-16-Cince</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-03-akins-series/">SBD-03-Akins</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-09-kerlin-series/">SBD-09-Kerlin</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-05-wackje-series/">SSH-05-Wackje</a></li></ul>
+              </div>
+              <div class="column">
+                
+                <ul><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-11-ferien-series/">SSH-11-Ferien</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-17-atosto-series/">SSH-17-Atosto</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-04-bryce-series/">SBD-04-Bryce</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-10-pine-series/">SBD-10-Pine</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-06-doval-series/">SSH-06-Doval</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-12-vakacio-series/">SSH-12-Vakacio</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-05-alysa-series/">SBD-05-Alysa</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-01-shime-series/">SSH-01-Shime</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-07-ferie-series/">SSH-07-Ferie</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-13-kanza-series/">SSH-13-Kanza</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-06-artur-series/">SBD-06-Artur</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-02-orak-series/">SSH-02-Orak</a></li><li><a href="https://creativefurniture.ae/product-category/hotel/standard-hotel-set/ssh-08-vacaly-series/">SSH-08-Vacaly</a></li><li><a href="https://creativefurniture.ae/product-category/home-furniture/bedroom-set/24-mester/">SSH-14-Mester</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
       </div>
-    </section>
+      
+      <div class="hospitality__block ">
 
-    <!-- Right Promo -->
-    <aside class="hospitality__promo">
-      <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg" alt="" />
-      <ul class="apromo__links">
-        <li>
-          <a href="#">
-            Sofa Sets
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            L Shape Sofa
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sofa Cum Bed
-            <img src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png" alt="" />
-          </a>
-        </li>
-      </ul>
-    </aside>
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                <h4>BedRoom Sets</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/set02-set-house/set04a-sbd-ssh-double-bed-room-set/">Double Bed Room Sets</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set02a-sbd-sbdt-ssh-double-bedside-table-set/">Double Bed with Side Table Sets</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set02b-sbd-sbdt-ssh-upholstered-double-bedside-table-set/">Upholstered Double Bed with Side Table Sets</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set05a-sbd-ssh-single-bed-room-set/">Single Bed Room Sets</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set03a-sbd-sbdt-ssh-single-bedside-table-set/">Single Bed with Side Table Sets</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Bed</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/b00-beds/b01-beds-upholstered-with-storage/">Upholstered Bed with Storage</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b02-beds-upholstered-without-storage/">Upholstered Bed without Storage</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b03-bed-headboard-with-storage/">Headboard Bed with Storage</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b04-bed-headboard-without-storage/">Headboard Bed without Storage</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b05-four-poster-beds/">Four Poster Beds</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b06-bed-frames/">Bed Frames</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b07-headboards-without-bed/">Headboards without Bed Frame</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b08-murphy-beds/">Murphy Bed</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b09-bunk-beds/">Bunk Bed</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b10-trundle-beds/">Trundle Bed</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b11-twin-single-beds/b11a-twin-single-beds-bd/">Single/Twin Bed</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Mattress</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/m00-mattress/m01-single-bed-mattress/">Single Bed Mattress</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m02-queen-bed-mattress/">Queen Bed Mattress</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m03-king-bed-mattress/">King Bed Mattress</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m05-foldable-mattress/">Foldable Mattress</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m06-pillow/">Pillow</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m07-bed-wedge/">Bed Wedge</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Accent Tables</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/st00-storages/st08-chest-of-drawers/">Chest of Drawer</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac06-dressing-tables/">Dressing Table</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07a-bedside-tables-night-stands-bd/">Bedside Table</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03b-tv-units-media-console-bd/">TV Unit/Media Console</a></li><li><a href="https://creativefurniture.ae/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/">Study Table</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Storage</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/">Double Door Wadrobes + Full Height Closed Cabinet</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03b-openable-swing-door-wardrobes/">Openable Swing Door Wardrobe</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st04-sliding-door-wadrobes/">Sliding Door Wadrobe</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st02-lockers-trunks/">Locker/Trunk</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
+      <div class="hospitality__block ">
+
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/set02-set-house/set03b-skbt-kids-single-bedside-table-set/">Kids Bed with Side Table Sets</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b11-twin-single-beds/b11b-twin-single-beds-kf/">Kids Bed</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b12-baby-cots/">Baby Cots</a></li><li><a href="https://creativefurniture.ae/product-category/b00-beds/b09-bunk-beds/">Bunk Bed</a></li><li><a href="https://creativefurniture.ae/product-category/m00-mattress/m04-kids-mattress/">Kids Mattress</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07b-bedside-tables-night-stands-kd/">Bedside Table</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st07-low-hieght-storages/st07d-nursing-tables/">Nursing Table</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st05-kids-storage/">Kids Storage</a></li><li><a href="https://creativefurniture.ae/product-category/d00-desk/d03-one-seater-tables/d03d-study-tables-kf/">Kids Study Table</a></li><li><a href="https://creativefurniture.ae/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/">Kids Study Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss08-bean-bags/">Bean Bags</a></li><li><a href="https://creativefurniture.ae/product-category/d00-desk/d07-sit-stand-desk/">Sit & Stand Desk</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac05-wall-shelves/ac05a-alphabetic-shelves/">Alphabetic Shelf</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
+      <div class="hospitality__block ">
+
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-01-ornet-series/">SDN-01-Ornet</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-05-nova-series/">SDN-05-Nova</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-09-harvey-series/">SDN-09-Harvey</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-13-hali-series/">SDN-13-Hali</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-17-dora-series/">SDN-17-Dora</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-02-milton-series/">SDN-02-Milton</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-06-niles-series/">SDN-06-Niles</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-10-ramen-series/">SDN-10-Ramen</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-14-hashwood-series/">SDN-14-Hashwood</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-18-vitra-series/">SDN-18-Vitra</a></li></ul>
+              </div>
+              <div class="column">
+                
+                <ul><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-03-mashriya-series/">SDN-03-Mashriya</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-07-victor-series/">SDN-07-Victor</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-11-fetro-series/">SDN-11-Fetro</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-15-levina-series/">SDN-15-Levina</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-19-evelin-series/">SDN-19-Evelin</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-04-arra-series/">SDN-04-Arra</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-08-zeehan-series/">SDN-08-Zeehan</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-12-ritz-series/">SDN-12-Ritz</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-16-luca-series/">SDN-16-Luca</a></li><li><a href="https://creativefurniture.ae/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-20-dussel-series/">SDN-20-Dussel</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
+      <div class="hospitality__block ">
+
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                <h4>Dining Table Set</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/set02-set-house/set01a-sdn-dining-table-set/set01b-sdn-4-seater-dining-table-set/">4 Seater Dining Table Set</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set01a-sdn-dining-table-set/set01c-sdn-6-seater-dining-table-set/">6 Seater Dining Table Set</a></li><li><a href="https://creativefurniture.ae/product-category/set02-set-house/set01a-sdn-dining-table-set/set01d-sdn-8-seater-dining-table-set/">8 Seater Dining Table Set</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Table</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/t00-functional-tables/t06-dining-table/">Dining Table</a></li><li><a href="https://creativefurniture.ae/product-category/t00-functional-tables/t05-folding-tables/">Folding Dining Table</a></li><li><a href="https://creativefurniture.ae/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/">Cafeteria/Outdoor Pantry Tables</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Chair</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/c00-chairs/c02-study-dinning-chair/c02b-study-dinning-chair-dn/">Dining Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/">Bench with Storage</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/">Ottomans/Bench without Storage</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Storage</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01d-crockery-unit-dn/">Full Height Open Cabinet + Crockery Unit</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st07-low-hieght-storages/st07c-low-height-credenzas/">Low Height Cabinets</a></li><li><a href="https://creativefurniture.ae/product-category/st00-storages/st06-wall-cabinets/">Wall Cabinet</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Bar Counter</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08a-bar-counters-cabinets-dn/">Bar Cabinet/Counter</a></li><li><a href="https://creativefurniture.ae/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/">Bar Stool</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
+    </div>
   </div>
 </div>
+

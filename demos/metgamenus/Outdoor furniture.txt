@@ -1,57 +1,97 @@
-<div class="container-fluid">
-    <div class="is-layout-flex" style="align-items: center;padding: 10px 0;width: 100{916c1bf5d255215be96a1b346afa5c6c75a53afdcbfdbaa6cbbe810190053dc2};justify-content: space-between">
-        <h4>Outdoor Furniture</h4>
-        <a href="#">Shop All</a>
-    </div>
 
-    <div class="is-layout-flex" style="gap: 20px;padding: 20px 0;justify-content: space-between;align-items: self-start">
-        <div class="is-layout-flex" style="gap: 20px">
-            <div style="margin-bottom: 20px">
-                <h5>Seating</h5>
-                <ul>
-                    <li><a href="#">Outdoor Sofas</a></li>
-                    <li><a href="#">Patio Chairs</a></li>
-                    <li><a href="#">Benches</a></li>
-                    <li><a href="#">Hammocks &amp; Swings</a></li>
-                </ul>
-            </div>
+<div class="hospitality container-fluid" data-menu-id="0">
+  <div class="hospitality__cta">
+    <a href="https://creativefurniture.ae/product-category/ct-c-outdoor-furniture/">View All Outdoor Furniture</a>
+  </div>
 
-            <div style="margin-bottom: 20px">
-                <h5>Tables</h5>
-                <ul>
-                    <li><a href="#">Dining Tables</a></li>
-                    <li><a href="#">Coffee &amp; Side Tables</a></li>
-                    <li><a href="#">Bar &amp; Bistro Tables</a></li>
-                    <li><a href="#">Picnic Tables</a></li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 20px">
-                <h5>Outdoor Essentials</h5>
-                <ul>
-                    <li><a href="#">Umbrellas &amp; Shades</a></li>
-                    <li><a href="#">Storage Boxes</a></li>
-                    <li><a href="#">Planters &amp; Pots</a></li>
-                    <li><a href="#">Outdoor Rugs</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="is-layout-flex" style="gap: 20px">
-            <a href="#" style="text-align: center">
-                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Patio Sofa" style="width: 200px;height: auto">
-                <p>PATIO SOFAS</p>
-            </a>
-
-            <a href="#" style="text-align: center">
-                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Outdoor Dining" style="width: 200px;height: auto">
-                <p>OUTDOOR DINING</p>
-            </a>
-
-            <a href="#" style="text-align: center">
-                <img src="https://creativefurniture.xyz/wp-content/uploads/2025/12/category-2-768x960.jpg" alt="Outdoor Chairs" style="width: 200px;height: auto">
-                <p>OUTDOOR CHAIRS</p>
+  <div class="hospitality__content">
+    <aside class="hospitality__sidebar">
+      <div class="sidebar__group">
+        
+        <div class="sidebar__title active">
+            <span>Outdoor Furniture</span>
+            <a href="#" class="sidebar__btn" target="_blank">
+            View All
+            <img
+                src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                alt=""
+            />
             </a>
         </div>
+      </div>
+    </aside>
+
+    <div class="hospitality__blocks">
+      
+      <div class="hospitality__block active">
+
+        <section class="hospitality__main">
+          <div class="columns">
+              
+              <div class="column">
+                <h4>Sofa Seating</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss01-sofa-sets/">Sofa Set</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss02-l-shape-sofas/">Lshape-Sofa Set</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/">Sun Lounger</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Seating & Chair</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/c00-chairs/c01-arm-chair/">Arm Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss06-ottomans-bench-without-storage/">Ottoman</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss07-pouffes-stool/">Pouff/Stool</a></li><li><a href="https://creativefurniture.ae/product-category/c00-chairs/c02-study-dinning-chair/c02c-study-dinning-chair-ou/">Chair</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss08-bean-bags/">Bean Bags</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Swing</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/">Single Seater Swing</a></li><li><a href="https://creativefurniture.ae/product-category/ss00-seatings/ss07-swings/ss07b-double-seater-swing/">Double Seater Swing</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Table</h4>
+                <ul>
+                  <li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01c-coffee-table-ou/">Coffee Table</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02c-side-end-tables-ou/">Side & End Table</a></li><li><a href="https://creativefurniture.ae/product-category/t00-functional-tables/t06-dining-table/">Dining Table</a></li><li><a href="https://creativefurniture.ae/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/">Cafeteria + Outdoor Pantry Tables</a></li><li><a href="https://creativefurniture.ae/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08b-bar-counters-cabinets-ou/">Bar Cabinet/Counter</a></li>
+                </ul>
+              </div>
+          </div>
+        </section>
+        <aside class="hospitality__promo">
+          <img
+            src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/megamenucard.jpg"
+            alt=""
+          />
+          <ul class="apromo__links">
+            <li>
+              <a href="#">
+                Sofa Sets
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                L Shape Sofa
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sofa Cum Bed
+                <img
+                  src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/arrow-right.png"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      
     </div>
+  </div>
 </div>
+

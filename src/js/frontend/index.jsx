@@ -50,6 +50,7 @@ class SiteCore {
         this.init_sell_with_us_form();
         this.init_review_actions();
         this.init_explore_products();
+        this.init_megamenus();
 
         this.init_tabby();
         this.init_animation();
@@ -1032,6 +1033,58 @@ class SiteCore {
         return Promise.all(urlArray.map(url => checkSingleImage(url)));
     }
 
+    init_megamenus() {
+        [...document.querySelectorAll('.hospitality__sidebar')].map(sb => {
+            return [...sb.querySelectorAll('.sidebar__title')].map((title, titleIndex) => {
+                return title.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    [...sb.querySelectorAll('.sidebar__title')].map(i => i.classList.remove('active'));
+                    title.classList.add('active');
+                    const tabItems = sb.nextElementSibling.children;
+                    if (!tabItems?.[titleIndex]) return;
+                    [...tabItems].map(i => i.classList.remove('active'));
+                    tabItems[titleIndex].classList.add('active');
+                })
+            });
+        });
+    }
+
 }
 
 new SiteCore();
+
+
+
+
+
+// [...document.querySelectorAll('#menu-main-menu > li.wpmm_mega_menu > a')].map(i => {
+//     const megaRoot = i.nextElementSibling;
+//     if (!megaRoot) return null;
+
+//     return {
+//         label: i.innerText.trim(),
+//         link: i.href,
+//         mega: [...megaRoot.querySelectorAll('ul.vc_tta-tabs-list .vc_tta-tab > a')].map(t => {
+//             const panelId = t.getAttribute('href')?.slice(1);
+//             if (!panelId) return null;
+
+//             const vp = megaRoot.querySelector(`#${CSS.escape(panelId)}`);
+//             return {
+//                 title: vp.querySelector('.vc_tta-panel-heading .vc_tta-panel-title')?.innerText.trim(),
+//                 links: [...vp.querySelectorAll('.vc_tta-panel-body > .vc_row > .wpb_column h2.menu-link > a, .vc_tta-panel-body > .vc_row > .wpb_column h2.menu-p-head > a')]
+//                     .map(a => ({
+//                         title: a.innerText.trim(),
+//                         link: a.href,
+//                         head: a.parentElement.classList.contains('menu-p-head'),
+//                         // items: [...a.parentElement.parentElement.querySelectorAll('.wpb_column h2.menu-link > a')]
+//                         //     .map(a => ({
+//                         //         title: a.innerText.trim(),
+//                         //         link: a.href
+//                         //     }))
+//                     }))
+//             };
+//         }).filter(Boolean)
+//     };
+// }).filter(Boolean);
+

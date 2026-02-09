@@ -86,16 +86,29 @@
     font-family: $font__main;
 
     &__cta {
-      display: inline-flex;
       padding: 14px 24px;
       border-radius: 45px;
-      border: 1px solid #1b201e;
       margin-bottom: 40px;
+      display: inline-flex;
+      border: 1px solid #1b201e;
 
       span {
         font-size: 16px;
         font-weight: 500;
         text-transform: capitalize;
+      }
+    }
+
+    &__blocks {
+      gap: 40px;
+      width: 100%;
+      display: flex;
+    }
+    &__block {
+      width: 100%;
+      display: none;
+      &.active {
+        display: flex;
       }
     }
 
@@ -136,30 +149,29 @@
     /* ///// */
 
     .sidebar__title {
-        display: flex;
-        align-items: center;
         gap: 8px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
         margin-bottom: 24px;
 
         span {
-            font-size: 18px;
-            font-weight: 500;
+          font-size: 18px;
+          font-weight: 500;
         }
-
-      
         .sidebar__btn {
-            display: none;
-            align-items: center;
             gap: 6px;
-            padding: 6px 12px;
-            border-radius: 150px;
-            background: #9d8465;
-            color: #fff;
+            border: none;
+            display: none;
+            cursor: pointer;
             font-size: 12px;
             font-weight: 500;
+            padding: 6px 12px;
+            align-items: center;
+            border-radius: 150px;
+            background: #9d8465;
+            color: #fff !important;
             text-transform: uppercase;
-            border: none;
-            cursor: pointer;
 
             i {
                 width: 8px;
@@ -168,7 +180,7 @@
             }
         }
 
-        &:hover {
+        &:hover, &.active {
             color: #9d8465;
             .sidebar__btn {
                 display: inline-flex;
