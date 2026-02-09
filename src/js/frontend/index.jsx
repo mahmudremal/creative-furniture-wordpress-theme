@@ -963,7 +963,7 @@ class SiteCore {
     init_animation() {
         document.addEventListener('DOMContentLoaded', () => {
             Array.from(document.querySelectorAll('.wp-block-image')).map(i => { i.dataset.animation = 'toggle-ease'; return i; });
-            const items = document.querySelectorAll('.wp-block-image, [class^="wp-block"], [data-animate]');
+            const items = document.querySelectorAll('.wp-block-image, [class^="wp-block"]:not(.overlay-buttons), [data-animate]');
             [...items].filter(i => i.nodeType).map(e => { e.dataset.animate = true });
 
             const observer = new IntersectionObserver(entries => {
