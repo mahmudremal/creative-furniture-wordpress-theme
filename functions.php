@@ -20,43 +20,15 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function creative_furniture_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Creative Furniture, use a find and replace
-		* to change 'creative-furniture' to the name of your theme in all the template files.
-		*/
 	load_theme_textdomain( 'creative-furniture', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
-	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
 	add_theme_support( 'title-tag' );
-
-	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
 	add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus([
 		'language-switcher-menu' => esc_html__('Language Switcher Menu', 'creative-furniture'),
 		'top-left-header-menu' => esc_html__('Header Top Left Menu', 'creative-furniture'),
 		'header-mega-menu' => esc_html__('Header Mega Menu', 'creative-furniture'),
 	]);
-
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
 	add_theme_support(
 		'html5',
 		[
@@ -69,8 +41,6 @@ function creative_furniture_setup() {
 			'script',
 		]
 	);
-
-	// Set up the WordPress core custom background feature.
 	add_theme_support(
 		'custom-background',
 		apply_filters(
@@ -81,15 +51,7 @@ function creative_furniture_setup() {
 			]
 		)
 	);
-
-	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
 	add_theme_support(
 		'custom-logo',
 		[
@@ -101,24 +63,10 @@ function creative_furniture_setup() {
 	);
 }
 add_action( 'after_setup_theme', 'creative_furniture_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
 function creative_furniture_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'creative_furniture_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'creative_furniture_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
 function creative_furniture_widgets_init() {
 	register_sidebar(
 		[
@@ -133,20 +81,18 @@ function creative_furniture_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'creative_furniture_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
 function creative_furniture_scripts() {
 	// wp_enqueue_style( 'creative-furniture-style', get_stylesheet_uri(), [], _S_VERSION );
 	// wp_style_add_data( 'creative-furniture-style', 'rtl', 'replace' );
 
 	// wp_enqueue_script( 'creative-furniture-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true );
+	wp_enqueue_script( 'creative-furniture-tailwindcdn', get_template_directory_uri() . '/js/tailwindcss.js', [], _S_VERSION, true );
 	if (file_exists(get_template_directory() . '/dist/css/public.css')) {
 		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], filemtime(get_template_directory() . '/dist/css/public.css'), 'all');
 	}
 	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], filemtime(get_template_directory() . '/dist/library/fonts/fonts.css'), 'all');
-	
+	wp_enqueue_style('blaze-slider', get_template_directory_uri() . '/src/library/css/blaze.css', [], false, 'all');
+	wp_enqueue_script( 'blaze-slider', get_template_directory_uri() . '/src/library/js/blaze-slider.min.js', [], false, true );
 	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], filemtime(get_template_directory() . '/dist/js/public.js'), true );
 	wp_localize_script('creative-furniture-public', 'cfStore', [
 		'ajax_url' => admin_url('admin-ajax.php'),
@@ -186,6 +132,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Block Patterns
  */
 require get_template_directory() . '/inc/patterns.php';
+
+/**
+ * Credits and dev informations.
+ */
+require get_template_directory() . '/inc/credits.php';
 
 /**
  * Load Jetpack compatibility file.

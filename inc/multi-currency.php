@@ -111,7 +111,7 @@ function mymc_currency_switcher_shortcode($atts){
     if ('yes' === $atts['show_label']) {
         // $out .= '<label for="mymc_currency_select" style="margin-right: 5px;font-size: 0;">' . esc_html__('Currency:', 'woocommerce') . '</label>';
     }
-    $out .= '<select name="mymc_currency" id="mymc_currency_select" onchange="this.form.submit();">';
+    $out .= '<select name="mymc_currency" id="mymc_currency_select" onchange="this.form.submit();" class="bg-transparent">';
     foreach($allowed as $c){
         $sel = $c === $current ? ' selected' : '';
         $out .= '<option value="'.esc_attr($c).'"'.$sel.'>'.esc_html($c).'</option>';
