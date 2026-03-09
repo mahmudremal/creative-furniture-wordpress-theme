@@ -715,104 +715,47 @@
     </div>
   </div>
 
+  <div class="flex flex-row gap-0 items-center justify-start w-[1440px] m-auto relative">
+    <div class="pr-20 pl-20 flex flex-col gap-10 items-start justify-center shrink-0 w-[758px] relative">
+      <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
+        <div class="text-[#525252] text-left font-['-',_sans-serif] text-base leading-6 font-normal relative self-stretch flex items-center justify-start">
+          <span>
+            <span class="creative-shelf-is-a-proud-bni-member-in-the-uae-connecting-with-a-community-of-dynamic-professionals-and-entrepreneurs-who-share-our-passion-for-growth-collaboration-and-excellence-through-bni-we-build-meaningful-business-relationships-exchange-valuable-referrals-and-contribute-to-a-strong-network-of-trusted-partners-our-membership-reflects-our-commitment-to-quality-innovation-and-supporting-the-success-of-businesses-across-the-region-span"
+            >
+              Creative Shelf
+            </span>
+            <span class="creative-shelf-is-a-proud-bni-member-in-the-uae-connecting-with-a-community-of-dynamic-professionals-and-entrepreneurs-who-share-our-passion-for-growth-collaboration-and-excellence-through-bni-we-build-meaningful-business-relationships-exchange-valuable-referrals-and-contribute-to-a-strong-network-of-trusted-partners-our-membership-reflects-our-commitment-to-quality-innovation-and-supporting-the-success-of-businesses-across-the-region-span2"
+            >
+              is a proud BNI member in the UAE, connecting with a community of
+              dynamic professionals and entrepreneurs who share our passion for
+              growth, collaboration, and excellence.
+              <br />
+              <br />
+              Through BNI, we build meaningful business relationships, exchange
+              valuable referrals, and contribute to a strong network of trusted
+              partners. Our membership reflects our commitment to quality,
+              innovation, and supporting the success of businesses across the
+              region.
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#797979] shrink-0 w-[658px] h-[373px] relative overflow-hidden">
+      <img class="absolute right-0 left-0 bottom-[-1px] top-0"
+        style="
+          background: linear-gradient(to left, #f4f4f4, #f4f4f4);
+          object-fit: cover;
+        "
+        src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45450.png"
+      />
+      <img class="w-[580px] h-[297px] absolute left-[50%] top-[50%]"
+        style="translate: -50% -50%; object-fit: cover; aspect-ratio: 580/297"
+        src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/image-2670.png"
+      />
+      <div class="bg-[#d9d9d9] w-[757px] h-[155px] absolute left-[658px] top-[348px]"></div>
+    </div>
+  </div>
   
 </div>
 <?php get_footer(); ?>
-
-<script>
-class ExtendedBlazeSlider extends BlazeSlider {
-  constructor(el, config) {
-    super(el, config)
-    this._events = {}
-  }
-
-  on(name, cb) {
-    if (!this._events[name]) this._events[name] = new Set()
-    this._events[name].add(cb)
-  }
-
-  off(name, cb) {
-    this._events[name]?.delete(cb)
-  }
-
-  emit(name, ...args) {
-    this._events[name]?.forEach(fn => fn(...args))
-  }
-
-  next(n) {
-    const prev = this.stateIndex
-    super.next(n)
-
-    if (prev !== this.stateIndex) {
-      this.emit("slide", ...this.get_slide_event_params())
-    }
-  }
-
-  prev(n) {
-    const prev = this.stateIndex
-    super.prev(n)
-
-    if (prev !== this.stateIndex) {
-      this.emit("slide", ...this.get_slide_event_params())
-    }
-  }
-  get_slide_event_params() {
-    const page = this.states[this.stateIndex]
-    return [this.stateIndex, page.next.stateIndex, page.prev.stateIndex, (this.states?.length - 1)]
-  }
-}
-document.querySelectorAll('.blaze-slider').forEach(element => {
-  const sliderOf = element.dataset?.slider;
-  const config = element.dataset?.config ? JSON.parse(element.dataset?.config??'{}') : {
-    all: {
-      // Layout
-      // slidesToShow: 1,
-      // slidesToScroll: 1,
-      // slideGap: 0,
-      // Loop
-      loop: false,
-      // // Autoplay
-      // enableAutoplay: false,
-      // OnInteraction: true,
-      // autoplayInterval: 3000,
-      // autoplayDirection: 'to left',
-      // // Pagination
-      // enablePagination: false,
-      // // Transition
-      // transitionDuration: 500,
-      // transitionTimingFunction: 'ease',
-    },
-    // '(max-width: 900px)': {
-    //   slidesToShow: 2,
-    // },
-    // '(max-width: 500px)': {
-    //   slidesToShow: 1,
-    // },
-  };
-  // console.log(config)
-  const slider = window.slider = new ExtendedBlazeSlider(element, config);
-  slider.on("slide", (pageIndex, next, prev, total) => {
-    // alert('Page Index: ' + pageIndex + '\nNext: ' + next + '\nPrev: ' + prev + '\nTotal: ' + total);
-    if (!slider.config?.loop) {
-      const prevEl = slider.el.querySelector('.blaze-prev');
-      const nextEl = slider.el.querySelector('.blaze-next');
-      if (true) {
-        if (pageIndex == 0) prevEl.classList.add('hidden')
-        else prevEl.classList.remove('hidden')
-      }
-      if (true) {
-        if (pageIndex == total) nextEl.classList.add('hidden')
-        else nextEl.classList.remove('hidden')
-      }
-    }
-    if (sliderOf == 'products') {
-      const progressBar = slider.el.querySelector('.blaze-progress-bar');
-      if (progressBar) {
-        progressBar.style.width = ((pageIndex + 1) / (total + 1)) * 100 + '%';
-      }
-    }
-  });
-});
-
-</script>
-

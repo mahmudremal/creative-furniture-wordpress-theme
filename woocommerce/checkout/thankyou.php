@@ -3,7 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// $order = wc_get_order( $order_id );
 if ( ! $order ) {
     return;
 }

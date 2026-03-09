@@ -1,214 +1,205 @@
 <?php
-defined('ABSPATH') || exit;
+/**
+ * Checkout Form
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-checkout.php.
+ *
+ * @see https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 3.5.0
+ */
 
-do_action('woocommerce_before_checkout_form', $checkout);
-
-if (!$checkout->is_registration_enabled() && $checkout->is_registration_required() && !is_user_logged_in()) {
-    echo esc_html(apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'woocommerce')));
-    return;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
+
+do_action( 'woocommerce_before_checkout_form', $checkout );
+
+// If checkout registration is required and not logged in, show login form.
+if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
+	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
+	return;
+}
+
 ?>
 
-<div class="checkout-wrapper">
-        
-        <div class="checkout-main">
-            <div class="checkout-left">
-                <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
-                    <h1 class="checkout-title">Checkout</h1>
+<div class="flex flex-col gap-7 pt-10 pb-20">
+    <!-- Breadcrumbs -->
+    <div class="flex flex-row gap-2 items-center justify-start w-[1440px] m-auto relative">
+        <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        </div>
+        <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+            /
+        </div>
+        <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+            <a href="<?php echo esc_url( wc_get_cart_url() ); ?>">Cart</a>
+        </div>
+        <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+            /
+        </div>
+        <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+            Checkout
+        </div>
+    </div>
 
-                    <div class="express-checkout">
-                        <div class="section-divider">
-                            <span>Express checkout</span>
+    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+        <div class="flex flex-row flex-wrap gap-0 items-start justify-start w-[1440px] mx-auto relative">
+            <!-- Left Side: Checkout Details -->
+            <div class="bg-[#ffffff] pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-[805px] relative">
+                <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
+                    <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
+                        Checkout
+                    </h1>
+                </div>
+
+                <!-- Express Checkout -->
+                <div class="flex flex-col gap-5 items-center justify-start self-stretch shrink-0 relative">
+                    <div class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 relative">
+                        <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
+                        <div class="text-[#717171] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                            Express checkout
                         </div>
-                        <div class="express-buttons">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png" alt="Express Checkout" />
-                        </div>
-                        <div class="section-divider">
-                            <span>OR</span>
-                        </div>
+                        <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                     </div>
-
-                    <?php if ($checkout->get_checkout_fields()): ?>
-                        <div class="checkout-section contact-info">
-                            <div class="section-header">
-                                <h2>Contact information</h2>
-                                <?php if (!is_user_logged_in()): ?>
-                                    <div class="login-prompt">
-                                        <span>Already have and account?</span>
-                                        <a href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>" class="login-link">Log in</a>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-
-                            <?php do_action('woocommerce_checkout_before_customer_details'); ?>
-
-                            <div class="checkout-fields">
-                                <?php foreach ($checkout->get_checkout_fields('billing') as $key => $field): ?>
-                                    <?php if ($key === 'billing_email'): ?>
-                                        <?php woocommerce_form_field($key, $field, $checkout->get_value($key)); ?>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </div>
-
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="newsletter" value="1">
-                                <span class="checkbox-custom"></span>
-                                <span>Email me with news and offers</span>
-                            </label>
+                    <img class="shrink-0 w-[640px] h-[47px] relative" style="object-fit: cover; aspect-ratio: 640/47" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
+                    <div class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 relative">
+                        <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
+                        <div class="text-[#717171] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
+                            OR
                         </div>
-                    <?php endif; ?>
-
-                    <div class="checkout-section payment-section">
-                        <div class="section-header-simple">
-                            <h2>Payment</h2>
-                            <p>Already have and account?</p>
-                        </div>
-
-                        <?php if (WC()->cart->needs_payment()): ?>
-                            <div id="payment" class="woocommerce-checkout-payment">
-                                <?php woocommerce_checkout_payment(); ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="checkout-section billing-section">
-                        <div class="section-header-simple">
-                            <h2>Shipping Address</h2>
-                            <p>Select the address that matches your card or payment method.</p>
-                        </div>
-
-                        <?php if ( $checkout->get_checkout_fields() ) : ?>
-                            <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
-                            <div class="billing-options">
-                                
-                                <div class="billing-fields-wrapper">
-                                    <?php do_action( 'woocommerce_checkout_shipping' ); ?>
-                                </div>
-
-                                <label class="checkbox-option">
-                                    <input type="checkbox" name="billing_address_type" value="different">
-                                    <span class="checkbox-custom"></span>
-                                    <span>Use a different billing address</span>
-                                </label>
-
-                                <div class="billing-fields-wrapper" style="display: none;">
-                                    <?php do_action('woocommerce_checkout_billing'); ?>
-                                </div>
-                            </div>
-                            <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="checkout-section remember-section">
-                        <h2>Remember Me</h2>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="save_info" value="1" checked>
-                            <span class="checkbox-custom"></span>
-                            <span>Save my information for a faster checkout</span>
-                        </label>
-                    </div>
-
-                    <div class="checkout-actions">
-                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="back-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M15 18L9 12L15 6" stroke="#9D8465" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Return to shipping</span>
-                        </a>
-                        <?php wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce'); ?>
-                        <button type="submit" class="button alt checkout-button" name="woocommerce_checkout_place_order" id="place_order" value="<?php esc_attr_e('Place order', 'woocommerce'); ?>">
-                            Pay now
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="checkout-right">
-                <div class="order-summary">
-                    <div class="cart-items">
-                        <?php
-                        foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item):
-                            $_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
-                            if ($_product && $_product->exists() && $cart_item['quantity'] > 0):
-                        ?>
-                            <div class="cart-item">
-                                <div class="item-image">
-                                    <?php echo $_product->get_image(); ?>
-                                    <?php if ($cart_item['quantity'] > 1): ?>
-                                        <span class="quantity-badge"><?php echo $cart_item['quantity']; ?></span>
-                                    <?php endif; ?>
-                                </div>
-                                <div class="item-details">
-                                    <h3><?php echo $_product->get_name(); ?></h3>
-                                    <div class="cart-item-meta">
-                                        <?php
-                                        $product = $cart_item['data'];
-
-                                        if ( isset( $cart_item['variation'] ) && ! empty( $cart_item['variation'] ) ) {
-                                            // For variable products – get selected attributes from cart item
-                                            foreach ( $cart_item['variation'] as $attr_name => $attr_value ) {
-                                                $attr_label = wc_attribute_label( str_replace( 'attribute_', '', $attr_name ), $product );
-                                                echo '<div class="meta-item"><span class="meta-label">' . esc_html( $attr_label ) . ':</span> <span class="meta-value">' . esc_html( $attr_value ) . '</span></div>';
-                                            }
-                                        } else {
-                                            // For simple products – fallback to all attributes
-                                            $attributes = $product->get_attributes();
-                                            if ( ! empty( $attributes ) ) {
-                                                foreach ( $attributes as $attribute_name => $attribute ) {
-                                                    $attr_label = wc_attribute_label( $attribute_name, $product );
-                                                    $attr_value = $product->get_attribute( $attribute_name );
-                                                    if ( $attr_value ) {
-                                                        echo '<div class="meta-item"><span class="meta-label">' . esc_html( $attr_label ) . ':</span> <span class="meta-value">' . esc_html( $attr_value ) . '</span></div>';
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-
-                                </div>
-                                <div class="item-price">
-                                    <?php echo WC()->cart->get_product_subtotal($_product, $cart_item['quantity']); ?>
-                                </div>
-                            </div>
-                        <?php
-                            endif;
-                        endforeach;
-                        ?>
-                    </div>
-
-                    <?php if ( wc_coupons_enabled() ) : ?>
-                        <div class="coupon-section">
-                            <form class="checkout_coupon woocommerce-form-coupon" method="post" id="woocommerce-checkout-form-coupon">
-                                <input type="text" name="coupon_code" class="input-text" id="coupon_code" placeholder="<?php esc_attr_e( 'Discount Code', 'woocommerce' ); ?>" value="">
-                                <button type="submit" class="button coupon-button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">
-                                    <?php esc_html_e( 'Apply', 'woocommerce' ); ?>
-                                </button>
-                            </form>
-                            <div class="clear"></div>
-                        </div>
-                    <?php endif; ?>
-
-
-                    <div class="order-totals">
-                        <div class="totals-wrapper">
-                            <div class="cart-subtotal">
-                                <span><?php _e('Subtotal (Incl.VAT)', 'woocommerce'); ?></span>
-                                <span><?php echo WC()->cart->get_cart_subtotal(); ?></span>
-                            </div>
-                            <div class="shipping">
-                                <span><?php _e('Shipping Charge', 'woocommerce'); ?></span>
-                                <span><?php echo WC()->cart->get_cart_shipping_total(); ?></span>
-                            </div>
-                            <div class="order-total">
-                                <span><?php _e('Total', 'woocommerce'); ?></span>
-                                <span><?php echo WC()->cart->get_total(); ?></span>
-                            </div>
-                        </div>
+                        <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                     </div>
                 </div>
+
+                <?php if ( $checkout->get_checkout_fields() ) : ?>
+                    <!-- Contact Information -->
+                    <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative">
+                        <div class="flex flex-row gap-2.5 items-center justify-between self-stretch shrink-0 relative">
+                            <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative flex-1">
+                                Contact information
+                            </div>
+                            <?php if ( ! is_user_logged_in() ) : ?>
+                            <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative">
+                                Already have an account? 
+                                <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="text-[#2d2d2d] font-semibold underline">Log in</a>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative contact-fields-grid">
+                            <?php
+                            // Just email for contact info as per design
+                            $billing_fields = $checkout->get_checkout_fields( 'billing' );
+                            if ( isset( $billing_fields['billing_email'] ) ) {
+                                $billing_fields['billing_email']['class'][] = 'flex flex-col gap-0 w-full';
+                                $billing_fields['billing_email']['input_class'][] = 'bg-white border-[#d4d4d4] border px-4 pt-6 pb-2 h-14 w-full font-[\'Raleway-Regular\'] text-base focus:ring-black focus:border-black';
+                                $billing_fields['billing_email']['label_class'][] = 'text-[#717171] font-[\'Raleway-Regular\'] text-sm translate-y-full px-4 pt-2';
+                                
+                                woocommerce_form_field( 'billing_email', $billing_fields['billing_email'], $checkout->get_value( 'billing_email' ) );
+                            }
+                            ?>
+
+                            <div class="flex flex-row gap-3 items-center justify-start shrink-0 relative mt-2">
+                                <label class="flex items-center cursor-pointer gap-3">
+                                    <input type="checkbox" class="peer hidden" name="email_subscribe" id="email_subscribe" />
+                                    <div class="bg-transparent border-[#212121] border-2 rounded-[54px] shrink-0 w-5 h-5 relative overflow-hidden transition-all duration-200 peer-checked:bg-[#212121]">
+                                        <svg class="w-[70%] h-[70%] absolute right-[15%] left-[15%] bottom-[15%] top-[15%] overflow-visible" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </label>
+                                <label for="email_subscribe" class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
+                                    Email me with news and offers
+                                </label>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <!-- Payment Section -->
+                    <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative payment-method-section">
+                        <div class="flex flex-col gap-1 items-start justify-center self-stretch shrink-0 relative">
+                            <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
+                                Payment
+                            </div>
+                            <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
+                                All transactions are secure and encrypted.
+                            </div>
+                        </div>
+                        <div id="payment" class="woocommerce-checkout-payment w-full">
+                            <?php woocommerce_checkout_payment(); ?>
+                        </div>
+                    </div>
+
+                    <!-- Shipping/Billing Section -->
+                    <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative address-section">
+                        <div class="flex flex-col gap-1 items-start justify-center self-stretch shrink-0 relative">
+                            <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
+                                Billing Address
+                            </div>
+                            <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
+                                Select the address that matches your card or payment method.
+                            </div>
+                        </div>
+                        
+                        <div class="w-full">
+                            <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+                            <?php do_action( 'woocommerce_checkout_billing' ); ?>
+                            <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+                            <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative">
+                        <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
+                            Remember Me
+                        </div>
+                        <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border p-4 flex flex-row gap-6 items-center justify-start self-stretch shrink-0 h-14 relative">
+                            <div class="flex flex-row gap-3 items-center justify-start flex-1 relative">
+                                <label class="flex items-center cursor-pointer gap-3">
+                                    <input type="checkbox" class="peer hidden" name="save_account_info" id="save_account_info" />
+                                    <div class="bg-transparent border-[#212121] border-2 rounded-[54px] shrink-0 w-5 h-5 relative overflow-hidden transition-all duration-200 peer-checked:bg-[#212121]">
+                                        <svg class="w-[70%] h-[70%] absolute right-[15%] left-[15%] bottom-[15%] top-[15%] overflow-visible" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </label>
+                                <label for="save_account_info" class="text-[#717171] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                                    Save my information for a faster checkout
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex flex-row gap-11 items-center justify-between self-stretch shrink-0 relative pt-5">
+                        <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="flex flex-row gap-1 items-center justify-start text-[#565656]">
+                            <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span class="text-sm leading-5 font-normal font-['Raleway-Regular']">Return to cart</span>
+                        </a>
+                        <button type="submit" class="bg-[#000000] rounded-lg pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center flex-1 relative" name="woocommerce_checkout_place_order" id="place_order" value="Pay now">
+                            <span class="text-[#ffffff] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">Pay now</span>
+                        </button>
+                        <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+                    </div>
+
+                <?php endif; ?>
+            </div>
+
+            <!-- Right Side: Order Summary -->
+            <div class="bg-[#f4f4f4] rounded-xl p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative min-h-screen">
+                <div id="order_review" class="woocommerce-checkout-review-order w-full">
+                    <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+                </div>
+                
+                <img class="shrink-0 w-[366px] h-[27px] relative mt-auto" style="object-fit: cover; aspect-ratio: 366/27" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
             </div>
         </div>
+    </form>
 </div>
 
-<?php do_action('woocommerce_after_checkout_form', $checkout); ?>
+<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

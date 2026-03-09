@@ -92,7 +92,10 @@ function creative_furniture_scripts() {
 	}
 	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], filemtime(get_template_directory() . '/dist/library/fonts/fonts.css'), 'all');
 	wp_enqueue_style('blaze-slider', get_template_directory_uri() . '/src/library/css/blaze.css', [], false, 'all');
+	wp_enqueue_style('intl-tel-input', get_template_directory_uri() . '/src/library/css/intlTelInput.css', [], false, 'all');
+	wp_enqueue_script( 'intl-tel-input', get_template_directory_uri() . '/src/library/js/intlTelInput.min.js', [], false, true );
 	wp_enqueue_script( 'blaze-slider', get_template_directory_uri() . '/src/library/js/blaze-slider.min.js', [], false, true );
+	wp_enqueue_script( 'blaze', get_template_directory_uri() . '/dist/js/blaze.js', [], filemtime(get_template_directory() . '/dist/js/blaze.js'), true );
 	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], filemtime(get_template_directory() . '/dist/js/public.js'), true );
 	wp_localize_script('creative-furniture-public', 'cfStore', [
 		'ajax_url' => admin_url('admin-ajax.php'),
@@ -153,6 +156,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/multi-currency.php';
 	require_once get_template_directory() . '/inc/wishlist.php';
 	require_once get_template_directory() . '/inc/seller-dashboard.php';
+	require_once get_template_directory() . '/inc/seller-registration.php';
+	require_once get_template_directory() . '/inc/contact-us.php';
 // }
 
 
@@ -228,10 +233,10 @@ function footer_block_svg_icon_print($icon) {
 // }
 // add_action('widgets_init', 'register_shop_filters_sidebar');
 
-// function custom_products_per_page() {
-//     return isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
-// }
-// add_filter('loop_shop_per_page', 'custom_products_per_page', 20);
+function custom_products_per_page() {
+    return isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
+}
+add_filter('loop_shop_per_page', 'custom_products_per_page', 20);
 
 
 

@@ -917,4 +917,103 @@ function load_products_ajax() {
 }
 add_action('wp_ajax_load_products', 'load_products_ajax');
 add_action('wp_ajax_nopriv_load_products', 'load_products_ajax');
+add_action('wp_footer', function() {
+    ?>
+    <style>
+        /* Custom Checkout Field Styling */
+        .design-field-wrapper {
+            margin-bottom: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        .design-field-wrapper .woocommerce-input-wrapper {
+            width: 100%;
+        }
+        .design-field-wrapper label {
+            display: block !important;
+        }
+        
+        /* Hide default WooCommerce payment radio but keep it functional */
+        .wc_payment_method input[type="radio"] {
+            display: none !important;
+        }
+        
+        /* Ensure shipping address toggles correctly with our custom checkbox */
+        .shipping_address {
+            display: <?php echo ( WC()->checkout->get_value('ship_to_different_address') ) ? 'block' : 'none'; ?>;
+        }
+    </style>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        // Quantity Buttons
+        $(document).on('click', '.quantity .plus, .quantity .minus', function() {
+            var $qty = $(this).closest('.quantity').find('.qty');
+            var currentVal = parseFloat($qty.val());
+            var max = parseFloat($qty.attr('max'));
+            var min = parseFloat($qty.attr('min'));
+            var step = parseFloat($qty.attr('step')) || 1;
 
+            if ($(this).is('.plus')) {
+                if (max && (max <= currentVal)) {
+                    $qty.val(max);
+                } else {
+                    $qty.val(currentVal + step);
+                }
+            } else {
+                if (min && (min >= currentVal)) {
+                    $qty.val(min);
+                } else if (currentVal > 0) {
+                    $qty.val(currentVal - step);
+                }
+            }
+
+            var newVal = $qty.val();
+            $qty.trigger('change');
+            $(this).closest('.quantity').find('.qty-display').text(newVal);
+            $('button[name="update_cart"]').prop('disabled', false);
+        });
+
+        // Payment Method Selection
+        $(document).on('click', '.gateway-selector', function() {
+            $(this).find('input[type="radio"]').prop('checked', true).trigger('change');
+            $(document.body).trigger('update_checkout');
+        });
+
+        // Shipping Address Toggle
+        $(document).on('change', '#ship-to-different-address-checkbox', function() {
+            if ($(this).is(':checked')) {
+                $('.shipping_address').slideDown();
+            } else {
+                $('.shipping_address').slideUp();
+            }
+        });
+    });
+    </script>
+    <?php
+});
+
+add_filter('woocommerce_form_field_args', function($args, $key, $value) {
+    if (is_checkout() || is_account_page()) {
+        $args['class'][] = 'design-field-wrapper';
+        $args['input_class'][] = 'design-input';
+        $args['label_class'][] = 'design-label';
+        
+        // Remove default placeholders as we want labels to act as headers/placeholders
+        // $args['placeholder'] = $args['label']; 
+    }
+    return $args;
+}, 10, 3);
+
+add_filter('woocommerce_checkout_fields', function($fields) {
+    foreach ($fields as $section => &$section_fields) {
+        foreach ($section_fields as $key => &$field) {
+            $field['class'][] = ' डिजाइन-फील्ड-ग्रुप'; // Just to identify
+        }
+    }
+    return $fields;
+});
+
+/**
+ * Remove payment methods from the order review section.
+ */
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );

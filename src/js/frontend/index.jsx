@@ -519,6 +519,7 @@ class SiteCore {
     }
 
     init_filters() {
+        console.log(document.querySelectorAll('.filters-toggle'))
         if (!document.querySelectorAll('.filters-toggle')?.length) return;
         const container = document.createElement('div');
         document.body.appendChild(container);

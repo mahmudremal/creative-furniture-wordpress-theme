@@ -1,3 +1,15 @@
+<?php
+function add_menu_anchor_class($atts, $item, $args) {
+    // Check if the current menu is the one you want to target (e.g., 'primary')
+    if ($args->theme_location == 'header-mega-menu') {
+        // Add your custom class(es)
+        $atts['class'] = "text-[#2a2a2a] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start";
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -13,7 +25,7 @@
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'creative-furniture' ); ?></a>
 
     <header id="masthead" class="site-header relative z-50">
-        <div class="flex flex-col items-center justify-start w-full gap-4">
+        <div class="flex flex-col items-center justify-start w-full gap-4 mb-4">
             <div class="bg-[#eaeaea] w-full py-2 px-4 md:px-6 overflow-hidden">
                 <div class="max-w-[1440px] m-auto flex flex-col md:flex-row items-center justify-between gap-2">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-[901px] gap-2 md:gap-4">
@@ -31,7 +43,7 @@
                             </div>
                         </div>
                         
-                        <a href="<?php echo esc_url( function_exists('wc_get_wishlist_url') ? wc_get_wishlist_url() : '#' ); ?>" class="text-[#434343] hover:text-[#bd262a] transition-colors">
+                        <a href="<?php echo esc_url( function_exists('wc_get_wishlist_url') ? wc_get_wishlist_url() : home_url('/wishlist/') ); ?>" class="text-[#434343] hover:text-[#bd262a] transition-colors">
                             <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99425 4.27985C8.32813 2.332 5.54975 1.80804 3.4622 3.59168C1.37466 5.37532 1.08077 8.35748 2.72012 10.467C4.08314 12.2209 8.2081 15.9201 9.56004 17.1174C9.7113 17.2513 9.78692 17.3183 9.87514 17.3446C9.95213 17.3676 10.0364 17.3676 10.1134 17.3446C10.2016 17.3183 10.2772 17.2513 10.4285 17.1174C11.7804 15.9201 15.9054 12.2209 17.2684 10.467C18.9077 8.35748 18.6497 5.35656 16.5263 3.59168C14.4029 1.8268 11.6604 2.332 9.99425 4.27985Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
@@ -72,7 +84,7 @@
                             'theme_location' => 'header-mega-menu',
                             'container' => false,
                             'menu_class' => 'flex flex-row gap-6 lg:gap-8 items-center h-full text-black font-bold text-sm lg:text-base uppercase tracking-tight',
-                            'fallback_cb' => false,
+                            'fallback_cb' => false
                         ]);
                         ?>
                     </nav>

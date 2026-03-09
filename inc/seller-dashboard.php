@@ -1,9 +1,22 @@
 <?php
 
+add_action('init', 'seller_dashboard_endpoints');
+function seller_dashboard_endpoints() {
+    add_rewrite_endpoint('seller-dashboard', EP_ROOT | EP_PAGES);
+    add_rewrite_endpoint('my-products', EP_ROOT | EP_PAGES);
+}
+
 add_filter('query_vars', 'seller_dashboard_query_vars', 0);
 function seller_dashboard_query_vars($vars) {
     $vars[] = 'seller-dashboard';
     $vars[] = 'my-products';
+    return $vars;
+}
+
+add_filter('woocommerce_get_query_vars', 'seller_dashboard_wc_query_vars');
+function seller_dashboard_wc_query_vars($vars) {
+    $vars['seller-dashboard'] = 'seller-dashboard';
+    $vars['my-products'] = 'my-products';
     return $vars;
 }
 
@@ -14,6 +27,7 @@ function add_seller_dashboard_link($items) {
         $new_items[$key] = $value;
         if($key === 'dashboard') {
             $new_items['seller-dashboard'] = __('Seller Dashboard', 'creative-furniture');
+            $new_items['my-products'] = __('My Products', 'creative-furniture');
         }
     }
     return $new_items;

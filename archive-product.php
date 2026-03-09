@@ -1,31 +1,46 @@
 <?php
-get_header();
+add_filter( 'woocommerce_product_loop_start', 'custom_woocommerce_loop_start' );
+function custom_woocommerce_loop_start( $loop_start ) {
+    $custom_classes = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center justify-start self-stretch relative';
+    return '<ul class="-products ' . esc_attr($custom_classes) . '">';
+}
 
-if ( woocommerce_product_loop() ) {
-    $bg_image = get_template_directory_uri() . '/dist/images/shop-bg.jpg';
+$shop_page_id = wc_get_page_id('shop');
+$title = woocommerce_page_title(false);
+$description = '';
+$breadcrumbs = [];
+$breadcrumbs[] = ['label' => __('Home', 'creative-furniture'), 'url' => home_url('/')];
+
+if (is_shop()) {
+    $breadcrumbs[] = ['label' => $title, 'url' => ''];
+    $description = get_post_field('post_content', $shop_page_id);
+} elseif (is_product_category()) {
+    $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
+    $term = get_queried_object();
+    $title = $term->name;
+    $description = $term->description;
     
-    $title = __('Furniture', 'creative-furniture');
-    
-    if ( is_product_category() ) {
-        $category = get_queried_object();
-        
-        $title = $category->name;
-        
-        $banner_id = get_term_meta( $category->term_id, '_catalogue_banner', true );
-        if ( ! empty( $banner_id ) && is_numeric( $banner_id ) ) {
-            $banner_url = wp_get_attachment_url( $banner_id );
-            if ( $banner_url ) {
-                $bg_image = $banner_url;
-            }
-        }
+    $ancestors = get_ancestors($term->term_id, 'product_cat');
+    foreach (array_reverse($ancestors) as $ancestor_id) {
+        $ancestor = get_term($ancestor_id, 'product_cat');
+        $breadcrumbs[] = ['label' => $ancestor->name, 'url' => get_term_link($ancestor)];
     }
-    ?>
-    <div class="shop-page">
-        <div class="shop-hero" style="background-image: url(<?php echo esc_url($bg_image); ?>);">
-            <h1 class="shop-title">
-                <?php echo wp_kses_post(sprintf(__('All %s %s %s', 'creative-furniture'), '<em class="font-italic-accent">', $title, '</em>')); ?>
-            </h1>
-        </div>
+    $breadcrumbs[] = ['label' => $title, 'url' => ''];
+} elseif (is_product_tag()) {
+    $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
+    $term = get_queried_object();
+    $title = $term->name;
+    $description = $term->description;
+    $breadcrumbs[] = ['label' => $title, 'url' => ''];
+} else {
+    $breadcrumbs[] = ['label' => $title, 'url' => ''];
+}
+
+$current_per_page = isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
+$current_orderby = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : 'menu_order';
+
+?>
+
 <?php
 global $wp_query;
 $current_post_ids = wp_list_pluck($wp_query->posts, 'ID');
@@ -117,73 +132,98 @@ foreach ($attributes as $attribute) {
 
 $filter_arrays = wp_json_encode($filter_data);
 ?>
+<?php get_header(); ?>
 
-
-        <div class="shop-container">
-            <div class="">
-                <div class="shop-toolbar">
-                    <div class="container-fluid">
-                        <button class="filters-toggle" data-filters="<?php echo esc_attr($filter_arrays); ?>">
-                            <?php footer_block_svg_icon_print('filter-lines'); ?>
-                            <span>Filters</span>
-                        </button>
-
-                        <div class="toolbar-filters">
-                            <button>
-                                <span>Category</span>
-                                <?php footer_block_svg_icon_print('chevron-down'); ?>
-                            </button>
-                            <button>
-                                <span>Color</span>
-                                <?php footer_block_svg_icon_print('chevron-down'); ?>
-                            </button>
-                            <button>
-                                <span>Any Finish</span>
-                                <?php footer_block_svg_icon_print('chevron-down'); ?>
-                            </button>
-                            <button>
-                                <span>Price</span>
-                                <?php footer_block_svg_icon_print('chevron-down'); ?>
-                            </button>
-                            <?php // woocommerce_catalog_ordering(); ?>
-                        </div>
-
-                        <div class="toolbar-meta">
-                            <div class="show-count">
-                                <label>Show:</label>
-                                <select class="products-per-page" style="background-image: url(<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/chevron-down.svg'); ?>);">
-                                    <option value="20">20</option>
-                                    <option value="40">40</option>
-                                    <option value="60">60</option>
-                                </select>
-                            </div>
-
-                            <div class="sort-by">
-                                <label>Sort by:</label>
-                                <select class="orderby" style="background-image: url(<?php echo esc_attr(get_template_directory_uri() . '/dist/icons/chevron-down.svg'); ?>);">
-                                    <option value="menu_order">Best Selling</option>
-                                    <option value="popularity">Popularity</option>
-                                    <option value="rating">Average rating</option>
-                                    <option value="date">Latest</option>
-                                    <option value="price">Price: Low to High</option>
-                                    <option value="price-desc">Price: High to Low</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+<div class="relative flex flex-col gap-10">
+    <div class="flex flex-row gap-2 items-center justify-start w-[1440px] m-auto relative">
+        <?php foreach ($breadcrumbs as $index => $crumb) : ?>
+            <?php if (!empty($crumb['url'])) : ?>
+                <a href="<?php echo esc_url($crumb['url']); ?>" class="text-[#989898] hover:text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start transition-colors">
+                    <?php echo esc_html($crumb['label']); ?>
+                </a>
+            <?php else : ?>
+                <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                    <?php echo esc_html($crumb['label']); ?>
                 </div>
+            <?php endif; ?>
+            
+            <?php if ($index < count($breadcrumbs) - 1) : ?>
+                <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                    /
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+    <div class="border-solid border-[#d3d3d3] border-b">
+        <div class="pb-5 flex flex-col gap-3 items-start justify-start w-[1440px] m-auto relative">
+            <h1 class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-5xl leading-[48px] font-semibold relative self-stretch">
+                <?php echo esc_html($title); ?>
+            </h1>
+            <?php if (!empty($description)) : ?>
+                <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative w-[630px]" style="opacity: 0.8">
+                    <?php echo wp_kses_post($description); ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="flex flex-row gap-2 items-center justify-between w-[1440px] m-auto relative">
+        <div class="filters-toggle bg-[#222222] pt-2 pr-3.5 pb-2 pl-3.5 flex flex-row gap-2 items-center justify-start cursor-pointer transition-colors hover:bg-[#333333] select-none" data-filters="<?php echo esc_attr($filter_arrays); ?>">
+            <svg class="shrink-0 w-5 h-5 relative overflow-visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <div class="text-[#ffffff] text-left font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
+                <?php esc_html_e('Filters', 'creative-furniture'); ?>
+            </div>
+        </div>
 
-                <div class="shop-content container-fluid">
-                    <!-- <aside class="shop-sidebar">
-                        <div class="sidebar-filters">
-                            <?php // dynamic_sidebar('shop-filters'); ?>
-                        </div>
-                    </aside> -->
+        <div class="flex flex-row gap-6 items-center justify-start">
+            <div class="flex flex-row gap-2 items-center justify-end shrink-0 relative">
+                <label class="text-[#212121] text-right font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end">
+                    <?php esc_html_e('Show:', 'creative-furniture'); ?>
+                </label>
+                <div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
+                    <select class="products-per-page text-[#212121] text-right font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end border-none focus:ring-0 bg-transparent cursor-pointer" onchange="window.location.href=this.value;">
+                        <?php foreach ([20, 40, 60] as $count) : ?>
+                            <option value="<?php echo esc_url(remove_query_arg('paged', add_query_arg('per_page', $count))); ?>" <?php selected($current_per_page, $count); ?>>
+                                <?php echo esc_html($count); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-row gap-2 items-center justify-end shrink-0 relative">
+                <label class="text-[#212121] font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end">
+                    <?php esc_html_e('Sort by:', 'creative-furniture'); ?>
+                </label>
+                <div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
+                    <select class="orderby text-[#212121] font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end border-none focus:ring-0 bg-transparent cursor-pointer" onchange="window.location.href=this.value;">
+                        <?php
+                        $sort_options = [
+                            'menu_order' => __('Best Selling', 'creative-furniture'),
+                            'popularity' => __('Popularity', 'creative-furniture'),
+                            'rating'     => __('Average rating', 'creative-furniture'),
+                            'date'       => __('Latest', 'creative-furniture'),
+                            'price'      => __('Price: Low to High', 'creative-furniture'),
+                            'price-desc' => __('Price: High to Low', 'creative-furniture'),
+                        ];
+                        foreach ($sort_options as $value => $label) : ?>
+                            <option value="<?php echo esc_url(remove_query_arg('paged', add_query_arg('orderby', $value))); ?>" <?php selected($current_orderby, $value); ?>>
+                                <?php echo esc_html($label); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+if ( woocommerce_product_loop() ) {
+    ?>
+        <div class="shop-container flex flex-col gap-6 items-start justify-start w-[1440px] m-auto relative">
+            <div class="w-full">
+                <div class="shop-content -container-fluid p-0">
 
                     <main class="shop-main">
-                        <div class="products-info">
-                            <?php woocommerce_result_count(); ?>
-                        </div>
 
                         <?php woocommerce_product_loop_start(); ?>
 
@@ -208,5 +248,8 @@ $filter_arrays = wp_json_encode($filter_data);
 } else {
     do_action( 'woocommerce_no_products_found' );
 }
+?>
+</div>
 
-get_footer();
+
+<?php get_footer(); ?>

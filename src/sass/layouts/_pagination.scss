@@ -24,7 +24,7 @@
                 justify-content: center;
                 border-radius: 50%;
                 background: #FFFFFF;
-                border: 1px solid #E5E5E5;
+                // border: 1px solid #E5E5E5;
                 color: #333333;
                 text-decoration: none;
                 font-size: 16px;
@@ -38,15 +38,15 @@
                 }
 
                 &.current {
-                    background: #9B8B7A;
-                    color: #FFFFFF;
-                    border-color: #9B8B7A;
                     cursor: default;
+                    color: #FFFFFF;
+                    background: #000000;
+                    border-color: #000000;
 
-                    &:hover {
-                        background: #9B8B7A;
-                        border-color: #9B8B7A;
-                    }
+                    // &:hover {
+                    //     background: #9B8B7A;
+                    //     border-color: #9B8B7A;
+                    // }
                 }
 
                 &.dots {
@@ -64,6 +64,8 @@
 
                 &.prev,
                 &.next {
+                    border: 1px solid #E5E5E5;
+                    
                     svg {
                         width: 8px;
                         height: 14px;
