@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
                 ?>
                 <div class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative border-b border-[#d9d9d9] pb-5 last:border-b-0">
                     <div class="flex flex-row gap-4 items-center justify-start flex-1 relative">
-                        <div class="bg-[#d9d9d9] shrink-0 w-[98px] h-[98px] relative overflow-hidden rounded-md">
+                        <div class="bg-[#d9d9d9] shrink-0 w-[98px] h-[98px] relative rounded-md">
                             <?php echo $_product->get_image( 'thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
                             
                             <!-- Quantity Badge -->

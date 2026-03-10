@@ -44,7 +44,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     </div>
 
     <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
-        <div class="flex flex-row flex-wrap gap-0 items-start justify-start w-[1440px] mx-auto relative">
+        <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-[1440px] mx-auto relative">
             <!-- Left Side: Checkout Details -->
             <div class="bg-[#ffffff] pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-[805px] relative">
                 <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
@@ -189,17 +189,56 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
                 <?php endif; ?>
             </div>
-
             <!-- Right Side: Order Summary -->
-            <div class="bg-[#f4f4f4] rounded-xl p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative min-h-screen">
+            <div class="bg-[#f4f4f4] rounded-xl p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative h-fit sticky top-0">
                 <div id="order_review" class="woocommerce-checkout-review-order w-full">
                     <?php do_action( 'woocommerce_checkout_order_review' ); ?>
                 </div>
                 
-                <img class="shrink-0 w-[366px] h-[27px] relative mt-auto" style="object-fit: cover; aspect-ratio: 366/27" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
+                <img class="shrink-0 w-[366px] relative mt-0" style="object-fit: cover; aspect-ratio: 366/27" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
             </div>
         </div>
     </form>
 </div>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const args = {
+        initialCountry: 'ae',
+        countryNameLocale: "ae",
+        onlyCountries: ['ae', 'sa', 'kw', 'om', 'bh', 'qa', 'bd'],
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@26.7.6/build/js/utils.js",
+        containerClass: 'w-full',
+        i18n: {
+            noCountrySelected: "Select country",
+            countryListAriaLabel: "List of countries",
+            searchPlaceholder: "Search",
+            clearSearchAriaLabel: "Clear search",
+            searchEmptyState: "No results found",
+        }
+    };
+    document.querySelectorAll("input[type=tel]").forEach(input => window.intlTelInput(input, args));
+  });
+</script>
+<style>
+  .iti__arrow {
+    border: none;
+  }
+  .iti__arrow::after {
+    content: " ";
+    height: 10px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-5px);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic2hyaW5rLTAgdy01IGgtNSByZWxhdGl2ZSBvdmVyZmxvdy12aXNpYmxlIiBzdHlsZT0iYXNwZWN0LXJhdGlvOiAxIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiM4QzhDOEMiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .iti__country-container + input {
+    padding-left: 52px !important;
+  }
+</style>

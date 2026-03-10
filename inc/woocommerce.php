@@ -920,8 +920,7 @@ add_action('wp_ajax_nopriv_load_products', 'load_products_ajax');
 add_action('wp_footer', function() {
     ?>
     <style>
-        /* Custom Checkout Field Styling */
-        .design-field-wrapper {
+        /* .design-field-wrapper {
             margin-bottom: 0 !important;
             padding: 0 !important;
             border: none !important;
@@ -932,13 +931,9 @@ add_action('wp_footer', function() {
         .design-field-wrapper label {
             display: block !important;
         }
-        
-        /* Hide default WooCommerce payment radio but keep it functional */
         .wc_payment_method input[type="radio"] {
             display: none !important;
-        }
-        
-        /* Ensure shipping address toggles correctly with our custom checkbox */
+        } */
         .shipping_address {
             display: <?php echo ( WC()->checkout->get_value('ship_to_different_address') ) ? 'block' : 'none'; ?>;
         }
@@ -992,26 +987,26 @@ add_action('wp_footer', function() {
     <?php
 });
 
-add_filter('woocommerce_form_field_args', function($args, $key, $value) {
-    if (is_checkout() || is_account_page()) {
-        $args['class'][] = 'design-field-wrapper';
-        $args['input_class'][] = 'design-input';
-        $args['label_class'][] = 'design-label';
+// add_filter('woocommerce_form_field_args', function($args, $key, $value) {
+//     if (is_checkout() || is_account_page()) {
+//         $args['class'][] = 'design-field-wrapper';
+//         $args['input_class'][] = 'design-input';
+//         $args['label_class'][] = 'design-label';
         
-        // Remove default placeholders as we want labels to act as headers/placeholders
-        // $args['placeholder'] = $args['label']; 
-    }
-    return $args;
-}, 10, 3);
+//         // Remove default placeholders as we want labels to act as headers/placeholders
+//         // $args['placeholder'] = $args['label']; 
+//     }
+//     return $args;
+// }, 10, 3);
 
-add_filter('woocommerce_checkout_fields', function($fields) {
-    foreach ($fields as $section => &$section_fields) {
-        foreach ($section_fields as $key => &$field) {
-            $field['class'][] = ' डिजाइन-फील्ड-ग्रुप'; // Just to identify
-        }
-    }
-    return $fields;
-});
+// add_filter('woocommerce_checkout_fields', function($fields) {
+//     foreach ($fields as $section => &$section_fields) {
+//         foreach ($section_fields as $key => &$field) {
+//             $field['class'][] = ' डिजाइन-फील्ड-ग्रुप'; // Just to identify
+//         }
+//     }
+//     return $fields;
+// });
 
 /**
  * Remove payment methods from the order review section.

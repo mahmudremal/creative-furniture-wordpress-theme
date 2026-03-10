@@ -39,13 +39,13 @@ if ( ! wp_doing_ajax() ) {
 			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
 		</noscript>
 
-		<?php wc_get_template( 'checkout/terms.php' ); ?>
+		<?php // wc_get_template( 'checkout/terms.php' ); ?>
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<button type="submit" class="bg-[#000000] rounded-lg pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center w-full relative mb-4" name="woocommerce_checkout_place_order" id="place_order" value="<?php echo esc_attr( $order_button_text ); ?>" data-value="<?php echo esc_attr( $order_button_text ); ?>">
+		<!-- <button type="submit" class="bg-[#000000] rounded-lg pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center w-full relative mb-4" name="woocommerce_checkout_place_order" id="place_order" value="<?php echo esc_attr( $order_button_text ); ?>" data-value="<?php echo esc_attr( $order_button_text ); ?>">
             <span class="text-[#ffffff] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start"><?php echo esc_html( $order_button_text ); ?></span>
-        </button>
+        </button> -->
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
