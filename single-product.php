@@ -29,7 +29,7 @@ $plus_minus_icons = '
                     <?php wp_nonce_field( 'cf_add_to_cart_nonce' ); ?>
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-row items-start justify-between gap-4">
-                            <h1 class="text-[#1a1a1a] text-left font-['Raleway-Bold',_sans-serif] text-xl leading-[30px] font-bold flex-1">
+                            <h1 class="text-[#1a1a1a] text-left font-['Raleway-Bold',_sans-serif] text-2xl leading-[30px] font-bold flex-1">
                                 <?php the_title(); ?>
                             </h1>
                             <button type="button" class="bg-[#f6f6f6] rounded-full p-2.5 flex items-center justify-center shrink-0 product-wishlist-btn <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product->get_id()) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
@@ -151,11 +151,11 @@ $plus_minus_icons = '
                         ['id' => 'care', 'title' => 'Care & Instructions', 'content' => wp_kses_post(wpautop(get_post_meta(get_the_ID(), '_care_instructions', true) ?: 'Care instructions coming soon.')), 'active' => false],
                         ['id' => 'warranty', 'title' => 'Warranty & Installation', 'content' => wp_kses_post(wpautop(get_post_meta(get_the_ID(), '_warranty_installation', true) ?: 'Warranty information coming soon.')), 'active' => false],
                         ['id' => 'tc', 'title' => 'T&C', 'content' => wp_kses_post(wpautop(get_post_meta(get_the_ID(), '_terms_conditions', true) ?: 'Terms & Conditions coming soon.')), 'active' => false],
-                        ['id' => 'reviews', 'title' => 'Reviews', 'content' => comments_template('', true), 'active' => false, 'raw' => true],
+                        ['id' => 'reviews', 'title' => 'Reviews', 'content' => wc_get_template_html('single-product/tabs/reviews.php', ['product' => $product]), 'active' => false],
                     ];
                     foreach ($accordion_items as $item) : ?>
                         <div class="cf-accordion-item border-b border-[#dbdbdb] <?php echo $item['active'] ? 'cf-accordion-active' : ''; ?>">
-                            <button type="button" class="cf-accordion-header w-full py-4 flex flex-row items-center justify-between group">
+                            <button type="button" class="cfr-accordion-header w-full py-4 flex flex-row items-center justify-between group">
                                 <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold"><?php echo esc_html($item['title']); ?></span>
                                 <span class="cf-accordion-icons">
                                     <svg class="cf-accordion-icon-minus w-7 h-7 <?php echo $item['active'] ? '' : 'hidden'; ?>" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,7 +168,7 @@ $plus_minus_icons = '
                             </button>
                             <div class="cf-accordion-content <?php echo $item['active'] ? 'pb-5' : 'h-0 overflow-hidden'; ?>">
                                 <div class="text-[#282828] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal flex flex-col gap-4">
-                                    <?php if (isset($item['raw']) && $item['raw']) { /* reviews handled by comments_template */ } else { echo $item['content']; } ?>
+                                    <?php echo $item['content']; ?>
                                 </div>
                             </div>
                         </div>
@@ -183,6 +183,32 @@ $plus_minus_icons = '
 </div>
 
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const changeStatus = (item, hide = false) => {
+        const content = item.querySelector('.cf-accordion-content');
+        const minusIcon = item.querySelector('.cf-accordion-icon-minus');
+        const plusIcon = item.querySelector('.cf-accordion-icon-plus');
+        if (hide) {
+            content.classList.add('h-0', 'overflow-hidden');
+            content.classList.remove('pb-5');
+            minusIcon.classList.add('hidden');
+            plusIcon.classList.remove('hidden');
+        } else {
+            content.classList.remove('h-0', 'overflow-hidden');
+            content.classList.add('pb-5');
+            minusIcon.classList.remove('hidden');
+            plusIcon.classList.add('hidden');
+        }
+    }
+    document.querySelectorAll('.cfr-accordion-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const item = header.parentElement;
+            item.parentElement.querySelectorAll('.cf-accordion-item:not(.hidden)').forEach(i => changeStatus(i, true));
+            const isActive = item.classList.contains('cf-accordion-active');
+            changeStatus(item, isActive);
+        });
+    });
+});
+</script>

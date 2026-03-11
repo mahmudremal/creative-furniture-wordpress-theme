@@ -123,6 +123,10 @@ module.exports = {
           from: path.resolve(SRC_DIR, "icons"),
           to: path.resolve(__dirname, "dist/icons"),
         },
+        {
+          from: path.resolve(SRC_DIR, "img"),
+          to: path.resolve(__dirname, "dist/images"),
+        },
       ],
     }),
   ].filter(Boolean),

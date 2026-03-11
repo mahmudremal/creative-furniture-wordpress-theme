@@ -120,7 +120,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                     <div class="hidden md:flex flex-row items-center justify-end flex-1">
                         <form role="search" method="get" class="w-full max-w-[481px]" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <div class="border-b border-[#d3d3d3] py-2 flex flex-row gap-5 items-center justify-start w-full relative">
-                                <input type="search" class="bg-transparent border-none focus:ring-0 text-black text-sm w-full outline-none" 
+                                <input type="search" class="bg-transparent border-none focus:ring-0 text-black text-sm w-full outline-none placeholder:text-[#464646]" 
                                     placeholder="<?php echo esc_attr__( 'What are you looking for?', 'creative-furniture' ); ?>" 
                                     value="<?php echo get_search_query(); ?>" name="s" />
                                 <input type="hidden" name="post_type" value="product" />
@@ -175,7 +175,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
         <div id="mobile-search-bar" class="hidden md:hidden w-full bg-white border-b p-4 animate-slide-down">
             <form role="search" method="get" class="w-full" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="border border-[#d3d3d3] rounded px-4 py-2 flex flex-row gap-3 items-center w-full">
-                    <input type="search" class="bg-transparent border-none focus:ring-0 text-black text-sm w-full outline-none" 
+                    <input type="search" class="bg-transparent border-none focus:ring-0 text-black text-sm w-full outline-none placeholder:text-[#464646]" 
                         placeholder="<?php echo esc_attr__( 'Search products...', 'creative-furniture' ); ?>" 
                         value="<?php echo get_search_query(); ?>" name="s" />
                     <input type="hidden" name="post_type" value="product" />

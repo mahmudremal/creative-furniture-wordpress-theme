@@ -35,7 +35,7 @@ $primary_category = ! empty( $categories ) ? $categories[0]->name : '';
 				
 				<div class="w-full h-full absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center p-0">
 					<?php if ( has_post_thumbnail( $product_id ) ) : ?>
-						<?php echo get_the_post_thumbnail( $product_id, 'woocommerce_thumbnail', [ 'class' => 'w-full h-full object-contain aspect-square transition-transform duration-500 group-hover:scale-110 hidden' ] ); ?>
+						<?php echo get_the_post_thumbnail( $product_id, 'woocommerce_thumbnail', [ 'class' => 'w-full h-full object-contain aspect-square transition-transform duration-500 group-hover:scale-110' ] ); ?>
 					<?php else : ?>
 						<img class="w-full h-full object-contain aspect-square" src="<?php echo esc_url( wc_placeholder_img_src( 'woocommerce_thumbnail' ) ); ?>" alt="<?php echo esc_attr( $product->get_name() ); ?>">
 					<?php endif; ?>

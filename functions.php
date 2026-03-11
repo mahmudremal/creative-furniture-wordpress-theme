@@ -160,6 +160,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/seller-dashboard.php';
 	require_once get_template_directory() . '/inc/seller-registration.php';
 	require_once get_template_directory() . '/inc/contact-us.php';
+	require_once get_template_directory() . '/inc/reviews.php';
 // }
 
 
