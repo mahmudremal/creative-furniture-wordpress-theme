@@ -104,6 +104,8 @@ function creative_furniture_scripts() {
 		'update_cart_nonce' => is_cart() ? wp_create_nonce('update-cart') : '',
 		'dist' => get_template_directory_uri() . '/dist',
 	]);
+	wp_enqueue_script( 'popper', 'https://unpkg.com/@popperjs/core@2', [], false, true );
+	wp_enqueue_script( 'tippy', 'https://unpkg.com/tippy.js@6', [], false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script('comment-reply');

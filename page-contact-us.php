@@ -10,7 +10,7 @@
           rgba(255, 255, 255, 0) 100%
         );
         object-fit: cover;
-      " src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45320.png">
+      " src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/rectangle-45320.png">
     <div class="flex flex-col gap-14 items-start justify-center w-[476px] absolute left-[calc(50%_-_696px)] top-[50%]" style="translate: 0 -50%">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <img class="shrink-0 w-[595px] h-[522px] relative" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45460.png">
+    <img class="shrink-0 w-[595px] h-[522px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/rectangle-45460.png">
   </div>
   <div class="flex flex-col gap-0 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div id="contact-form" class="flex flex-col gap-10 items-center justify-start w-full md:w-[1440px] m-auto relative py-20 px-6">

@@ -457,7 +457,8 @@ function cf_ajax_get_variation() {
         wp_send_json_success([
             'variation_id' => $variation_id,
             'price_html' => $variation->get_price_html(),
-            'is_in_stock' => $variation->is_in_stock()
+            'is_in_stock' => $variation->is_in_stock(),
+            'image_url' => wp_get_attachment_image_url($variation->get_image_id(), 'full')
         ]);
     } else {
         wp_send_json_error(['message' => __('No matching variation found', 'creative-furniture')]);

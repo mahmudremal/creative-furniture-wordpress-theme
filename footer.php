@@ -151,15 +151,15 @@
 <style>
 #language-switcher-menu > li > a::after,
 #mymc_currency_select::after {
-  content: " ";
-  height: 10px;
-  width: 20px;
-  position: absolute;
   top: 50%;
+  width: 20px;
   right: -10px;
+  height: 10px;
+  content: " ";
+  position: absolute;
   transform: translateY(-5px);
   background-position: center;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic2hyaW5rLTAgdy01IGgtNSByZWxhdGl2ZSBvdmVyZmxvdy12aXNpYmxlIiBzdHlsZT0iYXNwZWN0LXJhdGlvOiAxIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiM4QzhDOEMiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJzaHJpbmstMCB3LTUgaC01IHJlbGF0aXZlIG92ZXJmbG93LXZpc2libGUiIHN0eWxlPSJhc3BlY3QtcmF0aW86IDEiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiMxOTE5MTkiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
 }
 </style>
 

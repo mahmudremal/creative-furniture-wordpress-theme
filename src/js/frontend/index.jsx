@@ -318,6 +318,14 @@ class SiteCore {
                             priceElement.innerHTML = data.data.price_html;
                         }
                         addToCartBtn.disabled = !data.data.is_in_stock;
+
+                        if (data.data.image_url) {
+                            const mainImage = document.getElementById('cf-main-product-image');
+                            if (mainImage) {
+                                mainImage.src = data.data.image_url;
+                                mainImage.srcset = '';
+                            }
+                        }
                     }
                 })
                 .catch(error => {

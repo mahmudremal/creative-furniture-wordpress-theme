@@ -1,11 +1,17 @@
 <?php
 if (!isset($args['title']) || !isset($args['link']) || !isset($args['query'])) return;
-$query = (array) $args['query'] || [];
+$query = (array) $args['query'];
+if (empty($query['post_type'])) {
+    $query['post_type'] = 'product';
+}
+if (empty($query['posts_per_page'])) {
+    $query['posts_per_page'] = 10;
+}
 $title = $args['title'];
 $link = $args['link'];
 ?>
 <div class="flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto">
-  <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
+  <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative px-4 md:px-0">
     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
       <?php echo esc_html($title); ?>
     </div>
@@ -15,37 +21,23 @@ $link = $args['link'];
   </div>
   <div class="w-full relative">
     <div class="relative overflow-hidden">
-      <div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px']])); ?>">
+      <div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px'], 'md' => ['slidesToShow' => 3], 'sm' => ['slidesToShow' => 2]])); ?>">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
-              <?php for ($i=1; $i <= 15; $i++) get_template_part('template-parts/product-card-extended', null, ['product_id' => ($i % 5) + 1]); ?>
               <?php
-              // $posts = new WP_Query([
-              //   'post_type' => 'product',
-              //   'posts_per_page' => 12,
-              //   // 'fields' => 'ids',
-              //   // ...$query
-              // ]);
-              // $posts = wc_get_products([]);
-              // print_r($posts);wp_die();
+              $products_query = new WP_Query($query);
+              if ($products_query->have_posts()) :
+                while ($products_query->have_posts()) : $products_query->the_post();
+                  ?>
+                  <div class="h-full">
+                    <?php get_template_part('template-parts/product-card-extended', null, ['product_id' => get_the_ID()]); ?>
+                  </div>
+                  <?php
+                endwhile;
+                wp_reset_postdata();
+              endif;
               ?>
-              <?php // while ( $posts->have_posts() ) : $posts->the_post(); ?>
-              <?php // get_template_part( 'template-parts/product-card', 'extended', array('viewType' => 'grid', 'badge' => true, 'estimateShipping' => true, 'showCategory' => false) ); // here need to use product loop template with wc_get_products ?>
-            <?php // endwhile; ?>
-
-            
-              <!-- here need to implmenet product looping on the args params $query -->
-              <?php woocommerce_product_loop_start(); ?>
-              <?php
-              if ( wc_get_loop_prop( 'total' ) ) {
-                while ( have_posts() ) {
-                  the_post();
-                  wc_get_template_part( 'content', 'product' );
-                }
-              }
-              ?>
-              <?php woocommerce_product_loop_end(); ?>
             
             
             </div>
