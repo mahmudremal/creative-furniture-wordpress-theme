@@ -26,7 +26,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
 
     <header id="masthead" class="site-header relative z-50">
         <div class="flex flex-col items-center justify-start w-full gap-4 mb-4">
-            <div class="bg-[#eaeaea] w-full py-2 px-4 md:px-6 overflow-hidden">
+            <div class="bg-[#eaeaea] w-full py-2 px-4 md:px-6">
                 <div class="max-w-[1440px] m-auto flex flex-col md:flex-row items-center justify-between gap-2">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-[901px] gap-2 md:gap-4">
                         <div class="text-black text-center md:text-left font-normal text-xs md:text-sm leading-5">
@@ -37,6 +37,18 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                         </div>
                     </div>
                     <div class="flex flex-row gap-4 md:gap-6 items-center justify-start">
+                        <div class="flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
+                            <div class="currency-switcher desktop-only">
+                                <?php
+                                wp_nav_menu([
+                                    'theme_location' => 'language-switcher-menu',
+                                    'menu_id'        => 'language-switcher-menu',
+                                    'container'      => false,
+                                    'fallback_cb'    => false,
+                                ]);
+                                ?>
+                            </div>
+                        </div>
                         <div class="flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
                             <div class="currency-switcher desktop-only">
                                 <?php echo do_shortcode('[mymc_currency_switcher]'); ?>

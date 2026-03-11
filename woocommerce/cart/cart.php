@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="flex flex-col gap-7 pt-10 pb-20">
-    <div class="flex flex-row gap-2 items-center justify-start w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -26,7 +26,7 @@ do_action( 'woocommerce_before_cart' ); ?>
         </div>
     </div>
 
-    <div class="flex flex-row items-start justify-between w-[1440px] m-auto relative">
+    <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 items-start justify-between w-full md:w-[1440px] m-auto relative">
         <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-[887px] relative">
             <div class="text-black-primary text-left font-['Raleway-Medium',_sans-serif] text-2xl leading-[44px] font-medium relative self-stretch flex items-center justify-start">
                 <?php esc_html_e( 'Your cart', 'woocommerce' ); ?> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
@@ -165,7 +165,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             </form>
         </div>
 
-        <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-[453px] relative">
+        <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-[453px] relative sticky top-0">
             <div class="bg-[#f4f4f4] rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
                 <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-[44px] font-semibold relative self-stretch flex items-center justify-start">
                     Order Summary

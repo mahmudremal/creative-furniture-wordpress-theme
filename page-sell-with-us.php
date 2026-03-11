@@ -2,7 +2,7 @@
 
 
 <div class="relative flex flex-col gap-20">
-  <div class="h-[456px] w-[1440px] m-auto relative overflow-hidden">
+  <div class="h-[456px] w-full md:w-[1440px] m-auto relative overflow-hidden">
     <img class="h-[607px] absolute right-0 left-0 top-[calc(50%_-_336px)]" style="
         background: linear-gradient(
           94.97deg,
@@ -28,14 +28,14 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-col gap-7 items-start justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-[#242424] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Why Sell With Us
       </div>
-      <div class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
+      <a href="/shop" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
         Explore more
-      </div>
+      </a>
     </div>
     <div class="flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
       <div class="rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
@@ -136,7 +136,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row gap-0 items-center justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-row gap-0 items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="bg-[#797979] shrink-0 w-[658px] h-[455px] relative overflow-hidden">
       <img class="absolute right-0 left-0 bottom-[-1px] top-0" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45450.png'); ?>">
       <div class="bg-[#d9d9d9] w-[757px] h-[155px] absolute left-[658px] top-[348px]"></div>
@@ -164,7 +164,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-col gap-7 items-center justify-start w-[1440px] m-auto relative overflow-hidden">
+  <div class="flex flex-col gap-7 items-center justify-start w-full md:w-[1440px] m-auto relative overflow-hidden">
     <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
       Trusted by Leading Furniture Brands
     </div>
@@ -312,7 +312,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row gap-[105px] items-center justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-row gap-[105px] items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-col gap-7 items-start justify-center shrink-0 w-[716px] relative">
       <div class="flex flex-col gap-[18px] items-center justify-center self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
@@ -385,7 +385,7 @@
     <img class="shrink-0 w-[595px] h-[436px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45460.png'); ?>">
   </div>
   
-  <div class="flex flex-col gap-12 items-center justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-12 items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-col gap-4 items-center justify-center shrink-0 w-[794px] relative">
       <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
         Grow Your Furniture Business with

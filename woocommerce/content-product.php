@@ -7,33 +7,8 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	return;
 }
 
-$card_style = get_theme_mod( 'product_card_style', 'style1' );
 $product_id = $product->get_id();
-$gallery_ids = $product->get_gallery_image_ids();
 $sale_percentage = 0;
-
-$product_thumbnail_imgs = [];
-
-
-$feat_image_id = get_post_thumbnail_id($product_id);
-
-if ( !empty($feat_image_id) ) {
-	$image = wp_get_attachment_image( $feat_image_id, 'woocommerce_thumbnail' );
-	if (!empty($image)) {
-		$product_thumbnail_imgs[] = $image;
-	}
-}
-if ( ! empty( $gallery_ids ) ) {
-	foreach ($gallery_ids as $gallery_id) {
-		$image = wp_get_attachment_image( $gallery_id, 'woocommerce_thumbnail' );
-		if (!empty($image)) {
-			$product_thumbnail_imgs[] = $image;
-		}
-	}
-}
-if (empty($product_thumbnail_imgs)) {
-	$product_thumbnail_imgs[] = $product->get_image( 'woocommerce_thumbnail' );
-}
 
 if ( $product->is_on_sale() ) {
 	$regular_price = (float) $product->get_regular_price();
@@ -47,131 +22,105 @@ $available_variations = [];
 if ( $product->is_type( 'variable' ) ) {
 	$available_variations = $product->get_available_variations();
 }
+
+$categories = get_the_terms( $product_id, 'product_cat' );
+$primary_category = ! empty( $categories ) ? $categories[0]->name : '';
 ?>
 
-<li <?php wc_product_class( 'product-card product-card-' . esc_attr( $card_style ), $product ); ?> data-product-id="<?php echo esc_attr( $product_id ); ?>">
-	
-	<div class="product-card-inner">
-		
-		<div class="product-image-wrapper">
-			
-			<?php if ( $sale_percentage > 0 ) : ?>
-				<span class="product-badge sale-badge"><?php echo esc_html( $sale_percentage ); ?>% OFF</span>
-			<?php endif; ?>
-
-			<?php if ( ! $product->is_in_stock() ) : ?>
-				<span class="product-badge out-of-stock-badge"><?php esc_html_e( 'Out of Stock', 'creative-furniture' ); ?></span>
-			<?php endif; ?>
-
-			<button type="button" class="product-wishlist-btn <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Add to wishlist">
-				<?php footer_block_svg_icon_print('heart'); ?>
-			</button>
-
-			<button type="button" class="product-quick-view-btn" data-product-id="<?php echo esc_attr( $product_id ); ?>" aria-label="Quick view" data-quickview="true">
-				Quick View
-				<?php footer_block_svg_icon_print('plus'); ?>
-			</button>
-
-			<?php if ( $card_style === 'style1' ) : ?>
+<li <?php wc_product_class( 'product-card', $product ); ?> data-product-id="<?php echo esc_attr( $product_id ); ?>">
+	<a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>" class="flex relative group">
+		<div class="flex flex-col gap-4 items-start justify-start flex-1">
+			<div class="self-stretch shrink-0 h-[294px] relative overflow-hidden bg-[#f4f4f4] w-full">
+				<img class="absolute right-[-0.4px] left-0 bottom-0 top-0 w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/products/bg-gray.png'); ?>" alt="Background">
 				
-				<a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>" class="product-image-link">
-					<div class="product-images-hover">
-						<div class="product-image-main">
-							<?php echo wp_kses_post($product_thumbnail_imgs[0]); ?>
-						</div>
-						<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
-							<div class="product-image-hover">
-								<?php echo wp_kses_post($product_thumbnail_imgs[1]); ?>
-							</div>
-						<?php endif; ?>
-					</div>
-				</a>
-
-			<?php elseif ( $card_style === 'style2' ) : ?>
-				
-				<div class="product-image-slider">
-					<div class="slider-container">
-						<div class="slider-track">
-							<div class="slider-item">
-								<?php echo wp_kses_post($product_thumbnail_imgs[0]); ?>
-							</div>
-							<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
-								<?php foreach ( $product_thumbnail_imgs as $product_thumbnail_img ) : ?>
-									<div class="slider-item">
-										<?php echo wp_kses_post($product_thumbnail_img); ?>
-									</div>
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div>
-					</div>
-					
-					<?php if ( count( $product_thumbnail_imgs ) >= 2 ) : ?>
-						<button type="button" class="slider-btn slider-prev" aria-label="Previous image">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-								<path d="M12 4L6 10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</button>
-						<button type="button" class="slider-btn slider-next" aria-label="Next image">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-								<path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</button>
-						<div class="slider-dots"></div>
+				<div class="w-full h-full absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center p-0">
+					<?php if ( has_post_thumbnail( $product_id ) ) : ?>
+						<?php echo get_the_post_thumbnail( $product_id, 'woocommerce_thumbnail', [ 'class' => 'w-full h-full object-contain aspect-square transition-transform duration-500 group-hover:scale-110 hidden' ] ); ?>
+					<?php else : ?>
+						<img class="w-full h-full object-contain aspect-square" src="<?php echo esc_url( wc_placeholder_img_src( 'woocommerce_thumbnail' ) ); ?>" alt="<?php echo esc_attr( $product->get_name() ); ?>">
 					<?php endif; ?>
 				</div>
 
-			<?php endif; ?>
-		</div>
+				<?php if ( $sale_percentage > 0 ) : ?>
+					<div class="bg-[#000000] pt-1 pr-2 pb-1 pl-2 flex flex-row gap-7 items-center justify-start absolute left-0 top-0 overflow-hidden">
+						<div class="text-[#ffffff] text-left font-['Raleway-SemiBold',_sans-serif] text-xs leading-[18px] font-semibold relative flex items-center justify-start">
+							- <?php echo esc_html( $sale_percentage ); ?>%
+						</div>
+					</div>
+				<?php endif; ?>
 
-		<div class="product-info">
-			<h3 class="product-title">
-				<a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>">
-					<?php echo esc_html( $product->get_name() ); ?>
-				</a>
-			</h3>
-
-			<div class="product-price">
-				<?php echo wp_kses_post( $product->get_price_html() ); ?>
+				<button type="button" class="bg-[#ffffff] rounded-full p-2 flex flex-row items-center justify-center absolute right-4 top-5 shadow-sm product-wishlist-btn <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product_id ); ?>">
+					<svg class="w-4 h-4 transition-colors <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'fill-[#bd262a] stroke-[#bd262a]' : 'stroke-[#111111]'); ?>" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99544 3.42388C6.66254 1.8656 4.43984 1.44643 2.76981 2.87334C1.09977 4.30026 0.864655 6.68598 2.17614 8.3736C3.26655 9.77674 6.56653 12.7361 7.64808 13.6939C7.76908 13.801 7.82958 13.8546 7.90015 13.8757C7.96175 13.8941 8.02914 13.8941 8.09074 13.8757C8.16131 13.8546 8.22181 13.801 8.34281 13.6939C9.42436 12.7361 12.7243 9.77674 13.8147 8.3736C15.1262 6.68598 14.9198 4.28525 13.2211 2.87334C11.5223 1.46144 9.32835 1.8656 7.99544 3.42388Z" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+					</svg>
+				</button>
 			</div>
+			
+			<div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
+				<?php if ( ! empty( $primary_category ) ) : ?>
+					<div class="text-[#8f8f8f] text-left font-['Raleway-Medium',_sans-serif] text-[10px] leading-3 uppercase tracking-wider">
+						<?php echo esc_html( $primary_category ); ?>
+					</div>
+				<?php endif; ?>
 
-			<?php if ( ! empty( $available_variations ) ) : ?>
-				<div class="product-variations">
-					<?php
-					$color_attributes = [];
-					foreach ( $available_variations as $variation ) {
-						foreach ( $variation['attributes'] as $attr_name => $attr_value ) {
-							if ( strpos( strtolower( $attr_name ), 'color' ) !== false || strpos( strtolower( $attr_name ), 'colour' ) !== false ) {
-								$color_attributes[ $attr_value ] = [
-									'name' => $attr_value,
-									'image' => $variation['image']['url'] ?? '',
-									'variation_id' => $variation['variation_id']
-								];
+				<div class="text-[#141414] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch flex items-center justify-start group-hover:text-[#bd262a] transition-colors">
+					<?php echo esc_html( $product->get_name() ); ?>
+				</div>
+
+				<div class="flex flex-row gap-3 items-center justify-start shrink-0 relative">
+					<?php 
+					$colors_shown = false;
+					if ( ! empty( $available_variations ) ) {
+						$color_attributes = [];
+						foreach ( $available_variations as $variation ) {
+							foreach ( $variation['attributes'] as $attr_name => $attr_value ) {
+								if ( strpos( strtolower( $attr_name ), 'color' ) !== false || strpos( strtolower( $attr_name ), 'colour' ) !== false ) {
+									$color_attributes[ $attr_value ] = $attr_value;
+								}
 							}
+						}
+						
+						if ( ! empty( $color_attributes ) ) {
+							$colors_shown = true;
+							?>
+							<div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
+								<?php foreach ( array_slice($color_attributes, 0, 4) as $color_val ) : ?>
+									<div class="rounded-full shrink-0 w-2.5 h-2.5 relative border border-gray-200 aspect-square" style="background-color: <?php echo esc_attr( strtolower( $color_val ) ); ?>"></div>
+								<?php endforeach; ?>
+							</div>
+							<?php
 						}
 					}
 					
-					if ( ! empty( $color_attributes ) ) :
-						$color_attributes = array_slice( $color_attributes, 0, 4 );
-					?>
-						<div class="product-color-swatches">
-							<?php foreach ( $color_attributes as $color ) : ?>
-								<button 
-									type="button" 
-									class="color-swatch" 
-									data-variation-id="<?php echo esc_attr( $color['variation_id'] ); ?>"
-									data-image="<?php echo esc_url( $color['image'] ); ?>"
-									title="<?php echo esc_attr( $color['name'] ); ?>"
-									style="background-color: <?php echo esc_attr( strtolower( $color['name'] ) ); ?>;"
-								>
-									<span class="screen-reader-text"><?php echo esc_html( $color['name'] ); ?></span>
-								</button>
-							<?php endforeach; ?>
+					if ( ! $colors_shown ) : ?>
+						<div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
+							<div class="bg-[#000000] rounded-full shrink-0 w-2.5 h-2.5 relative aspect-square"></div>
+							<div class="bg-[#ab9a8d] rounded-full shrink-0 w-2.5 h-2.5 relative aspect-square"></div>
+							<div class="bg-[#ceb492] rounded-full shrink-0 w-2.5 h-2.5 relative aspect-square"></div>
+							<div class="bg-[#9c7a52] rounded-full shrink-0 w-2.5 h-2.5 relative aspect-square"></div>
+						</div>
+					<?php endif; ?>
+					
+					<div class="text-[#3f3f3f] text-right font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">
+						+ more options
+					</div>
+				</div>
+
+				<div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+					<?php if ( $product->is_on_sale() ) : ?>
+						<div class="text-[#3f3f3f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
+							<?php echo wc_price( $product->get_sale_price() ); ?>
+						</div>
+						<div class="text-[#8f8f8f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative line-through">
+							<?php echo wc_price( $product->get_regular_price() ); ?>
+						</div>
+					<?php else : ?>
+						<div class="text-[#3f3f3f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
+							<?php echo wc_price( $product->get_price() ); ?>
 						</div>
 					<?php endif; ?>
 				</div>
-			<?php endif; ?>
+			</div>
 		</div>
-
-	</div>
-
+	</a>
 </li>

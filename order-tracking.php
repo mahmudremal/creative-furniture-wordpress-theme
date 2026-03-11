@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
 
 <div class="relative flex flex-col gap-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start w-[1440px] m-auto relative pt-10">
+    <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative pt-10">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     </div>
 
     <?php if (!$order) : ?>
-    <div class="h-[381px] overflow-hidden w-[1440px] m-auto relative">
+    <div class="h-[381px] overflow-hidden w-full md:w-[1440px] m-auto relative">
       <img class="h-[607px] absolute right-0 left-0 top-[calc(50%_-_404.5px)] w-full w-full" style="
           object-fit: cover;
         " src="<?php echo get_template_directory_uri(); ?>/src/img/v2/rectangle-453201.png">

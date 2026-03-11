@@ -3,15 +3,15 @@
 
 
 
-  <div class="mt-4 w-[1440px] m-auto relative">
-    <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1,]])); ?>">
+  <div class="mt-4 w-full md:w-[1440px] m-auto relative">
+    <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
       <div class="blaze-container">
         <div class="blaze-track-container">
           <div class="blaze-track">
             <?php for ($i=1; $i <= 5; $i++) : ?>
             <div class="relative h-[673px]">
               <img class="h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/smart-furniture-for-modern-offices-hero-1.png">
-              <div class="flex flex-col gap-52 items-start justify-start w-[476px] absolute left-[100px] top-[50%]" style="translate: 0 -50%">
+              <div class="flex flex-col gap-52 items-start justify-start w-[476px] absolute left-8 mg:left-[50px] lg:left-[100px] top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                   <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
                     Smart Furniture for Modern Offices
@@ -50,13 +50,13 @@
       </div>
     </div>
   </div>
-  <div class="pr-6 pl-6 flex flex-col gap-6 items-center justify-start w-[1440px] m-auto">
+  <div class="pr-6 pl-6 flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-[#242424] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         <?php echo esc_html__( 'Shop by Category', 'creative-furniture' ); ?>
       </div>
     </div>
-    <div class="flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-start self-stretch shrink-0 relative">
       <?php
       $categories = get_terms([
         'taxonomy'   => 'product_cat',
@@ -72,8 +72,8 @@
       ?>
     </div>
   </div>
-  <div class="bg-[#f9f9f9] pl-[100px] flex flex-col gap-6 items-center justify-start w-[1440px] m-auto overflow-hidden">
-    <div class="flex flex-row items-center justify-between self-stretch flex-1 relative">
+  <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto overflow-hidden">
+    <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-7 py-10 lg:p-0 gap-7">
       <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-[476px] relative">
         <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
           <div class="rounded-[48px] border-solid border-[#eeeeee] border pt-1.5 pr-3.5 pb-1.5 pl-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
@@ -101,18 +101,16 @@
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => '#', 'query' => []]); ?>
-
-  <div class="flex flex-col gap-7 items-start justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 px-7 py-10 md:p-0 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         New Arrivals
       </div>
-      <a href="#" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
+      <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
         Explore more
       </a>
     </div>
-    <div class="flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+    <div class="flex flex-wrap gap-4 items-center justify-start self-stretch shrink-0 relative">
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
         <div class="self-stretch shrink-0 h-[267px] relative overflow-hidden">
           <img class="absolute right-[0.33px] left-0 bottom-0 top-0" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-453430.png">
@@ -158,70 +156,104 @@
       </a>
     </div>
   </div>
-  
-  <div class="flex flex-col gap-7 items-start justify-start w-[1440px] m-auto">
-    <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        This Season’s Top Picks
+
+  <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full">
+    <div class="flex flex-row justify-between py-6 w-full md:w-[1440px] m-auto relative">
+      <div class="flex flex-col gap-2 items-start justify-start w-[984px]">
+        <div
+          class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch"
+        >
+          Trusted Member of the BNI Network
+        </div>
+        <div class="text-[#4d4d4d] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" >
+          As a member of BNI, Creative Furniture builds strong professional
+          relationships, shares valuable referrals, and contributes to a
+          <br />
+          trusted global business network.
+        </div>
       </div>
-      <a href="#" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
-        Explore more
-      </a>
+      <img
+        class="w-[234px] h-[91px]"
+        style="object-fit: cover; aspect-ratio: 234/91"
+        src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/image-2780.png'); ?>"
+      />
     </div>
-    <div class="self-stretch shrink-0 h-[437px] relative">
-      <div class="pr-[100px] pl-[100px] flex flex-row items-center justify-between w-[1392px] h-[437px] absolute left-0 top-0" style="
-          background: linear-gradient(
-            96.56deg,
-            rgba(244, 244, 244, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          background: url(https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/frame-21214531531.png) center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        ">
-        <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
-              Top Picks
-            </div>
-            <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
-              <span>
-                <span class="_15-off-for-outdoor-collection-span">15% Off</span>
-                <span class="_15-off-for-outdoor-collection-span2"></span>
-                <span class="_15-off-for-outdoor-collection-span3">
-                  For Outdoor
-                  <br>
-                  Collection
-                </span>
-              </span>
-            </div>
-            <div class="text-[#2f2f2f] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-              Premium furniture engineered for style, performance, and long-term
-              durability.
+  </div>
+  
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
+
+  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
+    <div class="w-full">
+      <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
+        <div class="blaze-container">
+          <div class="blaze-track-container">
+            <div class="blaze-track">
+              <?php for ($i = 1; $i <= 5; $i++): ?>
+              <div>
+                <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
+                  <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
+                    This Season’s Top Picks
+                  </div>
+                  <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
+                    Explore more
+                  </a>
+                </div>
+                <div class="self-stretch shrink-0 h-[437px] relative">
+                  <div class="pr-[100px] pl-[100px] flex flex-row items-center justify-between w-[1392px] h-[437px] absolute left-0 top-0 bg-center norepeat bg-cover w-full" style="
+                      background: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 0) 100% ) center no-repeat;
+                      background-image: url(https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/frame-21214531531.png);
+                      background-size: cover;
+                    ">
+                    <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
+                      <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
+                        <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
+                          Top Picks
+                        </div>
+                        <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
+                          <span>
+                            <span class="_15-off-for-outdoor-collection-span">15% Off</span>
+                            <span class="_15-off-for-outdoor-collection-span2"></span>
+                            <span class="_15-off-for-outdoor-collection-span3">
+                              For Outdoor
+                              <br>
+                              Collection
+                            </span>
+                          </span>
+                        </div>
+                        <div class="text-[#2f2f2f] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
+                          Premium furniture engineered for style, performance, and long-term
+                          durability.
+                        </div>
+                      </div>
+                      <a href="#" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                        <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                          View Details
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <svg class="h-auto w-full absolute left-0 overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="bottom: -5px;">
+                    <path d="M0 56.5C512.758 56.5 772.242 56.5 1285 56.5L1392.5 0" stroke="#BD262A" stroke-width="3.5"></path>
+                    <path d="M1395 61.5L1392.5 2L1285.5 59L1395 61.5Z" fill="white"></path>
+                  </svg>
+                </div>
+              </div>
+              <?php endfor; ?>
             </div>
           </div>
-          <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-            <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-              View Details
-            </div>
+          <div class="blaze-next bg-[#bd262a] p-0.5 flex flex-row gap-2.5 items-center justify-start shrink-0 absolute right-[35px] top-[50%] cursor-pointer" style="translate: 0 -50%">
+            <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 21L17.5 14L10.5 7" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </div>
-        </div>
-        <div class="bg-[#bd262a] p-0.5 flex flex-row gap-2.5 items-center justify-start shrink-0 absolute right-[35px] top-[50%]" style="translate: 0 -50%">
-          <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.5 21L17.5 14L10.5 7" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
         </div>
       </div>
-      <svg class="h-[auto] absolute left-0 top-[378.5px] overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 56.5C512.758 56.5 772.242 56.5 1285 56.5L1392.5 0" stroke="#BD262A" stroke-width="3.5"></path>
-        <path d="M1395 61.5L1392.5 2L1285.5 59L1395 61.5Z" fill="white"></path>
-      </svg>
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => '#', 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand']]); ?>
   
-  <div class="bg-[#000000] h-[88px] w-[1440px] m-auto overflow-hidden relative">
+  <div class="bg-[#000000] h-[88px] w-full md:w-[1440px] m-auto overflow-hidden relative">
     <div class="w-[341px] h-16 absolute left-0 top-[50%]" style="translate: 0 -50%">
       <svg class="w-[312px] h-[58px] absolute left-0 top-[3px] overflow-visible" width="312" height="58" viewBox="0 0 312 58" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0H312L277.689 29L312 58H0V0Z" fill="#9D0004" fill-opacity="0.48"></path>
@@ -239,22 +271,22 @@
         <span class="enjoy-30-off-your-first-order-span">Your First Order</span>
       </span>
     </div>
-    <div class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-start justify-start absolute left-[1312px] top-[28.5px]">
-      <div class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
+    <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-start justify-start absolute left-[1312px] top-[28.5px]">
+      <span class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
         Shop Now
-      </div>
+      </span>
       <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
-    </div>
+    </a>
   </div>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Shop the Look
       </div>
-      <a href="#" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
+      <a href="/shop" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
         Explore more
       </a>
     </div>
@@ -377,132 +409,315 @@
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => '#', 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-[1440px] m-auto">
+  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Deal Zone
       </div>
-      <a href="#" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
+      <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
         Explore more
       </a>
     </div>
-    <div class="grid grid-cols-3 gap-4 items-center justify-start self-stretch shrink-0 relative">
-      <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
-        <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
-          <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-            <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-              Maximum
-            </div>
-            <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-              60% Off
-            </div>
+    <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'gap' => '12px', 'slidesToShow' => 3, 'slidesToScroll' => 1]])); ?>">
+      <div class="blaze-container w-full">
+        <div class="blaze-track-container w-full">
+          <div class="blaze-track w-full">
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Maximum
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    60% Off
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
+            </a>
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Decor on
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Sale
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_13586893-340-10.png">
+            </a>
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Best Buys
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
+                    Under AED 10000
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[194px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
+            </a>
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Maximum
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    60% Off
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
+            </a>
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Decor on
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Sale
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_13586893-340-10.png">
+            </a>
+            <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
+              <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
+                <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                    Best Buys
+                  </div>
+                  <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
+                    Under AED 10000
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[194px] top-[50%]" style="translate: 0 -50%">
+                <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
+            </a>
           </div>
         </div>
-        <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
-          <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
-      </a>
-      <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
-        <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
-          <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-            <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-              Decor on
-            </div>
-            <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-              Sale
-            </div>
-          </div>
-        </div>
-        <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
-          <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_13586893-340-10.png">
-      </a>
-      <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
-        <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
-          <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-            <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-              Best Buys
-            </div>
-            <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
-              Under AED 10000
-            </div>
-          </div>
-        </div>
-        <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[194px] top-[50%]" style="translate: 0 -50%">
-          <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
-        <div class="bg-[#000000] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-0 top-[50%]" style="translate: 0 -50%">
+        <div class="blaze-next bg-[#000000] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-0 top-[50%] cursor-pointer" style="translate: 0 -50%">
           <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 21L17.5 14L10.5 7" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </div>
-      </a>
+      </div>
     </div>
+    <!-- <div class="grid grid-cols-3 gap-4 items-center justify-start self-stretch shrink-0 relative">
+    </div> -->
   </div>
 
-  <div class="bg-[#f9f9f9] pr-[100px] flex flex-col gap-6 items-center justify-start relative w-[1440px] m-auto">
-    <div class="flex flex-row items-center justify-between self-stretch flex-1 relative">
-      <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45411.png">
-      <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
-        <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
-          <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
-            <span>
-              <span class="limited-time-deals-on-shoe-rack-span">
-                Limited-time deals on
-                <br>
-              </span>
-              <span class="limited-time-deals-on-shoe-rack-span2">
-                Shoe Rack
-              </span>
-            </span>
-          </div>
-          <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
-            <div class="text-[#bd262a] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative" style="opacity: 0.8">
-              AED3,575.00
+  <div class="bg-[#f9f9f9] flex flex-col w-full md:w-[1440px] m-auto relative">
+    <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
+      <div class="blaze-container w-full">
+        <div class="blaze-track-container">
+          <div class="blaze-track">
+            <div class="flex flex-row items-center justify-between self-stretch -flex-1 relative">
+              <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45411.png">
+              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
+                <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
+                  <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
+                    <span>
+                      <span class="limited-time-deals-on-shoe-rack-span">
+                        Limited-time deals on
+                        <br>
+                      </span>
+                      <span class="limited-time-deals-on-shoe-rack-span2">
+                        Shoe Rack
+                      </span>
+                    </span>
+                  </div>
+                  <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
+                    <div class="text-[#bd262a] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative" style="opacity: 0.8">
+                      AED3,575.00
+                    </div>
+                    <div class="text-[#171717] text-center font-['Raleway-Regular',_sans-serif] text-2xl leading-8 font-normal relative" style="text-decoration: line-through; opacity: 0.8">
+                      AED3,575.00
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                  <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                    View Details
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="text-[#171717] text-center font-['Raleway-Regular',_sans-serif] text-2xl leading-8 font-normal relative" style="text-decoration: line-through; opacity: 0.8">
-              AED3,575.00
+            <div class="flex flex-row items-center justify-between self-stretch -flex-1 relative">
+              <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-45411.png">
+              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
+                <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
+                  <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
+                    <span>
+                      <span class="limited-time-deals-on-shoe-rack-span">
+                        Limited-time deals on
+                        <br>
+                      </span>
+                      <span class="limited-time-deals-on-shoe-rack-span2">
+                        Shoe Rack
+                      </span>
+                    </span>
+                  </div>
+                  <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
+                    <div class="text-[#bd262a] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative" style="opacity: 0.8">
+                      AED3,575.00
+                    </div>
+                    <div class="text-[#171717] text-center font-['Raleway-Regular',_sans-serif] text-2xl leading-8 font-normal relative" style="text-decoration: line-through; opacity: 0.8">
+                      AED3,575.00
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                  <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                    View Details
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-          <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-            View Details
-          </div>
+        <div class="blaze-next bg-[#000000] p-0.5 flex flex-row gap-2.5 items-center justify-start shrink-0 absolute right-6 top-[50%] cursor-pointer" style="translate: 0 -50%">
+          <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 21L17.5 14L10.5 7" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
         </div>
       </div>
     </div>
-    <div class="bg-[#000000] p-0.5 flex flex-row gap-2.5 items-center justify-start shrink-0 absolute right-6 top-[50%]" style="translate: 0 -50%">
-      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.5 21L17.5 14L10.5 7" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </div>
+    
   </div>
   
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => '#', 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
 
-  <div class="flex flex-col gap-6 items-center justify-start w-[1440px] m-auto relative">
+  <!-- <div class="w-full md:w-[1440px] m-auto">
+    <div class="h-[437px] relative">
+      <img
+        style="object-fit: cover"
+        class="w-full h-[437px] absolute right-0 bottom-0 overflow-visible"
+        src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/vector-40.png'); ?>"
+      />
+      <div class="flex flex-col gap-5 items-center justify-center w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
+        <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
+          <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[32px] leading-[44px] font-bold relative self-stretch" >
+            Ready to Upgrade Your
+            <br />
+            Interior?
+          </div>
+        </div>
+        <a href="/shop" class="bg-[#ffffff] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative" >
+          <span class="text-[#000000] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center" >
+            Start Shopping
+          </span>
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Top Deals By Category
       </div>
-      <a href="#" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
+      <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
         Explore more
       </a>
     </div>
     <div class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative">
-      <div class="flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center justify-start self-stretch shrink-0 relative">
+        
+        <a href="#" class="flex flex-col gap-[15px] items-start justify-start shrink-0 relative">
+          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
+            <img class="w-full h-full absolute left-0 top-0 overflow-visible"
+              style="object-fit: cover"
+              src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/87102e52f6667c4bbab4c50e59c775a9320a8e90.jpg"
+            />
+            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
+              width="71"
+              height="73"
+              viewBox="0 0 71 73"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
+            </svg>
+            <svg class="w-full h-[77px] absolute left-0 bottom-0 overflow-visible"
+              width="336"
+              height="77"
+              viewBox="0 0 336 77"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
+                fill="#BD262A"
+              />
+            </svg>
+            <div class="flex flex-col gap-0 items-center justify-center absolute bottom-0 right-0 -rotate-45">
+              <div class="text-[#ffffff]- text-[#000000] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
+                Up TO
+              </div>
+              <div class="text-[#ffffff]- text-[#000000] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
+                30% Off
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
+            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
+                Office Furniture
+              </div>
+              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#3F3F3F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
         <a href="#" class="flex flex-col gap-4 items-center justify-center flex-1 relative">
           <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
             <img class="absolute right-0 left-0 bottom-0 top-0" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-453422.png">
@@ -605,8 +820,6 @@
             </div>
           </div>
         </a>
-      </div>
-      <div class="flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
         <a href="#" class="flex flex-col gap-4 items-center justify-center flex-1 relative">
           <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
             <img class="absolute right-0 left-0 bottom-0 top-0" style="object-fit: cover" src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/rectangle-453426.png">
@@ -711,11 +924,12 @@
             </div>
           </div>
         </a>
+        
       </div>
     </div>
   </div>
 
-  <div class="flex flex-row gap-0 items-center justify-start w-[1440px] m-auto relative">
+  <!-- <div class="flex flex-row gap-0 items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="pr-20 pl-20 flex flex-col gap-10 items-start justify-center shrink-0 w-[758px] relative">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#525252] text-left font-['-',_sans-serif] text-base leading-6 font-normal relative self-stretch flex items-center justify-start">
@@ -754,6 +968,314 @@
         src="https://creativefurniture.local/wp-content/themes/creative-furniture/src/img/v2/image-2670.png"
       />
       <div class="bg-[#d9d9d9] w-[757px] h-[155px] absolute left-[658px] top-[348px]"></div>
+    </div>
+  </div> -->
+
+  <div class="px-6 bg-white w-full md:w-[1440px] m-auto relative">
+    <div class="blaze-slider inline-flex flex-col justify-start items-center gap-6" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 5, 'slidesToScroll' => 3], '(max-width: 900px)' => ['slidesToShow' => 4, 'slidesToScroll' => 2], '(max-width: 500px)' => ['slidesToShow' => 2, 'slidesToScroll' => 1]])); ?>">
+      <div class="blaze-container">
+        <div class="self-stretch inline-flex justify-between items-center">
+          <h3 class="justify-center text-neutral-800 text-2xl font-semibold font-['Raleway'] capitalize leading-8">Customer Stories</h3>
+          <div class="flex justify-start items-center gap-1">
+            <div class="blaze-prev w-7 h-7 relative origin-top-left rotate-180 overflow-hidden">
+              <div class="w-1.5 h-3.5 left-[10.50px] top-[7px] absolute outline outline-2 outline-offset-[-1.17px] outline-stone-300"></div>
+            </div>
+            <div class="flex justify-start items-center gap-2.5">
+              <div class="blaze-next w-7 h-7 relative overflow-hidden">
+                <div class="w-1.5 h-3.5 left-[10.50px] top-[7px] absolute outline outline-2 outline-offset-[-1.17px]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="self-stretch inline-flex justify-start items-center gap-4">
+          <div class="blaze-track-container">
+            <div class="blaze-track">
+              <?php for ($i=1; $i <= 5; $i++): ?>
+              <a href="#" class="-flex-1 p-4 rounded-2xl outline outline-1 outline-offset-[-1px] outline-zinc-300 inline-flex flex-col justify-start items-start gap-14">
+                <div class="self-stretch flex flex-col justify-start items-start gap-7">
+                  <div class="self-stretch inline-flex justify-start items-center gap-3">
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">
+                      <div class="self-stretch justify-start text-black text-sm font-semibold font-['Raleway'] capitalize leading-5">Michael Carter</div>
+                      <div class="inline-flex justify-start items-center gap-1">
+                        <div class="w-4 h-4 relative overflow-hidden">
+                          <div class="w-3.5 h-3.5 left-[1.33px] top-[1.33px] absolute outline outline-[1.33px] outline-offset-[-0.67px] outline-UI---Light-Black-Primary"></div>
+                        </div>
+                        <div class="justify-start text-stone-900 text-sm font-normal font-['Raleway'] capitalize">Verified Buyer</div>
+                      </div>
+                    </div>
+                    <div data-checked="5" data-label="false" data-size="M*" data-state="Enabled" class="flex justify-start items-center gap-1">
+                      <div class="flex justify-start items-center">
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="self-stretch flex flex-col justify-start items-start gap-2">
+                    <div class="self-stretch justify-start">
+                      <span class="text-black text-sm font-medium font-['Raleway'] capitalize leading-5">The quality of the sofa exceeded my expectations. The design fits perfectly in our living room and the comfort level is....</span>
+                      <span class="text-red-700 text-sm font-medium font-['Raleway'] capitalize leading-5">More</span>
+                    </div>
+                  </div>
+                  <div class="self-stretch inline-flex justify-between items-start">
+                    <div class="flex-1 justify-start text-zinc-800 text-xs font-medium font-['Raleway'] capitalize">1 days ago</div>
+                    <div class="w-6 h-6 relative overflow-hidden">
+                      <div class="w-2.5 h-2.5 left-[12px] top-[10px] absolute bg-blue-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[14.10px] absolute bg-green-600"></div>
+                      <div class="w-[4.84px] h-2.5 left-[1px] top-[7.07px] absolute bg-yellow-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[1px] absolute bg-red-500"></div>
+                      <div class="w-5 h-5 left-[1px] top-[1px] absolute"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="-flex-1 p-4 rounded-2xl outline outline-1 outline-offset-[-1px] outline-zinc-300 inline-flex flex-col justify-start items-start gap-14">
+                <div class="self-stretch flex flex-col justify-start items-start gap-7">
+                  <div class="self-stretch inline-flex justify-start items-center gap-3">
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">
+                      <div class="self-stretch justify-start text-black text-sm font-semibold font-['Raleway'] capitalize leading-5">Sarah Thompson</div>
+                      <div class="inline-flex justify-start items-center gap-1">
+                        <div class="w-4 h-4 relative overflow-hidden">
+                          <div class="w-3.5 h-3.5 left-[1.33px] top-[1.33px] absolute outline outline-[1.33px] outline-offset-[-0.67px] outline-UI---Light-Black-Primary"></div>
+                        </div>
+                        <div class="justify-start text-stone-900 text-sm font-normal font-['Raleway'] capitalize">Verified Buyer</div>
+                      </div>
+                    </div>
+                    <div data-checked="5" data-label="false" data-size="M*" data-state="Enabled" class="flex justify-start items-center gap-1">
+                      <div class="flex justify-start items-center">
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="self-stretch flex flex-col justify-start items-start gap-2">
+                    <div class="self-stretch justify-start"><span class="text-black text-sm font-medium font-['Raleway'] capitalize leading-5">Beautiful dining set and excellent craftsmanship. The materials feel premium and the delivery process was smooth.....</span><span class="text-red-700 text-sm font-medium font-['Raleway'] capitalize leading-5">More</span></div>
+                  </div>
+                  <div class="self-stretch inline-flex justify-between items-start">
+                    <div class="flex-1 justify-start text-zinc-800 text-xs font-medium font-['Raleway'] capitalize">2 days ago</div>
+                    <div class="w-6 h-6 relative overflow-hidden">
+                      <div class="w-2.5 h-2.5 left-[12px] top-[10px] absolute bg-blue-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[14.10px] absolute bg-green-600"></div>
+                      <div class="w-[4.84px] h-2.5 left-[1px] top-[7.07px] absolute bg-yellow-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[1px] absolute bg-red-500"></div>
+                      <div class="w-5 h-5 left-[1px] top-[1px] absolute"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="-flex-1 p-4 rounded-2xl outline outline-1 outline-offset-[-1px] outline-zinc-300 inline-flex flex-col justify-start items-start gap-14">
+                <div class="self-stretch flex flex-col justify-start items-start gap-7">
+                  <div class="self-stretch inline-flex justify-start items-center gap-3">
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">
+                      <div class="self-stretch justify-start text-black text-sm font-semibold font-['Raleway'] capitalize leading-5">David Anderson</div>
+                      <div class="inline-flex justify-start items-center gap-1">
+                        <div class="w-4 h-4 relative overflow-hidden">
+                          <div class="w-3.5 h-3.5 left-[1.33px] top-[1.33px] absolute outline outline-[1.33px] outline-offset-[-0.67px] outline-UI---Light-Black-Primary"></div>
+                        </div>
+                        <div class="justify-start text-stone-900 text-sm font-normal font-['Raleway'] capitalize">Verified Buyer</div>
+                      </div>
+                    </div>
+                    <div data-checked="5" data-label="false" data-size="M*" data-state="Enabled" class="flex justify-start items-center gap-1">
+                      <div class="flex justify-start items-center">
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="self-stretch flex flex-col justify-start items-start gap-2">
+                    <div class="self-stretch justify-start"><span class="text-black text-sm font-medium font-['Raleway'] capitalize leading-5">We furnished our office with their workstations and chairs. The ergonomic design has made a huge difference for.....</span><span class="text-red-700 text-sm font-medium font-['Raleway'] capitalize leading-5">More</span></div>
+                  </div>
+                  <div class="self-stretch inline-flex justify-between items-start">
+                    <div class="flex-1 justify-start text-zinc-800 text-xs font-medium font-['Raleway'] capitalize">3 days ago</div>
+                    <div class="w-6 h-6 relative overflow-hidden">
+                      <div class="w-2.5 h-2.5 left-[12px] top-[10px] absolute bg-blue-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[14.10px] absolute bg-green-600"></div>
+                      <div class="w-[4.84px] h-2.5 left-[1px] top-[7.07px] absolute bg-yellow-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[1px] absolute bg-red-500"></div>
+                      <div class="w-5 h-5 left-[1px] top-[1px] absolute"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="-flex-1 p-4 rounded-2xl outline outline-1 outline-offset-[-1px] outline-zinc-300 inline-flex flex-col justify-start items-start gap-14">
+                <div class="self-stretch flex flex-col justify-start items-start gap-7">
+                  <div class="self-stretch inline-flex justify-start items-center gap-3">
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">
+                      <div class="self-stretch justify-start text-black text-sm font-semibold font-['Raleway'] capitalize leading-5">Emily Roberts</div>
+                      <div class="inline-flex justify-start items-center gap-1">
+                        <div class="w-4 h-4 relative overflow-hidden">
+                          <div class="w-3.5 h-3.5 left-[1.33px] top-[1.33px] absolute outline outline-[1.33px] outline-offset-[-0.67px] outline-UI---Light-Black-Primary"></div>
+                        </div>
+                        <div class="justify-start text-stone-900 text-sm font-normal font-['Raleway'] capitalize">Verified Buyer</div>
+                      </div>
+                    </div>
+                    <div data-checked="5" data-label="false" data-size="M*" data-state="Enabled" class="flex justify-start items-center gap-1">
+                      <div class="flex justify-start items-center">
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="self-stretch flex flex-col justify-start items-start gap-2">
+                    <div class="self-stretch justify-start"><span class="text-black text-sm font-medium font-['Raleway'] capitalize leading-5">The quality of the sofa exceeded my expectations. The design fits perfectly in our living room and the comfort level is....</span><span class="text-red-700 text-sm font-medium font-['Raleway'] capitalize leading-5">More</span></div>
+                  </div>
+                  <div class="self-stretch inline-flex justify-between items-start">
+                    <div class="flex-1 justify-start text-zinc-800 text-xs font-medium font-['Raleway'] capitalize">4 days ago</div>
+                    <div class="w-6 h-6 relative overflow-hidden">
+                      <div class="w-2.5 h-2.5 left-[12px] top-[10px] absolute bg-blue-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[14.10px] absolute bg-green-600"></div>
+                      <div class="w-[4.84px] h-2.5 left-[1px] top-[7.07px] absolute bg-yellow-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[1px] absolute bg-red-500"></div>
+                      <div class="w-5 h-5 left-[1px] top-[1px] absolute"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="-flex-1 p-4 rounded-2xl outline outline-1 outline-offset-[-1px] outline-zinc-300 inline-flex flex-col justify-start items-start gap-14">
+                <div class="self-stretch flex flex-col justify-start items-start gap-7">
+                  <div class="self-stretch inline-flex justify-start items-center gap-3">
+                    <div class="flex-1 inline-flex flex-col justify-start items-start gap-1">
+                      <div class="self-stretch justify-start text-black text-sm font-semibold font-['Raleway'] capitalize leading-5">James Walker</div>
+                      <div class="inline-flex justify-start items-center gap-1">
+                        <div class="w-4 h-4 relative overflow-hidden">
+                          <div class="w-3.5 h-3.5 left-[1.33px] top-[1.33px] absolute outline outline-[1.33px] outline-offset-[-0.67px] outline-UI---Light-Black-Primary"></div>
+                        </div>
+                        <div class="justify-start text-stone-900 text-sm font-normal font-['Raleway'] capitalize">Verified Buyer</div>
+                      </div>
+                    </div>
+                    <div data-checked="5" data-label="false" data-size="M*" data-state="Enabled" class="flex justify-start items-center gap-1">
+                      <div class="flex justify-start items-center">
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                        <div class="w-3.5 h-3.5 relative">
+                          <div class="w-3 h-3 left-[1.19px] top-[1.16px] absolute bg-amber-500"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="self-stretch flex flex-col justify-start items-start gap-2">
+                    <div class="self-stretch justify-start"><span class="text-black text-sm font-medium font-['Raleway'] capitalize leading-5">Great customer service and high-quality furniture. The installation team was very professional and everything was.....</span><span class="text-red-700 text-sm font-medium font-['Raleway'] capitalize leading-5">More</span></div>
+                  </div>
+                  <div class="self-stretch inline-flex justify-between items-start">
+                    <div class="flex-1 justify-start text-zinc-800 text-xs font-medium font-['Raleway'] capitalize">5 days ago</div>
+                    <div class="w-6 h-6 relative overflow-hidden">
+                      <div class="w-2.5 h-2.5 left-[12px] top-[10px] absolute bg-blue-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[14.10px] absolute bg-green-600"></div>
+                      <div class="w-[4.84px] h-2.5 left-[1px] top-[7.07px] absolute bg-yellow-500"></div>
+                      <div class="w-4 h-2 left-[2.18px] top-[1px] absolute bg-red-500"></div>
+                      <div class="w-5 h-5 left-[1px] top-[1px] absolute"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <?php endfor; ?>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="h-40 overflow-hidden w-full md:w-[1440px] m-auto relative">
+    <div class="w-[1392px] left-0 top-0 absolute inline-flex justify-center items-center gap-[1201px]">
+      <div class="justify-center text-neutral-800 text-2xl font-semibold font-['Raleway'] capitalize leading-8">Our partner</div>
+    </div>
+    <div class="left-[19.25px] top-[56px] absolute inline-flex justify-start items-center gap-20">
+      <img class="w-20 h-10" src="https://placehold.co/75x42" />
+      <div class="w-20 h-10 bg-neutral-600"></div>
+      <img class="w-24 h-10" src="https://placehold.co/89x42" />
+      <div class="w-24 h-10 bg-neutral-600"></div>
+      <img class="w-36 h-10" src="https://placehold.co/136x42" />
+      <div class="w-36 h-10 bg-neutral-600"></div>
+      <img class="w-20 h-10" src="https://placehold.co/84x42" />
+      <div class="w-20 h-10 bg-neutral-600"></div>
+      <img class="w-20 h-10" src="https://placehold.co/82x42" />
+      <div class="w-20 h-10 bg-neutral-600"></div>
+      <img class="w-24 h-10" src="https://placehold.co/93x42" />
+      <div class="w-24 h-10 bg-neutral-600"></div>
+      <img class="w-36 h-10" src="https://placehold.co/145x42" />
+      <div class="w-36 h-10 bg-neutral-600"></div>
+      <img class="w-32 h-10" src="https://placehold.co/131x42" />
+      <div class="w-32 h-10 bg-neutral-600"></div>
+    </div>
+    <div class="left-[-11.70px] top-[122px] absolute inline-flex justify-start items-center gap-20">
+      <img class="w-32 h-10" src="https://placehold.co/131x42" />
+      <div class="w-32 h-10 bg-neutral-600"></div>
+      <img class="w-24 h-10" src="https://placehold.co/93x42" />
+      <div class="w-24 h-10 bg-neutral-600"></div>
+      <img class="w-36 h-10" src="https://placehold.co/145x42" />
+      <div class="w-36 h-10 bg-neutral-600"></div>
+      <img class="w-28 h-10" src="https://placehold.co/110x42" />
+      <div class="w-28 h-10 bg-neutral-600"></div>
+      <img class="w-28 h-10" src="https://placehold.co/109x42" />
+      <div class="w-28 h-10 bg-neutral-600"></div>
+      <img class="w-20 h-10" src="https://placehold.co/84x42" />
+      <div class="w-20 h-10 bg-neutral-600"></div>
+      <img class="w-36 h-10" src="https://placehold.co/136x42" />
+      <div class="w-36 h-10 bg-neutral-600"></div>
+      <img class="w-24 h-10" src="https://placehold.co/89x42" />
+      <div class="w-24 h-10 bg-neutral-600"></div>
     </div>
   </div>
   

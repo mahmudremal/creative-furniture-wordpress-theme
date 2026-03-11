@@ -9,7 +9,7 @@
 <footer id="colophon" class="site-footer bg-white mt-10">
     <div class="">
         <!-- Newsletter Section -->
-        <div class="bg-[#f4f4f4] py-8 md:py-12 border-b border-black/10">
+        <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10">
             <div class="max-w-[1440px] m-auto flex flex-col md:flex-row gap-8 items-center justify-between">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
                     <h3 class="text-[#0c0c0c] font-semibold text-xl md:text-2xl leading-tight uppercase tracking-tight">
@@ -147,6 +147,21 @@
 </footer>
 
 </div>
+
+<style>
+#language-switcher-menu > li > a::after,
+#mymc_currency_select::after {
+  content: " ";
+  height: 10px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-5px);
+  background-position: center;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic2hyaW5rLTAgdy01IGgtNSByZWxhdGl2ZSBvdmVyZmxvdy12aXNpYmxlIiBzdHlsZT0iYXNwZWN0LXJhdGlvOiAxIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiM4QzhDOEMiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
+}
+</style>
 
 <?php wp_footer(); ?>
 </body>
