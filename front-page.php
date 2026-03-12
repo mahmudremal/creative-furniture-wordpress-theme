@@ -235,10 +235,10 @@ $theme_directory_uri = get_template_directory_uri();
                       </a>
                     </div>
                   </div>
-                  <svg class="h-auto w-full absolute left-0 overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="bottom: -5px;">
+                  <!-- <svg class="h-auto w-full absolute left-0 overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="bottom: -5px;">
                     <path d="M0 56.5C512.758 56.5 772.242 56.5 1285 56.5L1392.5 0" stroke="#BD262A" stroke-width="3.5"></path>
                     <path d="M1395 61.5L1392.5 2L1285.5 59L1395 61.5Z" fill="white"></path>
-                  </svg>
+                  </svg> -->
                 </div>
               </div>
               <?php endfor; ?>
@@ -669,12 +669,22 @@ $theme_directory_uri = get_template_directory_uri();
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
 
 
-  <div class="h-[453px] w-full md:w-[1440px] m-auto relative">
-    <img
+  <div class="h-[453px] w-full md:w-[1440px] m-auto relative overflow-hidden"
+  style="
+    background-image: url('<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0px 0px 0px 0px;
+  "
+  >
+    <!-- <img
       class="w-full h-full absolute right-0 bottom-0 overflow-visible"
       src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png"
-    />
-    <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333352 100%);"></div>
+    /> -->
+    <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333380 100%);"></div>
     <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
         <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[32px] leading-[44px] font-bold relative self-stretch" >

@@ -10,7 +10,7 @@ class Toast {
       position: "right",
       stopOnFocus: true,
       style: {
-        background: "#10b981",
+        background: "#010101",
         borderRadius: "8px",
       },
       escapeMarkup: false,

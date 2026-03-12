@@ -696,6 +696,8 @@ class SiteCore {
     }
 
     init_wishlist() {
+        const _this = this;
+        // Generic Wishlist Toggle (like from product cards)
         document.querySelectorAll('button.product-wishlist-btn').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -724,56 +726,159 @@ class SiteCore {
                         } else {
                             toast.error(res?.message || 'Something went wrong');
                         }
-                        document.querySelector('.header-icon.cart')?.classList?.add?.('shake');
-                        setTimeout(() => document.querySelector('.header-icon.cart')?.classList?.remove?.('shake'), 1000);
+
                         return res;
                     })
-                    .catch(err => {
-                        toast.error(err?.message || 'Something went wrong');
-                    })
-                    .finally(() => {
-                        button.disabled = false;
-                    })
-
+                    .catch(err => toast.error(err?.message || 'Something went wrong'))
+                    .finally(() => button.disabled = false);
             });
         });
+
+        // Quantity Buttons on Wishlist Page
+        document.querySelectorAll('.qty-minus, .qty-plus').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const input = btn.parentElement.querySelector('.qty-input');
+                if (!input) return;
+                let val = parseInt(input.value);
+                if (btn.classList.contains('qty-plus')) {
+                    val++;
+                } else if (val > 1) {
+                    val--;
+                }
+                input.value = val;
+            });
+        });
+
+        // Add to Cart from Wishlist
+        document.querySelectorAll('.cf-wishlist-add-to-cart').forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                const productId = btn.dataset.productId;
+                if (!productId) return;
+
+                const wrapper = btn.closest('.flex-wrap'); // Row containing quantity and button
+                const quantity = wrapper ? wrapper.querySelector('.qty-input')?.value : 1;
+
+                btn.disabled = true;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Adding...';
+
+                try {
+                    const response = await axios.post(cfStore.ajax_url, new URLSearchParams({
+                        action: 'cf_add_to_cart',
+                        nonce: cfStore.add_to_cart_nonce,
+                        product_id: productId,
+                        quantity: quantity
+                    }));
+
+                    if (response.data.success) {
+                        toast.success(response.data.data.message || 'Added to cart');
+                        btn.innerHTML = '✓ Added';
+
+                        // Update cart count if exists
+                        const cartCount = document.querySelector('.cart-count, .site-header .count');
+                        if (cartCount && response.data.data.cart_count) {
+                            cartCount.textContent = response.data.data.cart_count;
+                        }
+
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                        }, 2000);
+                    } else {
+                        throw new Error(response.data.data.message || 'Failed to add to cart');
+                    }
+                } catch (error) {
+                    toast.error(error.message);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }
+            });
+        });
+
+        // Remove from Wishlist (on wishlist page)
+        document.querySelectorAll('.cf-wishlist-remove').forEach(button => {
+            button.addEventListener('click', async (e) => {
+                const productId = button.dataset.productId;
+                if (!productId) return;
+
+                if (!confirm('Remove this item from your wishlist?')) return;
+
+                button.disabled = true;
+                const formData = new FormData();
+                formData.append('action', 'cf_wishlist_toggle');
+                formData.append('_nonce', cfStore.add_to_cart_nonce);
+                formData.append('product_id', productId);
+
+                try {
+                    const r = await fetch(cfStore.ajax_url, {
+                        method: 'POST',
+                        body: formData,
+                        credentials: 'same-origin'
+                    });
+                    const res = await r.json();
+
+                    if (res.status === 'removed') {
+                        toast.error('Removed from wishlist');
+                        // Remove the item row from DOM
+                        const itemRow = button.closest('.border-b');
+                        if (itemRow) {
+                            itemRow.style.opacity = '0';
+                            itemRow.style.transform = 'translateX(-20px)';
+                            itemRow.style.transition = 'all 0.3s ease';
+                            setTimeout(() => {
+                                itemRow.remove();
+                                // Optional: Check if wishlist is empty and reload to show empty state
+                                if (document.querySelectorAll('.border-b.group').length === 0) {
+                                    window.location.reload();
+                                }
+                            }, 300);
+                        }
+                    } else {
+                        toast.error(res?.message || 'Something went wrong');
+                        button.disabled = false;
+                    }
+                } catch (err) {
+                    toast.error(err?.message || 'Something went wrong');
+                    button.disabled = false;
+                }
+            });
+        });
+
+        // Share & Copy Link logic
         document.querySelectorAll('#cf-wishlist-share-btn').forEach(button => {
             button.addEventListener('click', (e) => {
                 const panel = document.querySelector('#cf-wishlist-share-panel');
-                panel.classList.toggle('active');
+                panel?.classList.toggle('hidden');
+                panel?.classList.toggle('flex');
             });
         });
+
         document.querySelectorAll('#cf-wishlist-copy-link').forEach(button => {
             button.addEventListener('click', async (e) => {
                 const panel = document.querySelector('#cf-wishlist-share-panel');
-                const input = panel.querySelector('.cf-wishlist-share-link')
-                input.select(); input.setSelectionRange(0, 99999);
-                try { await navigator.clipboard.writeText(input.value) } catch (e) { }
+                const input = panel?.querySelector('.cf-wishlist-share-link');
+                if (!input) return;
+                input.select();
+                input.setSelectionRange(0, 99999);
+                try {
+                    await navigator.clipboard.writeText(input.value);
+                    toast.success('Link copied to clipboard');
+                } catch (err) { }
             });
         });
+
         document.querySelectorAll('#cf-wishlist-share-panel').forEach(panel => {
             const nativeShare = document.createElement('button');
-            nativeShare.innerText = 'Share'
-            nativeShare.className = 'cf-wishlist-native-share'
-            panel.appendChild(nativeShare)
+            nativeShare.innerText = 'Native Share';
+            nativeShare.className = 'w-full py-2 mt-2 bg-gray-100 text-black text-sm font-bold rounded-xl hover:bg-black hover:text-white transition-all';
+            panel.appendChild(nativeShare);
             nativeShare.addEventListener('click', function () {
-                const url = panel.querySelector('.cf-wishlist-share-link').value
-                if (navigator.share) navigator.share({ title: 'Wishlist', url: url });
+                const url = panel.querySelector('.cf-wishlist-share-link')?.value;
+                if (navigator.share && url) {
+                    navigator.share({ title: 'My Wishlist', url: url });
+                }
             });
         });
-
-        // fetch(cf_ajax.ajaxurl, {
-        //     method: 'POST',
-        //     body: new URLSearchParams({ action: 'cf_wishlist_share' })
-        // })
-        // .then(r=>r.json())
-        // .then(d=>{
-        //     if (d.status === 'ok') {
-        //         document.querySelector('.cf-wishlist-share-link').value = d.url
-        //     }
-        // })
-
-
     }
 
     init_header() {

@@ -1,225 +1,292 @@
 <?php
-register_activation_hook(__FILE__,'cf_wishlist_activate');
-// add_action('init', 'cf_wishlist_activate');
-function cf_wishlist_activate(){
-    global $wpdb;
-    $table=$wpdb->prefix.'cf_wishlist_items';
-    $charset=$wpdb->get_charset_collate();
-    $sql="CREATE TABLE IF NOT EXISTS $table (id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,user_id BIGINT UNSIGNED NULL,session_key VARCHAR(255) NULL,product_id BIGINT UNSIGNED NOT NULL,created_at DATETIME NOT NULL,PRIMARY KEY(id)) $charset;";
-    require_once ABSPATH.'wp-admin/includes/upgrade.php';
-    // wp_die($sql);
-    dbDelta($sql);
-    global $wpdb;
-    $table = $wpdb->prefix . 'cf_wishlist_share_tokens';
-    $charset = $wpdb->get_charset_collate();
-    $sql = "CREATE TABLE IF NOT EXISTS $table (
-        id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-        token VARCHAR(255) NOT NULL,
-        product_ids LONGTEXT NOT NULL,
-        created_at DATETIME NOT NULL,
-        PRIMARY KEY(id),
-        UNIQUE KEY token(token)
-    ) $charset;";
-    dbDelta($sql);
 
-}
-function cf_wishlist_get_session(){
-    if ( function_exists('WC') && WC()->session ) {
-        if ( ! WC()->session->has_session() ) {
-            WC()->session->set_customer_session_cookie( true );
+class CF_Wishlist {
+    private $table_items;
+    private $table_tokens;
+
+    public function __construct() {
+        global $wpdb;
+        $this->table_items = $wpdb->prefix . 'cf_wishlist_items';
+        $this->table_tokens = $wpdb->prefix . 'cf_wishlist_share_tokens';
+        $this->init_hooks();
+    }
+
+    private function init_hooks() {
+        add_action('wp_ajax_cf_wishlist_toggle', [$this, 'ajax_toggle']);
+        add_action('wp_ajax_nopriv_cf_wishlist_toggle', [$this, 'ajax_toggle']);
+        add_action('wp_login', [$this, 'merge_on_login'], 10, 2);
+        add_shortcode('cf_wishlist', [$this, 'render_shortcode']);
+        add_action('wp_ajax_cf_wishlist_share', [$this, 'ajax_share']);
+        add_action('wp_ajax_nopriv_cf_wishlist_share', [$this, 'ajax_share']);
+    }
+
+    public function activate() {
+        global $wpdb;
+        $charset = $wpdb->get_charset_collate();
+
+        $sql1 = "CREATE TABLE IF NOT EXISTS {$this->table_items} (
+            id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+            user_id BIGINT UNSIGNED NULL,
+            session_key VARCHAR(255) NULL,
+            product_id BIGINT UNSIGNED NOT NULL,
+            created_at DATETIME NOT NULL,
+            PRIMARY KEY(id)
+        ) $charset;";
+
+        $sql2 = "CREATE TABLE IF NOT EXISTS {$this->table_tokens} (
+            id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+            token VARCHAR(255) NOT NULL,
+            product_ids LONGTEXT NOT NULL,
+            created_at DATETIME NOT NULL,
+            PRIMARY KEY(id),
+            UNIQUE KEY token(token)
+        ) $charset;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta($sql1);
+        dbDelta($sql2);
+    }
+
+    public function get_session() {
+        if (function_exists('WC') && WC()->session) {
+            if (!WC()->session->has_session()) {
+                WC()->session->set_customer_session_cookie(true);
+            }
+            $session_key = WC()->session->get('cf_wishlist_session');
+            if (empty($session_key)) {
+                $session_key = wp_generate_uuid4();
+                WC()->session->set('cf_wishlist_session', $session_key);
+            }
+            return $session_key;
         }
 
-        $session_key = WC()->session->get('cf_wishlist_session');
-
-        if( empty($session_key) ) {
-            $session_key = wp_generate_uuid4();
-            WC()->session->set('cf_wishlist_session', $session_key);
+        $cookie_name = 'cf_wishlist_session';
+        if (!empty($_COOKIE[$cookie_name])) {
+            return $_COOKIE[$cookie_name];
         }
-        
+
+        $session_key = wp_generate_uuid4();
+        if (!headers_sent()) {
+            $expires = time() + YEAR_IN_SECONDS;
+            setcookie($cookie_name, $session_key, $expires, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), true);
+        }
+        $_COOKIE[$cookie_name] = $session_key;
         return $session_key;
     }
-    
-    // Fallback to a simple cookie if WC session is not available for any reason.
-    $cookie_name = 'cf_wishlist_session';
-    if (!empty($_COOKIE[$cookie_name])) {
-        return $_COOKIE[$cookie_name];
-    }
-    
-    $session_key = wp_generate_uuid4();
-    
-    if (!headers_sent()) {
-        $expires = time() + YEAR_IN_SECONDS;
-        setcookie($cookie_name, $session_key, $expires, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), true);
-    }
-    
-    // Make the cookie available to the current request.
-    $_COOKIE[$cookie_name] = $session_key;
 
-    return $session_key;
-}
-add_action('wp_ajax_cf_wishlist_toggle','cf_wishlist_toggle');
-add_action('wp_ajax_nopriv_cf_wishlist_toggle','cf_wishlist_toggle');
-function cf_wishlist_toggle(){
-    global $wpdb;
-    $table=$wpdb->prefix.'cf_wishlist_items';
-    $pid=intval($_POST['product_id']);
-    $uid=get_current_user_id();
-    $session=cf_wishlist_get_session();
-    $product_title = get_the_title($pid);
-    if($uid){
-        $row=$wpdb->get_row($wpdb->prepare("SELECT id FROM $table WHERE product_id=%d AND user_id=%d",$pid,$uid));
-        if($row){
-            $wpdb->delete($table,['id'=>$row->id]);
-            wp_send_json(['status'=>'removed', 'product_title' => $product_title]);
+    public function ajax_toggle() {
+        global $wpdb;
+        $pid = intval($_POST['product_id']);
+        $uid = get_current_user_id();
+        $session = $this->get_session();
+        $product_title = get_the_title($pid);
+
+        if ($uid) {
+            $row = $wpdb->get_row($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND user_id=%d", $pid, $uid));
+            if ($row) {
+                $wpdb->delete($this->table_items, ['id' => $row->id]);
+                wp_send_json(['status' => 'removed', 'product_title' => $product_title]);
+            } else {
+                $wpdb->insert($this->table_items, ['user_id' => $uid, 'session_key' => null, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
+                wp_send_json(['status' => 'added', 'product_title' => $product_title]);
+            }
         } else {
-            $wpdb->insert($table,['user_id'=>$uid,'session_key'=>null,'product_id'=>$pid,'created_at'=>current_time('mysql')]);
-            wp_send_json(['status'=>'added', 'product_title' => $product_title]);
+            $row = $wpdb->get_row($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND session_key=%s", $pid, $session));
+            if ($row) {
+                $wpdb->delete($this->table_items, ['id' => $row->id]);
+                wp_send_json(['status' => 'removed', 'product_title' => $product_title]);
+            } else {
+                $wpdb->insert($this->table_items, ['user_id' => null, 'session_key' => $session, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
+                wp_send_json(['status' => 'added', 'product_title' => $product_title]);
+            }
         }
-    } else {
-        $row=$wpdb->get_row($wpdb->prepare("SELECT id FROM $table WHERE product_id=%d AND session_key=%s",$pid,$session));
-        if($row){
-            $wpdb->delete($table,['id'=>$row->id]);
-            wp_send_json(['status'=>'removed', 'product_title' => $product_title]);
+    }
+
+    public function merge_on_login($user_login, $user) {
+        global $wpdb;
+        $session = $this->get_session();
+        $uid = $user->ID;
+        $items = $wpdb->get_results($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE session_key=%s", $session));
+        foreach ($items as $i) {
+            $exists = $wpdb->get_var($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND user_id=%d", $i->product_id, $uid));
+            if (!$exists) {
+                $wpdb->insert($this->table_items, ['user_id' => $uid, 'session_key' => null, 'product_id' => $i->product_id, 'created_at' => current_time('mysql')]);
+            }
+        }
+        $wpdb->delete($this->table_items, ['session_key' => $session]);
+    }
+
+    public function get_items() {
+        global $wpdb;
+        $uid = get_current_user_id();
+        if ($uid) {
+            return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE user_id=%d ORDER BY created_at DESC", $uid));
         } else {
-            $wpdb->insert($table,['user_id'=>null,'session_key'=>$session,'product_id'=>$pid,'created_at'=>current_time('mysql')]);
-            wp_send_json(['status'=>'added', 'product_title' => $product_title]);
+            $session = $this->get_session();
+            return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE session_key=%s ORDER BY created_at DESC", $session));
         }
     }
-}
-add_action('wp_login','cf_wishlist_merge',10,2);
-function cf_wishlist_merge($user_login,$user){
-    global $wpdb;
-    $table=$wpdb->prefix.'cf_wishlist_items';
-    $session=cf_wishlist_get_session();
-    $uid=$user->ID;
-    $items=$wpdb->get_results($wpdb->prepare("SELECT product_id FROM $table WHERE session_key=%s",$session));
-    foreach($items as $i){
-        $exists=$wpdb->get_var($wpdb->prepare("SELECT id FROM $table WHERE product_id=%d AND user_id=%d",$i->product_id,$uid));
-        if(!$exists){
-            $wpdb->insert($table,['user_id'=>$uid,'session_key'=>null,'product_id'=>$i->product_id,'created_at'=>current_time('mysql')]);
+
+    public function render_page() {
+        $items = !empty($_GET['wishlist']) ? explode(',', $_GET['wishlist']) : $this->get_items();
+        ?>
+        <div class="flex flex-col md:flex-row gap-10 py-10 min-h-[600px] max-w-[1440px] mx-auto px-4">
+            <div class="w-full md:w-[65%]">
+                <h2 class="text-2xl font-bold mb-6 text-black uppercase tracking-tight">
+                    <?php echo (!empty($_GET['wishlist']) ? __('Shared Wishlist','creative-furniture') : __('Your Wishlist','creative-furniture')) . ' (' . count($items) . ')'; ?>
+                </h2>
+                
+                <div class="flex flex-col gap-6">
+                    <?php if (empty($items)) : ?>
+                        <div class="py-20 text-center bg-gray-50 rounded-2xl border border-dashed border-gray-200">
+                            <p class="text-gray-400 text-lg"><?php _e('Your wishlist is empty.', 'creative-furniture'); ?></p>
+                            <a href="<?php echo esc_url(home_url('/shop/')); ?>" class="inline-block mt-4 text-[#bd262a] font-bold hover:underline"><?php _e('Browse Products', 'creative-furniture'); ?></a>
+                        </div>
+                    <?php else : ?>
+                        <?php foreach ($items as $pid) : 
+                            $p = wc_get_product((int) $pid);
+                            if ($p) : ?>
+                                <div class="flex gap-5 border-b border-gray-100 pb-6 group items-center">
+                                    <div class="shrink-0">
+                                        <a href="<?php echo get_permalink($pid); ?>" class="block overflow-hidden rounded-xl border border-gray-100">
+                                            <?php echo get_the_post_thumbnail($pid, 'medium', ['class' => 'w-[140px] h-auto object-cover transform transition-transform group-hover:scale-105']); ?>
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col justify-center flex-1">
+                                        <a class="text-black text-lg font-bold no-underline hover:text-[#bd262a] transition-colors mb-1" href="<?php echo get_permalink($pid); ?>">
+                                            <?php echo $p->get_name(); ?>
+                                        </a>
+                                        <div class="text-base font-black text-[#bd262a]">
+                                            <?php echo $p->get_price_html(); ?>
+                                        </div>
+                                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                                            <div class="flex items-center border border-gray-200 rounded-full overflow-hidden bg-white h-10">
+                                                <button class="qty-minus px-3 text-black hover:bg-gray-100 transition-colors h-full flex items-center justify-center">-</button>
+                                                <input type="number" value="1" min="1" class="w-10 text-center border-none focus:ring-0 text-sm font-bold p-0 bg-transparent h-full qty-input" readonly>
+                                                <button class="qty-plus px-3 text-black hover:bg-gray-100 transition-colors h-full flex items-center justify-center">+</button>
+                                            </div>
+                                            <button class="cf-wishlist-add-to-cart px-8 h-10 bg-black text-white text-xs font-bold rounded-full hover:bg-[#bd262a] transition-all transform active:scale-95 shadow-md hover:shadow-[#bd262a]/20 uppercase tracking-wider" data-product-id="<?php echo $pid; ?>">
+                                                <?php _e('Add', 'creative-furniture'); ?>
+                                            </button>
+                                            <button class="cf-wishlist-remove p-0 border-none text-gray-400 hover:text-[#d00] text-xs font-bold cursor-pointer bg-transparent transition-colors flex items-center gap-1 group/remove" data-product-id="<?php echo $pid; ?>">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                                <?php _e('Remove', 'creative-furniture'); ?>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <?php
+            $total = 0;
+            foreach ($items as $pid) {
+                $p = wc_get_product($pid);
+                if ($p) $total += floatval($p->get_price());
+            }
+            ?>
+
+            <div class="w-full md:w-[35%] sticky top-10 self-start">
+                <div class="border border-gray-200 p-8 rounded-2xl bg-gray-50/50">
+                    <h3 class="text-xl font-bold mb-6 uppercase tracking-tight"><?php _e('Wishlist Summary','creative-furniture'); ?></h3>
+                    <div class="flex justify-between mb-4 text-base font-medium">
+                        <span><?php _e('Total Items','creative-furniture'); ?></span>
+                        <span class="font-bold"><?php echo count($items); ?></span>
+                    </div>
+                    <div class="flex justify-between mb-6 text-lg font-bold text-black border-t border-gray-200 pt-4">
+                        <span><?php _e('Total Cost','creative-furniture'); ?></span>
+                        <span class="text-[#bd262a]"><?php echo wc_price($total); ?></span>
+                    </div>
+                    <button class="w-full py-4 bg-black text-white text-base font-bold rounded-full hover:bg-[#bd262a] transition-all duration-300 transform active:scale-95 shadow-lg shadow-black/10" id="cf-wishlist-share-btn">
+                        <?php _e('Share Wishlist','creative-furniture'); ?>
+                    </button>
+                    
+                    <div class="hidden flex-col gap-3 mt-6 pt-6 border-t border-gray-200 cf-wishlist-share-panel" id="cf-wishlist-share-panel">
+                        <input type="text" readonly value="<?php echo esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())); ?>" class="w-full p-3 border border-gray-300 rounded-xl text-sm bg-white focus:ring-2 focus:ring-black outline-none transition-all cf-wishlist-share-link">
+                        <button class="w-full py-3 bg-gray-200 text-black text-sm font-bold rounded-xl hover:bg-black hover:text-white transition-all cursor-pointer" id="cf-wishlist-copy-link">
+                            <?php _e('Copy Link','creative-furniture'); ?>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    public function is_in_wishlist($product_id) {
+        global $wpdb;
+        $uid = get_current_user_id();
+        if ($uid) {
+            return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE user_id=%d AND product_id=%d", $uid, $product_id));
+        } else {
+            $session = $this->get_session();
+            return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE session_key=%s AND product_id=%d", $session, $product_id));
         }
     }
-    $wpdb->delete($table,['session_key'=>$session]);
-}
-function cf_wishlist_get_items(){
-    global $wpdb;
-    $table=$wpdb->prefix.'cf_wishlist_items';
-    $uid=get_current_user_id();
-    if($uid){
-        return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM $table WHERE user_id=%d ORDER BY created_at DESC",$uid));
-    } else {
-        $session=cf_wishlist_get_session();
-        return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM $table WHERE session_key=%s ORDER BY created_at DESC",$session));
-    }
-}
-function cf_wishlist_render_page() {
-    $items = !empty($_GET['wishlist']) ? explode(',', $_GET['wishlist']) : cf_wishlist_get_items();
-    echo '<div class="cf-wishlist-wrapper container-fluid">';
-    echo '<div class="cf-wishlist-left">';
-    echo '<h2>'. (!empty($_GET['wishlist']) ? __('Shared Wishlist','creative-furniture') : __('Your Wishlist','creative-furniture')) .' (' . count($items) . ')</h2>';
-    echo '<div class="cf-wishlist-list">';
-    foreach ($items as $pid) {
-        $p = wc_get_product((int) $pid);
-        if ($p) {
-            echo '<div class="cf-wishlist-item">';
-            echo '<div class="cf-wishlist-thumb"><a href="'.get_permalink($pid).'">'.get_the_post_thumbnail($pid, 'medium').'</a></div>';
-            echo '<div class="cf-wishlist-info">';
-            echo '<a class="cf-wishlist-title" href="'.get_permalink($pid).'">'.$p->get_name().'</a>';
-            echo '<div class="cf-wishlist-price">'.$p->get_price_html().'</div>';
-            echo '<div class="cf-wishlist-actions">';
-            echo '<button class="cf-wishlist-remove" data-product-id="'.$pid.'">Remove</button>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
+
+    public function has_any() {
+        global $wpdb;
+        $uid = get_current_user_id();
+        if ($uid) {
+            return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE user_id=%d LIMIT 1", $uid));
+        } else {
+            $session = $this->get_session();
+            return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE session_key=%s LIMIT 1", $session));
         }
     }
-    echo '</div>';
-    echo '</div>';
 
-    $total = 0;
-    foreach ($items as $pid) {
-        $p = wc_get_product($pid);
-        if ($p) $total += floatval($p->get_price());
+    public function render_shortcode($attr = []) {
+        ob_start();
+        $this->render_page();
+        return ob_get_clean();
     }
 
-    echo '<div class="cf-wishlist-right">';
-    echo '<div class="cf-wishlist-summary">';
-    echo '<h3>'.__('Wishlist Summary','creative-furniture').'</h3>';
-    echo '<div class="cf-wishlist-summary-row"><span>'.__('Total Items','creative-furniture').'</span><span>'.count($items).'</span></div>';
-    echo '<div class="cf-wishlist-summary-row"><span>'.__('Total Cost','creative-furniture').'</span><span>'.wc_price($total).'</span></div>';
-    echo '<button class="cf-wishlist-share-btn" id="cf-wishlist-share-btn">'.__('Share Wishlist','creative-furniture').'</button>';
-    echo '</div>';
-    echo '<div class="cf-wishlist-share-panel" id="cf-wishlist-share-panel">';
-    echo '<input type="text" readonly value="'.esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())).'" class="cf-wishlist-share-link">';
-    echo '<button class="cf-wishlist-copy-link" id="cf-wishlist-copy-link">'.__('Copy Link','creative-furniture').'</button>';
-    echo '</div>';
-    echo '</div>';
+    public function generate_share_token($product_ids) {
+        global $wpdb;
+        $token = wp_generate_uuid4();
+        $wpdb->insert($this->table_tokens, [
+            'token' => $token,
+            'product_ids' => implode(',', $product_ids),
+            'created_at' => current_time('mysql')
+        ]);
+        return $token;
+    }
 
-    echo '</div>';
-}
+    public function get_shared_items($token) {
+        global $wpdb;
+        $row = $wpdb->get_row($wpdb->prepare("SELECT product_ids FROM {$this->table_tokens} WHERE token=%s", $token));
+        if (!$row) return [];
+        return array_filter(array_map('intval', explode(',', $row->product_ids)));
+    }
 
-
-function cf_wishlist_is_in_wishlist($product_id){
-    global $wpdb;
-    $table=$wpdb->prefix.'cf_wishlist_items';
-    $uid=get_current_user_id();
-    if($uid){
-        return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM $table WHERE user_id=%d AND product_id=%d",$uid,$product_id));
-    } else {
-        $session = cf_wishlist_get_session();
-        return (bool)$wpdb->get_var($wpdb->prepare("SELECT id FROM $table WHERE session_key=%s AND product_id=%d",$session,$product_id));
+    public function ajax_share() {
+        $items = $this->get_items();
+        if (empty($items)) wp_send_json(['status' => 'empty']);
+        $token = $this->generate_share_token($items);
+        $url = add_query_arg('wishlist_token', $token, home_url());
+        wp_send_json(['status' => 'ok', 'url' => $url]);
     }
 }
+
+global $cf_wishlist;
+$cf_wishlist = new CF_Wishlist();
+
+register_activation_hook(__FILE__, [$cf_wishlist, 'activate']);
+
+function cf_wishlist_is_in_wishlist($product_id) {
+    global $cf_wishlist;
+    return $cf_wishlist->is_in_wishlist($product_id);
+}
+
 function cf_wishlist_has_any() {
-    global $wpdb;
-    $table = $wpdb->prefix . 'cf_wishlist_items';
-    $uid = get_current_user_id();
-
-    if ($uid) {
-        return (bool) $wpdb->get_var(
-            $wpdb->prepare("SELECT id FROM $table WHERE user_id=%d LIMIT 1", $uid)
-        );
-    } else {
-        $session = cf_wishlist_get_session();
-        return (bool) $wpdb->get_var(
-            $wpdb->prepare("SELECT id FROM $table WHERE session_key=%s LIMIT 1", $session)
-        );
-    }
-}
-add_shortcode('cf_wishlist', 'render_wishlist_shortcode');
-function render_wishlist_shortcode($attr = []) {
-    ob_start();
-    cf_wishlist_render_page();
-    return ob_get_clean();
+    global $cf_wishlist;
+    return $cf_wishlist->has_any();
 }
 
-// Share wishlist
-function cf_wishlist_generate_share_token($product_ids) {
-    global $wpdb;
-    $table = $wpdb->prefix . 'cf_wishlist_share_tokens';
-    $token = wp_generate_uuid4();
-    $wpdb->insert($table, [
-        'token' => $token,
-        'product_ids' => implode(',', $product_ids),
-        'created_at' => current_time('mysql')
-    ]);
-    return $token;
+function cf_wishlist_get_items() {
+    global $cf_wishlist;
+    return $cf_wishlist->get_items();
 }
-function cf_wishlist_get_shared_items($token) {
-    global $wpdb;
-    $table = $wpdb->prefix . 'cf_wishlist_share_tokens';
-    $row = $wpdb->get_row($wpdb->prepare("SELECT product_ids FROM $table WHERE token=%s", $token));
-    if (!$row) return [];
-    return array_filter(array_map('intval', explode(',', $row->product_ids)));
-}
-
-add_action('wp_ajax_cf_wishlist_share','cf_wishlist_share');
-add_action('wp_ajax_nopriv_cf_wishlist_share','cf_wishlist_share');
-function cf_wishlist_share() {
-    $items = cf_wishlist_get_items();
-    if (empty($items)) wp_send_json(['status'=>'empty']);
-    $token = cf_wishlist_generate_share_token($items);
-    $url = add_query_arg('wishlist_token', $token, home_url());
-    wp_send_json(['status'=>'ok','url'=>$url]);
-}
-

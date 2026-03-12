@@ -29,13 +29,23 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
     <header id="masthead" class="site-header relative z-50">
         <div class="flex flex-col items-center justify-start w-full gap-4 mb-4">
             <div class="bg-[#eaeaea] w-full py-2 px-4 md:px-6">
-                <div class="max-w-[1440px] m-auto flex flex-col md:flex-row items-center justify-between gap-2">
-                    <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-[901px] gap-2 md:gap-4">
-                        <div class="text-black text-center md:text-left font-normal text-xs md:text-sm leading-5">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[1440px] m-auto relative">
+                    <div class="flex flex-col md:flex-row items-center justify-between w-full gap-2 md:gap-4">
+                        <div class="text-black text-center md:text-left font-normal text-xs md:text-sm leading-5 text-nowrap">
                             <?php echo esc_html__( 'Free shipping - orders above AED 1500', 'creative-furniture' ); ?>
                         </div>
                         <div class="text-black text-center font-normal text-xs md:text-sm leading-5">
-                            <?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?>
+                            <!-- <?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?> -->
+                            <div class="blaze-slider" data-slider="discount-text" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1, 'enableAutoplay' => true, 'OnInteraction' => true, 'autoplayInterval' => 4000]])); ?>">
+                                <div class="blaze-container">
+                                    <div class="blaze-track-container">
+                                    <div class="blaze-track">
+                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="flex flex-row gap-4 md:gap-6 items-center justify-start">
