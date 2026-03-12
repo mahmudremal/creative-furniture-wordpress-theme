@@ -13,7 +13,7 @@ $theme_directory_uri = get_template_directory_uri();
           <div class="blaze-track">
             <?php for ($i=1; $i <= 5; $i++) : ?>
             <div class="relative h-[673px]">
-              <img class="h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/smart-furniture-for-modern-offices-hero-1.png">
+              <img class="h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/smart-furniture-for-modern-offices-hero-1.png">
               <div class="flex flex-col gap-52 items-start justify-start w-full md:w-[476px] absolute left-4 mg:left-[50px] lg:left-[100px] top-[40%] md:top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                   <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
@@ -102,7 +102,7 @@ $theme_directory_uri = get_template_directory_uri();
           </svg>
         </a>
       </div>
-      <img class="shrink-0 w-[724px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri . '/src/img/v2/modern-home-furniture-collection.png'); ?>">
+      <img class="shrink-0 w-[724px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/modern-home-furniture-collection.png'); ?>">
     </div>
   </div>
 
@@ -118,7 +118,7 @@ $theme_directory_uri = get_template_directory_uri();
     <div class="flex flex-wrap gap-4 items-center justify-start self-stretch shrink-0 relative">
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
         <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
-          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453430.png">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453430.png">
           <svg class="h-[auto] absolute left-0 top-52 overflow-visible" width="405" height="59" viewBox="0 0 405 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 56.5C144.013 56.5 189.487 57.5 333.5 57.5L404.5 0" stroke="#BD262A" stroke-width="3.5"></path>
             <path d="M405 59V2L334.5 59H405Z" fill="#F4F4F4"></path>
@@ -135,7 +135,7 @@ $theme_directory_uri = get_template_directory_uri();
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
         <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
-          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453431.png">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453431.png">
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
@@ -148,7 +148,7 @@ $theme_directory_uri = get_template_directory_uri();
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
         <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
-          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453432.png">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453432.png">
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
@@ -178,7 +178,7 @@ $theme_directory_uri = get_template_directory_uri();
       <img
         class="w-[234px] h-[91px]"
         style="object-fit: cover; aspect-ratio: 234/91"
-        src="<?php echo esc_url($theme_directory_uri . '/src/img/v2/image-2780.png'); ?>"
+        src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/image-2780.png'); ?>"
       />
     </div>
   </div>
@@ -203,7 +203,7 @@ $theme_directory_uri = get_template_directory_uri();
                 </div>
                 <div class="self-stretch shrink-0 h-[437px] relative">
                   <div class="md:pr-[100px] md:pl-[100px] flex flex-row items-center justify-between h-[437px] absolute left-0 top-0 bg-center no-repeat bg-cover w-full" style="
-                      background-image: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 0) 100% ), url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-21214531531.png);
+                      background-image: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 0) 100% ), url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-21214531531.png);
                       background-position: center;
                       background-repeat: no-repeat;
                       background-size: cover;
@@ -304,7 +304,7 @@ $theme_directory_uri = get_template_directory_uri();
     <div class="flex flex-col md:flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
       <div class="flex flex-col gap-4 items-start justify-start w-full md:w-auto shrink-0 relative">
         <div class="shrink-0 w-full md:w-[431px] h-[415px] relative overflow-hidden" style="
-            background: url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-16100692210.png) center;
+            background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692210.png) center;
             background-size: cover;
             background-repeat: no-repeat;
           ">
@@ -331,7 +331,7 @@ $theme_directory_uri = get_template_directory_uri();
           <?php endforeach; ?>
         </div>
         <div class="shrink-0 w-full md:w-[431px] h-[315px] relative overflow-hidden" style="
-            background: url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-16100692200.png) center;
+            background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692200.png) center;
             background-size: cover;
             background-repeat: no-repeat;
           ">
@@ -400,7 +400,7 @@ $theme_directory_uri = get_template_directory_uri();
         ];
         ?>
         <div class="self-stretch shrink-0 h-[303px] relative overflow-hidden" style="
-            background: url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-16100692251.png) center;
+            background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692251.png) center;
             background-size: cover;
             background-repeat: no-repeat;
           ">
@@ -422,7 +422,7 @@ $theme_directory_uri = get_template_directory_uri();
         </div>
         <div class="flex flex-col sm:flex-row gap-4 items-start justify-start self-stretch flex-1 relative">
           <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="
-              background: url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-16100692220.png) center;
+              background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692220.png) center;
               background-size: cover;
               background-repeat: no-repeat;
             ">
@@ -449,7 +449,7 @@ $theme_directory_uri = get_template_directory_uri();
             <?php endforeach; ?>
           </div>
           <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="
-              background: url(<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/frame-16100692261.png) center;
+              background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692261.png) center;
               background-size: cover;
               background-repeat: no-repeat;
             ">
@@ -511,7 +511,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
+              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
             </a>
             <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
@@ -529,7 +529,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_13586893-340-10.png">
+              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_13586893-340-10.png">
             </a>
             <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
@@ -547,7 +547,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
+              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
             </a>
             <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
@@ -565,7 +565,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
+              <img class="w-[148px] h-[148px] absolute right-[9px] top-[calc(50%_-_73px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_408654916-3365999-c-cae-8-42-ed-8-cec-7-c-4-b-14271978-10.png">
             </a>
             <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
@@ -583,7 +583,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_13586893-340-10.png">
+              <img class="w-[151px] h-[151px] absolute right-0.5 top-0" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_13586893-340-10.png">
             </a>
             <a href="#" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
@@ -601,7 +601,7 @@ $theme_directory_uri = get_template_directory_uri();
                   <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
-              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
+              <img class="w-[161px] h-[161px] absolute right-[9px] top-[calc(50%_-_83px)]" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/_23043947-realistic-1-luxury-chairs-2-10.png">
             </a>
           </div>
         </div>
@@ -623,7 +623,7 @@ $theme_directory_uri = get_template_directory_uri();
           <div class="blaze-track">
             <?php for ($i = 1;$i <= 5; $i++): ?>
             <div class="flex flex-col md:flex-row items-center justify-between self-stretch -flex-1 relative">
-              <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45411.png">
+              <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-45411.png">
               <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-10 px-7 relative">
                 <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
                   <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
@@ -672,7 +672,7 @@ $theme_directory_uri = get_template_directory_uri();
   <div class="h-[453px] w-full md:w-[1440px] m-auto relative">
     <img
       class="w-full h-full absolute right-0 bottom-0 overflow-visible"
-      src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/vector-40.png"
+      src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png"
     />
     <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333352 100%);"></div>
     <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >

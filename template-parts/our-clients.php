@@ -5,40 +5,40 @@
       </div>
     </div>
     <div class="flex flex-row gap-[74px] items-center justify-start absolute left-[50%] top-14" style="translate: -50%">
-      <img class="shrink-0 w-[74.94px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group0.svg" />
-      <img class="shrink-0 w-[89.35px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group1.svg" />
-      <img class="shrink-0 w-[136.33px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group2.png" />
-      <img class="shrink-0 w-[84px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group3.svg" />
-      <img class="shrink-0 w-[82.32px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group4.svg" />
-      <img class="shrink-0 w-[92.74px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group5.svg" />
-      <img class="shrink-0 w-[145.09px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group6.svg" />
-      <img class="shrink-0 w-[130.73px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group7.svg" />
+      <img class="shrink-0 w-[74.94px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group0.svg" />
+      <img class="shrink-0 w-[89.35px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group1.svg" />
+      <img class="shrink-0 w-[136.33px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group2.png" />
+      <img class="shrink-0 w-[84px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group3.svg" />
+      <img class="shrink-0 w-[82.32px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group4.svg" />
+      <img class="shrink-0 w-[92.74px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group5.svg" />
+      <img class="shrink-0 w-[145.09px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group6.svg" />
+      <img class="shrink-0 w-[130.73px] h-[42px] relative overflow-visible" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group7.svg" />
     </div>
     <div class="flex flex-row gap-[74px] items-center justify-start absolute left-[50%] top-[122px]"
         style="translate: -50%">
         <img class="shrink-0 w-[130.73px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group8.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group8.svg"
         />
         <img class="shrink-0 w-[92.74px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group9.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group9.svg"
         />
         <img class="shrink-0 w-[145.09px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group10.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group10.svg"
         />
         <img class="shrink-0 w-[110.14px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group11.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group11.svg"
         />
         <img class="shrink-0 w-[109.02px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group12.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group12.svg"
         />
         <img class="shrink-0 w-[84px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group13.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group13.svg"
         />
         <img class="shrink-0 w-[136.33px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group14.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group14.svg"
         />
         <img class="shrink-0 w-[89.35px] h-[42px] relative overflow-visible"
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/v2/clients/mask-group15.svg"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/clients/mask-group15.svg"
         />
     </div>
   </div> -->
