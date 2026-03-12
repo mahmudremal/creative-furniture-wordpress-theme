@@ -25,7 +25,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <div class="flex flex-col gap-7 pt-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -43,7 +43,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         </div>
     </div>
 
-    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 md:px-0 w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
         <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-full md:w-[1440px] mx-auto relative">
             <!-- Left Side: Checkout Details -->
             <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-full md:w-[805px] relative">

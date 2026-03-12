@@ -18,7 +18,6 @@ class CF_MegaMenuWalker extends Walker_Nav_Menu {
         if ( ! empty( $saved ) ) {
             $has_mega     = true;
             $mega_content = do_shortcode( $saved );
-            // $mega_content = wp_kses_post( $saved );
         }
 
         $classes = empty( $item->classes ) ? [] : (array) $item->classes;
@@ -52,7 +51,7 @@ class CF_MegaMenuWalker extends Walker_Nav_Menu {
 
     public function end_el( &$output, $item, $depth = 0, $args = [] ) {
         $output .= "</li>";
-        $output .= '<li class="nav_devider"></li>';
+        // $output .= '<li class="nav_devider"></li>';
     }
 
 }

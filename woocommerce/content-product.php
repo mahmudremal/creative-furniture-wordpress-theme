@@ -63,9 +63,9 @@ $primary_category = ! empty( $categories ) ? $categories[0]->name : '';
 					</div>
 				<?php endif; ?>
 
-				<div class="text-[#141414] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch flex items-center justify-start group-hover:text-[#bd262a] transition-colors">
+				<h3 class="text-[#141414] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch items-center justify-start group-hover:text-[#bd262a] transition-colors line-clamp-2">
 					<?php echo esc_html( $product->get_name() ); ?>
-				</div>
+				</h3>
 
 				<div class="flex flex-row gap-3 items-center justify-start shrink-0 relative">
 					<?php 

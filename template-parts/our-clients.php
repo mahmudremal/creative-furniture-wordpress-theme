@@ -1,4 +1,4 @@
-  <!-- <div class="h-[164px] overflow-hidden w-full md:w-[1440px] m-auto relative">
+  <!-- <div class="h-[164px] overflow-hidden w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row gap-[1201px] items-center justify-center w-[1392px] absolute left-0 top-0">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
       Our partner
@@ -43,7 +43,7 @@
     </div>
   </div> -->
 
-<div class="flex flex-col gap-4 h-[238px] w-full md:w-[1440px] m-auto relative overflow-hidden">
+<div class="flex flex-col gap-4 h-[238px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
   <div class="flex flex-row gap-[1201px] items-center justify-center">
     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
       Our partner

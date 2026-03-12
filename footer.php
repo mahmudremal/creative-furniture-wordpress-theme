@@ -10,7 +10,7 @@
     <div class="">
         <!-- Newsletter Section -->
         <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10">
-            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
                     <h3 class="text-[#0c0c0c] font-semibold text-xl md:text-2xl leading-tight uppercase tracking-tight">
                         <?php echo esc_html__( 'Subscribe Up To Newsletter', 'creative-furniture' ); ?>
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Main Footer Links -->
-        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
             <!-- Brand Info -->
             <div class="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-6">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-1">

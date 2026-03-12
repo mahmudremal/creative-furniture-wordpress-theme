@@ -4,7 +4,7 @@ module.exports = {
   // prefix: "xpo_", // /hunting
   content: [...Array(10)].map(
     (u, i) =>
-      `./${[...Array(i)].map((o) => "**/").join("")}*.{php,js,jsx,ts,tsx}`,
+      `./${[...Array(i)].map((o) => "**/").join("")}*.{txt,php,js,jsx,ts,tsx}`,
   ),
   theme: {
     extend: {

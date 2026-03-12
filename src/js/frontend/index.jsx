@@ -1148,17 +1148,17 @@ class SiteCore {
     }
 
     init_megamenus() {
-        [...document.querySelectorAll('.hospitality__sidebar')].map(sb => {
+        [...document.querySelectorAll('.sidebar__group')].map(sb => {
             return [...sb.querySelectorAll('.sidebar__title')].map((title, titleIndex) => {
                 return title.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     [...sb.querySelectorAll('.sidebar__title')].map(i => i.classList.remove('active'));
                     title.classList.add('active');
-                    const tabItems = sb.nextElementSibling.children;
+                    const tabItems = sb.parentElement.nextElementSibling.children;
                     if (!tabItems?.[titleIndex]) return;
-                    [...tabItems].map(i => i.classList.remove('active'));
-                    tabItems[titleIndex].classList.add('active');
+                    [...tabItems].map(i => i.classList.add('hidden'));
+                    tabItems[titleIndex].classList.remove('hidden');
                 })
             });
         });

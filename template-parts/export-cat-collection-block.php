@@ -10,7 +10,7 @@ if (empty($query['posts_per_page'])) {
 $title = $args['title'];
 $link = $args['link'];
 ?>
-<div class="flex flex-col gap-6 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto">
+<div class="flex flex-col gap-6 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto">
   <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative px-4 md:px-0">
     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
       <?php echo esc_html($title); ?>

@@ -92,11 +92,11 @@ add_action('wp_ajax_mega_menu_content', function () {
 add_action('wp_ajax_save_mega_menu_content', function () {
     // check_ajax_referer('save-mega-menu-content');
     $id      = intval($_POST['menu_item_id']);
-    $content = wp_kses_post($_POST['content']);
+    $content = maybe_serialize($_POST['content']);
 
-    update_post_meta($id, '_mega_menu_content', $content);
+    $updated = update_post_meta($id, '_mega_menu_content', $content);
 
-    wp_send_json_success();
+    $updated ? wp_send_json_success() : wp_send_json_error([$id, $content]);
 });
 
 add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $args) {

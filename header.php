@@ -28,8 +28,8 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
 
     <header id="masthead" class="site-header relative z-50">
         <div class="flex flex-col items-center justify-start w-full gap-4 mb-4">
-            <div class="bg-[#eaeaea] w-full py-2 px-4 md:px-6">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[1440px] m-auto relative">
+            <div class="w-full bg-[#eaeaea]">
+                <div class="px-4 md:px-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto relative">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full gap-2 md:gap-4">
                         <div class="text-black text-center md:text-left font-normal text-xs md:text-sm leading-5 text-nowrap">
                             <?php echo esc_html__( 'Free shipping - orders above AED 1500', 'creative-furniture' ); ?>
@@ -39,10 +39,11 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                             <div class="blaze-slider" data-slider="discount-text" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1, 'enableAutoplay' => true, 'OnInteraction' => true, 'autoplayInterval' => 4000]])); ?>">
                                 <div class="blaze-container">
                                     <div class="blaze-track-container">
-                                    <div class="blaze-track">
-                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
-                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
-                                        <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                        <div class="blaze-track">
+                                            <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                            <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                            <span><?php echo esc_html__( 'All type of furniture items under one roof, with customization option!', 'creative-furniture' ); ?></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -95,9 +96,8 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                     </div>
                 </div>
             </div>
-
-            <div class="w-full h-[70px] md:h-[62px] px-4 md:px-6 relative flex">
-                <div class="max-w-[1440px] m-auto w-full flex flex-row items-center justify-between">
+            <div class="w-full h-[70px] md:h-[62px] py-2 px-4 md:px-0 relative flex">
+                <div class="flex flex-row items-center justify-between w-full max-w-full md:w-[1440px] m-auto">
                     <button id="mobile-menu-toggle" class="md:hidden p-3 -ml-3 text-black hover:bg-gray-100 rounded-full transition-colors active:scale-95">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>

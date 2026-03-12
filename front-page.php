@@ -6,7 +6,7 @@ $theme_directory_uri = get_template_directory_uri();
 
 
 
-  <div class="mt-4 w-full md:w-[1440px] m-auto relative">
+  <div class="w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
       <div class="blaze-container">
         <div class="blaze-track-container">
@@ -54,7 +54,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="pr-6 pl-6 flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto">
+  <div class="pr-6 pl-6 flex flex-col gap-6 items-center justify-start w-full max-w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-[#242424] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         <?php echo esc_html__( 'Shop by Category', 'creative-furniture' ); ?>
@@ -77,7 +77,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto overflow-hidden">
+  <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full max-w-full md:w-[1440px] m-auto overflow-hidden">
     <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-7 py-10 lg:p-0 gap-7">
       <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-full md:w-[476px] relative">
         <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
@@ -106,7 +106,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 px-7 md:p-0 items-start justify-start w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 px-7 md:p-0 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         New Arrivals
@@ -162,7 +162,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-col sm:flex-row gap-7 justify-between p-4 items-center w-full">
       <div class="flex flex-col gap-2 items-start justify-start p-4">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch" >
@@ -185,7 +185,7 @@ $theme_directory_uri = get_template_directory_uri();
   
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'bestsellers']); ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="w-full">
       <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
         <div class="blaze-container">
@@ -203,7 +203,7 @@ $theme_directory_uri = get_template_directory_uri();
                 </div>
                 <div class="self-stretch shrink-0 h-[437px] relative">
                   <div class="md:pr-[100px] md:pl-[100px] flex flex-row items-center justify-between h-[437px] absolute left-0 top-0 bg-center no-repeat bg-cover w-full" style="
-                      background-image: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 0) 100% ), url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-21214531531.png);
+                      background-image: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 20%, rgba(255, 255, 255, 0) 100% ), url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-21214531531.png);
                       background-position: center;
                       background-repeat: no-repeat;
                       background-size: cover;
@@ -257,7 +257,7 @@ $theme_directory_uri = get_template_directory_uri();
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand'], 'type' => 'chairs']); ?>
   
 
-  <div class="bg-[#000000] min-h-[88px] w-full md:w-[1440px] m-auto relative flex flex-col md:flex-row items-center justify-center md:justify-between py-6 md:py-0 px-6 gap-4 md:gap-4 overflow-hidden">
+  <div class="bg-[#000000] min-h-[88px] grid grid-cols-1 md:grid-cols-3 items-center justify-center md:justify-between py-6 md:py-0 px-6 gap-4 md:gap-4 overflow-hidden w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="hidden md:block w-[341px] h-16 shrink-0 relative">
       <svg
         class="w-[312px] h-[58px] absolute left-0 top-[3px] overflow-visible"
@@ -278,27 +278,31 @@ $theme_directory_uri = get_template_directory_uri();
       </div>
     </div>
     
-    <div class="md:hidden bg-[#9D0004]/50 px-4 py-1.5 rounded-full">
-      <span class="text-[#ffffff] text-xs font-semibold uppercase tracking-wider">Limited Time Offer</span>
+    <div class="flex items-center justify-center">
+      <div class="md:hidden bg-[#9D0004]/50 px-4 py-1.5 rounded-full text-center">
+        <span class="text-[#ffffff] text-xs font-semibold uppercase tracking-wider">Limited Time Offer</span>
+      </div>
     </div>
 
     <div class="text-[#ffffff] text-center md:flex-1">
       <span class="text-base md:text-xl">
-        Enjoy <span class="text-[20px] md:text-[24px] font-bold">30% Off</span> Your First Order
+        Enjoy <span class="text-[20px] md:text-[28px] font-bold">30% Off</span> Your First Order
       </span>
     </div>
     
-    <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-center justify-start shrink-0" >
-      <span class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" >
-        Shop Now
-      </span>
-      <svg class="shrink-0 w-5 h-5 md:w-6 md:h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </a>
+    <div class="flex flex-row items-center justify-center md:justify-end gap-2">
+      <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-center justify-start shrink-0" >
+        <span class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" >
+          Shop Now
+        </span>
+        <svg class="shrink-0 w-5 h-5 md:w-6 md:h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Shop the Look
@@ -488,7 +492,7 @@ $theme_directory_uri = get_template_directory_uri();
 
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'desks']); ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto">
+  <div class="flex flex-col gap-7 items-start justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Deal Zone
@@ -622,7 +626,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div> -->
   </div>
 
-  <div class="bg-[#f9f9f9] flex flex-col w-full md:w-[1440px] m-auto relative">
+  <div class="bg-[#f9f9f9] flex flex-col w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
       <div class="blaze-container w-full">
         <div class="blaze-track-container">
@@ -675,7 +679,7 @@ $theme_directory_uri = get_template_directory_uri();
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'living']); ?>
 
 
-  <div class="h-[453px] w-full md:w-[1440px] m-auto relative overflow-hidden"
+  <div class="h-[453px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden"
   style="
     background-image: url('<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png');
     background-position: center center;

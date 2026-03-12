@@ -281,7 +281,7 @@ class SiteCore {
                                 nonce: this.megaMenuNonce
                             }));
                             alert('Updated!');
-                            modal.remove();
+                            // modal.remove();
                         } catch (error) {
                             console.error('Failed to save mega menu content:', error);
                             alert('Failed to update');

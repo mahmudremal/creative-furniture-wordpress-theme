@@ -42,7 +42,7 @@ $allowed_html = array(
     $current_user = wp_get_current_user();
     $billing_phone = get_user_meta( $current_user->ID, 'billing_phone', true );
     ?>
-    <div class="flex flex-row items-start justify-between w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row items-start justify-between w-full max-w-full md:w-[1440px] m-auto relative">
       <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start shrink-0 w-[689px] relative">
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-lg leading-6 font-semibold relative self-stretch">
