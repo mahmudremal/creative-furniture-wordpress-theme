@@ -1,348 +1,349 @@
 
-<div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
-  <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
-      
-      <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
-        <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
-          
-          <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                Office Room Set
-              </div>
-            </div>
-            <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="1">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                Office Furniture
-              </div>
-            </div>
-            <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-        </div>
-      </aside>
-
-      <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+  <div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
+    <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
         
-        <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
-          
-          <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
+        <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
+          <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
             
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
+            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
+              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                  Office Room Set
+                </div>
+              </div>
+              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="1">
+              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                  Office Furniture
+                </div>
+              </div>
+              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </aside>
+
+        <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+          
+          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
+            
+            <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
               
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
                 
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-01-arian-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-01-Arian
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-06-gray-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-06-Gray Module
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-11-kona-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-11-Kona
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-16-anto-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-16-Anto
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-21-cloud-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-21-Cloud
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-26-snow-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-26-Snow-Module
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-31-diamond-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-31-Diamond
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-02-box-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-02-Box
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-07-walli-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-07-Walli
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-12-alder-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-12-Alder
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-17-muke-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-17-Muke
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-22-plank-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-22-Plank
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-27-frosty-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-27-Frosty
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-32-jane-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-32-Jane
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-03-pasa-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-03-Pasa
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-08-ashley-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-08-Ashley
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-13-dina-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-13-Dina
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-18-hats-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-18-Hats
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-23-x-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-23-X-Module
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-28-luna-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-28-Luna
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-33-opal-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-33-Opal
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-04-mint-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-04-Mint
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-09-honey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-09-Honey
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-14-asma-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-14-Asma
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-19-marraw-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-19-Marraw
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-24-pyramid-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-24-Pyramid
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-29-nova-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-29-Nova
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-05-sunny-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-05-Sunny
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-10-mist-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-10-Mist
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-15-mona-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-15-Mona
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-20-concrete-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-20-Concrete
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-25-sleek-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-25-Sleek
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-30-ruby-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  SOF-30-Ruby
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-01-arian-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-01-Arian
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-06-gray-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-06-Gray Module
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-11-kona-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-11-Kona
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-16-anto-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-16-Anto
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-21-cloud-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-21-Cloud
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-26-snow-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-26-Snow-Module
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-31-diamond-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-31-Diamond
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-02-box-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-02-Box
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-07-walli-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-07-Walli
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-12-alder-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-12-Alder
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-17-muke-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-17-Muke
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-22-plank-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-22-Plank
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-27-frosty-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-27-Frosty
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-32-jane-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-32-Jane
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-03-pasa-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-03-Pasa
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-08-ashley-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-08-Ashley
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-13-dina-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-13-Dina
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-18-hats-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-18-Hats
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-23-x-module-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-23-X-Module
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-28-luna-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-28-Luna
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-33-opal-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-33-Opal
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-04-mint-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-04-Mint
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-09-honey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-09-Honey
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-14-asma-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-14-Asma
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-19-marraw-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-19-Marraw
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-24-pyramid-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-24-Pyramid
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-29-nova-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-29-Nova
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-05-sunny-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-05-Sunny
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-10-mist-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-10-Mist
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-15-mona-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-15-Mona
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-20-concrete-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-20-Concrete
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-25-sleek-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-25-Sleek
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-30-ruby-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    SOF-30-Ruby
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
+              <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
+                <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+              </div>
+              <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
+                <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
+                  <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                    See All Office Room Set
+                  </div>
+                  <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
-          </div>
 
-          <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
-            <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-            </div>
-            <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
-              <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
-                <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                  See All Office Room Set
-                </div>
-                <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
           </div>
-
-        </div>
-        <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="1">
-          
-          <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
+          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="1">
             
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              <a href="https://creativefurniture.xyz/product-category/d00-desk/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>Desk/Workstations</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d01-reception-concierge-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Reception Desks
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d02-executive-desks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Executive Desks
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03a-workstations-1a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - One Seater
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03b-workstations-1b-seater-l-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - One Seater (L Type)
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d04-two-seater-workstations/d04a-workstations-2a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - Two Seater
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d04-two-seater-workstations/d04b-workstations-2b-seater-l-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - Two Seater (L Type)
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d05-three-seater-workstations/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - Three Seater
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d06-four-seater-workstations/d06a-workstations-4a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - Four Seater
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d06-four-seater-workstations/d06b-workstations-4b-seater-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Workstations - Four Seater (PlusType)
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Sit & Stand Desk
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>Conversation Tables</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t01-meeting-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Meeting Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t02-conference-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Conference Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t03-small-meeting-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Small Meeting Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t04-training-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Training Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t05-folding-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Folding Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Cafeteria + Pantry Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01a-coffee-table-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Coffee Tables
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02a-side-end-tables-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Side & End Tables
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>Storage & Filling Cabinet</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01a-full-height-open-cabinet-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Full Height Open Cabinet
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01b-full-height-filling-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Full Height Filling Cabinet
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st02-lockers-trunks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Locker/Trunk
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Full Height Closed Cabinet
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07a-low-height-closed-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Low Height Closed Cabinet
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07c-low-height-credenzas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Low Height Credenza
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              <a href="https://creativefurniture.xyz/product-category/ss00-seatings/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>Sofa Seating</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                
-                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss01-sofa-sets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Sofa Set
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss02-l-shape-sofas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Lshape-Sofa
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c01-arm-chair/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Arm Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Bench with Storage
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss06-pouffs-stool/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Pouffes/Stool
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Bean Bags
-                </a>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              <a href="https://creativefurniture.xyz/product-category/office-furniture/office-chairs/https://creativefurniture.xyz/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>Chair</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03-executive-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Exceutive Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03b-mesh-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Mesh Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03c-secretary-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Secretary Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03d-economic-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Economic Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03e-visitor-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Visitor Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03f-waiting-area-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Waiting Area Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03g-training-room-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Training Room Chairs
-                </a>
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                  Bar Stool / High Stools
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
-            <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-            </div>
-            <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
-              <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
-                <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                  See All Office Furniture
+            <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
+              
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                <a href="https://creativefurniture.xyz/product-category/d00-desk/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>Desk/Workstations</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d01-reception-concierge-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Reception Desks
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d02-executive-desks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Executive Desks
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03a-workstations-1a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - One Seater
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03b-workstations-1b-seater-l-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - One Seater (L Type)
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d04-two-seater-workstations/d04a-workstations-2a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - Two Seater
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d04-two-seater-workstations/d04b-workstations-2b-seater-l-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - Two Seater (L Type)
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d05-three-seater-workstations/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - Three Seater
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d06-four-seater-workstations/d06a-workstations-4a-seater/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - Four Seater
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d06-four-seater-workstations/d06b-workstations-4b-seater-type/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Workstations - Four Seater (PlusType)
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Sit & Stand Desk
+                  </a>
                 </div>
-                <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
+              </div>
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>Conversation Tables</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t01-meeting-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Meeting Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t02-conference-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Conference Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t03-small-meeting-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Small Meeting Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t04-training-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Training Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t05-folding-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Folding Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Cafeteria + Pantry Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01a-coffee-table-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Coffee Tables
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02a-side-end-tables-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Side & End Tables
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>Storage & Filling Cabinet</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01a-full-height-open-cabinet-of/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Full Height Open Cabinet
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01b-full-height-filling-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Full Height Filling Cabinet
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st02-lockers-trunks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Locker/Trunk
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Full Height Closed Cabinet
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07a-low-height-closed-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Low Height Closed Cabinet
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07c-low-height-credenzas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Low Height Credenza
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                <a href="https://creativefurniture.xyz/product-category/ss00-seatings/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>Sofa Seating</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss01-sofa-sets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Sofa Set
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss02-l-shape-sofas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Lshape-Sofa
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c01-arm-chair/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Arm Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Bench with Storage
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss06-pouffs-stool/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Pouffes/Stool
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Bean Bags
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                <a href="https://creativefurniture.xyz/product-category/office-furniture/office-chairs/https://creativefurniture.xyz/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>Chair</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03-executive-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Exceutive Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03b-mesh-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Mesh Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03c-secretary-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Secretary Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03d-economic-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Economic Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03e-visitor-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Visitor Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03f-waiting-area-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Waiting Area Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03g-training-room-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Training Room Chairs
+                  </a>
+                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    Bar Stool / High Stools
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
+              <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
+                <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+              </div>
+              <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
+                <a href="https://creativefurniture.xyz/product-category/ct-a-office/" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
+                  <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                    See All Office Furniture
+                  </div>
+                  <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
           </div>
-
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>
+  

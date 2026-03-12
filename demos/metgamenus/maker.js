@@ -1,4 +1,6 @@
-const megaMenus = [
+const fs = require("fs");
+
+const list = [
   {
     label: "Home",
     link: "https://creativefurniture.xyz/product-category/ct-b-home-furniture/",
@@ -1726,112 +1728,113 @@ const megaMenus = [
       },
     ],
   },
-][3];
+];
+list.forEach((megaMenus) => {
+  const expectedmenus = {
+    ...megaMenus,
+    mega: megaMenus.mega.map((mega) => {
+      const result = [];
+      let current = null;
 
-const expectedmenus = {
-  ...megaMenus,
-  mega: megaMenus.mega.map((mega) => {
-    const result = [];
-    let current = null;
-
-    for (const row of mega.links) {
-      if (row.head) {
-        current = { ...row, items: [] };
-        result.push(current);
-      } else {
-        if (!current) {
-          current = { head: null, items: [] };
+      for (const row of mega.links) {
+        if (row.head) {
+          current = { ...row, items: [] };
           result.push(current);
+        } else {
+          if (!current) {
+            current = { head: null, items: [] };
+            result.push(current);
+          }
+          current.items.push(row);
         }
-        current.items.push(row);
       }
-    }
 
-    return { ...mega, links: result };
-  }),
-};
-
-`
-<div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
-  <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
-      
-      <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
-        <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
-          ${expectedmenus.mega
-            .map(
-              ({ title }, index) => `
-          <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title ${index === 0 ? "active" : ""}" data-block-index="${index}">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                ${title}
-              </div>
-            </div>
-            <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>`,
-            )
-            .join("")}
-        </div>
-      </aside>
-
-      <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
-        ${expectedmenus.mega
-          .map(
-            ({ links = [], title: megaTitle, link: megaLink }, index) => `
-        <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative ${index === 0 ? "" : "hidden"} transition-all duration-300" data-index="${index}">
-          
-          <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
-            ${links
+      return { ...mega, links: result };
+    }),
+  };
+  const content = `
+  <div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
+    <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
+        
+        <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
+          <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
+            ${expectedmenus.mega
               .map(
-                ({ title, link, items = [] }) => `
-            <div class="flex flex-col gap-4 items-start justify-start min-relative">
-              ${
-                title
-                  ? `<a href="${link || "#"}" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                      <span>${title}</span>
-                      <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                    </a>`
-                  : ""
-              }
-              <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                ${items
-                  .map(
-                    ({ title, link }) => `
-                <a href="${link}" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                ({ title }, index) => `
+            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title ${index === 0 ? "active" : ""}" data-block-index="${index}">
+              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
                   ${title}
-                </a>`,
-                  )
-                  .join("")}
+                </div>
               </div>
+              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>`,
               )
               .join("")}
           </div>
+        </aside>
 
-          <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
-            <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-              <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-            </div>
-            <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
-              <a href="${megaLink || expectedmenus.link}" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
-                <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
-                  See All ${megaTitle}
+        <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+          ${expectedmenus.mega
+            .map(
+              ({ links = [], title: megaTitle, link: megaLink }, index) => `
+          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative ${index === 0 ? "" : "hidden"} transition-all duration-300" data-index="${index}">
+            
+            <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
+              ${links
+                .map(
+                  ({ title, link, items = [] }) => `
+              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+                ${
+                  title
+                    ? `<a href="${link || "#"}" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                        <span>${title}</span>
+                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                      </a>`
+                    : ""
+                }
+                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                  ${items
+                    .map(
+                      ({ title, link }) => `
+                  <a href="${link}" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                    ${title}
+                  </a>`,
+                    )
+                    .join("")}
                 </div>
-                <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
+              </div>`,
+                )
+                .join("")}
             </div>
-          </div>
 
-        </div>`,
-          )
-          .join("")}
+            <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
+              <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
+                <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+              </div>
+              <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
+                <a href="${megaLink || expectedmenus.link}" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
+                  <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                    See All ${megaTitle}
+                  </div>
+                  <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>`,
+            )
+            .join("")}
+        </div>
+
       </div>
-
     </div>
   </div>
-</div>
-`;
+  `;
+  fs.writeFileSync(`./${megaMenus.label}.txt`, content);
+});
