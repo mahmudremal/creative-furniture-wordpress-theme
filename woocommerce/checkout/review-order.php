@@ -23,9 +23,9 @@ defined( 'ABSPATH' ) || exit;
 
             if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
                 ?>
-                <div class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative border-b border-[#d9d9d9] pb-5 last:border-b-0">
-                    <div class="flex flex-row gap-4 items-center justify-start flex-1 relative">
-                        <div class="bg-[#d9d9d9] shrink-0 w-[98px] h-[98px] relative rounded-md">
+                <div class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative border-b border-[#d9d9d9] pb-3 md:pb-5 last:border-b-0">
+                    <div class="flex flex-row gap-2 md:gap-4 items-center justify-start flex-1 relative">
+                        <div class="bg-[#d9d9d9] shrink-0 w-[48px] md:w-[98px] h-auto aspect-square relative rounded-md">
                             <?php echo $_product->get_image( 'thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
                             
                             <!-- Quantity Badge -->
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 
                         <div class="flex flex-col gap-3 items-start justify-center self-stretch flex-1 relative">
                             <div class="flex flex-col gap-1 items-start justify-start self-stretch shrink-0 relative">
-                                <div class="text-[#000000] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative self-stretch">
+                                <div class="text-[#000000] text-left font-['Raleway-SemiBold',_sans-serif] text-sm md:text-base leading-6 font-semibold relative self-stretch">
                                     <?php echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) ); ?>
                                 </div>
                             </div>
@@ -64,8 +64,8 @@ defined( 'ABSPATH' ) || exit;
     </div>
 
     <!-- Discount Code Section -->
-    <div class="flex flex-row gap-5 items-start justify-start self-stretch shrink-0 relative coupon-section-custom">
-        <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border px-4 flex flex-row gap-6 items-center justify-start shrink-0 w-[359px] h-14 relative rounded-md">
+    <div class="grid grid-cols-[1fr_80px] gap-3 md:gap-5 items-start justify-start self-stretch shrink-0 relative coupon-section-custom">
+        <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border px-4 flex flex-row gap-6 items-center justify-start shrink-0 w-full md:w-[359px] h-14 relative rounded-md">
             <input type="text" name="coupon_code" class="bg-transparent border-none outline-none w-full font-['Raleway-Regular'] text-base text-[#111111] p-0 focus:ring-0" id="coupon_code" value="" placeholder="Discount Code">
         </div>
         <button type="submit" class="bg-[#000000] rounded-md pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center self-stretch flex-1 relative" name="apply_coupon" value="Apply">

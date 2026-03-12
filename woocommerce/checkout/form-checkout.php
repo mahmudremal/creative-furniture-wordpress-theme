@@ -25,7 +25,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <div class="flex flex-col gap-7 pt-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -43,10 +43,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         </div>
     </div>
 
-    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 md:px-0 w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
         <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-full md:w-[1440px] mx-auto relative">
             <!-- Left Side: Checkout Details -->
-            <div class="bg-[#ffffff] pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-[805px] relative">
+            <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-full md:w-[805px] relative">
                 <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
                     <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
                         Checkout
@@ -190,7 +190,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                 <?php endif; ?>
             </div>
             <!-- Right Side: Order Summary -->
-            <div class="bg-[#f4f4f4] rounded-xl p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative h-fit sticky top-0">
+            <div class="bg-[#f4f4f4] rounded-xl p-4 md:p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative h-fit sticky top-0">
                 <div id="order_review" class="woocommerce-checkout-review-order w-full">
                     <?php do_action( 'woocommerce_checkout_order_review' ); ?>
                 </div>

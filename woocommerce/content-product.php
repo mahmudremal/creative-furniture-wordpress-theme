@@ -31,7 +31,7 @@ $primary_category = ! empty( $categories ) ? $categories[0]->name : '';
 	<a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>" class="flex relative group">
 		<div class="flex flex-col gap-4 items-start justify-start flex-1">
 			<div class="self-stretch shrink-0 h-[294px] relative overflow-hidden bg-[#f4f4f4] w-full">
-				<img class="absolute right-[-0.4px] left-0 bottom-0 top-0 w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/products/bg-gray.png'); ?>" alt="Background">
+				<img class="absolute right-[-0.4px] left-0 bottom-0 top-0 w-full h-full object-cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/products/bg-gray.png'); ?>" alt="Background">
 				
 				<div class="w-full h-full absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center p-0">
 					<?php if ( has_post_thumbnail( $product_id ) ) : ?>

@@ -10,7 +10,7 @@
     <div class="">
         <!-- Newsletter Section -->
         <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10">
-            <div class="max-w-[1440px] m-auto flex flex-col md:flex-row gap-8 items-center justify-between">
+            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
                     <h3 class="text-[#0c0c0c] font-semibold text-xl md:text-2xl leading-tight uppercase tracking-tight">
                         <?php echo esc_html__( 'Subscribe Up To Newsletter', 'creative-furniture' ); ?>
@@ -61,13 +61,13 @@
         </div>
 
         <!-- Main Footer Links -->
-        <div class="max-w-[1440px] m-auto py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10">
+        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
             <!-- Brand Info -->
             <div class="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-6">
-                <div class="flex items-center gap-1">
-                    <img class="w-10 h-10 object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/src/img/v2/logo-icon.png' ); ?>" alt="">
-                    <img class="w-28 h-auto object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/src/img/v2/logo-text.png' ); ?>" alt="Creative Furniture">
-                </div>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-1">
+                    <img class="w-10 h-10 object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/v2/logo-icon.png' ); ?>" alt="">
+                    <img class="w-28 h-auto object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/v2/logo-text.png' ); ?>" alt="Creative Furniture">
+                </a>
                 <p class="text-[#484848] text-sm leading-relaxed opacity-80">
                     <?php echo esc_html__( 'Creative Furniture is a furniture store in Dubai that specializes in the design, production, and distribution of inexpensive, customizable, and modern furniture for the home, office, outdoor, hospitality, banks, kids, and workplace.', 'creative-furniture' ); ?>
                 </p>
@@ -81,7 +81,7 @@
                     'Delivery & Installation' => '/delivery-installation/',
                     'Materials & Finishes' => '/materials-finishes/',
                     'Warranty Policy' => '/warranty-policy/',
-                    'Project Portfolio' => '/portfolio/',
+                    'Order Tracking' => '/order-tracking/',
                 ],
                 'Shop' => [
                     'Office Chairs' => '/product-category/office-chairs/',
@@ -122,7 +122,7 @@
                         <?php foreach ($items as $label => $link) : ?>
                             <li>
                                 <a href="<?php echo esc_url(home_url($link)); ?>" class="text-[#484848] text-sm hover:text-[#bd262a] transition-colors flex items-center gap-2 opacity-80">
-                                    <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="w-3 h-3 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     <span><?php echo esc_html__($label, 'creative-furniture'); ?></span>
@@ -150,7 +150,7 @@
 
 <style>
 #language-switcher-menu > li > a::after,
-#mymc_currency_select::after {
+#mymc-switcher::after {
   top: 50%;
   width: 20px;
   right: -10px;

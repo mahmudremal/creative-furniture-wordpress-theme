@@ -10,7 +10,7 @@
           rgba(255, 255, 255, 0) 100%
         );
         object-fit: cover;
-      " src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45320.png'); ?>">
+      " src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45320.png'); ?>">
     <div class="flex flex-col gap-14 items-start justify-center w-[476px] absolute left-[calc(50%_-_696px)] top-[50%]" style="translate: 0 -50%">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
@@ -138,7 +138,7 @@
   </div>
   <div class="flex flex-row gap-0 items-center justify-start w-full md:w-[1440px] m-auto relative">
     <div class="bg-[#797979] shrink-0 w-[658px] h-[455px] relative overflow-hidden">
-      <img class="absolute right-0 left-0 bottom-[-1px] top-0" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45450.png'); ?>">
+      <img class="absolute right-0 left-0 bottom-[-1px] top-0" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45450.png'); ?>">
       <div class="bg-[#d9d9d9] w-[757px] h-[155px] absolute left-[658px] top-[348px]"></div>
     </div>
     <div class="pr-[70px] pl-[70px] flex flex-col gap-10 items-center justify-start shrink-0 w-[758px] relative">
@@ -382,7 +382,7 @@
       });
       </script>
     </div>
-    <img class="shrink-0 w-[595px] h-[436px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45460.png'); ?>">
+    <img class="shrink-0 w-[595px] h-[436px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45460.png'); ?>">
   </div>
   
   <div class="flex flex-col gap-12 items-center justify-start w-full md:w-[1440px] m-auto relative">

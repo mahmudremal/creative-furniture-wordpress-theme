@@ -134,7 +134,7 @@ $filter_arrays = wp_json_encode($filter_data);
 ?>
 <?php get_header(); ?>
 
-<div class="relative flex flex-col gap-10">
+<div class="relative flex flex-col gap-10 px-4 md:px-0">
     <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative">
         <?php foreach ($breadcrumbs as $index => $crumb) : ?>
             <?php if (!empty($crumb['url'])) : ?>
@@ -178,7 +178,7 @@ $filter_arrays = wp_json_encode($filter_data);
 
         <div class="flex flex-row gap-6 items-center justify-start">
             <div class="flex flex-row gap-2 items-center justify-end shrink-0 relative">
-                <label class="text-[#212121] text-right font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end">
+                <label class="text-[#212121] text-right font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative hidden md:flex items-center justify-end">
                     <?php esc_html_e('Show:', 'creative-furniture'); ?>
                 </label>
                 <div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
@@ -192,7 +192,7 @@ $filter_arrays = wp_json_encode($filter_data);
                 </div>
             </div>
             <div class="flex flex-row gap-2 items-center justify-end shrink-0 relative">
-                <label class="text-[#212121] font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-end">
+                <label class="text-[#212121] font-['Aspekta-400',_sans-serif] text-sm leading-5 font-normal relative hidden md:flex items-center justify-end">
                     <?php esc_html_e('Sort by:', 'creative-furniture'); ?>
                 </label>
                 <div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">

@@ -7,11 +7,7 @@
     "deva": "concurrently \"npm:webpack-dev\" \"npm:tailwind\"",
     "dev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode development --progress",
     "tailwindmini": "tailwindcss -i ./src/library/css/tailwind.css -o ./styling.css --minify",
-    "tailwind": "tailwindcss -i ./src/library/css/tailwind.css -o ./styling.css --watch",
-    "analyz": "webpack-bundle-analyzer dist/stats.json",
-    "server": "nodemon start.js",
-    "wa": "nodemon ./server/whastapp.js",
-    "ws": "nodemon ./bot/server.js"
+    "tailwind": "tailwindcss -i ./src/library/css/tailwind.css -o ./styling.css --watch"
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",

@@ -190,7 +190,7 @@
         </button>
       </form>
     </div>
-    <img class="self-stretch shrink-0 h-[395px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/src/img/v2/rectangle-45461.png'); ?>">
+    <img class="self-stretch shrink-0 h-[395px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45461.png'); ?>">
   </div>
 </div>
 

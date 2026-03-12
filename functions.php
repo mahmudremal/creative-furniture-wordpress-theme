@@ -91,10 +91,11 @@ function creative_furniture_scripts() {
 		wp_enqueue_style('creative-furniture-public', get_template_directory_uri() . '/dist/css/public.css', [], filemtime(get_template_directory() . '/dist/css/public.css'), 'all');
 	}
 	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], filemtime(get_template_directory() . '/dist/library/fonts/fonts.css'), 'all');
-	wp_enqueue_style('blaze-slider', get_template_directory_uri() . '/src/library/css/blaze.css', [], false, 'all');
-	wp_enqueue_style('intl-tel-input', get_template_directory_uri() . '/src/library/css/intlTelInput.css', [], false, 'all');
-	wp_enqueue_script( 'intl-tel-input', get_template_directory_uri() . '/src/library/js/intlTelInput.min.js', [], false, true );
-	wp_enqueue_script( 'blaze-slider', get_template_directory_uri() . '/src/library/js/blaze-slider.min.js', [], false, true );
+	// wp_enqueue_style('creative-furniture-styling', get_template_directory_uri() . '/styling.css', [], filemtime(get_template_directory() . '/styling.css'), 'all');
+	wp_enqueue_style('blaze-slider', get_template_directory_uri() . '/dist/library/css/blaze.css', [], false, 'all');
+	wp_enqueue_style('intl-tel-input', get_template_directory_uri() . '/dist/library/css/intlTelInput.css', [], false, 'all');
+	wp_enqueue_script( 'intl-tel-input', get_template_directory_uri() . '/dist/library/js/intlTelInput.min.js', [], false, true );
+	wp_enqueue_script( 'blaze-slider', get_template_directory_uri() . '/dist/library/js/blaze-slider.min.js', [], false, true );
 	wp_enqueue_script( 'blaze', get_template_directory_uri() . '/dist/js/blaze.js', [], filemtime(get_template_directory() . '/dist/js/blaze.js'), true );
 	wp_enqueue_script( 'creative-furniture-public', get_template_directory_uri() . '/dist/js/public.js', [], filemtime(get_template_directory() . '/dist/js/public.js'), true );
 	wp_localize_script('creative-furniture-public', 'cfStore', [
@@ -104,8 +105,8 @@ function creative_furniture_scripts() {
 		'update_cart_nonce' => is_cart() ? wp_create_nonce('update-cart') : '',
 		'dist' => get_template_directory_uri() . '/dist',
 	]);
-	wp_enqueue_script( 'popper', 'https://unpkg.com/@popperjs/core@2', [], false, true );
-	wp_enqueue_script( 'tippy', 'https://unpkg.com/tippy.js@6', [], false, true );
+	wp_enqueue_script( 'popper', get_template_directory_uri() . '/dist/library/js/popper.min.js', [], false, true );
+	wp_enqueue_script( 'tippy', get_template_directory_uri() . '/dist/library/js/tippy.js', [], false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script('comment-reply');

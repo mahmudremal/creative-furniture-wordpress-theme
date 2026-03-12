@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="flex flex-col gap-7 pt-10 pb-20">
-    <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -26,8 +26,8 @@ do_action( 'woocommerce_before_cart' ); ?>
         </div>
     </div>
 
-    <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 items-start justify-between w-full md:w-[1440px] m-auto relative">
-        <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-[887px] relative">
+    <div class="flex flex-wrap md:grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-7 items-start justify-between px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+        <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-full md:w-[887px] relative">
             <div class="text-black-primary text-left font-['Raleway-Medium',_sans-serif] text-2xl leading-[44px] font-medium relative self-stretch flex items-center justify-start">
                 <?php esc_html_e( 'Your cart', 'woocommerce' ); ?> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
             </div>
@@ -44,7 +44,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                         if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
                             $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
                             ?>
-                            <div class="border-solid border-[#e2e2e2] border-b pb-5 flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+                            <div class="border-solid border-[#e2e2e2] border-b pb-5 flex flex-row gap-4 md:gap-6 items-center justify-start self-stretch shrink-0 relative woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
                                 <div class="bg-[#f4f4f4] shrink-0 w-36 h-36 relative overflow-hidden">
                                     <?php
                                     $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -147,7 +147,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                     ?>
                 </div>
 
-                <div class="flex flex-row gap-5 items-center justify-between mt-8">
+                <div class="flex flex-wrap gap-5 items-center justify-between mt-8">
                     <div class="coupon-section flex gap-3">
                         <?php if ( wc_coupons_enabled() ) { ?>
                             <input type="text" name="coupon_code" class="border-solid border-[#e2e2e2] border p-2 text-sm" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
@@ -165,7 +165,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             </form>
         </div>
 
-        <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-[453px] relative sticky top-0">
+        <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-full md:w-[453px] relative sticky top-0">
             <div class="bg-[#f4f4f4] rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
                 <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-[44px] font-semibold relative self-stretch flex items-center justify-start">
                     Order Summary

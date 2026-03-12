@@ -1,5 +1,5 @@
-  <div class="bg-[#ffffff] flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto relative">
-    <div class="blaze-slider w-full" data-slider="customer-stories" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 5, 'slidesToScroll' => 1, 'slideGap' => '16px'], 'md' => ['slidesToShow' => 3], 'sm' => ['slidesToShow' => 1]])); ?>">
+  <div class="bg-[#ffffff] flex flex-col gap-6 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+    <div class="blaze-slider w-full" data-slider="customer-stories" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 5, 'slidesToScroll' => 1, 'slideGap' => '16px'], '(max-width: 900px)' => ['slidesToShow' => 3], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
       <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative mb-6">
         <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
           Customer Stories

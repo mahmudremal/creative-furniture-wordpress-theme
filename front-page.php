@@ -14,7 +14,7 @@ $theme_directory_uri = get_template_directory_uri();
             <?php for ($i=1; $i <= 5; $i++) : ?>
             <div class="relative h-[673px]">
               <img class="h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/smart-furniture-for-modern-offices-hero-1.png">
-              <div class="flex flex-col gap-52 items-start justify-start w-[476px] absolute left-8 mg:left-[50px] lg:left-[100px] top-[50%]" style="translate: 0 -50%">
+              <div class="flex flex-col gap-52 items-start justify-start w-full md:w-[476px] absolute left-4 mg:left-[50px] lg:left-[100px] top-[40%] md:top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                   <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
                     Smart Furniture for Modern Offices
@@ -60,7 +60,7 @@ $theme_directory_uri = get_template_directory_uri();
         <?php echo esc_html__( 'Shop by Category', 'creative-furniture' ); ?>
       </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-start self-stretch shrink-0 relative">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-start self-stretch shrink-0 relative">
       <?php
       $categories = get_terms([
         'taxonomy'   => 'product_cat',
@@ -79,7 +79,7 @@ $theme_directory_uri = get_template_directory_uri();
 
   <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto overflow-hidden">
     <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-7 py-10 lg:p-0 gap-7">
-      <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-[476px] relative">
+      <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-full md:w-[476px] relative">
         <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
           <div class="rounded-[48px] border-solid border-[#eeeeee] border pt-1.5 pr-3.5 pb-1.5 pl-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
             <div class="text-[#3f3f3f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
@@ -106,7 +106,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 px-7 py-10 md:p-0 items-start justify-start w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 px-7 md:p-0 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         New Arrivals
@@ -117,14 +117,14 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
     <div class="flex flex-wrap gap-4 items-center justify-start self-stretch shrink-0 relative">
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 h-[267px] relative overflow-hidden">
-          <img class="absolute right-[0.33px] left-0 bottom-0 top-0 w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453430.png">
+        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453430.png">
           <svg class="h-[auto] absolute left-0 top-52 overflow-visible" width="405" height="59" viewBox="0 0 405 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 56.5C144.013 56.5 189.487 57.5 333.5 57.5L404.5 0" stroke="#BD262A" stroke-width="3.5"></path>
             <path d="M405 59V2L334.5 59H405Z" fill="#F4F4F4"></path>
           </svg>
         </div>
-        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-[405.33px] h-[30px] relative">
+        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
             LOUNGE SEATING
           </div>
@@ -134,10 +134,10 @@ $theme_directory_uri = get_template_directory_uri();
         </div>
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 h-[267px] relative overflow-hidden">
-          <img class="absolute right-[0.33px] left-0 bottom-0 top-0 w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453431.png">
+        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453431.png">
         </div>
-        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-[405.33px] h-[30px] relative">
+        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
             DINING COLLECTION
           </div>
@@ -147,10 +147,10 @@ $theme_directory_uri = get_template_directory_uri();
         </div>
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 h-[267px] relative overflow-hidden">
-          <img class="absolute right-[0.33px] left-0 bottom-0 top-0 w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453432.png">
+        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+          <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-453432.png">
         </div>
-        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-[405.33px] h-[30px] relative">
+        <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
             LIVING ESSENTIALS
           </div>
@@ -208,7 +208,7 @@ $theme_directory_uri = get_template_directory_uri();
                       background-repeat: no-repeat;
                       background-size: cover;
                     ">
-                    <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] relative">
+                    <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] relative">
                       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
                         <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
                           Top Picks
@@ -482,7 +482,7 @@ $theme_directory_uri = get_template_directory_uri();
 
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto">
+  <div class="flex flex-col gap-7 items-start justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
         Deal Zone
@@ -491,7 +491,7 @@ $theme_directory_uri = get_template_directory_uri();
         Explore more
       </a>
     </div>
-    <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'gap' => '12px', 'slidesToShow' => 3, 'slidesToScroll' => 1]])); ?>">
+    <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'gap' => '12px', 'slidesToShow' => 3, 'slidesToScroll' => 1], '(max-width: 900px)' => ['slidesToShow' => 2], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
       <div class="blaze-container w-full">
         <div class="blaze-track-container w-full">
           <div class="blaze-track w-full">
@@ -506,7 +506,7 @@ $theme_directory_uri = get_template_directory_uri();
                   </div>
                 </div>
               </div>
-              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-1/2 md:right-[226px] top-[50%]" style="translate: 0 -50%">
                 <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -524,7 +524,7 @@ $theme_directory_uri = get_template_directory_uri();
                   </div>
                 </div>
               </div>
-              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-1/2 md:right-[226px] top-[50%]" style="translate: 0 -50%">
                 <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -560,7 +560,7 @@ $theme_directory_uri = get_template_directory_uri();
                   </div>
                 </div>
               </div>
-              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-1/2 md:right-[226px] top-[50%]" style="translate: 0 -50%">
                 <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.16667 19.8332L19.8333 8.1665M19.8333 8.1665H8.16667M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -578,7 +578,7 @@ $theme_directory_uri = get_template_directory_uri();
                   </div>
                 </div>
               </div>
-              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-[226px] top-[50%]" style="translate: 0 -50%">
+              <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start absolute right-1/2 md:right-[226px] top-[50%]" style="translate: 0 -50%">
                 <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.16669 19.8332L19.8334 8.1665M19.8334 8.1665H8.16669M19.8334 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -624,7 +624,7 @@ $theme_directory_uri = get_template_directory_uri();
             <?php for ($i = 1;$i <= 5; $i++): ?>
             <div class="flex flex-col md:flex-row items-center justify-between self-stretch -flex-1 relative">
               <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45411.png">
-              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-[476px] py-10 px-7 relative">
+              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-10 px-7 relative">
                 <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
                   <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
                     <span>
@@ -669,478 +669,13 @@ $theme_directory_uri = get_template_directory_uri();
   <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
 
 
-  <!-- <div class="flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative" >
-      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start" >
-        Top Deals By Category
-      </div>
-      <div class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline" >
-        Explore more
-      </div>
-    </div>
-    <div class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative" >
-      <div class="flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative" >
-        <div class="flex flex-col gap-[15px] items-start justify-start shrink-0 w-[336px] relative" >
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px] overflow-visible"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/vector-40.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]" >
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]" >
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative" >
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative" >
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative" >
-                Office Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative" >
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45340.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]" >
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]" >
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative" >
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                Living Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45341.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                Dining Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45342.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative">
-                Outdoor Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45343.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                Washroom Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45344.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                Hotel Bedroom
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45345.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                Hospitality Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center flex-1 relative">
-          <div class="self-stretch shrink-0 h-[312px] relative overflow-hidden">
-            <img class="w-[336px] h-[312px] absolute left-0 top-[0.5px]"
-              style="object-fit: cover"
-              src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/rectangle-45346.png"
-            />
-            <svg class="w-[70.5px] h-[73px] absolute right-0 bottom-0 overflow-visible"
-              width="71"
-              height="73"
-              viewBox="0 0 71 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M70.5 73L69.9998 0L0 73H70.5Z" fill="#F4F4F4" />
-            </svg>
-            <svg class="w-[335.5px] h-[77px] absolute left-0 bottom-[-0.5px] overflow-visible"
-              width="336"
-              height="77"
-              viewBox="0 0 336 77"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M335.5 4L266.272 76.4833L0 77V73.5L265.407 72.9833L335.5 0V4Z"
-                fill="#BD262A"
-              />
-            </svg>
-            <div class="flex flex-col gap-0 items-center justify-center absolute left-[calc(50%_-_-85px)] top-[calc(50%_-_-94.5px)]">
-              <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-[16.82px] font-semibold relative w-[50px]">
-                Up TO
-              </div>
-              <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-base leading-[20.18px] font-bold relative">
-                30% Off
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-            <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-              <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative">
-                Kids Furniture
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#3F3F3F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <div class="h-[453px] w-full md:w-[1440px] m-auto relative">
     <img
       class="w-full h-full absolute right-0 bottom-0 overflow-visible"
       src="<?php echo esc_url($theme_directory_uri); ?>/src/img/v2/vector-40.png"
     />
     <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333352 100%);"></div>
-    <div class="flex flex-col gap-5 items-center justify-center w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
+    <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
         <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[32px] leading-[44px] font-bold relative self-stretch" >
           Ready to Upgrade Your

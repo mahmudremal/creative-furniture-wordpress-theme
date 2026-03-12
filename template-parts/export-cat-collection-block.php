@@ -10,7 +10,7 @@ if (empty($query['posts_per_page'])) {
 $title = $args['title'];
 $link = $args['link'];
 ?>
-<div class="flex flex-col gap-6 items-center justify-start w-full md:w-[1440px] m-auto">
+<div class="flex flex-col gap-6 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto">
   <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative px-4 md:px-0">
     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
       <?php echo esc_html($title); ?>
@@ -21,7 +21,7 @@ $link = $args['link'];
   </div>
   <div class="w-full relative">
     <div class="relative overflow-hidden">
-      <div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px'], 'md' => ['slidesToShow' => 3], 'sm' => ['slidesToShow' => 2]])); ?>">
+      <div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px'], '(max-width: 900px)' => ['slidesToShow' => 3], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">

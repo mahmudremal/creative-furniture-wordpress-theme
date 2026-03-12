@@ -22,7 +22,7 @@ if ($product->is_on_sale() && $regular_price > 0) {
   <div class="flex flex-col gap-4 items-start justify-start flex-1">
     <div class="self-stretch shrink-0 h-[294px] relative overflow-hidden">
       <div class="absolute inset-0 bg-[#f4f4f4]"></div>
-      <img class="w-full h-full absolute left-[50%] top-[50%] object-contain p-4" style="translate: -50% -50%; aspect-ratio: 1" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($title); ?>">
+      <img class="w-full h-full absolute left-[50%] top-[50%] object-contain" style="translate: -50% -50%; aspect-ratio: 1" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($title); ?>">
       <?php if ($percentage > 0) : ?>
       <div class="bg-[#000000] pt-1 pr-2 pb-1 pl-2 flex flex-row gap-7 items-center justify-start absolute left-0 top-0 overflow-hidden">
         <div class="text-[#ffffff] text-left font-['Raleway-SemiBold',_sans-serif] text-xs leading-[18px] font-semibold relative flex items-center justify-start">

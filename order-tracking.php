@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
 
 <div class="relative flex flex-col gap-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start w-full md:w-[1440px] m-auto relative pt-10">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto relative pt-10">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
         </div>
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     </div>
 
     <?php if (!$order) : ?>
-    <div class="h-[381px] overflow-hidden w-full md:w-[1440px] m-auto relative">
+    <div class="h-[381px] overflow-hidden px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
       <img class="h-[607px] absolute right-0 left-0 top-[calc(50%_-_404.5px)] w-full w-full" style="
           object-fit: cover;
         " src="<?php echo get_template_directory_uri(); ?>/src/img/v2/rectangle-453201.png">
@@ -81,13 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     </div>
     <?php else : ?>
 
-    <div class="w-[1440px] m-auto relative flex flex-col gap-10 py-5">
-        <div class="flex flex-col gap-3 items-start justify-start w-[461px] relative">
+    <div class="flex flex-col gap-10 py-5 px-4 md:px-0 w-full md:w-[1440px] m-auto relative">
+        <div class="flex flex-col gap-3 items-start justify-start w-full md:w-[461px] relative">
             <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
                 Order ID: <?php echo esc_html($order->get_order_number()); ?>
             </h1>
         </div>
-        <div class="flex flex-row gap-10 items-start">
+        <div class="flex flex-wrap gap-10 items-start">
             <div class="flex flex-col gap-12 items-start justify-start relative flex-1">
                 <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-full relative">
                     <div class="border-solid border-[#d9d9d9] border-b pb-2.5 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 relative">
@@ -213,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
             </div>
 
             <!-- Status Timeline -->
-            <div class="bg-[#f8f8f8] rounded-lg p-8 flex flex-col gap-6 items-start justify-start w-[500px] shrink-0 sticky top-10 self-start">
+            <div class="bg-[#f8f8f8] rounded-lg p-4 md:p-8 flex flex-col gap-6 items-start justify-start w-full md:w-[500px] shrink-0 sticky top-10 self-start">
                 <div class="border-solid border-[#efefef] border-b pb-3 w-full">
                     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl font-semibold relative flex items-center justify-start">
                         Order Status Guide
@@ -255,8 +255,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                 ?>
                 <div class="flex flex-row items-start justify-between self-stretch shrink-0 relative">
                     <div class="flex flex-row gap-4 items-center justify-start shrink-0 relative">
-                        <div class="<?php echo $bg_color; ?> rounded-full p-2 flex items-center justify-center shrink-0 w-10 h-10 relative">
-                            <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="<?php echo $bg_color; ?> rounded-full p-2 flex items-center justify-center shrink-0 w-7 md:w-10 h-auto aspect-square relative">
+                            <svg class="shrink-0 w-4 md:w-6 h-auto aspect-square relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                         </div>
