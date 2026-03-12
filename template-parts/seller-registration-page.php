@@ -26,7 +26,16 @@ if (isset($_GET['id'])) {
                     </tr>
                     <tr>
                         <th scope="row">Business Email</th>
-                        <td><a href="mailto:<?php echo esc_attr($submission->email); ?>"><?php echo esc_html($submission->email); ?></a></td>
+                        <td>
+                            <a href="mailto:<?php echo esc_attr($submission->email); ?>"><?php echo esc_html($submission->email); ?></a>
+                            <?php
+                            $user = get_user_by('email', $submission->email);
+                            if ($user) :
+                                $edit_link = get_edit_user_link($user->ID);
+                                ?>
+                                <a href="<?php echo esc_url($edit_link); ?>" class="dashicons-before dashicons-external" aria-hidden="true" target="_blank"></a>
+                            <?php endif; ?>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Phone Number</th>

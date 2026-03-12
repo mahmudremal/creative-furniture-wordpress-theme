@@ -1,9 +1,11 @@
 <?php
 function add_menu_anchor_class($atts, $item, $args) {
-    // Check if the current menu is the one you want to target (e.g., 'primary')
     if ($args->theme_location == 'header-mega-menu') {
-        // Add your custom class(es)
-        $atts['class'] = "text-[#2a2a2a] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start";
+        if (strpos($args->menu_class, 'flex-col') !== false) {
+            $atts['class'] = "text-black text-base font-semibold py-3 px-4 rounded-2xl bg-gray-50/50 hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-between group";
+        } else {
+            $atts['class'] = "text-black/80 hover:text-black text-sm lg:text-base font-semibold transition-all duration-200 relative flex items-center justify-start";
+        }
     }
     return $atts;
 }
@@ -86,7 +88,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
 
             <div class="w-full h-[70px] md:h-[62px] px-4 md:px-6 relative flex">
                 <div class="max-w-[1440px] m-auto w-full flex flex-row items-center justify-between">
-                    <button id="mobile-menu-toggle" class="md:hidden p-2 text-black">
+                    <button id="mobile-menu-toggle" class="md:hidden p-3 -ml-3 text-black hover:bg-gray-100 rounded-full transition-colors active:scale-95">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
 
@@ -144,45 +146,59 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
             </div>
         </div>
 
-        <div id="mobile-menu-drawer" class="fixed inset-0 bg-black/50 z-[100] transition-opacity duration-300 opacity-0 pointer-events-none md:hidden">
-            <div id="mobile-menu-content" class="absolute left-0 top-0 h-full w-[280px] bg-white shadow-xl translate-x-[-100%] transition-transform duration-300 flex flex-col">
-                <div class="p-4 border-b flex justify-between items-center">
-                    <span class="font-bold text-lg uppercase tracking-wider"><?php echo esc_html__( 'Menu', 'creative-furniture' ); ?></span>
-                    <button id="mobile-menu-close" class="p-2">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div id="mobile-menu-drawer" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] transition-opacity duration-300 opacity-0 pointer-events-none md:hidden">
+            <div id="mobile-menu-content" class="absolute left-0 top-0 h-full w-[300px] bg-white shadow-2xl translate-x-[-100%] transition-transform duration-500 ease-out flex flex-col">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                             <img class="w-5 h-5 object-contain invert" src="<?php echo esc_url( get_template_directory_uri() . '/src/img/v2/logo-icon.png' ); ?>" alt="Icon">
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-black"><?php echo esc_html__( 'Menu', 'creative-furniture' ); ?></span>
+                    </div>
+                    <button id="mobile-menu-close" class="p-2 hover:bg-gray-100 rounded-full transition-colors group">
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </div>
-                <div class="flex-1 overflow-y-auto py-4">
+
+                <div class="flex-1 overflow-y-auto px-2 py-6 custom-scrollbar">
                     <?php
                     wp_nav_menu([
                         'theme_location' => 'header-mega-menu',
                         'container' => false,
-                        'menu_class' => 'flex flex-col text-black font-medium',
-                        'item_class' => 'border-b last:border-0',
+                        'menu_class' => 'flex flex-col gap-2',
                         'fallback_cb' => false,
                     ]);
                     ?>
                 </div>
-                <div class="p-4 bg-gray-50 border-t flex flex-col gap-4">
-                    <a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" class="flex items-center gap-3 text-sm font-medium">
-                        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6667 17.5C16.6667 16.337 16.6667 15.7555 16.5232 15.2824C16.2 14.217 15.3663 13.3834 14.301 13.0602C13.8278 12.9167 13.2463 12.9167 12.0834 12.9167H7.91671C6.75374 12.9167 6.17225 12.9167 5.69909 13.0602C4.63375 13.3834 3.80007 14.217 3.47691 15.2824C3.33337 15.7555 3.33337 16.337 3.33337 17.5M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92897 10 6.25004 8.32107 6.25004 6.25C6.25004 4.17893 7.92897 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        <?php echo esc_html__( 'My Account', 'creative-furniture' ); ?>
+
+                <div class="p-6 bg-gray-50 border-t border-gray-100 space-y-4">
+                    <a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-200 text-sm font-semibold text-black hover:border-black transition-all">
+                        <div class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center">
+                            <svg class="w-5 h-5 text-black" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6667 17.5C16.6667 16.337 16.6667 15.7555 16.5232 15.2824C16.2 14.217 15.3663 13.3834 14.301 13.0602C13.8278 12.9167 13.2463 12.9167 12.0834 12.9167H7.91671C6.75374 12.9167 6.17225 12.9167 5.69909 13.0602C4.63375 13.3834 3.80007 14.217 3.47691 15.2824C3.33337 15.7555 3.33337 16.337 3.33337 17.5M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92897 10 6.25004 8.32107 6.25004 6.25C6.25004 4.17893 7.92897 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500 font-normal"><?php echo esc_html__( 'Manage Profile', 'creative-furniture' ); ?></span>
+                            <span><?php echo esc_html__( 'My Account', 'creative-furniture' ); ?></span>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-search-bar" class="hidden md:hidden w-full bg-white border-b p-4 animate-slide-down">
+        <div id="mobile-search-bar" class="hidden md:hidden w-full bg-white border-b border-gray-100 p-6 transform transition-all duration-300">
             <form role="search" method="get" class="w-full" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <div class="border border-[#d3d3d3] rounded px-4 py-2 flex flex-row gap-3 items-center w-full">
-                    <input type="search" class="bg-transparent border-none focus:ring-0 text-black text-sm w-full outline-none placeholder:text-[#464646]" 
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400 group-focus-within:text-black transition-colors" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <input type="search" class="block w-full bg-gray-50 border-0 focus:ring-2 focus:ring-black rounded-2xl py-4 pl-12 pr-4 text-black text-sm transition-all placeholder:text-gray-400" 
                         placeholder="<?php echo esc_attr__( 'Search products...', 'creative-furniture' ); ?>" 
                         value="<?php echo get_search_query(); ?>" name="s" />
                     <input type="hidden" name="post_type" value="product" />
-                    <button type="submit" class="text-[#464646]">
-                        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
+                    <button type="submit" class="absolute inset-y-0 right-0 pr-4 flex items-center text-sm font-bold text-black uppercase tracking-wider">
+                        <?php echo esc_html__( 'Go', 'creative-furniture' ); ?>
                     </button>
                 </div>
             </form>

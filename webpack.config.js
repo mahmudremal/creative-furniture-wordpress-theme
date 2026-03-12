@@ -19,6 +19,7 @@ module.exports = {
     admin: path.resolve(JS_DIR, "admin.js"),
     editor: path.resolve(JS_DIR, "editor.js"),
     blaze: path.resolve(JS_DIR, "blaze.js"),
+    reviews: path.resolve(JS_DIR, "reviews.js"),
   },
   output: {
     clean: true,

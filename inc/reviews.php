@@ -10,9 +10,12 @@ class CustomerReviews {
 
     public function localize_ajax() {
         if (is_product()) {
-            wp_localize_script('public', 'cf_reviews_obj', [
+            global $product;
+	        wp_enqueue_script( 'cf-reviews', get_template_directory_uri() . '/dist/js/reviews.js', [], filemtime(get_template_directory() . '/dist/js/reviews.js'), true );
+            wp_localize_script('cf-reviews', 'cf_reviews_obj', [
                 'ajax_url' => admin_url('admin-ajax.php'),
                 'nonce'    => wp_create_nonce('cf_reviews_nonce'),
+                'product_id' => method_exists($product, 'get_id') ? $product->get_id() : get_the_ID()
             ]);
         }
     }
