@@ -8,12 +8,17 @@ class CF_MegaMenuWalker extends Walker_Nav_Menu {
     }
 
     public function start_el( &$output, $item, $depth = 0, $args = [], $id = 0 ) {
-
         $mega_content = '';
         $has_mega     = false;
 
         // Load mega content (saved from admin)
         $saved = get_post_meta( $item->ID, '_mega_menu_content', true );
+        if (empty(trim($saved))) {
+            $menu_path = get_template_directory() . '/demos/metgamenus/' . $item->title . '.txt';
+            if (file_exists($menu_path) && !is_dir($menu_path)) {
+                $saved = file_get_contents($menu_path);
+            }
+        }
 
         if ( ! empty( $saved ) ) {
             $has_mega     = true;
