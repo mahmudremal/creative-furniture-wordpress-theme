@@ -1,71 +1,25 @@
-/* -------------------------
-   Arimo Fonts
-------------------------- */
-
-/* Regular */
 @font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-Regular.ttf') format('truetype');
+  font-family: 'Raleway-Regular';
+  src: url('./Raleway/static/Raleway-Regular.ttf') format('truetype');
   font-weight: 400;
-  font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-Italic.ttf') format('truetype');
+  font-family: 'Raleway-Medium';
+  src: url('./Raleway/static/Raleway-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url('./Raleway/static/Raleway-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Raleway-Regular', sans-serif;
   font-weight: 400;
-  font-display: swap;
-  font-style: italic;
-}
-
-/* Medium */
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-/* SemiBold */
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: italic;
-}
-
-/* Bold */
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Arimo';
-  src: url('./Arimo/static/Arimo-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
 }

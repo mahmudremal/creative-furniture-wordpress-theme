@@ -3,49 +3,49 @@ $deals = [
   [
     'title'    => 'Office Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453422.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Living Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45340.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Dining Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45341.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Outdoor Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45342.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Washroom Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453426.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/washroom/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Hotel Bedroom',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45344.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/bedroom/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Hospitality Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45345.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/hospitality/'),
     'discount' => '30%'
   ],
   [
     'title'    => 'Kids Furniture',
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45346.png',
-    'link'     => '#',
+    'link'     => home_url('/product-category/kids/'),
     'discount' => '30%'
   ],
 ];

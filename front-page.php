@@ -119,10 +119,10 @@ $theme_directory_uri = get_template_directory_uri();
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
         <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
           <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453430.png">
-          <svg class="h-[auto] absolute left-0 top-52 overflow-visible" width="405" height="59" viewBox="0 0 405 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg class="w-full h-[auto] absolute left-0 top-52 overflow-visible" width="405" height="59" viewBox="0 0 405 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 56.5C144.013 56.5 189.487 57.5 333.5 57.5L404.5 0" stroke="#BD262A" stroke-width="3.5"></path>
             <path d="M405 59V2L334.5 59H405Z" fill="#F4F4F4"></path>
-          </svg>
+          </svg> -->
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
           <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
@@ -183,7 +183,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
   
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'bestsellers']); ?>
 
   <div class="flex flex-col gap-7 items-start justify-start w-full md:w-[1440px] m-auto relative">
     <div class="w-full">
@@ -235,10 +235,10 @@ $theme_directory_uri = get_template_directory_uri();
                       </a>
                     </div>
                   </div>
-                  <!-- <svg class="h-auto w-full absolute left-0 overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="bottom: -5px;">
-                    <path d="M0 56.5C512.758 56.5 772.242 56.5 1285 56.5L1392.5 0" stroke="#BD262A" stroke-width="3.5"></path>
-                    <path d="M1395 61.5L1392.5 2L1285.5 59L1395 61.5Z" fill="white"></path>
-                  </svg> -->
+                  <svg class="h-auto w-full absolute left-0 overflow-visible" width="1395" height="62" viewBox="0 0 1395 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="bottom: -5px;">
+                    <path d="M0 56.5C512.758 56.5 772.242 56.5 1285 56.5L1395 0" stroke="#BD262A" stroke-width="3.5" />
+                    <path d="M1395 62L1395 0L1285 59L1395 62Z" fill="white" />
+                  </svg>
                 </div>
               </div>
               <?php endfor; ?>
@@ -254,11 +254,11 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand']]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand'], 'type' => 'chairs']); ?>
   
 
-  <div class="bg-[#000000] h-[88px] overflow-hidden w-full md:w-[1440px] m-auto relative">
-    <div class="w-[341px] h-16 absolute left-0 top-[50%]" style="translate: 0 -50%" >
+  <div class="bg-[#000000] min-h-[88px] w-full md:w-[1440px] m-auto relative flex flex-col md:flex-row items-center justify-center md:justify-between py-6 md:py-0 px-6 gap-4 md:gap-4 overflow-hidden">
+    <div class="hidden md:block w-[341px] h-16 shrink-0 relative">
       <svg
         class="w-[312px] h-[58px] absolute left-0 top-[3px] overflow-visible"
         width="312"
@@ -277,16 +277,22 @@ $theme_directory_uri = get_template_directory_uri();
         Limited Time Offer
       </div>
     </div>
-    <div class="text-[#ffffff] text-center absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
-      <span class="text-sm md:text-xl">
-        Enjoy <span class="text-[24px] font-bold">30% Off</span> Your First Order
+    
+    <div class="md:hidden bg-[#9D0004]/50 px-4 py-1.5 rounded-full">
+      <span class="text-[#ffffff] text-xs font-semibold uppercase tracking-wider">Limited Time Offer</span>
+    </div>
+
+    <div class="text-[#ffffff] text-center md:flex-1">
+      <span class="text-base md:text-xl">
+        Enjoy <span class="text-[20px] md:text-[24px] font-bold">30% Off</span> Your First Order
       </span>
     </div>
-    <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-start justify-start absolute left-[1312px] top-[28.5px]" >
+    
+    <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-center justify-start shrink-0" >
       <span class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" >
         Shop Now
       </span>
-      <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="shrink-0 w-5 h-5 md:w-6 md:h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </a>
@@ -480,7 +486,7 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'desks']); ?>
 
   <div class="flex flex-col gap-7 items-start justify-start px-4 md:px-0 w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
@@ -666,7 +672,7 @@ $theme_directory_uri = get_template_directory_uri();
     
   </div>
   
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => []]); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'living']); ?>
 
 
   <div class="h-[453px] w-full md:w-[1440px] m-auto relative overflow-hidden"

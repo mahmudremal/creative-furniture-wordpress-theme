@@ -31,7 +31,7 @@ $link = $args['link'];
                 while ($products_query->have_posts()) : $products_query->the_post();
                   ?>
                   <div class="h-full">
-                    <?php get_template_part('template-parts/product-card-extended', null, ['product_id' => get_the_ID()]); ?>
+                    <?php get_template_part('template-parts/product-card-extended', null, ['product_id' => get_the_ID(), 'rowType' => $args['type'] ?: false]); ?>
                   </div>
                   <?php
                 endwhile;

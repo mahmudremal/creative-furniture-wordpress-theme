@@ -107,7 +107,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                         wp_nav_menu([
                             'theme_location' => 'header-mega-menu',
                             'container' => false,
-                            'menu_class' => 'flex flex-row gap-6 lg:gap-8 items-center h-full text-black font-bold text-sm lg:text-base uppercase tracking-tight',
+                            'menu_class' => 'flex flex-row gap-4 lg:gap-6 items-center h-full text-black font-bold text-sm lg:text-base capitalize tracking-tight',
                             'fallback_cb' => false,
                             'walker' => new \CF_MegaMenuWalker()
                         ]);

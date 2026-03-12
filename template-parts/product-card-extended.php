@@ -14,8 +14,47 @@ $price_html = $product->get_price_html();
 
 $percentage = 0;
 if ($product->is_on_sale() && $regular_price > 0) {
-    $percentage = round((($regular_price - $sale_price) / $regular_price) * 100);
+  $percentage = round((($regular_price - $sale_price) / $regular_price) * 100);
 }
+
+$rowType = $args['rowType'];
+
+
+$rows = [
+  'bestsellers' => [
+    'product-1.png',
+    'product-2.png',
+    'product-3.png',
+    'product-4.png',
+    'product-5.png'
+  ],
+  'chairs' => [
+    'chairs/chair-1.png',
+    'chairs/chair-2.png',
+    'chairs/chair-3.png',
+    'chairs/chair-4.png',
+    'chairs/chair-5.png'
+  ],
+  'desks' => [
+    'desks/desk-1.png',
+    'desks/desk-2.png',
+    'desks/desk-3.png',
+    'desks/desk-4.png',
+    'desks/desk-5.png'
+  ],
+  'living' => [
+    'living/living-1.png',
+    'living/living-2.png',
+    'living/living-3.png',
+    'living/living-4.png',
+    'living/living-5.png'
+  ]
+];
+
+if (!empty($rowType) && isset($rows[$rowType])) {
+  $image_url = get_template_directory_uri() . '/dist/images/v2/products/' . $rows[$rowType][rand(0, count($rows[$rowType]) - 1)];
+}
+
 ?>
 
 <a href="<?php echo esc_url($permalink); ?>" class="flex relative">
@@ -37,9 +76,9 @@ if ($product->is_on_sale() && $regular_price > 0) {
       </div>
     </div>
     <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
-      <div class="text-[#141414] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch flex items-center justify-start line-clamp-2">
+      <h3 class="text-[#141414] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch items-center justify-start line-clamp-2">
         <?php echo esc_html($title); ?>
-      </div>
+      </h3>
       <div class="flex flex-row gap-3 items-center justify-start shrink-0 relative">
         <div class="flex flex-row gap-1 items-center justify-start shrink-0 relative">
           <div class="bg-[#000000] rounded-[20px] shrink-0 w-2.5 h-2.5 relative" style="aspect-ratio: 1"></div>
