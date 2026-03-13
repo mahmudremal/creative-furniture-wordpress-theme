@@ -14,12 +14,10 @@
     <div class="flex flex-col gap-14 items-start justify-center w-[476px] absolute left-[calc(50%_-_696px)] top-[50%]" style="translate: 0 -50%">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
-          Contact Us
+          <?php esc_html_e('Contact Us', 'creative-furniture'); ?>
         </div>
         <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-          Have a question or project in mind? We’re here to help every step
-          <br>
-          of the way.
+          <?php echo nl2br(sprintf(esc_html(__('Have a question or project in mind? We’re here to help every step %s of the way.', 'creative-furniture')), '\n')); ?>
         </div>
       </div>
     </div>
@@ -28,20 +26,19 @@
     <div class="flex flex-col gap-[60px] items-start justify-start shrink-0 w-[821px] relative">
       <div class="border-solid border-[transparent] border-b pr-[120px] pl-[120px] flex flex-col gap-7 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-          Contact Information
+          <?php esc_html_e('Contact Information', 'creative-furniture'); ?>
         </div>
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative w-[571px] flex items-center justify-start">
             Office
           </div>
           <div class="text-[#4c4c4c] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative w-[484px] h-12 flex items-center justify-start">
-            Al Raihan Tower – Office No J512, 5th Floor – 46th St – next to
-            Movenpick Hotel – Deira – The Town Square – Dubai
+            <?php esc_html_e('Al Raihan Tower - Office No J512, 5th Floor - 46th St - next to Movenpick Hotel - Deira - The Town Square - Dubai', 'creative-furniture'); ?>
           </div>
         </div>
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative w-[571px] flex items-center justify-start">
-            Mail Address
+            <?php esc_html_e('Mail Address', 'creative-furniture'); ?>
           </div>
           <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
             <div class="text-[#4c4c4c] text-left font-['Aspekta-400',_sans-serif] text-base leading-6 font-normal relative w-[527px] flex items-center justify-start">
@@ -51,7 +48,7 @@
         </div>
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative w-[571px] flex items-center justify-start">
-            Phone
+            <?php esc_html_e('Phone', 'creative-furniture'); ?>
           </div>
           <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
             <div class="text-[#4c4c4c] text-left font-['Aspekta-400',_sans-serif] text-base leading-6 font-normal relative w-[527px] flex items-center justify-start">
@@ -62,7 +59,7 @@
       </div>
       <div class="border-solid border-[transparent] border-b pr-[120px] pl-[120px] flex flex-col gap-7 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-          Social Info
+          <?php esc_html_e('Social Info', 'creative-furniture'); ?>
         </div>
         <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
           <svg class="rounded-[22.76px] flex flex-row gap-[3.56px] items-center justify-center shrink-0 w-8 h-8 relative overflow-visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +88,7 @@
     <div id="contact-form" class="flex flex-col gap-10 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative py-20 px-6">
       <div class="flex flex-col gap-3 items-center justify-start shrink-0 w-[794px] relative">
         <h2 class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-          Send Us a Message
+          <?php esc_html_e('Send Us a Message', 'creative-furniture'); ?>
         </h2>
         <!-- <div class="text-[#2f2f2f] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
           Have questions or need assistance? Our team is here to help you design your perfect space.
@@ -101,9 +98,9 @@
       <?php if (isset($_GET['status'])): ?>
           <div class="w-[794px] m-auto mb-6 p-4 rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
               <?php if ($_GET['status'] === 'success'): ?>
-                  Thank you for contacting us! Your message has been sent successfully. We will get back to you soon.
+                  <?php esc_html_e('Thank you for contacting us! Your message has been sent successfully. We will get back to you soon.', 'creative-furniture'); ?>
               <?php else: ?>
-                  There was an error sending your message. Please check all required fields and try again.
+                  <?php esc_html_e('There was an error sending your message. Please check all required fields and try again.', 'creative-furniture'); ?>
               <?php endif; ?>
           </div>
       <?php endif; ?>
@@ -116,18 +113,18 @@
           <div class="flex flex-row gap-5 items-start justify-start self-stretch shrink-0 relative">
             <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
-                First Name *
+                <?php esc_html_e('First Name *', 'creative-furniture'); ?>
               </div>
               <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="text" name="firstname" placeholder="First Name *" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
+                <input type="text" name="firstname" placeholder="<?php esc_attr_e('First Name *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
             <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
-                Last Name *
+                <?php esc_html_e('Last Name *', 'creative-furniture'); ?>
               </div>
               <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="text" name="lastname" placeholder="Last Name *" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
+                <input type="text" name="lastname" placeholder="<?php esc_attr_e('Last Name *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
           </div>
@@ -135,28 +132,28 @@
           <div class="flex flex-row gap-5 items-start justify-start self-stretch shrink-0 relative">
             <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
-                Email Address *
+                <?php esc_html_e('Email Address *', 'creative-furniture'); ?>
               </div>
               <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="email" name="email" placeholder="Email Address *" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
+                <input type="email" name="email" placeholder="<?php esc_attr_e('Email Address *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
             <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
-                Phone Number
+                <?php esc_html_e('Phone Number', 'creative-furniture'); ?>
               </div>
               <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="tel" name="phone" placeholder="Phone Number" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
+                <input type="tel" name="phone" placeholder="<?php esc_attr_e('Phone Number', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
               </div>
             </div>
           </div>
 
           <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
-              Message *
+              <?php esc_html_e('Message *', 'creative-furniture'); ?>
             </div>
             <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
-              <textarea name="message" required placeholder="Type your message here" class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
+              <textarea name="message" required placeholder="<?php esc_attr_e('Type your message here', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
             </div>
           </div>
           
@@ -175,7 +172,7 @@
             <label for="agree_terms" class="flex flex-col gap-0.5 items-start justify-center shrink-0 relative cursor-pointer">
               <div class="text-[#0a0909] text-left font-['-',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
                 <span>
-                  Subscribe By submitting, you agree to our Terms &amp; Conditions and Privacy Policy.
+                  <?php esc_html_e('Subscribe By submitting, you agree to our Terms &amp; Conditions and Privacy Policy.', 'creative-furniture'); ?>
                 </span>
               </div>
             </label>
@@ -185,7 +182,7 @@
 
         <button type="submit" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center self-stretch shrink-0 relative cursor-pointer hover:bg-gray-900 transition-colors">
           <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-            Submit
+            <?php esc_html_e('Submit', 'creative-furniture'); ?>
           </div>
         </button>
       </form>

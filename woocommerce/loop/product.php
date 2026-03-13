@@ -82,7 +82,7 @@ $product_id = $args['product_id'];
           <div class="bg-[#9c7a52] rounded-[20px] shrink-0 w-2.5 h-2.5 relative" style="aspect-ratio: 1"></div>
         </div>
         <div class="text-[#3f3f3f] text-right font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">
-          + more options
+          <?php esc_html_e('+ more options', 'creative-furniture'); ?>
         </div>
       </div>
       <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
@@ -101,8 +101,7 @@ $product_id = $args['product_id'];
     <!-- Image Section -->
     <div class="self-stretch shrink-0 h-[294px] relative overflow-hidden bg-[#f4f4f4] rounded-sm">
         <a href="<?php echo esc_url( get_permalink( $product_id ) ); ?>" class="block w-full h-full">
-            <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" 
-                src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $product->get_name() ); ?>">
+            <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $product->get_name() ); ?>">
         </a>
 
         <!-- Discount Badge -->

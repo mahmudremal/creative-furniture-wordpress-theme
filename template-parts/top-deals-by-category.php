@@ -1,49 +1,49 @@
 <?php
 $deals = [
   [
-    'title'    => 'Office Furniture',
+    'title'    => __('Office Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453422.png',
     'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Living Furniture',
+    'title'    => __('Living Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45340.png',
     'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Dining Furniture',
+    'title'    => __('Dining Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45341.png',
     'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Outdoor Furniture',
+    'title'    => __('Outdoor Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45342.png',
     'link'     => home_url('/product-category/office/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Washroom Furniture',
+    'title'    => __('Washroom Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453426.png',
     'link'     => home_url('/product-category/washroom/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Hotel Bedroom',
+    'title'    => __('Hotel Bedroom', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45344.png',
     'link'     => home_url('/product-category/bedroom/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Hospitality Furniture',
+    'title'    => __('Hospitality Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45345.png',
     'link'     => home_url('/product-category/hospitality/'),
     'discount' => '30%'
   ],
   [
-    'title'    => 'Kids Furniture',
+    'title'    => __('Kids Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45346.png',
     'link'     => home_url('/product-category/kids/'),
     'discount' => '30%'
@@ -51,10 +51,10 @@ $deals = [
 ];
 ?>
 
-<div class="flex flex-col gap-6 items-center justify-start px-4 lg:px-0 mb-12 w-full md:max-w-[1440px] m-auto relative">
+<div class="flex flex-col gap-6 items-center justify-start px-4 mb-12 w-full md:max-w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
         <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl md:text-2xl leading-8 font-semibold relative flex items-center justify-start">
-            Top Deals By Category
+            <?php esc_html_e('Top Deals By Category', 'creative-furniture'); ?>
         </div>
         <div class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start cursor-pointer hover:opacity-80 transition-opacity" style="text-decoration: underline">
             Explore more
@@ -65,9 +65,7 @@ $deals = [
         <?php foreach ($deals as $deal) : ?>
             <a href="<?php echo esc_url($deal['link']); ?>" class="flex flex-col gap-4 items-center justify-center relative group">
                 <div class="self-stretch shrink-0 h-[300px] md:h-[312px] relative overflow-hidden rounded-sm">
-                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                         src="<?php echo esc_url($deal['banner']); ?>" 
-                         alt="<?php echo esc_attr($deal['title']); ?>" />
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="<?php echo esc_url($deal['banner']); ?>" alt="<?php echo esc_attr($deal['title']); ?>" />
                     
                     <div class="w-[76px] h-[72.78px] absolute right-4 top-4">
                         <svg class="w-full h-full absolute inset-0 overflow-visible" width="76" height="73" viewBox="0 0 76 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,12 +73,11 @@ $deals = [
                         </svg>
                         <div class="flex flex-col gap-0 items-center justify-center absolute left-[50%] top-[50%]" style="translate: -50% -50%">
                             <div class="text-[#0d0d0d] text-center font-['Raleway-SemiBold',_sans-serif] text-[10.41px] leading-[15px] font-semibold relative">
-                                Up TO
+                              Up TO
                             </div>
                             <div class="text-[#0d0d0d] text-center relative">
-                                <span>
-                                    <span class="_30-off-span"><?php echo esc_html($deal['discount']); ?></span>
-                                    <span class="_30-off-span2">Off</span>
+                                <span class="text-base leading-6 font-semibold whitespace-nowrap">
+                                  <?php echo esc_html(sprintf(__('%s Off', 'creative-furniture'), $deal['discount'])); ?>
                                 </span>
                             </div>
                         </div>

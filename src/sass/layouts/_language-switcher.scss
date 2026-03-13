@@ -18,6 +18,10 @@
     text-decoration: none;
     color: #000;
 
+    @media screen and (max-width: 768px) {
+      padding: 8px 12px 8px 0;
+    }
+
     // &::after {
     //   content: "▾";
     //   font-size: 12px;

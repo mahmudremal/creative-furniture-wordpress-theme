@@ -9,8 +9,8 @@ if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 				<path d="M9 8H11V17H9V8ZM13 8H15V17H13V8Z" fill="#9D8465"/>
 			</svg>
 		</div>
-		<h2 class="text-[#242424] text-[30px] font-medium capitalize leading-[46px] mb-[16px]">Your cart is empty</h2>
-		<p class="text-[#0A0909] text-[18px] font-normal leading-[28px] mb-[32px] max-w-[400px]">Looks like you haven't added anything to your cart yet. Start shopping to fill it up!</p>
+		<h2 class="text-[#242424] text-[30px] font-medium capitalize leading-[46px] mb-[16px]"> <?php esc_html_e('cart is empty', 'creative-furniture'); ?></h2>
+		<p class="text-[#0A0909] text-[18px] font-normal leading-[28px] mb-[32px] max-w-[400px]"><?php esc_html_e("Looks like you haven't added anything to your cart yet. Start shopping to fill it up!", 'creative-furniture'); ?></p>
 		<p class="mt-0">
 			<a class="inline-block p-[14px_30px] bg-[rgba(17,17,17,0.80)] hover:bg-[rgba(17,17,17,1)] rounded-[90px] text-white text-[18px] font-medium capitalize transition-colors duration-300" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 				<?php

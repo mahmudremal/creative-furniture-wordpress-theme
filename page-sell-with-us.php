@@ -14,16 +14,15 @@
     <div class="flex flex-col gap-14 items-start justify-center w-[476px] absolute left-[calc(50%_-_696px)] top-[50%]" style="translate: 0 -50%">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
-          Sell Your Furniture on Creative Furniture
+          <?php esc_html_e('Sell Your Furniture on Creative Furniture', 'creative-furniture'); ?>
         </div>
         <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-          Showcase your designs to a wider audience. We handle the marketing,
-          you focus on creating quality furniture.
+          <?php esc_html_e('Showcase your designs to a wider audience. We handle the marketing, you focus on creating quality furniture.', 'creative-furniture'); ?>
         </div>
       </div>
       <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
         <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-          Start Selling
+          <?php esc_html_e('Start Selling', 'creative-furniture'); ?>
         </div>
       </div>
     </div>
@@ -31,10 +30,10 @@
   <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-[#242424] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        Why Sell With Us
+        <?php esc_html_e('Why Sell With Us', 'creative-furniture'); ?>
       </div>
       <a href="/shop" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
-        Explore more
+        <?php esc_html_e('Explore more', 'creative-furniture'); ?>
       </a>
     </div>
     <div class="flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
@@ -79,10 +78,10 @@
         </svg>
         <div class="flex flex-col gap-3 items-center justify-center self-stretch shrink-0 relative">
           <div class="text-[#2b2b2b] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-[30px] font-semibold uppercase relative self-stretch">
-            Marketing &amp; Promotion
+            <?php esc_html_e('Marketing &amp; Promotion', 'creative-furniture'); ?>
           </div>
           <div class="text-[#4a4a4a] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative w-[266px]" style="opacity: 0.8">
-            We promote your products on Sell Platform
+            <?php esc_html_e('We promote your products on Sell Platform', 'creative-furniture'); ?>
           </div>
         </div>
       </div>
@@ -103,10 +102,10 @@
         </svg>
         <div class="flex flex-col gap-3 items-center justify-center self-stretch shrink-0 relative">
           <div class="text-[#0f1d1d] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-[30px] font-semibold uppercase relative self-stretch">
-            Fast Payouts
+            <?php esc_html_e('Fast Payouts', 'creative-furniture'); ?>
           </div>
           <div class="text-[#4a4a4a] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative w-[266px]" style="opacity: 0.8">
-            Receive payments securely and on time.
+            <?php esc_html_e('Receive payments securely and on time.', 'creative-furniture'); ?>
           </div>
         </div>
       </div>
@@ -127,10 +126,10 @@
         </svg>
         <div class="flex flex-col gap-3 items-center justify-center self-stretch shrink-0 relative">
           <div class="text-[#2b2b2b] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-[30px] font-semibold uppercase relative self-stretch">
-            Support Team
+            <?php esc_html_e('Support Team', 'creative-furniture'); ?>
           </div>
           <div class="text-[#4a4a4a] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative w-[266px]" style="opacity: 0.8">
-            we’re here to help you every step of the way.
+            <?php esc_html_e('we’re here to help you every step of the way.', 'creative-furniture'); ?>
           </div>
         </div>
       </div>
@@ -144,29 +143,22 @@
     <div class="pr-[70px] pl-[70px] flex flex-col gap-10 items-center justify-start shrink-0 w-[758px] relative">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-          Together, We Build Beautiful Spaces
+          <?php esc_html_e('Together, We Build Beautiful Spaces', 'creative-furniture'); ?>
         </div>
         <div class="text-[#525252] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch flex items-center justify-center">
-          At Creative Furniture, we believe furniture is more than function —
-          it’s a statement of style and comfort. We’ve helped people design
-          their dream spaces with high-quality, timeless pieces.
-          <br>
-          <br>
-          Now, we’re opening our platform to talented furniture makers and
-          brands who share our passion for craftsmanship, sustainability, and
-          design excellence.
+          <?php echo nl2br(sprintf(esc_html(__('At Creative Furniture, we believe furniture is more than function — it’s a statement of style and comfort. We’ve helped people design their dream spaces with high-quality, timeless pieces.%s Now, we’re opening our platform to talented furniture makers and brands who share our passion for craftsmanship, sustainability, and design excellence.', 'creative-furniture')), '\n\n')); ?>
         </div>
       </div>
       <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
         <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-          Start Selling Today
+          <?php esc_html_e('Start Selling Today', 'creative-furniture'); ?>
         </div>
       </div>
     </div>
   </div>
   <div class="flex flex-col gap-7 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
     <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-      Trusted by Leading Furniture Brands
+      <?php esc_html_e('Trusted by Leading Furniture Brands', 'creative-furniture'); ?>
     </div>
     <div class="flex flex-row items-center justify-start self-stretch relative select-none">
       <div class="blaze-slider" data-slider="clients" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 7, 'slidesToScroll' => 1, 'slideGap' => '70.14px', 'enableAutoplay' => !true, 'OnInteraction' => true, 'autoplayInterval' => 3000, 'autoplayDirection' => 'to left',]])); ?>">
@@ -316,26 +308,26 @@
     <div class="flex flex-col gap-7 items-start justify-center shrink-0 w-[716px] relative">
       <div class="flex flex-col gap-[18px] items-center justify-center self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-          Frequently Asked Questions
+          <?php esc_html_e('Frequently Asked Questions', 'creative-furniture'); ?>
         </div>
       </div>
       <?php
       $questions = [
           [
-              'title' => 'What kind of products can I sell?',
-              'answer' => 'You can sell a wide range of furniture and home décor items — including sofas, chairs, tables, storage units, beds, and more. We welcome both handcrafted and manufactured products, as long as they meet our quality and design standards.'
+              'title' => __('What kind of products can I sell?', 'creative-furniture'),
+              'answer' => __('You can sell a wide range of furniture and home décor items — including sofas, chairs, tables, storage units, beds, and more. We welcome both handcrafted and manufactured products, as long as they meet our quality and design standards.', 'creative-furniture')
           ],
           [
-              'title' => 'Are there any fees or commissions?',
-              'answer' => 'We offer competitive commission rates and transparent fee structures. Detailed information regarding our pricing model will be shared once your application is reviewed.'
+              'title' => __('Are there any fees or commissions?', 'creative-furniture'),
+              'answer' => __('We offer competitive commission rates and transparent fee structures. Detailed information regarding our pricing model will be shared once your application is reviewed.', 'creative-furniture')
           ],
           [
-              'title' => 'How are payments processed?',
-              'answer' => 'Payments are processed securely through our integrated payment gateway. You will receive payouts directly to your registered bank account on a regular schedule.'
+              'title' => __('How are payments processed?', 'creative-furniture'),
+              'answer' => __('Payments are processed securely through our integrated payment gateway. You will receive payouts directly to your registered bank account on a regular schedule.', 'creative-furniture')
           ],
           [
-              'title' => 'How do I track my orders?',
-              'answer' => 'Our seller dashboard provides real-time tracking for all your orders. You can manage inventory, view shipping status, and handle customer inquiries all in one place.'
+              'title' => __('How do I track my orders?', 'creative-furniture'),
+              'answer' => __('Our seller dashboard provides real-time tracking for all your orders. You can manage inventory, view shipping status, and handle customer inquiries all in one place.', 'creative-furniture')
           ]
       ];
       ?>
@@ -388,21 +380,18 @@
   <div class="flex flex-col gap-12 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-col gap-4 items-center justify-center shrink-0 w-[794px] relative">
       <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-        Grow Your Furniture Business with
-        <br>
-        Creative Furniture
+        <?php echo nl2br(sprintf(esc_html(__('Grow Your Furniture Business with %s Creative Furniture', 'creative-furniture')), '\n'));; ?>
       </div>
       <div class="text-[#525252] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch flex items-center justify-center">
-        Tell us about your products and business. Our team will review your
-        application and get back to you within 3–5 business days.
+        <?php esc_html_e('Tell us about your products and business. Our team will review your application and get back to you within 3-5 business days.', 'creative-furniture'); ?>
       </div>
     </div>
     <?php if (isset($_GET['status'])): ?>
         <div class="w-[794px] m-auto mb-6 p-4 rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
             <?php if ($_GET['status'] === 'success'): ?>
-                Your application has been submitted successfully! We will get back to you soon.
+              <?php esc_html_e('Your application has been submitted successfully! We will get back to you soon.', 'creative-furniture'); ?>
             <?php else: ?>
-                There was an error submitting your application. Please check all required fields.
+              <?php esc_html_e('There was an error submitting your application. Please check all required fields.', 'creative-furniture'); ?>
             <?php endif; ?>
         </div>
     <?php endif; ?>
@@ -415,23 +404,23 @@
           <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
               <span>
-                <span class="title-span">Full Name / Company Name</span>
+                <span class="title-span"><?php esc_html_e('Full Name / Company Name', 'creative-furniture'); ?></span>
                 <span class="title-span2">*</span>
               </span>
             </div>
             <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="text" name="fullname" placeholder="Donald Smith" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
+                <input type="text" name="fullname" placeholder="<?php esc_attr_e('Donald Smith', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
             </div>
           </div>
           <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
               <span>
-                <span class="title-span">Business Email</span>
+                <span class="title-span"><?php esc_html_e('Business Email', 'creative-furniture'); ?></span>
                 <span class="title-span2">*</span>
               </span>
             </div>
             <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                <input type="email" name="email" placeholder="Email Address" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
+                <input type="email" name="email" placeholder="<?php esc_attr_e('Email Address', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
             </div>
           </div>
         </div>
@@ -442,7 +431,7 @@
                 Phone Number
               </div>
               <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
-                  <input type="tel" name="phone" placeholder="Phone Number" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
+                  <input type="tel" name="phone" placeholder="<?php esc_attr_e('Phone Number', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
               </div>
             </div>
           </div>
@@ -450,19 +439,19 @@
             <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <span>
-                  <span class="title-span">Product Category</span>
+                  <span class="title-span"><?php esc_html_e('Product Category', 'creative-furniture'); ?></span>
                   <span class="title-span2">*</span>
                 </span>
               </div>
               <div class="w-full bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start">
                 <select name="category" required class="py-3.5 px-4  self-stretch shrink-0 relative w-[calc(100%-40px)] bg-transparent border-none focus:ring-0 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 appearance-none">
                     <option value="" disabled selected>Select Category</option>
-                    <option value="Sofas & Seating">Sofas & Seating</option>
-                    <option value="Tables & Dining">Tables & Dining</option>
-                    <option value="Beds & Bedroom">Beds & Bedroom</option>
-                    <option value="Storage & Cabinets">Storage & Cabinets</option>
-                    <option value="Handcrafted Decor">Handcrafted Decor</option>
-                    <option value="Other">Other</option>
+                    <option value="Sofas & Seating"><?php esc_html_e('Sofas & Seating', 'creative-furniture'); ?></option>
+                    <option value="Tables & Dining"><?php esc_html_e('Tables & Dining', 'creative-furniture'); ?></option>
+                    <option value="Beds & Bedroom"><?php esc_html_e('Beds & Bedroom', 'creative-furniture'); ?></option>
+                    <option value="Storage & Cabinets"><?php esc_html_e('Storage & Cabinets', 'creative-furniture'); ?></option>
+                    <option value="Handcrafted Decor"><?php esc_html_e('Handcrafted Decor', 'creative-furniture'); ?></option>
+                    <option value="Other"><?php esc_html_e('Other', 'creative-furniture'); ?></option>
                 </select>
                 <div class="flex flex-row gap-4 items-center justify-start shrink-0 relative pointer-events-none">
                   <svg class="shrink-0 w-5 h-5 relative overflow-visible" style="aspect-ratio: 1" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -476,12 +465,12 @@
         <div class="pt-px pb-px flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
             <span>
-              <span class="title-span">Tell Us About Your Business</span>
+              <span class="title-span"><?php esc_html_e('Tell Us About Your Business', 'creative-furniture'); ?></span>
               <span class="title-span2">*</span>
             </span>
           </div>
           <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
-              <textarea name="business_info" required placeholder="Briefly describe what you sell, your materials, and your unique style." class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
+              <textarea name="business_info" required placeholder="<?php esc_attr_e('Briefly describe what you sell, your materials, and your unique style.', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
           </div>
         </div>
         <div class="flex flex-row gap-2.5 items-center justify-start shrink-0 relative">
@@ -499,7 +488,7 @@
           <label for="agree_terms" class="flex flex-col gap-0.5 items-start justify-center shrink-0 relative cursor-pointer">
             <div class="text-[#0a0909] text-left font-['-',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
               <span>
-                Subscribe By submitting, you agree to our Terms &amp; Conditions and Privacy Policy.
+                <?php esc_html_e('Subscribe By submitting, you agree to our Terms &amp; Conditions and Privacy Policy.', 'creative-furniture'); ?>
               </span>
             </div>
           </label>
@@ -507,7 +496,7 @@
       </div>
       <button type="submit" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center self-stretch shrink-0 relative cursor-pointer hover:bg-gray-900 transition-colors">
         <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-          Submit
+          <?php esc_html_e('Submit', 'creative-furniture'); ?>
         </div>
       </button>
     </form>

@@ -10,12 +10,12 @@ $product_id = get_the_ID();
 
 <div id="review-form-wrapper" class="hidden flex-col gap-8 items-start justify-start self-stretch shrink-0 relative mt-10">
     <div class="flex flex-col gap-6 w-full">
-        <h3 class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-xl font-semibold relative">Submit Your Review</h3>
+        <h3 class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-xl font-semibold relative"><?php esc_html_e('Submit Your Review', 'creative-furniture'); ?></h3>
         
         <form action="<?php echo esc_url( site_url( 'wp-comments-post.php' ) ); ?>" method="post" id="commentform" class="flex flex-col gap-6 w-full">
             
             <div class="flex flex-col gap-3">
-                <span class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium">Your overall rating</span>
+                <span class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium"><?php esc_html_e('Your overall rating', 'creative-furniture'); ?></span>
                 <div class="flex flex-row gap-1" id="rating-stars">
                     <?php for ( $i = 1; $i <= 5; $i++ ) : ?>
                         <button type="button" data-value="<?php echo $i; ?>" class="star-rating-btn cursor-pointer transition-transform hover:scale-110">
@@ -29,26 +29,26 @@ $product_id = get_the_ID();
             </div>
 
             <div class="flex flex-col gap-2">
-                <label for="comment" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium">Your Review</label>
-                <textarea name="comment" id="comment" rows="5" placeholder="Write your comments here..." class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required></textarea>
+                <label for="comment" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium"><?php esc_html_e('Your Review', 'creative-furniture'); ?></label>
+                <textarea name="comment" id="comment" rows="5" placeholder="<?php esc_attr_e('Write your comments here...', 'creative-furniture'); ?>" class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required></textarea>
             </div>
 
             <?php if ( ! is_user_logged_in() ) : ?>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="flex flex-col gap-2">
-                        <label for="author" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium">Name</label>
-                        <input type="text" name="author" id="author" placeholder="Your Name" class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required>
+                        <label for="author" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium"><?php esc_html_e('Name', 'creative-furniture'); ?></label>
+                        <input type="text" name="author" id="author" placeholder="<?php esc_attr_e('Your Name', 'creative-furniture'); ?>" class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <label for="email" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required>
+                        <label for="email" class="text-[#363636] text-left font-['Raleway-Medium',_sans-serif] text-sm font-medium"><?php esc_html_e('Email', 'creative-furniture'); ?></label>
+                        <input type="email" name="email" id="email" placeholder="<?php esc_attr_e('Your Email', 'creative-furniture'); ?>" class="w-full border border-[#dbdbdb] p-4 text-[#363636] font-['Raleway-Regular',_sans-serif] text-sm focus:border-[#111111] outline-none transition-colors" required>
                     </div>
                 </div>
             <?php endif; ?>
 
             <div>
                 <button type="submit" class="bg-[#111111] border border-[#111111] text-white pt-4 pr-10 pb-4 pl-10 text-base font-semibold font-['Raleway-SemiBold',_sans-serif] hover:bg-white hover:text-[#111111] transition-colors">
-                    Submit Review
+                    <?php esc_html_e('Submit Review', 'creative-furniture'); ?>
                 </button>
             </div>
 

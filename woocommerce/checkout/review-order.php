@@ -66,9 +66,9 @@ defined( 'ABSPATH' ) || exit;
     <!-- Discount Code Section -->
     <div class="grid grid-cols-[1fr_80px] gap-3 md:gap-5 items-start justify-start self-stretch shrink-0 relative coupon-section-custom">
         <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border px-4 flex flex-row gap-6 items-center justify-start shrink-0 w-full md:w-[359px] h-14 relative rounded-md">
-            <input type="text" name="coupon_code" class="bg-transparent border-none outline-none w-full font-['Raleway-Regular'] text-base text-[#111111] p-0 focus:ring-0" id="coupon_code" value="" placeholder="Discount Code">
+            <input type="text" name="coupon_code" class="bg-transparent border-none outline-none w-full font-['Raleway-Regular'] text-base text-[#111111] p-0 focus:ring-0" id="coupon_code" value="" placeholder="<?php esc_attr_e('Discount Code', 'creative-furniture'); ?>">
         </div>
-        <button type="submit" class="bg-[#000000] rounded-md pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center self-stretch flex-1 relative" name="apply_coupon" value="Apply">
+        <button type="submit" class="bg-[#000000] rounded-md pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center self-stretch flex-1 relative" name="apply_coupon" value="<?php esc_attr_e('Apply', 'creative-furniture'); ?>">
             <span class="text-[#ffffff] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">Apply</span>
         </button>
     </div>
@@ -80,7 +80,7 @@ defined( 'ABSPATH' ) || exit;
             <!-- Subtotal -->
             <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
                 <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">
-                    Subtotal (Incl.Vat)
+                    <?php esc_html_e('Subtotal (Incl.Vat)', 'creative-furniture'); ?>
                 </div>
                 <div class="text-[#373737] text-right font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium uppercase relative">
                     <?php wc_cart_totals_subtotal_html(); ?>

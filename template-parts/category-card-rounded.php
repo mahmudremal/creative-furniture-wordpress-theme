@@ -6,9 +6,9 @@ $image_url = wp_get_attachment_image_url( $thumbnail_id, 'medium' );
 if ( ! $image_url ) $image_url = wc_placeholder_img_src();
 $link = get_term_link( $category );
 ?>
-<a href="<?php echo esc_url( $link ); ?>" class="flex flex-col gap-4 items-center justify-center flex-1 relative">
+<a href="<?php echo esc_url( $link ); ?>" class="flex flex-col gap-4 items-center justify-center -flex-1 relative">
   <div class="self-stretch shrink-0 relative overflow-hidden">
-    <div class="aspect-square h-[265px] rounded-[260px] bg-[#F4F4F4] relative m-auto">
+    <div class="aspect-square max-h-[265px] rounded-[260px] bg-[#F4F4F4] relative m-auto">
       <!-- <img class="absolute right-[-0.4px] left-0 bottom-0 top-0" style="background: linear-gradient(to left, #f4f4f4, #f4f4f4); object-fit: cover;" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/v2/products/bg-gray.png' ); ?>"> -->
       <img class="w-[194px] h-[194px] absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2" style="object-fit: cover; aspect-ratio: 1" src="<?php echo esc_url( $image_url ); ?>">
       <!-- <div class="bg-[#ffffff] rounded-[90px] p-2 flex flex-row gap-2.5 items-center justify-start absolute right-5 top-5">

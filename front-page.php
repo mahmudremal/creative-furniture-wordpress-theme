@@ -2,7 +2,7 @@
 <?php
 $theme_directory_uri = get_template_directory_uri();
 ?>
-<div class="relative flex flex-col gap-20">
+<div class="relative flex flex-col gap-14 md:gap-20">
 
 
 
@@ -12,21 +12,20 @@ $theme_directory_uri = get_template_directory_uri();
         <div class="blaze-track-container">
           <div class="blaze-track">
             <?php for ($i=1; $i <= 5; $i++) : ?>
-            <div class="relative h-[673px]">
-              <img class="h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/smart-furniture-for-modern-offices-hero-1.png">
-              <div class="flex flex-col gap-52 items-start justify-start w-full md:w-[476px] absolute left-4 mg:left-[50px] lg:left-[100px] top-[40%] md:top-[50%]" style="translate: 0 -50%">
+            <div class="relative h-[450px] md:h-[673px]">
+              <img class="h-[450px] md:h-[673px] absolute right-0 left-0 top-[50%]" style="translate: 0 -50%; object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/smart-furniture-for-modern-offices-hero-1.png">
+              <div class="flex flex-col gap-36 md:gap-52 items-start justify-start w-full md:w-[476px] absolute left-4 md:left-[50px] lg:left-[100px] top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                   <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
-                    Smart Furniture for Modern Offices
+                    <?php esc_html_e('Smart Furniture for Modern Offices', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-                    Design, supply, and installation services for startups, enterprises,
-                    and commercial spaces.
+                    <?php esc_html_e('Design, supply, and installation services for startups, enterprises, and commercial spaces.', 'creative-furniture'); ?>
                   </div>
                 </div>
                 <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
                   <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-                    Shop Furniture
+                    <?php esc_html_e('Shop Furniture', 'creative-furniture'); ?>
                   </div>
                 </div>
               </div>
@@ -60,14 +59,16 @@ $theme_directory_uri = get_template_directory_uri();
         <?php echo esc_html__( 'Shop by Category', 'creative-furniture' ); ?>
       </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-start self-stretch shrink-0 relative">
-      <?php
+    <?php
       $categories = get_terms([
         'taxonomy'   => 'product_cat',
         'hide_empty' => false,
         'number'     => 5,
         'slug'       => explode(',', 'home,office,hospitality,unique,outdoor')
       ]);
+    ?>
+    <div class="hidden sm:grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-start self-stretch shrink-0 relative">
+      <?php
       if (!is_wp_error($categories) && !empty($categories)) {
         foreach ($categories as $category) {
           get_template_part('template-parts/category-card-rounded', null, ['category' => $category]);
@@ -75,49 +76,70 @@ $theme_directory_uri = get_template_directory_uri();
       }
       ?>
     </div>
-  </div>
-
-  <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full max-w-full md:w-[1440px] m-auto overflow-hidden">
-    <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-7 py-10 lg:p-0 gap-7">
-      <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-full md:w-[476px] relative">
-        <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
-          <div class="rounded-[48px] border-solid border-[#eeeeee] border pt-1.5 pr-3.5 pb-1.5 pl-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-            <div class="text-[#3f3f3f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
-              <?php echo esc_html__( 'Latest Collection', 'creative-furniture' ); ?>
+    <div class="w-full block sm:hidden relative">
+      <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
+        <div class="blaze-container">
+          <div class="blaze-track-container">
+            <div class="blaze-track">
+              <?php
+                if (!is_wp_error($categories) && !empty($categories)) {
+                  foreach ($categories as $category) {
+                    get_template_part('template-parts/category-card-rounded', null, ['category' => $category]);
+                  }
+                }
+              ?>
             </div>
           </div>
-          <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[32px] leading-[44px] font-semibold relative self-stretch">
-            <?php echo esc_html__( 'Modern Home Furniture Collection', 'creative-furniture' ); ?>
-          </div>
-          <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-            <?php echo esc_html__( 'Premium pieces crafted to enhance everyday living with refined aesthetics and lasting comfort.', 'creative-furniture' ); ?>
-          </div>
+
+          <!-- arrow -->
         </div>
-        <a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>" class="border-solid border-[#353535] border-b pb-2 flex flex-row gap-2 items-start justify-start shrink-0 relative">
-          <div class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
-            <?php echo esc_html__( 'Explore Collection', 'creative-furniture' ); ?>
-          </div>
-          <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#353535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
       </div>
-      <img class="shrink-0 w-[724px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/modern-home-furniture-collection.png'); ?>">
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 px-7 md:p-0 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="lg:px-4 w-full">
+    <div class="bg-[#f9f9f9] lg:pl-[100px] flex flex-col gap-6 items-center justify-start w-full max-w-full md:w-[1440px] m-auto overflow-hidden">
+      <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-4 md:px-7 py-10 lg:p-0 gap-7">
+        <div class="flex flex-col gap-10 items-start justify-start shrink-0 w-full md:w-[476px] relative">
+          <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
+            <div class="rounded-[48px] border-solid border-[#eeeeee] border pt-1.5 pr-3.5 pb-1.5 pl-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+              <div class="text-[#3f3f3f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
+                <?php echo esc_html__( 'Latest Collection', 'creative-furniture' ); ?>
+              </div>
+            </div>
+            <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[32px] leading-[44px] font-semibold relative self-stretch">
+              <?php echo esc_html__( 'Modern Home Furniture Collection', 'creative-furniture' ); ?>
+            </div>
+            <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
+              <?php echo esc_html__( 'Premium pieces crafted to enhance everyday living with refined aesthetics and lasting comfort.', 'creative-furniture' ); ?>
+            </div>
+          </div>
+          <a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>" class="text-[#161616] border-solid border-[#353535] border-b pb-2 flex flex-row gap-2 items-start justify-start shrink-0 relative">
+            <div class="text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
+              <?php echo esc_html__( 'Explore Collection', 'creative-furniture' ); ?>
+            </div>
+            <svg class="shrink-0 w-6 h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#353535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+        <img class="shrink-0 w-[724px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/modern-home-furniture-collection.png'); ?>">
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-7 px-4 md:p-4 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        New Arrivals
+      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
+        <?php esc_html_e('New Arrivals', 'creative-furniture'); ?>
       </div>
       <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
-        Explore more
+        <?php esc_html_e('Explore more', 'creative-furniture'); ?>
       </a>
     </div>
-    <div class="flex flex-wrap gap-4 items-center justify-start self-stretch shrink-0 relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-start self-stretch shrink-0 relative">
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+        <div class="self-stretch shrink-0 lg:h-[267px] relative overflow-hidden">
           <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453430.png">
           <!-- <svg class="w-full h-[auto] absolute left-0 top-52 overflow-visible" width="405" height="59" viewBox="0 0 405 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 56.5C144.013 56.5 189.487 57.5 333.5 57.5L404.5 0" stroke="#BD262A" stroke-width="3.5"></path>
@@ -125,82 +147,82 @@ $theme_directory_uri = get_template_directory_uri();
           </svg> -->
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
-          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-            LOUNGE SEATING
+          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-sm md:text-base leading-4 md:leading-6 font-semibold relative">
+            <?php esc_html_e('LOUNGE SEATING', 'creative-furniture'); ?>
           </div>
           <div class="text-[#484848] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
-            Comfort meets style.
+            <?php esc_html_e('Comfort meets style.', 'creative-furniture'); ?>
           </div>
         </div>
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+        <div class="self-stretch shrink-0 lg:h-[267px] relative overflow-hidden">
           <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453431.png">
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
-          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-            DINING COLLECTION
+          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-sm md:text-base leading-4 md:leading-6 font-semibold relative">
+            <?php esc_html_e('DINING COLLECTION', 'creative-furniture'); ?>
           </div>
           <div class="text-[#484848] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
-            Elevated dining design.
+            <?php esc_html_e('Elevated dining design.', 'creative-furniture'); ?>
           </div>
         </div>
       </a>
       <a href="#" class="bg-[#f4f4f4] p-6 flex flex-col gap-4 items-center justify-center flex-1 relative">
-        <div class="self-stretch shrink-0 md:h-[267px] relative overflow-hidden">
+        <div class="self-stretch shrink-0 lg:h-[267px] relative overflow-hidden">
           <img class="w-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453432.png">
         </div>
         <div class="flex flex-row gap-2 items-center justify-center shrink-0 w-full md:w-[405.33px] h-[30px] relative">
-          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-            LIVING ESSENTIALS
+          <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-sm md:text-base leading-4 md:leading-6 font-semibold relative">
+            <?php esc_html_e('LIVING ESSENTIALS', 'creative-furniture'); ?>
           </div>
           <div class="text-[#484848] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
-            Modern accent pieces.
+            <?php esc_html_e('Modern accent pieces.', 'creative-furniture'); ?>
           </div>
         </div>
       </a>
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-col sm:flex-row gap-7 justify-between p-4 items-center w-full">
-      <div class="flex flex-col gap-2 items-start justify-start p-4">
-        <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch" >
-          Trusted Member of the BNI Network
+  <div class="w-full lg:px-4">
+    <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="flex flex-col sm:flex-row gap-7 justify-between p-4 items-center w-full">
+        <div class="flex flex-col gap-2 items-start justify-start p-4">
+          <div class="text-[#010101] text-center sm:text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch" >
+            <?php esc_html_e('Trusted Member of the BNI Network', 'creative-furniture'); ?>
+          </div>
+          <div class="text-[#4d4d4d] text-center sm:text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" >
+            <?php echo nl2br(esc_html(sprintf(__('As a member of BNI, Creative Furniture builds strong professional relationships, shares valuable referrals, and contributes to a %s trusted global business network.', 'creative-furniture'), '\n'))); ?>
+          </div>
         </div>
-        <div class="text-[#4d4d4d] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" >
-          As a member of BNI, Creative Furniture builds strong professional
-          relationships, shares valuable referrals, and contributes to a
-          <br />
-          trusted global business network.
-        </div>
+        <img
+          class="w-[234px] h-[91px]"
+          style="object-fit: cover; aspect-ratio: 234/91"
+          src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/image-2780.png'); ?>"
+        />
       </div>
-      <img
-        class="w-[234px] h-[91px]"
-        style="object-fit: cover; aspect-ratio: 234/91"
-        src="<?php echo esc_url($theme_directory_uri . '/dist/images/v2/image-2780.png'); ?>"
-      />
     </div>
   </div>
   
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'bestsellers']); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Best Sellers', 'creative-furniture'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'bestsellers']); ?>
 
   <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="w-full flex flex-col gap-4 px-4 --md:px-0">
+      <div class="w-full flex flex-row items-center justify-between self-stretch shrink-0 gap-4 relative">
+        <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
+          <?php esc_html_e('This Season’s Top Picks', 'creative-furniture'); ?>
+        </div>
+        <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
+          <?php esc_html_e('Explore more', 'creative-furniture'); ?>
+        </a>
+      </div>
+    </div>
     <div class="w-full">
       <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
               <?php for ($i = 1; $i <= 5; $i++): ?>
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                  <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-                    This Season’s Top Picks
-                  </div>
-                  <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
-                    Explore more
-                  </a>
-                </div>
                 <div class="self-stretch shrink-0 h-[437px] relative">
                   <div class="md:pr-[100px] md:pl-[100px] flex flex-row items-center justify-between h-[437px] absolute left-0 top-0 bg-center no-repeat bg-cover w-full" style="
                       background-image: linear-gradient( 96.56deg, rgba(244, 244, 244, 1) 20%, rgba(255, 255, 255, 0) 100% ), url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-21214531531.png);
@@ -208,29 +230,27 @@ $theme_directory_uri = get_template_directory_uri();
                       background-repeat: no-repeat;
                       background-size: cover;
                     ">
-                    <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] relative">
+                    <div class="flex flex-col gap-10 items-center justify-center shrink-0 px-4 w-full md:w-[476px] relative">
                       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
                         <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
-                          Top Picks
+                          <?php esc_html_e('Top Picks', 'creative-furniture'); ?>
                         </div>
                         <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
                           <span>
-                            <span class="text-[#BD262A]">15% Off</span>
+                            <span class="text-[#BD262A]"><?php echo esc_html(sprintf(__('%s Off', 'creative-furniture'), '15%')); ?></span>
                             <span class=""></span>
                             <span class="">
-                              For Outdoor
-                              <br>
-                              Collection
+                              <?php echo nl2br(esc_html(sprintf(__('For Outdoor %s Collection', 'creative-furniture'), '\n'))); ?>
                             </span>
                           </span>
                         </div>
                         <div class="text-[#2f2f2f] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-                          Premium furniture engineered for style, performance, and long-term durability.
+                          <?php esc_html_e('Premium furniture engineered for style, performance, and long-term durability.', 'creative-furniture'); ?>
                         </div>
                       </div>
-                      <a href="#" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                      <a href="#" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative cursor-pointer">
                         <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-                          View Details
+                          <?php esc_html_e('View Details', 'creative-furniture'); ?>
                         </span>
                       </a>
                     </div>
@@ -240,7 +260,6 @@ $theme_directory_uri = get_template_directory_uri();
                     <path d="M1395 62L1395 0L1285 59L1395 62Z" fill="white" />
                   </svg>
                 </div>
-              </div>
               <?php endfor; ?>
             </div>
           </div>
@@ -254,13 +273,13 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'domain'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand'], 'type' => 'chairs']); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Office Chair', 'creative-furniture'), 'link' => home_url('/shop'), 'query' => ['orderby' => 'rand'], 'type' => 'chairs']); ?>
   
 
-  <div class="bg-[#000000] min-h-[88px] grid grid-cols-1 md:grid-cols-3 items-center justify-center md:justify-between py-6 md:py-0 px-6 gap-4 md:gap-4 overflow-hidden w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="bg-[#000000] min-h-[88px] grid grid-cols-1 md:grid-cols-3 items-center justify-center md:justify-between py-4 gap-4 overflow-hidden w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="hidden md:block w-[341px] h-16 shrink-0 relative">
       <svg
-        class="w-[312px] h-[58px] absolute left-0 top-[3px] overflow-visible"
+        class="w-full md:w-[312px] h-[58px] absolute left-0 top-[3px] overflow-visible"
         width="312"
         height="58"
         viewBox="0 0 312 58"
@@ -274,26 +293,26 @@ $theme_directory_uri = get_template_directory_uri();
         />
       </svg>
       <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold absolute left-8 top-4" >
-        Limited Time Offer
+        <?php esc_html_e('Limited Time Offer', 'creative-furniture'); ?>
       </div>
     </div>
     
-    <div class="flex items-center justify-center">
-      <div class="md:hidden bg-[#9D0004]/50 px-4 py-1.5 rounded-full text-center">
-        <span class="text-[#ffffff] text-xs font-semibold uppercase tracking-wider">Limited Time Offer</span>
+    <div class="flex md:hidden items-center justify-center">
+      <div class="bg-[#9D0004]/50 px-4 py-1.5 rounded-full text-center">
+        <span class="text-[#ffffff] text-xs font-semibold uppercase tracking-wider"><?php esc_html_e('Limited Time Offer', 'creative-furniture'); ?></span>
       </div>
     </div>
 
     <div class="text-[#ffffff] text-center md:flex-1">
       <span class="text-base md:text-xl">
-        Enjoy <span class="text-[20px] md:text-[28px] font-bold">30% Off</span> Your First Order
+        <?php echo sprintf(__('Enjoy %s 30%% Off %s Your First Order', 'creative-furniture'), '<span class="text-[20px] md:text-[28px] font-bold">', '</span>'); ?>
       </span>
     </div>
     
-    <div class="flex flex-row items-center justify-center md:justify-end gap-2">
+    <div class="flex flex-row items-center justify-center md:justify-end gap-2 lg:pr-4">
       <a href="/shop" class="border-solid border-[#ffffff] border-b pb-2 flex flex-row gap-2 items-center justify-start shrink-0" >
         <span class="text-[#ffffff] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" >
-          Shop Now
+          <?php esc_html_e('Shop Now', 'creative-furniture'); ?>
         </span>
         <svg class="shrink-0 w-5 h-5 md:w-6 md:h-6 relative overflow-visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -302,13 +321,13 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-col gap-7 items-start justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        Shop the Look
+      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
+        <?php esc_html_e('Shop the Look', 'creative-furniture'); ?>
       </div>
       <a href="/shop" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
-        Explore more
+        <?php esc_html_e('Explore more', 'creative-furniture'); ?>
       </a>
     </div>
     <div class="flex flex-col md:flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
@@ -490,15 +509,15 @@ $theme_directory_uri = get_template_directory_uri();
     </div>
   </div>
 
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'desks']); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Desk', 'creative-furniture'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'desks']); ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto">
+  <div class="flex flex-col gap-7 items-start justify-start px-4 --md:px-0 w-full max-w-full md:w-[1440px] m-auto">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        Deal Zone
+      <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
+        <?php esc_html_e('Deal Zone', 'creative-furniture'); ?>
       </div>
       <a href="/shop" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start" style="text-decoration: underline">
-        Explore more
+        <?php esc_html_e('Explore more', 'creative-furniture'); ?>
       </a>
     </div>
     <div class="blaze-slider w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'gap' => '12px', 'slidesToShow' => 3, 'slidesToScroll' => 1], '(max-width: 900px)' => ['slidesToShow' => 2], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
@@ -509,7 +528,7 @@ $theme_directory_uri = get_template_directory_uri();
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
                   <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Maximum
+                    <?php esc_html_e('Maximum', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
                     60% Off
@@ -545,10 +564,10 @@ $theme_directory_uri = get_template_directory_uri();
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
                   <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Best Buys
+                    <?php esc_html_e('Best Buys', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
-                    Under AED 10000
+                    <?php echo esc_html(sprintf(__('Under AED %s', 'creative-furniture'), 10000)); ?>
                   </div>
                 </div>
               </div>
@@ -563,7 +582,7 @@ $theme_directory_uri = get_template_directory_uri();
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
                   <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Maximum
+                    <?php esc_html_e('Maximum', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
                     60% Off
@@ -581,10 +600,10 @@ $theme_directory_uri = get_template_directory_uri();
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
                   <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Decor on
+                    <?php esc_html_e('Decor on', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Sale
+                    <?php esc_html_e('Sale', 'creative-furniture'); ?>
                   </div>
                 </div>
               </div>
@@ -599,10 +618,10 @@ $theme_directory_uri = get_template_directory_uri();
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
                   <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
-                    Best Buys
+                    <?php esc_html_e('Best Buys', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
-                    Under AED 10000
+                    <?php echo esc_html(sprintf(__('Under AED %s', 'creative-furniture'), 10000)); ?>
                   </div>
                 </div>
               </div>
@@ -633,17 +652,17 @@ $theme_directory_uri = get_template_directory_uri();
           <div class="blaze-track">
             <?php for ($i = 1;$i <= 5; $i++): ?>
             <div class="flex flex-col md:flex-row items-center justify-between self-stretch -flex-1 relative">
-              <img class="shrink-0 w-[808px] h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-45411.png">
-              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-10 px-7 relative">
+              <img class="shrink-0 w-full md:w-[808px] h-[250px] md:h-[433px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-45411.png">
+              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-7 md:py-10 px-7 relative">
                 <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
                   <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
                     <span>
                       <span class="limited-time-deals-on-shoe-rack-span">
-                        Limited-time deals on
+                        <?php esc_html_e('Limited-time deals on', 'creative-furniture'); ?>
                         <br>
                       </span>
                       <span class="limited-time-deals-on-shoe-rack-span2">
-                        Shoe Rack
+                        <?php esc_html_e('Shoe Rack', 'creative-furniture'); ?>
                       </span>
                     </span>
                   </div>
@@ -658,7 +677,7 @@ $theme_directory_uri = get_template_directory_uri();
                 </div>
                 <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
                   <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
-                    View Details
+                    <?php esc_html_e('View Details', 'creative-furniture'); ?>
                   </div>
                 </div>
               </div>
@@ -676,36 +695,28 @@ $theme_directory_uri = get_template_directory_uri();
     
   </div>
   
-  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'domain'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'living']); ?>
+  <?php get_template_part('template-parts/export-cat-collection-block', null, ['title' => __('Explore Living Furniture', 'creative-furniture'), 'link' => home_url('/shop'), 'query' => [], 'type' => 'living']); ?>
 
 
-  <div class="h-[453px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden"
+  <div class="h-[350px] md:h-[453px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden"
   style="
     background-image: url('<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png');
     background-position: center center;
     background-attachment: fixed;
     background-repeat: repeat;
-    margin-top: 100px;
-    margin-bottom: 100px;
     padding: 0px 0px 0px 0px;
   "
   >
-    <!-- <img
-      class="w-full h-full absolute right-0 bottom-0 overflow-visible"
-      src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/vector-40.png"
-    /> -->
     <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333380 100%);"></div>
     <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
         <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[32px] leading-[44px] font-bold relative self-stretch" >
-          Ready to Upgrade Your
-          <br />
-          Interior?
+          <?php echo nl2br(esc_html(sprintf(__('Ready to Upgrade Your %s Interior?', 'creative-furniture'), "\n"))); ?>
         </div>
       </div>
-      <a href="/shop" class="bg-[#ffffff] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative" >
-        <span class="text-[#000000] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center" >
-          Start Shopping
+      <a href="/shop" class="border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative bg-[#ffffff] text-[#000000] hover:bg-[#000000] hover:text-white" >
+        <span class="text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center" >
+          <?php esc_html_e('Start Shopping', 'creative-furniture'); ?>
         </span>
       </a>
     </div>

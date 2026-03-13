@@ -9,8 +9,8 @@
 <footer id="colophon" class="site-footer bg-white mt-10">
     <div class="">
         <!-- Newsletter Section -->
-        <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10">
-            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
+        <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10 lg:px-4">
+            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 w-full max-w-full md:w-[1440px] m-auto relative">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
                     <h3 class="text-[#0c0c0c] font-semibold text-xl md:text-2xl leading-tight uppercase tracking-tight">
                         <?php echo esc_html__( 'Subscribe Up To Newsletter', 'creative-furniture' ); ?>
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Main Footer Links -->
-        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
+        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 w-full max-w-full md:w-[1440px] m-auto relative">
             <!-- Brand Info -->
             <div class="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-6">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-1">
@@ -76,50 +76,140 @@
             <!-- Menus -->
             <?php
             $footer_menus = [
-                'Quick Links' => [
-                    'About Us' => '/about-us/',
-                    'Delivery & Installation' => '/delivery-installation/',
-                    'Materials & Finishes' => '/materials-finishes/',
-                    'Warranty Policy' => '/warranty-policy/',
-                    'Order Tracking' => '/order-tracking/',
+                [
+                    __('Quick Links', 'creative-furniture'),
+                    [
+                        [
+                            __('About Us', 'creative-furniture'),
+                            '/about-us/'
+                        ],
+                        [
+                            __('Delivery & Installation', 'creative-furniture'),
+                            '/delivery-installation/'
+                        ],
+                        [
+                            __('Materials & Finishes', 'creative-furniture'),
+                            '/materials-finishes/'
+                        ],
+                        [
+                            __('Warranty Policy', 'creative-furniture'),
+                            '/warranty-policy/'
+                        ],
+                        [
+                            __('Order Tracking', 'creative-furniture'),
+                            '/order-tracking/'
+                        ],
+                    ]
                 ],
-                'Shop' => [
-                    'Office Chairs' => '/product-category/office-chairs/',
-                    'Executive Desks' => '/product-category/executive-desks/',
-                    'Modular Workstations' => '/product-category/workstations/',
-                    'Height Adjustable Desks' => '/product-category/sit-stand-desks/',
-                    'Storage Solutions' => '/product-category/storage/',
+                [
+                    __('Shop', 'creative-furniture'),
+                    [
+                        [
+                            __('Office Chairs', 'creative-furniture'),
+                            '/product-category/office-chairs/'
+                        ],
+                        [
+                            __('Executive Desks', 'creative-furniture'),
+                            '/product-category/executive-desks/'
+                        ],
+                        [
+                            __('Modular Workstations', 'creative-furniture'),
+                            '/product-category/workstations/'
+                        ],
+                        [
+                            __('Height Adjustable Desks', 'creative-furniture'),
+                            '/product-category/sit-stand-desks/'
+                        ],
+                        [
+                            __('Storage Solutions', 'creative-furniture'),
+                            '/product-category/storage/'
+                        ],
+                    ]
                 ],
-                'Learn More' => [
-                    'Sell With Us' => '/sell-with-us/',
-                    'Hardware & Mechanisms' => '/mechanisms/',
-                    'Leather & Fabric Care' => '/care-guide/',
-                    'Ergonomic Seating' => '/ergonomic-guide/',
-                    'Meeting Table Sizes' => '/size-guide/',
+                [
+                    __('Learn More', 'creative-furniture'),
+                    [
+                        [
+                            __('Sell With Us', 'creative-furniture'),
+                            '/sell-with-us/'
+                        ],
+                        [
+                            __('Hardware & Mechanisms', 'creative-furniture'),
+                            '/mechanisms/'
+                        ],
+                        [
+                            __('Leather & Fabric Care', 'creative-furniture'),
+                            '/care-guide/'
+                        ],
+                        [
+                            __('Ergonomic Seating', 'creative-furniture'),
+                            '/ergonomic-guide/'
+                        ],
+                        [
+                            __('Meeting Table Sizes', 'creative-furniture'),
+                            '/size-guide/'
+                        ],
+                    ]
                 ],
-                'Resources' => [
-                    'Planning Ideas' => '/planning/',
-                    'Design Inspiration' => '/inspiration/',
-                    '3D Model Library' => '/3d-models/',
-                    'Terms & Conditions' => '/terms-conditions/',
-                    'Client Login' => '/my-account/',
+                [
+                    __('Resources', 'creative-furniture'),
+                    [
+                        [
+                            __('Planning Ideas', 'creative-furniture'),
+                            '/planning/'
+                        ],
+                        [
+                            __('Design Inspiration', 'creative-furniture'),
+                            '/inspiration/'
+                        ],
+                        [
+                            __('3D Model Library', 'creative-furniture'),
+                            '/3d-models/'
+                        ],
+                        [
+                            __('Terms & Conditions', 'creative-furniture'),
+                            '/terms-conditions/'
+                        ],
+                        [
+                            __('Client Login', 'creative-furniture'),
+                            '/my-account/'
+                        ],
+                    ]
                 ],
-                'Contact Us' => [
-                    'Get in Touch' => '/contact/',
-                    'Support Center' => '/support/',
-                    'Become a Partner' => '/partner/',
-                    'About Us' => '/about/',
-                    'Visit Showrooms' => '/showrooms/',
+                [
+                    __('Contact Us', 'creative-furniture'),
+                    [
+                        [
+                            __('Get in Touch', 'creative-furniture'),
+                            '/contact-us/'
+                        ],
+                        [
+                            __('Support Center', 'creative-furniture'),
+                            '/support/'
+                        ],
+                        [
+                            __('Become a Partner', 'creative-furniture'),
+                            '/sell-with-us/'
+                        ],
+                        [
+                            __('About Us', 'creative-furniture'),
+                            '/about/'
+                        ],
+                        [
+                            __('Visit Showrooms', 'creative-furniture'),
+                            '/showrooms/'
+                        ],
+                    ]
                 ]
             ];
 
-            foreach ($footer_menus as $title => $items) : ?>
+            foreach ($footer_menus as [$title, $items]) : ?>
                 <div class="flex flex-col gap-5">
                     <h4 class="text-[#121212] font-semibold text-base">
                         <?php echo esc_html__($title, 'creative-furniture'); ?>
                     </h4>
                     <ul class="flex flex-col gap-3">
-                        <?php foreach ($items as $label => $link) : ?>
+                        <?php foreach ($items as [$label, $link]) : ?>
                             <li>
                                 <a href="<?php echo esc_url(home_url($link)); ?>" class="text-[#484848] text-sm hover:text-[#bd262a] transition-colors flex items-center gap-2 opacity-80">
                                     <svg class="w-3 h-3 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

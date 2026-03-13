@@ -10,18 +10,18 @@ do_action( 'woocommerce_before_edit_account_form' );
 
 	<div class="account-section">
 		<div class="section-header">
-			<div class="section-title">Account</div>
+			<div class="section-title"><?php esc_html_e('Account', 'creative-furniture'); ?></div>
 		</div>
 		<div class="fields-container">
 			<div class="fields-row">
 				<div class="field">
-					<div class="field-label">First Name</div>
+					<div class="field-label"><?php esc_html_e('First Name', 'creative-furniture'); ?></div>
 					<div class="field-input">
 						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="<?php echo esc_attr( $user->first_name ); ?>" aria-required="true" />
 					</div>
 				</div>
 				<div class="field">
-					<div class="field-label">Last Name</div>
+					<div class="field-label"><?php esc_html_e('Last Name', 'creative-furniture'); ?></div>
 					<div class="field-input">
 						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="<?php echo esc_attr( $user->last_name ); ?>" aria-required="true" />
 					</div>
@@ -29,13 +29,13 @@ do_action( 'woocommerce_before_edit_account_form' );
 			</div>
 			<div class="fields-row">
 				<div class="field">
-					<div class="field-label">Phone Number</div>
+					<div class="field-label"><?php esc_html_e('Phone Number', 'creative-furniture'); ?></div>
 					<div class="field-input">
 						<input type="tel" class="woocommerce-Input woocommerce-Input--tel input-text" name="account_phone" id="account_phone" value="<?php echo esc_attr( get_user_meta( $user->ID, 'billing_phone', true ) ); ?>" />
 					</div>
 				</div>
 				<div class="field">
-					<div class="field-label">Email Address</div>
+					<div class="field-label"><?php esc_html_e('Email Address', 'creative-furniture'); ?></div>
 					<div class="field-input">
 						<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" aria-required="true" />
 					</div>
@@ -43,18 +43,18 @@ do_action( 'woocommerce_before_edit_account_form' );
 			</div>
 		</div>
 		<div class="save-button">
-			<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>">Save Info</button>
+			<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e('Save Info', 'creative-furniture'); ?></button>
 		</div>
 	</div>
 
 	<div class="password-section">
 		<div class="section-header">
-			<div class="section-title">Reset Password</div>
+			<div class="section-title"><?php esc_html_e('Reset Password', 'creative-furniture'); ?></div>
 		</div>
 		<div class="fields-container">
 			<div class="fields-row">
 				<div class="field">
-					<div class="field-label">New password</div>
+					<div class="field-label"><?php esc_html_e('New password', 'creative-furniture'); ?></div>
 					<div class="field-input field-input-password">
 						<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" />
 						<!-- <div class="password-toggle">
@@ -67,7 +67,7 @@ do_action( 'woocommerce_before_edit_account_form' );
 					</div>
 				</div>
 				<div class="field">
-					<div class="field-label">Confirm Password</div>
+					<div class="field-label"><?php esc_html_e('Confirm Password', 'creative-furniture'); ?></div>
 					<div class="field-input field-input-password">
 						<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
 						<!-- <div class="password-toggle">
@@ -82,7 +82,7 @@ do_action( 'woocommerce_before_edit_account_form' );
 			</div>
 		</div>
 		<div class="save-button">
-			<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>">Reset Password</button>
+			<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e('Reset Password', 'creative-furniture'); ?></button>
 		</div>
 	</div>
 

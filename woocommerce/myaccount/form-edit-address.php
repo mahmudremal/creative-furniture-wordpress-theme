@@ -20,15 +20,15 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
         <div class="flex flex-row items-start justify-between self-stretch shrink-0 relative">
             <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
                 <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                    Addresses
+                    <?php esc_html_e('Addresses', 'creative-furniture'); ?>
                 </div>
                 <div class="text-text-and-icon-secondary text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative self-stretch flex items-center justify-start">
-                    Manage your billing and shipping addresses for a faster checkout experience.
+                    <?php esc_html_e('Manage your billing and shipping addresses for a faster checkout experience.', 'creative-furniture'); ?>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-row gap-6 items-start justify-start self-stretch shrink-0 relative">
+        <div class="flex flex-wrap gap-6 items-start justify-start self-stretch shrink-0 relative">
             <?php
             $get_addresses = apply_filters(
                 'woocommerce_my_account_get_addresses',
@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
             foreach ( $get_addresses as $name => $address_title ) :
                 $address = wc_get_account_formatted_address( $name );
                 ?>
-                <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start flex-1 relative min-h-[300px]">
+                <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start w-full md:flex-1 relative min-h-[300px]">
                     <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
                         <div class="flex flex-row gap-2 items-center justify-between self-stretch shrink-0 relative">
                             <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-lg leading-6 font-semibold relative">

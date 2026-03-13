@@ -7,7 +7,7 @@
 
     <div class="max-w-2xl w-full text-center relative z-10">
         <div class="mb-2 inline-block px-4 py-1.5 bg-[#bd262a]/10 text-[#bd262a] rounded-full text-sm font-bold uppercase tracking-widest">
-            Error
+            <?php esc_html_e('Error', 'creative-furniture'); ?>
         </div>
         <h1 class="text-7xl md:text-9xl font-black text-black mb-6 tracking-tighter">
             404

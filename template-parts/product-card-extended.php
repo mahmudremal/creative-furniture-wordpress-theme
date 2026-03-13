@@ -87,7 +87,7 @@ if (!empty($rowType) && isset($rows[$rowType])) {
           <div class="bg-[#9c7a52] rounded-[20px] shrink-0 w-2.5 h-2.5 relative" style="aspect-ratio: 1"></div>
         </div>
         <div class="text-[#3f3f3f] text-right font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">
-          + more options
+          <?php esc_html_e('+ more options', 'creative-furniture'); ?>
         </div>
       </div>
       <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">

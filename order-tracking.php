@@ -25,13 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     <!-- Breadcrumbs -->
     <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative pt-10">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e('Home', 'creative-furniture'); ?></a>
         </div>
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             /
         </div>
         <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-            Order Tracking
+            <?php esc_html_e('Order Tracking', 'creative-furniture'); ?>
         </div>
     </div>
 
@@ -42,16 +42,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
         " src="<?php echo get_template_directory_uri(); ?>/dist/images/v2/rectangle-453201.png">
       <div class="flex flex-col gap-14 items-center justify-center w-[476px] absolute left-[50%] top-[50%] z-10" style="translate: -50% -50%">
         <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-5xl leading-[62px] font-semibold relative w-[655px]">
-          Order Tracking
+          <?php esc_html_e('Order Tracking', 'creative-furniture'); ?>
         </div>
       </div>
       <div class="absolute inset-0 bg-black/20"></div>
     </div>
 
-    <div class="flex py-10 justify-center">
+    <div class="flex py-10 justify-center px-4 md:px-0">
         <form method="POST" action="" class="flex flex-col gap-8 items-start justify-start w-[687px] m-auto relative">
             <div class="text-[#383838] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative self-stretch">
-                To track your order please enter your Order ID in the box below and press the "<strong>Track</strong>" button. This was given to you on your receipt and in the confirmation email you should have received.
+                <?php echo sprintf(esc_html(__('To track your order please enter your Order ID in the box below and press the "%sTrack%s" button. This was given to you on your receipt and in the confirmation email you should have received.', 'creative-furniture')), '<strong>', '</strong>'); ?>
             </div>
             <?php if ($error): ?>
                 <div class="text-red-500 text-sm font-semibold self-stretch"><?php echo esc_html($error); ?></div>
@@ -60,20 +60,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                 <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative">
                     <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                         <label for="order_id" class="text-[#031424] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative self-stretch">
-                        Order ID
+                        <?php esc_html_e('Order ID', 'creative-furniture'); ?>
                         </label>
-                        <input type="text" id="order_id" name="order_id" required class="border-solid border-[#cbcbcb] border p-4 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 h-14 relative text-[#000]" placeholder="Found in your order confirmation email.">
+                        <input type="text" id="order_id" name="order_id" required class="border-solid border-[#cbcbcb] border p-4 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 h-14 relative text-[#000]" placeholder="<?php esc_attr_e('Found in your order confirmation email.', 'creative-furniture'); ?>">
                     </div>
                     <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                         <label for="billing_email" class="text-[#031424] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative self-stretch">
-                        Billing Email
+                        <?php esc_html_e('Billing Email', 'creative-furniture'); ?>
                         </label>
-                        <input type="email" id="billing_email" name="billing_email" required class="border-solid border-[#cbcbcb] border p-4 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 h-14 relative text-[#000]" placeholder="Email you used during checkout">
+                        <input type="email" id="billing_email" name="billing_email" required class="border-solid border-[#cbcbcb] border p-4 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 h-14 relative text-[#000]" placeholder="<?php esc_attr_e('Email you used during checkout', 'creative-furniture'); ?>">
                     </div>
                 </div>
                 <button type="submit" class="bg-[#000000] pt-[13px] pr-[22px] pb-[13px] pl-[22px] flex flex-row gap-2.5 items-center justify-center self-stretch shrink-0 relative">
                     <div class="text-[#ffffff] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">
-                        Order Track
+                        <?php esc_html_e('Order Track', 'creative-furniture'); ?>
                     </div>
                 </button>
             </div>
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     <div class="flex flex-col gap-10 py-5 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
         <div class="flex flex-col gap-3 items-start justify-start w-full md:w-[461px] relative">
             <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                Order ID: <?php echo esc_html($order->get_order_number()); ?>
+                <?php esc_html_e('Order ID:', 'creative-furniture'); ?> <?php echo esc_html($order->get_order_number()); ?>
             </h1>
         </div>
         <div class="flex flex-wrap gap-10 items-start">
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                 <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-full relative">
                     <div class="border-solid border-[#d9d9d9] border-b pb-2.5 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 relative">
                         <div class="text-[#363636] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative flex items-center justify-start">
-                            Order Items
+                            <?php esc_html_e('Order Items', 'creative-furniture'); ?>
                         </div>
                     </div>
                     <div class="flex flex-col gap-5 w-full">
@@ -140,20 +140,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                 <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-full relative">
                     <div class="border-solid border-[#d9d9d9] border-b pb-2.5 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 relative">
                         <div class="text-[#363636] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative flex items-center justify-start">
-                            Overview
+                            <?php esc_html_e('Overview', 'creative-furniture'); ?>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Order ID</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Order ID', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal uppercase relative">#<?php echo esc_html($order->get_order_number()); ?></div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Date</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Date', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative"><?php echo esc_html($order->get_date_created()->format('M d, Y')); ?></div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Est Delivery</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Est Delivery', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
                                 <?php
                                     $estimated_delivery = get_post_meta($order->get_id(), '_estimated_delivery', true);
@@ -162,18 +162,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                             </div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Address</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Address', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative text-right">
                                 <?php echo esc_html($order->get_shipping_address_1()); ?><br>
                                 <?php echo esc_html($order->get_shipping_city() . ', ' . $order->get_shipping_state() . ', ' . $order->get_shipping_postcode()); ?>
                             </div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Email</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Email', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative uppercase"><?php echo esc_html($order->get_billing_email()); ?></div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Phone</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Phone', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative"><?php echo esc_html($order->get_billing_phone()); ?></div>
                         </div>
                     </div>
@@ -182,16 +182,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                 <div class="flex flex-col gap-6 items-start justify-start shrink-0 w-full relative">
                     <div class="border-solid border-[#d9d9d9] border-b pb-2.5 flex flex-row gap-2.5 items-center justify-start self-stretch shrink-0 relative">
                         <div class="text-[#363636] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative flex items-center justify-start">
-                            Order Summary
+                            <?php esc_html_e('Order Summary', 'creative-furniture'); ?>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3 w-full border-solid border-[#d9d9d9] border-b pb-5">
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Subtotal (Incl.Vat)</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Subtotal (Incl.Vat)', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal uppercase relative"><?php echo $order->get_formatted_order_total(); ?></div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Shipping Charge</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Shipping Charge', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
                                 <?php 
                                     echo $order->get_shipping_total() > 0 
@@ -201,11 +201,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
                             </div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative">Payment method</div>
+                            <div class="text-[#373737] text-left font-['Raleway-Medium',_sans-serif] text-sm leading-5 font-medium relative"><?php esc_html_e('Payment method', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative"><?php echo esc_html($order->get_payment_method_title()); ?></div>
                         </div>
                         <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative mt-2">
-                            <div class="text-[#373737] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative">Total</div>
+                            <div class="text-[#373737] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative"><?php esc_html_e('Total', 'creative-furniture'); ?></div>
                             <div class="text-[#464646] text-right font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold uppercase relative"><?php echo $order->get_formatted_order_total(); ?></div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
             <div class="bg-[#f8f8f8] rounded-lg p-4 md:p-8 flex flex-col gap-6 items-start justify-start w-full md:w-[500px] shrink-0 sticky top-10 self-start">
                 <div class="border-solid border-[#efefef] border-b pb-3 w-full">
                     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl font-semibold relative flex items-center justify-start">
-                        Order Status Guide
+                        <?php esc_html_e('Order Status Guide', 'creative-furniture'); ?>
                     </div>
                 </div>
                 <?php

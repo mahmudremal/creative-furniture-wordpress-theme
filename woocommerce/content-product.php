@@ -49,11 +49,11 @@ $primary_category = ! empty( $categories ) ? $categories[0]->name : '';
 					</div>
 				<?php endif; ?>
 
-				<button type="button" class="bg-[#ffffff] rounded-full p-2 flex flex-row items-center justify-center absolute right-4 top-5 shadow-sm product-wishlist-btn z-10 <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product_id ); ?>">
-					<svg class="w-4 h-4 transition-colors <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'fill-[#bd262a] stroke-[#bd262a]' : 'stroke-[#111111]'); ?>" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<!-- <button type="button" class="bg-[#ffffff] rounded-full p-2 flex flex-row items-center justify-center absolute right-4 top-5 shadow-sm product-wishlist-btn z-10 <?php // echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'active' : ''); ?>" data-product-id="<?php // echo esc_attr( $product_id ); ?>">
+					<svg class="w-4 h-4 transition-colors <?php // echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product_id) ? 'fill-[#bd262a] stroke-[#bd262a]' : 'stroke-[#111111]'); ?>" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99544 3.42388C6.66254 1.8656 4.43984 1.44643 2.76981 2.87334C1.09977 4.30026 0.864655 6.68598 2.17614 8.3736C3.26655 9.77674 6.56653 12.7361 7.64808 13.6939C7.76908 13.801 7.82958 13.8546 7.90015 13.8757C7.96175 13.8941 8.02914 13.8941 8.09074 13.8757C8.16131 13.8546 8.22181 13.801 8.34281 13.6939C9.42436 12.7361 12.7243 9.77674 13.8147 8.3736C15.1262 6.68598 14.9198 4.28525 13.2211 2.87334C11.5223 1.46144 9.32835 1.8656 7.99544 3.42388Z" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
 					</svg>
-				</button>
+				</button> -->
 			</div>
 			
 			<div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">

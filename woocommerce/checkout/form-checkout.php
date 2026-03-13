@@ -25,31 +25,31 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 <div class="flex flex-col gap-7 pt-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e('Home', 'creative-furniture'); ?></a>
         </div>
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             /
         </div>
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-            <a href="<?php echo esc_url( wc_get_cart_url() ); ?>">Cart</a>
+            <a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><?php esc_html_e('Cart', 'creative-furniture'); ?></a>
         </div>
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             /
         </div>
         <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-            Checkout
+            <?php esc_html_e('Checkout', 'creative-furniture'); ?>
         </div>
     </div>
 
-    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
-        <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-full md:w-[1440px] mx-auto relative">
+    <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 w-full max-w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+        <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-full max-w-full md:w-[1440px] mx-auto relative">
             <!-- Left Side: Checkout Details -->
-            <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-8 items-start justify-start shrink-0 w-full md:w-[805px] relative">
+            <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-4 items-start justify-start shrink-0 w-full md:w-[805px] relative">
                 <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
                     <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                        Checkout
+                        <?php esc_html_e('Checkout', 'creative-furniture'); ?>
                     </h1>
                 </div>
 
@@ -58,7 +58,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <div class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 relative">
                         <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                         <div class="text-[#717171] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-                            Express checkout
+                            <?php esc_html_e('Express checkout', 'creative-furniture'); ?>
                         </div>
                         <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                     </div>
@@ -66,7 +66,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <div class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 relative">
                         <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                         <div class="text-[#717171] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
-                            OR
+                            <?php esc_html_e('OR', 'creative-furniture'); ?>
                         </div>
                         <div class="border-t border-[#d4d4d4] flex-1 h-0 relative"></div>
                     </div>
@@ -74,15 +74,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
                 <?php if ( $checkout->get_checkout_fields() ) : ?>
                     <!-- Contact Information -->
-                    <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative">
+                    <div class="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
                         <div class="flex flex-row gap-2.5 items-center justify-between self-stretch shrink-0 relative">
                             <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-xl leading-[30px] font-semibold relative flex-1">
-                                Contact information
+                                <?php esc_html_e('Contact information', 'creative-furniture'); ?>
                             </div>
                             <?php if ( ! is_user_logged_in() ) : ?>
                             <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative">
-                                Already have an account? 
-                                <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="text-[#2d2d2d] font-semibold underline">Log in</a>
+                                <?php esc_html_e('Already have an account?', 'creative-furniture'); ?> 
+                                <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="text-[#2d2d2d] font-semibold underline"><?php esc_html_e('Log in', 'creative-furniture'); ?></a>
                             </div>
                             <?php endif; ?>
                         </div>
@@ -109,7 +109,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                                     </div>
                                 </label>
                                 <label for="email_subscribe" class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
-                                    Email me with news and offers
+                                    <?php esc_html_e('Email me with news and offers', 'creative-furniture'); ?>
                                 </label>
                             </div>
                             
@@ -121,10 +121,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative payment-method-section">
                         <div class="flex flex-col gap-1 items-start justify-center self-stretch shrink-0 relative">
                             <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                                Payment
+                                <?php esc_html_e('Payment', 'creative-furniture'); ?>
                             </div>
                             <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
-                                All transactions are secure and encrypted.
+                                <?php esc_html_e('All transactions are secure and encrypted.', 'creative-furniture'); ?>
                             </div>
                         </div>
                         <div id="payment" class="woocommerce-checkout-payment w-full">
@@ -136,10 +136,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative address-section">
                         <div class="flex flex-col gap-1 items-start justify-center self-stretch shrink-0 relative">
                             <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                                Billing Address
+                                <?php esc_html_e('Billing Address', 'creative-furniture'); ?>
                             </div>
                             <div class="text-[#737373] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative flex items-center justify-start">
-                                Select the address that matches your card or payment method.
+                                <?php esc_html_e('Select the address that matches your card or payment method.', 'creative-furniture'); ?>
                             </div>
                         </div>
                         
@@ -154,7 +154,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <!-- Remember Me -->
                     <div class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative">
                         <div class="text-[#111111] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
-                            Remember Me
+                            <?php esc_html_e('Remember Me', 'creative-furniture'); ?>
                         </div>
                         <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border p-4 flex flex-row gap-6 items-center justify-start self-stretch shrink-0 h-14 relative">
                             <div class="flex flex-row gap-3 items-center justify-start flex-1 relative">
@@ -167,7 +167,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                                     </div>
                                 </label>
                                 <label for="save_account_info" class="text-[#717171] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
-                                    Save my information for a faster checkout
+                                    <?php esc_html_e('Save my information for a faster checkout', 'creative-furniture'); ?>
                                 </label>
                             </div>
                         </div>
@@ -195,7 +195,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <?php do_action( 'woocommerce_checkout_order_review' ); ?>
                 </div>
                 
-                <img class="shrink-0 w-[366px] relative mt-0" style="object-fit: cover; aspect-ratio: 366/27" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
+                <img class="shrink-0 w-full relative mt-0" style="object-fit: cover; aspect-ratio: 366/27" src="<?php echo get_template_directory_uri(); ?>/dist/images/payment-methods.png">
             </div>
         </div>
     </form>
@@ -212,11 +212,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@26.7.6/build/js/utils.js",
         containerClass: 'w-full',
         i18n: {
-            noCountrySelected: "Select country",
-            countryListAriaLabel: "List of countries",
-            searchPlaceholder: "Search",
-            clearSearchAriaLabel: "Clear search",
-            searchEmptyState: "No results found",
+            noCountrySelected: "<?php esc_attr_e('Select country', 'creative-furniture'); ?>",
+            countryListAriaLabel: "<?php esc_attr_e('List of countries', 'creative-furniture'); ?>",
+            searchPlaceholder: "<?php esc_attr_e('Search', 'creative-furniture'); ?>",
+            clearSearchAriaLabel: "<?php esc_attr_e('Clear search', 'creative-furniture'); ?>",
+            searchEmptyState: "<?php esc_attr_e('No results found', 'creative-furniture'); ?>",
         }
     };
     document.querySelectorAll("input[type=tel]").forEach(input => window.intlTelInput(input, args));

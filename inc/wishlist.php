@@ -85,19 +85,19 @@ class CF_Wishlist {
             $row = $wpdb->get_row($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND user_id=%d", $pid, $uid));
             if ($row) {
                 $wpdb->delete($this->table_items, ['id' => $row->id]);
-                wp_send_json(['status' => 'removed', 'product_title' => $product_title]);
+                wp_send_json(['status' => 'removed', 'product_title' => $product_title, 'total' => $this->get_total()]);
             } else {
                 $wpdb->insert($this->table_items, ['user_id' => $uid, 'session_key' => null, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
-                wp_send_json(['status' => 'added', 'product_title' => $product_title]);
+                wp_send_json(['status' => 'added', 'product_title' => $product_title, 'total' => $this->get_total()]);
             }
         } else {
             $row = $wpdb->get_row($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND session_key=%s", $pid, $session));
             if ($row) {
                 $wpdb->delete($this->table_items, ['id' => $row->id]);
-                wp_send_json(['status' => 'removed', 'product_title' => $product_title]);
+                wp_send_json(['status' => 'removed', 'product_title' => $product_title, 'total' => $this->get_total()]);
             } else {
                 $wpdb->insert($this->table_items, ['user_id' => null, 'session_key' => $session, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
-                wp_send_json(['status' => 'added', 'product_title' => $product_title]);
+                wp_send_json(['status' => 'added', 'product_title' => $product_title, 'total' => $this->get_total()]);
             }
         }
     }
@@ -114,6 +114,17 @@ class CF_Wishlist {
             }
         }
         $wpdb->delete($this->table_items, ['session_key' => $session]);
+    }
+
+    public function get_total() {
+        global $wpdb;
+        $uid = is_user_logged_in() ? get_current_user_id() : null;
+        if ($uid) {
+            return $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$this->table_items} WHERE user_id=%d ORDER BY created_at DESC", $uid));
+        } else {
+            $session = $this->get_session();
+            return $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$this->table_items} WHERE session_key=%s ORDER BY created_at DESC", $session));
+        }
     }
 
     public function get_items() {
@@ -166,7 +177,7 @@ class CF_Wishlist {
                                                 <button class="qty-plus px-3 text-black hover:bg-gray-100 transition-colors h-full flex items-center justify-center">+</button>
                                             </div>
                                             <button class="cf-wishlist-add-to-cart px-8 h-10 bg-black text-white text-xs font-bold rounded-full hover:bg-[#bd262a] transition-all transform active:scale-95 shadow-md hover:shadow-[#bd262a]/20 uppercase tracking-wider" data-product-id="<?php echo $pid; ?>">
-                                                <?php _e('Add', 'creative-furniture'); ?>
+                                                <?php _e('Add to Cart', 'creative-furniture'); ?>
                                             </button>
                                             <button class="cf-wishlist-remove p-0 border-none text-gray-400 hover:text-[#d00] text-xs font-bold cursor-pointer bg-transparent transition-colors flex items-center gap-1 group/remove" data-product-id="<?php echo $pid; ?>">
                                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
@@ -289,4 +300,9 @@ function cf_wishlist_has_any() {
 function cf_wishlist_get_items() {
     global $cf_wishlist;
     return $cf_wishlist->get_items();
+}
+
+function cf_wishlist_get_total() {
+    global $cf_wishlist;
+    return $cf_wishlist->get_total();
 }

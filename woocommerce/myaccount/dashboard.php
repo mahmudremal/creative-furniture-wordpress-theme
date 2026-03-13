@@ -42,8 +42,8 @@ $allowed_html = array(
     $current_user = wp_get_current_user();
     $billing_phone = get_user_meta( $current_user->ID, 'billing_phone', true );
     ?>
-    <div class="flex flex-row items-start justify-between w-full max-w-full md:w-[1440px] m-auto relative">
-      <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start shrink-0 w-[689px] relative">
+    <div class="flex flex-wrap items-start justify-between w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start shrink-0 w-full md:w-[689px] relative">
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-lg leading-6 font-semibold relative self-stretch">
             Personal Info
@@ -77,18 +77,18 @@ $allowed_html = array(
           </div>
         </div>
       </div>
-      <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-[688px] relative">
+      <div class="bg-[#f4f4f4] p-6 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full md:w-[688px] relative">
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-lg leading-6 font-semibold relative self-stretch">
-            Password
+            <?php esc_html_e('Password', 'creative-furniture'); ?>
           </div>
           <div class="text-text-and-icon-secondary text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch">
-            Update or reset your login password securely
+            <?php esc_html_e('Update or reset your login password securely', 'creative-furniture'); ?>
           </div>
         </div>
         <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-[#0a0909] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative self-stretch">
-            Current password
+            <?php esc_html_e('Current password', 'creative-furniture'); ?>
           </div>
           <div class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative">
             <div class="text-[#525252] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex-1" style="opacity: 0.8">

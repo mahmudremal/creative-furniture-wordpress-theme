@@ -15,9 +15,11 @@ $plus_minus_icons = '
     </svg>
 </span>
 ';
+$demoVariations = true;
+
 ?>
 
-<div class="max-w-[1440px] mx-auto px-4 md:px-6 py-6 lg:py-10">
+<div class="max-w-[1440px] mx-auto px-4 py-6 lg:py-10">
     <?php while (have_posts()) : the_post(); $product = wc_get_product(get_the_ID()); ?>
         <div class="flex flex-col lg:flex-row gap-10 items-start justify-between">
             <div class="w-full lg:w-[789px] shrink-0">
@@ -95,6 +97,60 @@ $plus_minus_icons = '
                                     </div>
                                 </div>
                             <?php endforeach; ?>
+                        </div>
+                    <?php elseif ($demoVariations): ?>
+                        <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
+                            <div class="text-[#000000] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex items-center justify-center">
+                                Color
+                            </div>
+                            <div class="bg-[#ffffff] flex flex-row gap-3 items-center justify-start shrink-0 relative">
+                                <div class="flex flex-col gap-[3px] items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group">
+                                    <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#000000] border shrink-0 w-14 h-12 relative overflow-hidden transition-colors"></div>
+                                    <div class="text-[#000000] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
+                                        Red
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[3px] items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group">
+                                    <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#000000] border shrink-0 w-14 h-12 relative overflow-hidden transition-colors"></div>
+                                    <div class="text-[#000000] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
+                                        Blue
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-[3px] items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group active">
+                                    <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#000000] border shrink-0 w-14 h-12 relative overflow-hidden transition-colors">
+                                        <img class="w-10 h-5 absolute left-[50%] top-[50%]" style="
+                                            translate: -50% -50%;
+                                            object-fit: cover;
+                                            aspect-ratio: 2/1;
+                                        " src="image-2633.png">
+                                    </div>
+                                    <div class="text-[#000000] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative">
+                                        Grey
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
+                            <div class="text-[#000000] text-center font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex items-center justify-center">
+                                Seating Capacity
+                            </div>
+                            <div class="flex flex-row gap-3 items-start justify-start shrink-0 relative">
+                                <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#0c0a0a] border pt-2 pr-4 pb-2 pl-4 flex flex-row gap-4 items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group transition-colors">
+                                    <div class="text-[#000000] text-center font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative">
+                                        1 Seater
+                                    </div>
+                                </div>
+                                <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#0c0a0a] border pt-2 pr-4 pb-2 pl-4 flex flex-row gap-4 items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group transition-colors">
+                                    <div class="text-[#000000] text-center font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative">
+                                        2 Seater
+                                    </div>
+                                </div>
+                                <div class="border-solid border-[#c4c4c4] group-[.active]:border-[#0c0a0a] border pt-2 pr-4 pb-2 pl-4 flex flex-row gap-4 items-center justify-center shrink-0 relative cursor-pointer cf-demo-selectable group transition-colors active">
+                                    <div class="text-[#000000] text-center font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative">
+                                        3 Seater
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     <?php endif; ?>
                     <div class="flex flex-col gap-2">
@@ -212,6 +268,13 @@ document.addEventListener('DOMContentLoaded', function() {
             item.parentElement.querySelectorAll('.cf-accordion-item:not(.hidden)').forEach(i => changeStatus(i, true));
             const isActive = item.classList.contains('cf-accordion-active');
             changeStatus(item, isActive);
+        });
+    });
+
+    document.querySelectorAll('.cf-demo-selectable').forEach(item => {
+        item.addEventListener('click', function() {
+            item.parentElement.querySelectorAll('.cf-demo-selectable').forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
         });
     });
 });

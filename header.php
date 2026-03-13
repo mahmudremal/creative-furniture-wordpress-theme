@@ -29,7 +29,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
     <header id="masthead" class="site-header relative z-50">
         <div class="flex flex-col items-center justify-start w-full gap-4 mb-4">
             <div class="w-full bg-[#eaeaea]">
-                <div class="px-4 md:px-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto relative">
+                <div class="px-4 --md:px-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto relative">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full gap-2 md:gap-4">
                         <div class="text-black text-center md:text-left font-normal text-xs md:text-sm leading-5 text-nowrap">
                             <?php echo esc_html__( 'Free shipping - orders above AED 1500', 'creative-furniture' ); ?>
@@ -68,10 +68,14 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                             </div>
                         </div>
                         
-                        <a href="<?php echo esc_url( function_exists('wc_get_wishlist_url') ? wc_get_wishlist_url() : home_url('/wishlist/') ); ?>" class="text-[#434343] hover:text-[#bd262a] transition-colors">
+                        <a href="<?php echo esc_url( function_exists('wc_get_wishlist_url') ? wc_get_wishlist_url() : home_url('/wishlist/') ); ?>" class="text-[#434343] hover:text-[#bd262a] transition-colors relative">
                             <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99425 4.27985C8.32813 2.332 5.54975 1.80804 3.4622 3.59168C1.37466 5.37532 1.08077 8.35748 2.72012 10.467C4.08314 12.2209 8.2081 15.9201 9.56004 17.1174C9.7113 17.2513 9.78692 17.3183 9.87514 17.3446C9.95213 17.3676 10.0364 17.3676 10.1134 17.3446C10.2016 17.3183 10.2772 17.2513 10.4285 17.1174C11.7804 15.9201 15.9054 12.2209 17.2684 10.467C18.9077 8.35748 18.6497 5.35656 16.5263 3.59168C14.4029 1.8268 11.6604 2.332 9.99425 4.27985Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
+                            <?php $totalWishlist = cf_wishlist_get_total(); ?>
+                            <span class="wishlist-total-qty absolute -top-1.5 -right-1.5 bg-[#bd262a] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center <?php echo esc_attr($totalWishlist > 0 ? '' : 'hidden'); ?>">
+                                <?php echo esc_html($totalWishlist); ?>
+                            </span>
                         </a>
 
                         <a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" class="text-[#434343] hover:text-[#bd262a] transition-colors">
@@ -87,16 +91,15 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                                 <path d="M12.9129 10H12.9204" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M7.07872 10H7.0862" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
-                            <?php if ( WC()->cart->get_cart_contents_count() > 0 ) : ?>
-                                <span class="absolute -top-1.5 -right-1.5 bg-[#bd262a] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-                                    <?php echo WC()->cart->get_cart_contents_count(); ?>
-                                </span>
-                            <?php endif; ?>
+                            <?php $totalInCart = WC()->cart->get_cart_contents_count(); ?>
+                            <span class="cart-total-qty absolute -top-1.5 -right-1.5 bg-[#bd262a] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center <?php echo esc_attr($totalInCart > 0 ? '' : 'hidden'); ?>">
+                                <?php echo esc_html($totalInCart); ?>
+                            </span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="w-full h-[70px] md:h-[62px] py-2 px-4 md:px-0 relative flex">
+            <div class="w-full h-[70px] md:h-[62px] py-2 px-4 --md:px-0 relative flex">
                 <div class="flex flex-row items-center justify-between w-full max-w-full md:w-[1440px] m-auto">
                     <button id="mobile-menu-toggle" class="md:hidden p-3 -ml-3 text-black hover:bg-gray-100 rounded-full transition-colors active:scale-95">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>

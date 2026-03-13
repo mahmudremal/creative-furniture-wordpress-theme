@@ -17,7 +17,7 @@ foreach($recent_orders as $order_data) {
 
 <div class="space-y-8">
     <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold text-black"><?php _e('Seller Dashboard', 'creative-furniture'); ?></h2>
+        <h2 class="text-2xl font-bold text-black"><?php esc_html_e('Seller Dashboard', 'creative-furniture'); ?></h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -27,7 +27,7 @@ foreach($recent_orders as $order_data) {
             </div>
             <div>
                 <div class="text-2xl font-bold text-black"><?php echo $total_products; ?></div>
-                <div class="text-sm text-white-800"><?php _e('Total Products', 'creative-furniture'); ?></div>
+                <div class="text-sm text-white-800"><?php esc_html_e('Total Products', 'creative-furniture'); ?></div>
             </div>
         </div>
 
@@ -37,7 +37,7 @@ foreach($recent_orders as $order_data) {
             </div>
             <div>
                 <div class="text-2xl font-bold text-black"><?php echo $total_sales; ?></div>
-                <div class="text-sm text-white-800"><?php _e('Total Sales', 'creative-furniture'); ?></div>
+                <div class="text-sm text-white-800"><?php esc_html_e('Total Sales', 'creative-furniture'); ?></div>
             </div>
         </div>
 
@@ -47,7 +47,7 @@ foreach($recent_orders as $order_data) {
             </div>
             <div>
                 <div class="text-2xl font-bold text-black"><?php echo wc_price($total_revenue); ?></div>
-                <div class="text-sm text-white-800"><?php _e('Total Revenue', 'creative-furniture'); ?></div>
+                <div class="text-sm text-white-800"><?php esc_html_e('Total Revenue', 'creative-furniture'); ?></div>
             </div>
         </div>
     </div>
@@ -55,13 +55,13 @@ foreach($recent_orders as $order_data) {
     <div class="flex justify-start">
         <a href="<?php echo esc_url(wc_get_account_endpoint_url('my-products')); ?>" class="inline-flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-xl font-semibold transition-all hover:opacity-90">
             <svg class="w-5 h-5 text-black" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>table-rows</title> <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd"> <g id="icon" fill="#fff" transform="translate(42.666667, 106.666667)"> <path d="M3.55271368e-14,85.3333333 L106.666667,85.3333333 L106.666667,128 L3.55271368e-14,128 L3.55271368e-14,85.3333333 Z M3.55271368e-14,4.26325641e-14 L106.666667,4.26325641e-14 L106.666667,42.6666667 L3.55271368e-14,42.6666667 L3.55271368e-14,4.26325641e-14 Z M3.55271368e-14,170.666667 L106.666667,170.666667 L106.666667,213.333333 L3.55271368e-14,213.333333 L3.55271368e-14,170.666667 Z M3.55271368e-14,256 L106.666667,256 L106.666667,298.666667 L3.55271368e-14,298.666667 L3.55271368e-14,256 Z M149.333333,85.3333333 L426.666667,85.3333333 L426.666667,128 L149.333333,128 L149.333333,85.3333333 Z M149.333333,4.26325641e-14 L426.666667,4.26325641e-14 L426.666667,42.6666667 L149.333333,42.6666667 L149.333333,4.26325641e-14 Z M149.333333,170.666667 L426.666667,170.666667 L426.666667,213.333333 L149.333333,213.333333 L149.333333,170.666667 Z M149.333333,256 L426.666667,256 L426.666667,298.666667 L149.333333,298.666667 L149.333333,256 Z" id="Combined-Shape"> </path> </g> </g> </g></svg>
-            <span><?php _e('My Products', 'creative-furniture'); ?></span>
+            <span><?php esc_html_e('My Products', 'creative-furniture'); ?></span>
         </a>
     </div>
 
     <div class="bg-white rounded-2xl shadow-sm border border-white-400 overflow-hidden">
         <div class="px-6 py-4 border-b border-white-400">
-            <h3 class="text-lg font-semibold text-black"><?php _e('Recent Orders', 'creative-furniture'); ?></h3>
+            <h3 class="text-lg font-semibold text-black"><?php esc_html_e('Recent Orders', 'creative-furniture'); ?></h3>
         </div>
         
         <?php if(!empty($recent_orders)): ?>
@@ -69,12 +69,12 @@ foreach($recent_orders as $order_data) {
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-white-200 text-black text-xs uppercase tracking-wider">
-                        <th class="px-6 py-4 font-bold"><?php _e('Order', 'creative-furniture'); ?></th>
-                        <th class="px-6 py-4 font-bold"><?php _e('Product', 'creative-furniture'); ?></th>
-                        <th class="px-6 py-4 font-bold text-center"><?php _e('Quantity', 'creative-furniture'); ?></th>
-                        <th class="px-6 py-4 font-bold"><?php _e('Total', 'creative-furniture'); ?></th>
-                        <th class="px-6 py-4 font-bold"><?php _e('Status', 'creative-furniture'); ?></th>
-                        <th class="px-6 py-4 font-bold"><?php _e('Date', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold"><?php esc_html_e('Order', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold"><?php esc_html_e('Product', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold text-center"><?php esc_html_e('Quantity', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold"><?php esc_html_e('Total', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold"><?php esc_html_e('Status', 'creative-furniture'); ?></th>
+                        <th class="px-6 py-4 font-bold"><?php esc_html_e('Date', 'creative-furniture'); ?></th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-white-400">
@@ -113,7 +113,7 @@ foreach($recent_orders as $order_data) {
         </div>
         <?php else: ?>
         <div class="p-8 text-center">
-            <p class="text-white-800"><?php _e('No orders found.', 'creative-furniture'); ?></p>
+            <p class="text-white-800"><?php esc_html_e('No orders found.', 'creative-furniture'); ?></p>
         </div>
         <?php endif; ?>
     </div>

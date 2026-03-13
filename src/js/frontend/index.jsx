@@ -203,7 +203,7 @@ class SiteCore {
                                     $btn.attr('aria-label', 'Add to wishlist');
                                 }
 
-                                $(document).trigger('wishlist_updated', [productId, isActive]);
+                                $(document).trigger('wishlist_updated', [productId, isActive, response]);
                             }
                         },
                         error: function () {
@@ -211,7 +211,19 @@ class SiteCore {
                         }
                     });
                 })
-            })
+            });
+            $(document).on('wishlist_updated', function (e, productId, isActive, response) {
+                const { total = null } = response;
+                if (total !== null) {
+                    const counter = document.querySelector('.wishlist-total-qty');
+                    if (total === 0) {
+                        counter.classList.add('hidden');
+                    } else {
+                        counter.innerHTML = total;
+                        counter.classList.remove('hidden');
+                    }
+                }
+            });
         }
 
         function loadWishlistState() {
@@ -343,8 +355,8 @@ class SiteCore {
             const variationId = formData.get('variation_id');
 
             if (variationIdInput && !variationId) {
-                alert('Please select all product options');
-                return;
+                // alert('Please select all product options');
+                // return;
             }
 
             addToCartBtn.disabled = true;
@@ -368,7 +380,7 @@ class SiteCore {
                     if (data.success) {
                         addToCartBtn.textContent = '✓ Added';
 
-                        const cartCount = document.querySelector('.cart-count');
+                        const cartCount = document.querySelector('.cart-total-qty');
                         if (cartCount) {
                             cartCount.textContent = data.data.cart_count;
                         }

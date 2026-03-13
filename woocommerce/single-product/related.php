@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( $related_products ) : ?>
 	<section class="related products w-full flex flex-col gap-8">
-		<div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px']])); ?>">
+		<div class="blaze-slider" data-slider="products" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 5, 'slidesToScroll' => 2, 'slideGap' => '16px'], '(max-width: 900px)' => ['slidesToShow' => 3], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
 			<div class="blaze-container flex flex-col gap-7">
 				<?php
 				$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'You may like', 'creative-furniture' ) );

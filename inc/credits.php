@@ -105,7 +105,7 @@ class DevCredits {
             </div>
         </div>
 
-        <script src="<?php echo get_template_directory_uri(); ?>/src/library/js/marked.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/dist/library/js/marked.min.js"></script>
         <style>
             .dev-info-wrap #markdown-preview h1 { font-size: 2.5em; font-weight: 800; margin-bottom: 30px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
             .dev-info-wrap #markdown-preview h2 { font-size: 1.8em; font-weight: 700; margin-top: 40px; margin-bottom: 20px; color: #000; }
