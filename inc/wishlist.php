@@ -159,7 +159,7 @@ class CF_Wishlist {
                             if ($p) : ?>
                                 <div class="flex gap-5 border-b border-gray-100 pb-6 group items-center">
                                     <div class="shrink-0">
-                                        <a href="<?php echo get_permalink($pid); ?>" class="block overflow-hidden rounded-xl border border-gray-100">
+                                        <a href="<?php echo get_permalink($pid); ?>" class="block overflow-hidden -rounded-xl border border-gray-100">
                                             <?php echo get_the_post_thumbnail($pid, 'medium', ['class' => 'w-[140px] h-auto object-cover transform transition-transform group-hover:scale-105']); ?>
                                         </a>
                                     </div>
@@ -216,8 +216,8 @@ class CF_Wishlist {
                     </button>
                     
                     <div class="hidden flex-col gap-3 mt-6 pt-6 border-t border-gray-200 cf-wishlist-share-panel" id="cf-wishlist-share-panel">
-                        <input type="text" readonly value="<?php echo esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())); ?>" class="w-full p-3 border border-gray-300 rounded-xl text-sm bg-white focus:ring-2 focus:ring-black outline-none transition-all cf-wishlist-share-link">
-                        <button class="w-full py-3 bg-gray-200 text-black text-sm font-bold rounded-xl hover:bg-black hover:text-white transition-all cursor-pointer" id="cf-wishlist-copy-link">
+                        <input type="text" readonly value="<?php echo esc_url(add_query_arg('wishlist', implode(',', $items), get_the_permalink())); ?>" class="w-full p-3 border border-gray-300 -rounded-xl text-sm bg-white focus:ring-2 focus:ring-black outline-none transition-all cf-wishlist-share-link">
+                        <button class="w-full py-3 bg-gray-200 text-black text-sm font-bold -rounded-xl hover:bg-black hover:text-white transition-all cursor-pointer" id="cf-wishlist-copy-link">
                             <?php _e('Copy Link','creative-furniture'); ?>
                         </button>
                     </div>

@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
         </div>
     </div>
 <?php else : ?>
-    <div class="bg-[#f4f4f4] p-10 rounded-xl w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="bg-[#f4f4f4] p-10 -rounded-xl w-full max-w-full md:w-[1440px] m-auto relative">
         <form method="post" class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
                 <h3 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold">

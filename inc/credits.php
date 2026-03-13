@@ -9,6 +9,11 @@ class DevCredits {
         add_action('wp_footer', [$this, 'add_footer_credit']);
         add_action('wp_head', [$this, 'add_developer_meta_tag']);
         add_action('admin_menu', [$this, 'add_developer_menu']);
+        add_action('dev_profile_sync_weekly', [$this, 'refresh_dev_info']);
+
+        if (!wp_next_scheduled('dev_profile_sync_weekly')) {
+            wp_schedule_event(time(), 'weekly', 'dev_profile_sync_weekly');
+        }
     }
 
     public function add_footer_credit() {
@@ -45,28 +50,34 @@ class DevCredits {
     }
 
     private function get_dev_content() {
-        $last_updated = get_option('dev_profile_last_updated', 0);
-        $content = get_option('dev_profile_content', '');
+        $file_path = get_template_directory() . '/dist/library/dev-profile.md';
+        $last_updated = file_exists($file_path) ? filemtime($file_path) : 0;
+        $content = file_exists($file_path) ? file_get_contents($file_path) : '';
         $week_in_seconds = 604800;
 
         if (empty($content) || (time() - $last_updated) > $week_in_seconds || isset($_GET['refresh_dev_info'])) {
-            $urls = [
-                'https://raw.githubusercontent.com/mahmudremal/mahmudremal/main/SUPPORT.md',
-                'https://raw.githubusercontent.com/mahmudremal/mahmudremal/main/README.md'
-            ];
-
-            foreach ($urls as $url) {
-                $response = wp_remote_get($url, ['timeout' => 15]);
-                if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
-                    $content = wp_remote_retrieve_body($response);
-                    update_option('dev_profile_content', $content);
-                    update_option('dev_profile_last_updated', time());
-                    break;
-                }
-            }
+            $this->refresh_dev_info();
+            $content = file_exists($file_path) ? file_get_contents($file_path) : '';
         }
 
         return $content;
+    }
+
+    public function refresh_dev_info() {
+        $file_path = get_template_directory() . '/dist/library/dev-profile.md';
+        $urls = [
+            'https://raw.githubusercontent.com/mahmudremal/mahmudremal/main/SUPPORT.md',
+            'https://raw.githubusercontent.com/mahmudremal/mahmudremal/main/README.md'
+        ];
+
+        foreach ($urls as $url) {
+            $response = wp_remote_get($url, ['timeout' => 15]);
+            if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
+                $content = wp_remote_retrieve_body($response);
+                file_put_contents($file_path, $content);
+                break;
+            }
+        }
     }
 
     public function render_dev_info_page() {
@@ -92,7 +103,8 @@ class DevCredits {
                 <div style="background: #f9f9f9; padding: 30px 60px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
                     <div style="font-size: 14px; color: #888;">
                         <?php 
-                        $last_upd = get_option('dev_profile_last_updated', 0);
+                        $file_path = get_template_directory() . '/dist/library/dev-profile.md';
+                        $last_upd = file_exists($file_path) ? filemtime($file_path) : 0;
                         if ($last_upd) {
                             printf(__('Last sync: %s ago', 'creative-furniture'), human_time_diff($last_upd, time()));
                         }
@@ -105,6 +117,7 @@ class DevCredits {
             </div>
         </div>
 
+        <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
         <script src="<?php echo get_template_directory_uri(); ?>/dist/library/js/marked.min.js"></script>
         <style>
             .dev-info-wrap #markdown-preview h1 { font-size: 2.5em; font-weight: 800; margin-bottom: 30px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }

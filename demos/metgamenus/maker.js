@@ -847,176 +847,6 @@ const list = [
     link: "https://creativefurniture.xyz/product-category/ct-a-office/",
     mega: [
       {
-        title: "Office Room Set",
-        links: [
-          {
-            title: "SOF-01-Arian",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-01-arian-series/",
-            head: false,
-          },
-          {
-            title: "SOF-06-Gray Module",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-06-gray-module-series/",
-            head: false,
-          },
-          {
-            title: "SOF-11-Kona",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-11-kona-series/",
-            head: false,
-          },
-          {
-            title: "SOF-16-Anto",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-16-anto-series/",
-            head: false,
-          },
-          {
-            title: "SOF-21-Cloud",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-21-cloud-series/",
-            head: false,
-          },
-          {
-            title: "SOF-26-Snow-Module",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-26-snow-module-series/",
-            head: false,
-          },
-          {
-            title: "SOF-31-Diamond",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-31-diamond-series/",
-            head: false,
-          },
-          {
-            title: "SOF-02-Box",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-02-box-series/",
-            head: false,
-          },
-          {
-            title: "SOF-07-Walli",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-07-walli-series/",
-            head: false,
-          },
-          {
-            title: "SOF-12-Alder",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-12-alder-series/",
-            head: false,
-          },
-          {
-            title: "SOF-17-Muke",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-17-muke-series/",
-            head: false,
-          },
-          {
-            title: "SOF-22-Plank",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-22-plank-series/",
-            head: false,
-          },
-          {
-            title: "SOF-27-Frosty",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-27-frosty-series/",
-            head: false,
-          },
-          {
-            title: "SOF-32-Jane",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-32-jane-series/",
-            head: false,
-          },
-          {
-            title: "SOF-03-Pasa",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-03-pasa-series/",
-            head: false,
-          },
-          {
-            title: "SOF-08-Ashley",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-08-ashley-series/",
-            head: false,
-          },
-          {
-            title: "SOF-13-Dina",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-13-dina-series/",
-            head: false,
-          },
-          {
-            title: "SOF-18-Hats",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-18-hats-series/",
-            head: false,
-          },
-          {
-            title: "SOF-23-X-Module",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-23-x-module-series/",
-            head: false,
-          },
-          {
-            title: "SOF-28-Luna",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-28-luna-series/",
-            head: false,
-          },
-          {
-            title: "SOF-33-Opal",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-33-opal-series/",
-            head: false,
-          },
-          {
-            title: "SOF-04-Mint",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-04-mint-series/",
-            head: false,
-          },
-          {
-            title: "SOF-09-Honey",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-09-honey-series/",
-            head: false,
-          },
-          {
-            title: "SOF-14-Asma",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-14-asma-series/",
-            head: false,
-          },
-          {
-            title: "SOF-19-Marraw",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-19-marraw-series/",
-            head: false,
-          },
-          {
-            title: "SOF-24-Pyramid",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-24-pyramid-series/",
-            head: false,
-          },
-          {
-            title: "SOF-29-Nova",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-29-nova-series/",
-            head: false,
-          },
-          {
-            title: "SOF-05-Sunny",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-05-sunny-series/",
-            head: false,
-          },
-          {
-            title: "SOF-10-Mist",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-10-mist-series/",
-            head: false,
-          },
-          {
-            title: "SOF-15-Mona",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-15-mona-series/",
-            head: false,
-          },
-          {
-            title: "SOF-20-Concrete",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-20-concrete-series/",
-            head: false,
-          },
-          {
-            title: "SOF-25-Sleek",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-25-sleek-series/",
-            head: false,
-          },
-          {
-            title: "SOF-30-Ruby",
-            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-30-ruby-series/",
-            head: false,
-          },
-        ],
-      },
-      {
         title: "Office Furniture",
         links: [
           {
@@ -1232,6 +1062,176 @@ const list = [
           {
             title: "Bar Stool / High Stools",
             link: "https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/",
+            head: false,
+          },
+        ],
+      },
+      {
+        title: "Office Room Set",
+        links: [
+          {
+            title: "SOF-01-Arian",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-01-arian-series/",
+            head: false,
+          },
+          {
+            title: "SOF-06-Gray Module",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-06-gray-module-series/",
+            head: false,
+          },
+          {
+            title: "SOF-11-Kona",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-11-kona-series/",
+            head: false,
+          },
+          {
+            title: "SOF-16-Anto",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-16-anto-series/",
+            head: false,
+          },
+          {
+            title: "SOF-21-Cloud",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-21-cloud-series/",
+            head: false,
+          },
+          {
+            title: "SOF-26-Snow-Module",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-26-snow-module-series/",
+            head: false,
+          },
+          {
+            title: "SOF-31-Diamond",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-31-diamond-series/",
+            head: false,
+          },
+          {
+            title: "SOF-02-Box",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-02-box-series/",
+            head: false,
+          },
+          {
+            title: "SOF-07-Walli",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-07-walli-series/",
+            head: false,
+          },
+          {
+            title: "SOF-12-Alder",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-12-alder-series/",
+            head: false,
+          },
+          {
+            title: "SOF-17-Muke",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-17-muke-series/",
+            head: false,
+          },
+          {
+            title: "SOF-22-Plank",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-22-plank-series/",
+            head: false,
+          },
+          {
+            title: "SOF-27-Frosty",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-27-frosty-series/",
+            head: false,
+          },
+          {
+            title: "SOF-32-Jane",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-32-jane-series/",
+            head: false,
+          },
+          {
+            title: "SOF-03-Pasa",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-03-pasa-series/",
+            head: false,
+          },
+          {
+            title: "SOF-08-Ashley",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-08-ashley-series/",
+            head: false,
+          },
+          {
+            title: "SOF-13-Dina",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-13-dina-series/",
+            head: false,
+          },
+          {
+            title: "SOF-18-Hats",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-18-hats-series/",
+            head: false,
+          },
+          {
+            title: "SOF-23-X-Module",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-23-x-module-series/",
+            head: false,
+          },
+          {
+            title: "SOF-28-Luna",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-28-luna-series/",
+            head: false,
+          },
+          {
+            title: "SOF-33-Opal",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-33-opal-series/",
+            head: false,
+          },
+          {
+            title: "SOF-04-Mint",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-04-mint-series/",
+            head: false,
+          },
+          {
+            title: "SOF-09-Honey",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-09-honey-series/",
+            head: false,
+          },
+          {
+            title: "SOF-14-Asma",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-14-asma-series/",
+            head: false,
+          },
+          {
+            title: "SOF-19-Marraw",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-19-marraw-series/",
+            head: false,
+          },
+          {
+            title: "SOF-24-Pyramid",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-24-pyramid-series/",
+            head: false,
+          },
+          {
+            title: "SOF-29-Nova",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-29-nova-series/",
+            head: false,
+          },
+          {
+            title: "SOF-05-Sunny",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-05-sunny-series/",
+            head: false,
+          },
+          {
+            title: "SOF-10-Mist",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-10-mist-series/",
+            head: false,
+          },
+          {
+            title: "SOF-15-Mona",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-15-mona-series/",
+            head: false,
+          },
+          {
+            title: "SOF-20-Concrete",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-20-concrete-series/",
+            head: false,
+          },
+          {
+            title: "SOF-25-Sleek",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-25-sleek-series/",
+            head: false,
+          },
+          {
+            title: "SOF-30-Ruby",
+            link: "https://creativefurniture.xyz/product-category/set01-set-house-designs/sof-00-office-set/sof-30-ruby-series/",
             head: false,
           },
         ],
@@ -1764,7 +1764,7 @@ list.forEach((megaMenus) => {
                 ({ title }, index) => `
             <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title ${index === 0 ? "active" : ""}" data-block-index="${index}">
               <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
                   ${title}
                 </div>
               </div>
@@ -1783,14 +1783,14 @@ list.forEach((megaMenus) => {
               ({ links = [], title: megaTitle, link: megaLink }, index) => `
           <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative ${index === 0 ? "" : "hidden"} transition-all duration-300" data-index="${index}">
             
-            <div class="grid grid-cols-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
               ${links
                 .map(
                   ({ title, link, items = [] }) => `
-              <div class="flex flex-col gap-4 items-start justify-start min-relative">
+              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
                 ${
                   title
-                    ? `<a href="${link || "#"}" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                    ? `<a href="${link || "#"}" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
                         <span>${title}</span>
                         <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
                       </a>`
@@ -1800,7 +1800,7 @@ list.forEach((megaMenus) => {
                   ${items
                     .map(
                       ({ title, link }) => `
-                  <a href="${link}" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                  <a href="${link}" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
                     ${title}
                   </a>`,
                     )
@@ -1811,21 +1811,21 @@ list.forEach((megaMenus) => {
                 .join("")}
             </div>
 
-            <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative">
-              <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                <img class="absolute inset-0 w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-              </div>
-              <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
-                <a href="${megaLink || expectedmenus.link}" class="flex flex-row gap-1 items-center justify-start self-stretch shrink-0 relative group">
-                  <div class="text-[#222222] group-hover:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative flex-1 transition-colors">
+              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
+                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                </div>
+                <a href="${megaLink || expectedmenus.link}" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
+                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
                     See All ${megaTitle}
                   </div>
-                  <svg class="shrink-0 w-6 h-6 relative overflow-visible group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-hover:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
                 </a>
               </div>
-            </div>
 
           </div>`,
             )

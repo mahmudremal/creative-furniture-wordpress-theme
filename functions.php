@@ -91,8 +91,8 @@ function creative_furniture_scripts() {
 	}
 	wp_enqueue_style('creative-furniture-fonts', get_template_directory_uri() . '/dist/library/fonts/fonts.css', [], filemtime(get_template_directory() . '/dist/library/fonts/fonts.css'), 'all');
 	
-	wp_enqueue_script( 'creative-furniture-tailwindcdn', get_template_directory_uri() . '/js/tailwindcss.js', [], _S_VERSION, true );
-	// wp_enqueue_style('creative-furniture-styling', get_template_directory_uri() . '/styling.css', [], filemtime(get_template_directory() . '/styling.css'), 'all');
+	// wp_enqueue_script( 'creative-furniture-tailwindcdn', get_template_directory_uri() . '/js/tailwindcss.js', [], _S_VERSION, true );
+	wp_enqueue_style('creative-furniture-styling', get_template_directory_uri() . '/styling.css', [], filemtime(get_template_directory() . '/styling.css'), 'all');
 	
 	
 	wp_enqueue_style('blaze-slider', get_template_directory_uri() . '/dist/library/css/blaze.css', [], false, 'all');
@@ -165,6 +165,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/seller-registration.php';
 	require_once get_template_directory() . '/inc/contact-us.php';
 	require_once get_template_directory() . '/inc/reviews.php';
+	require_once get_template_directory() . '/inc/checkout.php';
 // }
 
 

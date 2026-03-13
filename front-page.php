@@ -346,7 +346,7 @@ $theme_directory_uri = get_template_directory_uri();
           foreach ($hotspots_top_left as $spot) : ?>
           <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
                style="backdrop-filter: blur(4px); top: <?php echo $spot['top']; ?>; left: <?php echo $spot['left']; ?>;"
-               data-tippy-content='<div class="bg-[#ffffff] rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
+               data-tippy-content='<div class="bg-[#ffffff] -rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
                   <div class="flex flex-col gap-1 items-start justify-start flex-1">
                     <div class="text-[#151515] text-left font-Raleway text-[10px] leading-[15px] font-normal uppercase"><?php echo esc_html($spot['name']); ?></div>
                     <div class="text-[#0f0f0f] text-right font-Raleway text-xs leading-[18px] font-medium"><?php echo esc_html($spot['price']); ?></div>
@@ -374,7 +374,7 @@ $theme_directory_uri = get_template_directory_uri();
           foreach ($hotspots_bottom_left as $spot) : ?>
           <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
                style="backdrop-filter: blur(4px); top: <?php echo $spot['top']; ?>; left: <?php echo $spot['left']; ?>;"
-               data-tippy-content='<div class="bg-[#ffffff] rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
+               data-tippy-content='<div class="bg-[#ffffff] -rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
                   <div class="flex flex-col gap-1 items-start justify-start flex-1">
                     <div class="text-[#151515] text-left font-Raleway text-[10px] leading-[15px] font-normal uppercase"><?php echo esc_html($spot['name']); ?></div>
                     <div class="text-[#0f0f0f] text-right font-Raleway text-xs leading-[18px] font-medium"><?php echo esc_html($spot['price']); ?></div>
@@ -436,7 +436,7 @@ $theme_directory_uri = get_template_directory_uri();
           <?php foreach ($hotspots_top_right as $index => $spot) : ?>
           <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
                style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;"
-               data-tippy-content='<div class="bg-[#ffffff] rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
+               data-tippy-content='<div class="bg-[#ffffff] -rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
                   <div class="flex flex-col gap-1 items-start justify-start flex-1">
                     <div class="text-[#151515] text-left font-Raleway text-[10px] leading-[15px] font-normal uppercase"><?php echo esc_html($spot['product_name']); ?></div>
                     <div class="text-[#0f0f0f] text-right font-Raleway text-xs leading-[18px] font-medium"><?php echo esc_html($spot['product_price']); ?></div>
@@ -464,7 +464,7 @@ $theme_directory_uri = get_template_directory_uri();
             foreach ($hotspots_bottom_middle as $spot) : ?>
             <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
                  style="backdrop-filter: blur(4px); top: <?php echo $spot['top']; ?>; left: <?php echo $spot['left']; ?>;"
-                 data-tippy-content='<div class="bg-[#ffffff] rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
+                 data-tippy-content='<div class="bg-[#ffffff] -rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
                     <div class="flex flex-col gap-1 items-start justify-start flex-1">
                       <div class="text-[#151515] text-left font-Raleway text-[10px] leading-[15px] font-normal uppercase"><?php echo esc_html($spot['name']); ?></div>
                       <div class="text-[#0f0f0f] text-right font-Raleway text-xs leading-[18px] font-medium"><?php echo esc_html($spot['price']); ?></div>
@@ -491,7 +491,7 @@ $theme_directory_uri = get_template_directory_uri();
             foreach ($hotspots_bottom_right as $spot) : ?>
             <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
                  style="backdrop-filter: blur(4px); top: <?php echo $spot['top']; ?>; left: <?php echo $spot['left']; ?>;"
-                 data-tippy-content='<div class="bg-[#ffffff] rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
+                 data-tippy-content='<div class="bg-[#ffffff] -rounded-lg p-2 flex flex-row gap-2 items-center justify-start relative shadow-lg min-w-[150px]">
                     <div class="flex flex-col gap-1 items-start justify-start flex-1">
                       <div class="text-[#151515] text-left font-Raleway text-[10px] leading-[15px] font-normal uppercase"><?php echo esc_html($spot['name']); ?></div>
                       <div class="text-[#0f0f0f] text-right font-Raleway text-xs leading-[18px] font-medium"><?php echo esc_html($spot['price']); ?></div>

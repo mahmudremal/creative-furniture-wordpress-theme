@@ -213,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
             </div>
 
             <!-- Status Timeline -->
-            <div class="bg-[#f8f8f8] rounded-lg p-4 md:p-8 flex flex-col gap-6 items-start justify-start w-full md:w-[500px] shrink-0 sticky top-10 self-start">
+            <div class="bg-[#f8f8f8] -rounded-lg p-4 md:p-8 flex flex-col gap-6 items-start justify-start w-full md:w-[500px] shrink-0 sticky top-10 self-start">
                 <div class="border-solid border-[#efefef] border-b pb-3 w-full">
                     <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl font-semibold relative flex items-center justify-start">
                         <?php esc_html_e('Order Status Guide', 'creative-furniture'); ?>

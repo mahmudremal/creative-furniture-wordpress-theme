@@ -163,7 +163,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
             <div id="mobile-menu-content" class="absolute left-0 top-0 h-full w-[300px] bg-white shadow-2xl translate-x-[-100%] transition-transform duration-500 ease-out flex flex-col">
                 <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
                     <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                        <div class="w-8 h-8 bg-black -rounded-lg flex items-center justify-center">
                              <img class="w-5 h-5 object-contain invert" src="<?php echo esc_url( get_template_directory_uri() . '/dist/images/v2/logo-icon.png' ); ?>" alt="Icon">
                         </div>
                         <span class="font-bold text-xl tracking-tight text-black"><?php echo esc_html__( 'Menu', 'creative-furniture' ); ?></span>
@@ -186,7 +186,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
 
                 <div class="p-6 bg-gray-50 border-t border-gray-100 space-y-4">
                     <a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?>" class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-200 text-sm font-semibold text-black hover:border-black transition-all">
-                        <div class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center">
+                        <div class="w-10 h-10 bg-gray-100 -rounded-xl flex items-center justify-center">
                             <svg class="w-5 h-5 text-black" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6667 17.5C16.6667 16.337 16.6667 15.7555 16.5232 15.2824C16.2 14.217 15.3663 13.3834 14.301 13.0602C13.8278 12.9167 13.2463 12.9167 12.0834 12.9167H7.91671C6.75374 12.9167 6.17225 12.9167 5.69909 13.0602C4.63375 13.3834 3.80007 14.217 3.47691 15.2824C3.33337 15.7555 3.33337 16.337 3.33337 17.5M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92897 10 6.25004 8.32107 6.25004 6.25C6.25004 4.17893 7.92897 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </div>
                         <div class="flex flex-col">

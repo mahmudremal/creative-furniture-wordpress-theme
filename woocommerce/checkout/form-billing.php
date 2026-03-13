@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
             // Field Wrapper CSS
             $fw_class = 'bg-[#ffffff] border-solid border-[#e9eaf0] border p-4 flex flex-row gap-6 items-center justify-start self-stretch shrink-0 h-14 relative';
             $input_class = 'bg-transparent border-none outline-none w-full font-[\'Raleway-Regular\'] text-base text-[#111111] p-0 focus:ring-0';
-            $label_class = 'text-[#9b9b9b] text-left font-[\'Raleway-Regular\'] text-xs leading-4 font-normal absolute top-2 left-4 pointer-events-none';
+            $label_class = 'text-[#9b9b9b] text-left font-[\'Raleway-Regular\'] text-xs leading-4 font-normal absolute top-1 left-4 pointer-events-none';
 
             // Custom function to render a field with design
             $render_field = function($key, $field, $is_half = false, $is_third = false) use ($checkout, $fw_class, $input_class, $label_class) {
                 $field['class'] = array('design-field-wrapper', $is_half ? 'flex-1' : ($is_third ? 'flex-1' : 'w-full'));
                 $field['input_class'] = ['bg-transparent', 'border-none', 'outline-none', 'w-full', 'p-0', 'focus:ring-0', 'appearance-none', 'text-[#111111]', 'placeholder:text-[#9b9b9b]', 'text-left', "font-['Raleway-Regular',_sans-serif]", 'text-base', 'leading-6', 'font-normal', 'relative', 'flex', 'items-center', 'justify-start'];
-                $field['label_class'] = array('design-label', 'text-[#9b9b9b]', 'text-left', 'font-[\'Raleway-Regular\']', 'text-xs', 'leading-4', 'font-normal', 'absolute', 'top-2', 'left-4', 'pointer-events-none');
+                $field['label_class'] = array('design-label', 'text-[#9b9b9b]', 'text-left', 'font-[\'Raleway-Regular\']', 'text-xs', 'leading-4', 'font-normal', 'absolute', 'top-1', 'left-4', 'pointer-events-none');
 
                 if (in_array($key, [ 'billing_first_name', 'billing_last_name', 'billing_address_1', 'billing_address_2', 'billing_city', 'billing_state', 'billing_postcode', 'billing_phone' ])) {
                     $field['label_class'][] = 'hidden';

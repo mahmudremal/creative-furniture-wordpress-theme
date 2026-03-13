@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?> bg-[#f4f4f4] rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
+<div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?> bg-[#f4f4f4] -rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 

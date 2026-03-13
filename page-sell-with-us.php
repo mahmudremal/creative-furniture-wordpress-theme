@@ -37,7 +37,7 @@
       </a>
     </div>
     <div class="flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
-      <div class="rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5910" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5910)"></rect>
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl flex flex-col gap-6 items-center justify-start shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start shrink-0 w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5918" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5918)"></rect>
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5926" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5926)"></rect>
@@ -109,7 +109,7 @@
           </div>
         </div>
       </div>
-      <div class="rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5934" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5934)"></rect>
@@ -387,7 +387,7 @@
       </div>
     </div>
     <?php if (isset($_GET['status'])): ?>
-        <div class="w-[794px] m-auto mb-6 p-4 rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
+        <div class="w-[794px] m-auto mb-6 p-4 -rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
             <?php if ($_GET['status'] === 'success'): ?>
               <?php esc_html_e('Your application has been submitted successfully! We will get back to you soon.', 'creative-furniture'); ?>
             <?php else: ?>
@@ -408,7 +408,7 @@
                 <span class="title-span2">*</span>
               </span>
             </div>
-            <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+            <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="text" name="fullname" placeholder="<?php esc_attr_e('Donald Smith', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
             </div>
           </div>
@@ -419,7 +419,7 @@
                 <span class="title-span2">*</span>
               </span>
             </div>
-            <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+            <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="email" name="email" placeholder="<?php esc_attr_e('Email Address', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
             </div>
           </div>
@@ -430,7 +430,7 @@
               <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 Phone Number
               </div>
-              <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+              <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                   <input type="tel" name="phone" placeholder="<?php esc_attr_e('Phone Number', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
               </div>
             </div>
@@ -443,7 +443,7 @@
                   <span class="title-span2">*</span>
                 </span>
               </div>
-              <div class="w-full bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start">
+              <div class="w-full bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start">
                 <select name="category" required class="py-3.5 px-4  self-stretch shrink-0 relative w-[calc(100%-40px)] bg-transparent border-none focus:ring-0 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 appearance-none">
                     <option value="" disabled selected>Select Category</option>
                     <option value="Sofas & Seating"><?php esc_html_e('Sofas & Seating', 'creative-furniture'); ?></option>
@@ -469,7 +469,7 @@
               <span class="title-span2">*</span>
             </span>
           </div>
-          <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
+          <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
               <textarea name="business_info" required placeholder="<?php esc_attr_e('Briefly describe what you sell, your materials, and your unique style.', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
           </div>
         </div>

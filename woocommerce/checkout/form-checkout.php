@@ -181,7 +181,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                             </svg>
                             <span class="text-sm leading-5 font-normal font-['Raleway-Regular']">Return to cart</span>
                         </a>
-                        <button type="submit" class="bg-[#000000] rounded-lg pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center flex-1 relative" name="woocommerce_checkout_place_order" id="place_order" value="Pay now">
+                        <button type="submit" class="bg-[#000000] -rounded-lg pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center flex-1 relative" name="woocommerce_checkout_place_order" id="place_order" value="Pay now">
                             <span class="text-[#ffffff] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">Pay now</span>
                         </button>
                         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
@@ -190,7 +190,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                 <?php endif; ?>
             </div>
             <!-- Right Side: Order Summary -->
-            <div class="bg-[#f4f4f4] rounded-xl p-4 md:p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative h-fit sticky top-0">
+            <div class="bg-[#f4f4f4] -rounded-xl p-4 md:p-6 flex flex-col gap-8 items-start justify-start self-stretch flex-1 relative h-fit sticky top-0">
                 <div id="order_review" class="woocommerce-checkout-review-order w-full">
                     <?php do_action( 'woocommerce_checkout_order_review' ); ?>
                 </div>

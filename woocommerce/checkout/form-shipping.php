@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
 
-			<div class="mt-6 rounded-lg border-solid border-[#e9eaf0] border flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
+			<div class="mt-6 -rounded-lg border-solid border-[#e9eaf0] border flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
                 <div class="bg-[#f6f6f6] p-4 flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative">
                     <?php
                     $fields = $checkout->get_checkout_fields( 'shipping' );
@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
                     $render_field = function($key, $field, $is_half = false, $is_third = false) use ($checkout, $fw_class) {
                         $field['class'] = array('design-field-wrapper', $is_half ? 'flex-1' : ($is_third ? 'flex-1' : 'w-full'));
                         $field['input_class'] = ['bg-transparent', 'border-none', 'outline-none', 'w-full', 'p-0', 'focus:ring-0', 'appearance-none', 'text-[#111111]', 'placeholder:text-[#9b9b9b]', 'text-left', "font-['Raleway-Regular',_sans-serif]", 'text-base', 'leading-6', 'font-normal', 'relative', 'flex', 'items-center', 'justify-start'];
-                        $field['label_class'] = array('design-label', 'text-[#9b9b9b]', 'text-left', 'font-[\'Raleway-Regular\']', 'text-xs', 'leading-4', 'font-normal', 'absolute', 'top-2', 'left-4', 'pointer-events-none');
+                        $field['label_class'] = array('design-label', 'text-[#9b9b9b]', 'text-left', 'font-[\'Raleway-Regular\']', 'text-xs', 'leading-4', 'font-normal', 'absolute', 'top-1', 'left-4', 'pointer-events-none');
                         if (in_array($key, [ 'shipping_first_name', 'shipping_last_name', 'shipping_address_1', 'shipping_address_2', 'shipping_city', 'shipping_state', 'shipping_postcode', 'shipping_phone' ])) {
                             $field['label_class'][] = 'hidden';
                             $field['placeholder'] = $field['label'];
@@ -110,7 +110,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
                 <?php
                 $field['class'][] = 'flex flex-col gap-1';
-                $field['input_class'][] = 'bg-white border-[#e9eaf0] border p-4 w-full font-[\'Raleway-Regular\'] text-base focus:ring-black focus:border-black rounded-lg min-h-[100px]';
+                $field['input_class'][] = 'bg-white border-[#e9eaf0] border p-4 w-full font-[\'Raleway-Regular\'] text-base focus:ring-black focus:border-black -rounded-lg min-h-[100px]';
                 $field['label_class'][] = 'text-[#111111] font-[\'Raleway-SemiBold\'] text-xl leading-[30px] font-semibold mb-2';
                 ?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>

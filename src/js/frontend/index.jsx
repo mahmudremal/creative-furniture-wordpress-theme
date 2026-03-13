@@ -882,7 +882,7 @@ class SiteCore {
         document.querySelectorAll('#cf-wishlist-share-panel').forEach(panel => {
             const nativeShare = document.createElement('button');
             nativeShare.innerText = 'Native Share';
-            nativeShare.className = 'w-full py-2 mt-2 bg-gray-100 text-black text-sm font-bold rounded-xl hover:bg-black hover:text-white transition-all';
+            nativeShare.className = 'w-full py-2 mt-2 bg-gray-100 text-black text-sm font-bold -rounded-xl hover:bg-black hover:text-white transition-all';
             panel.appendChild(nativeShare);
             nativeShare.addEventListener('click', function () {
                 const url = panel.querySelector('.cf-wishlist-share-link')?.value;

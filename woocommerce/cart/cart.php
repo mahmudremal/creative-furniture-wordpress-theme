@@ -166,7 +166,7 @@ do_action( 'woocommerce_before_cart' ); ?>
         </div>
 
         <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-full md:w-[453px] relative sticky top-0">
-            <div class="bg-[#f4f4f4] rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
+            <div class="bg-[#f4f4f4] -rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
                 <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-[44px] font-semibold relative self-stretch flex items-center justify-start">
                     Order Summary
                 </div>

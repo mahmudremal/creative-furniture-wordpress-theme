@@ -96,7 +96,7 @@
       </div>
 
       <?php if (isset($_GET['status'])): ?>
-          <div class="w-[794px] m-auto mb-6 p-4 rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
+          <div class="w-[794px] m-auto mb-6 p-4 -rounded-lg <?php echo $_GET['status'] === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?> font-['Raleway-SemiBold',_sans-serif]">
               <?php if ($_GET['status'] === 'success'): ?>
                   <?php esc_html_e('Thank you for contacting us! Your message has been sent successfully. We will get back to you soon.', 'creative-furniture'); ?>
               <?php else: ?>
@@ -115,7 +115,7 @@
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <?php esc_html_e('First Name *', 'creative-furniture'); ?>
               </div>
-              <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+              <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="text" name="firstname" placeholder="<?php esc_attr_e('First Name *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
@@ -123,7 +123,7 @@
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <?php esc_html_e('Last Name *', 'creative-furniture'); ?>
               </div>
-              <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+              <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="text" name="lastname" placeholder="<?php esc_attr_e('Last Name *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
@@ -134,7 +134,7 @@
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <?php esc_html_e('Email Address *', 'creative-furniture'); ?>
               </div>
-              <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+              <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="email" name="email" placeholder="<?php esc_attr_e('Email Address *', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
               </div>
             </div>
@@ -142,7 +142,7 @@
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <?php esc_html_e('Phone Number', 'creative-furniture'); ?>
               </div>
-              <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
+              <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="tel" name="phone" placeholder="<?php esc_attr_e('Phone Number', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5" autocomplete="tel">
               </div>
             </div>
@@ -152,7 +152,7 @@
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
               <?php esc_html_e('Message *', 'creative-furniture'); ?>
             </div>
-            <div class="bg-[#f6f6f6] rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
+            <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
               <textarea name="message" required placeholder="<?php esc_attr_e('Type your message here', 'creative-furniture'); ?>" class="w-full bg-transparent border-none focus:ring-0 pt-[17px] pr-4 pb-[88px] pl-4 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5 resize-none min-h-[150px]"></textarea>
             </div>
           </div>
