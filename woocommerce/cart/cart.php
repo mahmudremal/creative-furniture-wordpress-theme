@@ -167,7 +167,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
         <div class="flex flex-col gap-6 items-center justify-start shrink-0 w-full md:w-[453px] relative sticky top-0">
             <div class="bg-[#f4f4f4] -rounded-lg p-6 flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
-                <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-[44px] font-semibold relative self-stretch flex items-center justify-start">
+                <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-[38px] sm:leading-[44px] font-semibold relative self-stretch flex items-center justify-start">
                     Order Summary
                 </div>
                 <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
@@ -199,7 +199,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                     </div>
                 </div>
 
-                <div class="bg-[#0c0a0a] pt-3 pr-5 pb-3 pl-5 flex flex-row gap-1 items-center justify-center self-stretch shrink-0 h-12 relative mt-4">
+                <div class="bg-[#0c0a0a] px-3 sm:px-5 py-2 sm:py-3 flex flex-row gap-1 items-center justify-center self-stretch shrink-0 h-12 relative mt-4">
                     <div class="flex flex-row gap-2 items-center justify-center flex-1 relative text-center">
                         <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative checkout-button button alt wc-forward w-full">
                             Secure Checkout

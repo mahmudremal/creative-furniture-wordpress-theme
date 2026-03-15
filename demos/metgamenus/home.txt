@@ -1,891 +1,893 @@
 
   <div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
-    <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
-      <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
-        
-        <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
-          <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
-            
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Living Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="1">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Study & Home Office Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="2">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Washroom Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="3">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Bedroom Set
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="4">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Bedroom Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="5">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Kids Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="6">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Dining Room Set
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="7">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Dining Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-        </aside>
-
-        <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+  <div class="w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="2xl:max-w-[1440px] py-12 px-4 flex flex-col gap-10 items-start justify-start self-stretch shrink-0">
+        <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
           
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+          <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
+            <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Accent Furniture</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03a-tv-units-media-console-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    TV Unit/Media Console
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac04-shoe-racks-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Shoe Racks
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac05-wall-shelves_1/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Shelves
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Display Unit/Bookshelf
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01b-coffee-table-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Coffee Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02b-side-end-tables-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Side & End Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07b-credenza-console-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Credenza/Console Table
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Living Furniture
+                  </div>
                 </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Sofa Seating</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss01-sofa-sets/ss01a-sofa-sets-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sofa Set
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss02-l-shape-sofas/ss02a-l-shape-sofas-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Lshape-Sofa
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss03-sofa-cum-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sofa Cum Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/ss04a-chaise-lounge-sun-loungers-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Chaise Lounge/Sun Lounger
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="1">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Study & Home Office Furniture
+                  </div>
                 </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Seating & Chair</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bench with Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Ottomans/Bench without Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss06-pouffs-stool/ss06a-pouffs-stool-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Pouff/Stool
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single Seater Swings/Bucket Swings
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c01-arm-chair/c01a-arm-chair-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Arm Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bean Bags
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="2">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Washroom Furniture
+                  </div>
                 </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Temples/Mandir</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ac09-mandir-temples/ac09a-mandir-temples-wall-hung/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Hung Temple
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac09-mandir-temples/ac09b-mandir-temples-free-standing/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Free Standing Temple
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac09-mandir-temples/ac10-altars/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Altars/Home Chappels
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="3">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Bedroom Set
+                  </div>
                 </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/w01-wall-mirrors/w00-mirrors/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Mirrors</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-creativefurniture-category/w01-wall-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Mirrors
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/w01-wall-mirrors/w00-mirrors/w02-back-lit-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Back Lit Mirrors
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/w01-wall-mirrors/w00-mirrors/w03-floor-standing-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Floor Standing Mirrors
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/w01-wall-mirrors/w00-mirrors/w04-wall-decor-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Decor Mirrors
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="4">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Bedroom Furniture
+                  </div>
                 </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="5">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Kids Furniture
+                  </div>
+                </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="6">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Dining Room Set
+                  </div>
+                </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title " data-block-index="7">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Dining Furniture
+                  </div>
+                </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
             </div>
+          </aside>
 
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Living Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="1">
+          <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
             
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/d00-desk/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Desk</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sit & Stand Desk
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Study Tables
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Chairs</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Study Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c03b-mesh-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Mesh Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bean Bags
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Storage</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Book Shelves/Display Unit
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Full Height Closed Cabinet
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07a-low-height-closed-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Low Height Closed Cabinet
-                  </a>
-                </div>
-              </div>
-            </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Study & Home Office Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="2">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
-              
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
                 
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st09-vanities/st09a-under-counter-vanities-with-basin/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Under Counter Vanities with Basin
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st09-vanities/st09b-under-counter-vanities-without-basin/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Under Counter Vanities without Basin
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st06-wall-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Cabinet
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac05-wall-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Shelves
-                  </a>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Accent Furniture</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03a-tv-units-media-console-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      TV Unit/Media Console
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac04-shoe-racks-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Shoe Racks
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac05-wall-shelves_1/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Shelves
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Display Unit/Bookshelf
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01b-coffee-table-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Coffee Table
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02b-side-end-tables-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Side & End Table
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st07-low-hieght-storages/st07b-credenza-console-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Credenza/Console Table
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Sofa Seating</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss01-sofa-sets/ss01a-sofa-sets-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sofa Set
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss02-l-shape-sofas/ss02a-l-shape-sofas-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Lshape-Sofa
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss03-sofa-cum-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sofa Cum Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/ss04a-chaise-lounge-sun-loungers-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Chaise Lounge/Sun Lounger
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Seating & Chair</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bench with Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Ottomans/Bench without Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss06-pouffs-stool/ss06a-pouffs-stool-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Pouff/Stool
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single Seater Swings/Bucket Swings
+                    </a>
+                    <a href="{{home_url}}/product-category/c00-chairs/c01-arm-chair/c01a-arm-chair-lv/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Arm Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bean Bags
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Temples/Mandir</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ac09-mandir-temples/ac09a-mandir-temples-wall-hung/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Hung Temple
+                    </a>
+                    <a href="{{home_url}}/product-category/ac09-mandir-temples/ac09b-mandir-temples-free-standing/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Free Standing Temple
+                    </a>
+                    <a href="{{home_url}}/product-category/ac09-mandir-temples/ac10-altars/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Altars/Home Chappels
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/w01-wall-mirrors/w00-mirrors/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Mirrors</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-creativefurniture-category/w01-wall-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Mirrors
+                    </a>
+                    <a href="{{home_url}}/product-category/w01-wall-mirrors/w00-mirrors/w02-back-lit-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Back Lit Mirrors
+                    </a>
+                    <a href="{{home_url}}/product-category/w01-wall-mirrors/w00-mirrors/w03-floor-standing-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Floor Standing Mirrors
+                    </a>
+                    <a href="{{home_url}}/product-category/w01-wall-mirrors/w00-mirrors/w04-wall-decor-mirrors/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Decor Mirrors
+                    </a>
+                  </div>
                 </div>
               </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Living Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
             </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Washroom Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="3">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="1">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
                 
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-01-hayden-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-01-Hayden
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-07-aldino-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-07-Aldino
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-03-odmo-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-03-Odmo
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-09-brealy-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-09-Brealy
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-15-volen-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-15-Volen
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-02-zey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-02-Zey
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-08-classy-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-08-Classy
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-04-cances-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-04-Cances
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-10-loma-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-10-Loma
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/ssh-00-standard-hotel-room-set/ssh-16-cince-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-16-Cince
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-03-akins-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-03-Akins
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-09-kerlin-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-09-Kerlin
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-05-wackje-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-05-Wackje
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-11-ferien-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-11-Ferien
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-17-atosto-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-17-Atosto
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-04-bryce-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-04-Bryce
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-10-pine-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-10-Pine
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-06-doval-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-06-Doval
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-12-vakacio-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-12-Vakacio
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-05-alysa-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-05-Alysa
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-01-shime-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-01-Shime
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-07-ferie-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-07-Ferie
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-13-kanza-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-13-Kanza
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-06-artur-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SBD-06-Artur
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-02-orak-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-02-Orak
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/hotel/standard-hotel-set/ssh-08-vacaly-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-08-Vacaly
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/home-furniture/bedroom-set/24-mester/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SSH-14-Mester
-                  </a>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/d00-desk/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Desk</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sit & Stand Desk
+                    </a>
+                    <a href="{{home_url}}/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Study Tables
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/c00-chairs/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Chairs</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Study Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/c00-chairs/c03a-modular-chairs/c03b-mesh-chairs/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Mesh Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bean Bags
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Storage</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01c-display-unit-book-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Book Shelves/Display Unit
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Full Height Closed Cabinet
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st07-low-hieght-storages/st07a-low-height-closed-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Low Height Closed Cabinet
+                    </a>
+                  </div>
                 </div>
               </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Study & Home Office Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
             </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Bedroom Set
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="4">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="2">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/set02-set-house/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>BedRoom Sets</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set04a-sbd-ssh-double-bed-room-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Double Bed Room Sets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set02a-sbd-sbdt-ssh-double-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Double Bed with Side Table Sets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set02b-sbd-sbdt-ssh-upholstered-double-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Upholstered Double Bed with Side Table Sets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set05a-sbd-ssh-single-bed-room-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single Bed Room Sets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set03a-sbd-sbdt-ssh-single-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single Bed with Side Table Sets
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/b00-beds/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Bed</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b01-beds-upholstered-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Upholstered Bed with Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b02-beds-upholstered-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Upholstered Bed without Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b03-bed-headboard-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Headboard Bed with Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b04-bed-headboard-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Headboard Bed without Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b05-four-poster-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Four Poster Beds
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b06-bed-frames/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bed Frames
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b07-headboards-without-bed/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Headboards without Bed Frame
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b08-murphy-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Murphy Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b09-bunk-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bunk Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b10-trundle-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Trundle Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b11-twin-single-beds/b11a-twin-single-beds-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single/Twin Bed
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/m00-mattress/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Mattress</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m01-single-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single Bed Mattress
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m02-queen-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Queen Bed Mattress
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m03-king-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    King Bed Mattress
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m05-foldable-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Foldable Mattress
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m06-pillow/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Pillow
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m07-bed-wedge/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bed Wedge
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Accent Tables</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st08-chest-of-drawers/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Chest of Drawer
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac06-dressing-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Dressing Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07a-bedside-tables-night-stands-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bedside Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03b-tv-units-media-console-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    TV Unit/Media Console
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Study Table
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Storage</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Double Door Wadrobes + Full Height Closed Cabinet
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03b-openable-swing-door-wardrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Openable Swing Door Wardrobe
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st04-sliding-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sliding Door Wadrobe
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st02-lockers-trunks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Locker/Trunk
-                  </a>
-                </div>
-              </div>
-            </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Bedroom Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="5">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
-              
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
                 
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
                   
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set03b-skbt-kids-single-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Bed with Side Table Sets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b11-twin-single-beds/b11b-twin-single-beds-kf/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b12-baby-cots/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Baby Cots
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/b00-beds/b09-bunk-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bunk Bed
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/m00-mattress/m04-kids-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Mattress
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07b-bedside-tables-night-stands-kd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bedside Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07d-nursing-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Nursing Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st05-kids-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d03-one-seater-tables/d03d-study-tables-kf/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Study Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Kids Study Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bean Bags
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sit & Stand Desk
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac05-wall-shelves/ac05a-alphabetic-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Alphabetic Shelf
-                  </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/st00-storages/st09-vanities/st09a-under-counter-vanities-with-basin/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Under Counter Vanities with Basin
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st09-vanities/st09b-under-counter-vanities-without-basin/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Under Counter Vanities without Basin
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st06-wall-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Cabinet
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac05-wall-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Shelves
+                    </a>
+                  </div>
                 </div>
               </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Washroom Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
             </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Kids Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="6">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="3">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
                 
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
                   
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-01-ornet-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-01-Ornet
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-05-nova-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-05-Nova
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-09-harvey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-09-Harvey
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-13-hali-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-13-Hali
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-17-dora-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-17-Dora
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-02-milton-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-02-Milton
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-06-niles-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-06-Niles
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-10-ramen-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-10-Ramen
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-14-hashwood-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-14-Hashwood
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-18-vitra-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-18-Vitra
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-03-mashriya-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-03-Mashriya
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-07-victor-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-07-Victor
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-11-fetro-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-11-Fetro
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-15-levina-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-15-Levina
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-19-evelin-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-19-Evelin
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-04-arra-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-04-Arra
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-08-zeehan-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-08-Zeehan
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-12-ritz-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-12-Ritz
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-16-luca-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-16-Luca
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-20-dussel-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    SDN-20-Dussel
-                  </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-01-hayden-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-01-Hayden
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-07-aldino-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-07-Aldino
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-03-odmo-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-03-Odmo
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-09-brealy-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-09-Brealy
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-15-volen-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-15-Volen
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-02-zey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-02-Zey
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-08-classy-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-08-Classy
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-04-cances-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-04-Cances
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-10-loma-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-10-Loma
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/ssh-00-standard-hotel-room-set/ssh-16-cince-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-16-Cince
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-03-akins-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-03-Akins
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-09-kerlin-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-09-Kerlin
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-05-wackje-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-05-Wackje
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-11-ferien-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-11-Ferien
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-17-atosto-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-17-Atosto
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-04-bryce-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-04-Bryce
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-10-pine-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-10-Pine
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-06-doval-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-06-Doval
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-12-vakacio-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-12-Vakacio
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-05-alysa-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-05-Alysa
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-01-shime-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-01-Shime
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-07-ferie-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-07-Ferie
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-13-kanza-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-13-Kanza
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sbd-00-standard-bedroom-set/sbd-06-artur-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SBD-06-Artur
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-02-orak-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-02-Orak
+                    </a>
+                    <a href="{{home_url}}/product-category/hotel/standard-hotel-set/ssh-08-vacaly-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-08-Vacaly
+                    </a>
+                    <a href="{{home_url}}/product-category/home-furniture/bedroom-set/24-mester/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SSH-14-Mester
+                    </a>
+                  </div>
                 </div>
               </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Bedroom Set
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
             </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
-                </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Dining Room Set
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="7">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="4">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/set02-set-house/set01a-sdn-dining-table-set/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Dining Table Set</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set01a-sdn-dining-table-set/set01b-sdn-4-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    4 Seater Dining Table Set
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set01a-sdn-dining-table-set/set01c-sdn-6-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    6 Seater Dining Table Set
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/set02-set-house/set01a-sdn-dining-table-set/set01d-sdn-8-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    8 Seater Dining Table Set
-                  </a>
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
+                
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/set02-set-house/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>BedRoom Sets</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/set02-set-house/set04a-sbd-ssh-double-bed-room-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Double Bed Room Sets
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set02a-sbd-sbdt-ssh-double-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Double Bed with Side Table Sets
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set02b-sbd-sbdt-ssh-upholstered-double-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Upholstered Double Bed with Side Table Sets
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set05a-sbd-ssh-single-bed-room-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single Bed Room Sets
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set03a-sbd-sbdt-ssh-single-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single Bed with Side Table Sets
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/b00-beds/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Bed</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/b00-beds/b01-beds-upholstered-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Upholstered Bed with Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b02-beds-upholstered-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Upholstered Bed without Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b03-bed-headboard-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Headboard Bed with Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b04-bed-headboard-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Headboard Bed without Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b05-four-poster-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Four Poster Beds
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b06-bed-frames/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bed Frames
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b07-headboards-without-bed/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Headboards without Bed Frame
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b08-murphy-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Murphy Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b09-bunk-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bunk Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b10-trundle-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Trundle Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b11-twin-single-beds/b11a-twin-single-beds-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single/Twin Bed
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/m00-mattress/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Mattress</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/m00-mattress/m01-single-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single Bed Mattress
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m02-queen-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Queen Bed Mattress
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m03-king-bed-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      King Bed Mattress
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m05-foldable-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Foldable Mattress
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m06-pillow/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Pillow
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m07-bed-wedge/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bed Wedge
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Accent Tables</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/st00-storages/st08-chest-of-drawers/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Chest of Drawer
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac06-dressing-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Dressing Table
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07a-bedside-tables-night-stands-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bedside Table
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac03-tv-units-media-console/ac03b-tv-units-media-console-bd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      TV Unit/Media Console
+                    </a>
+                    <a href="{{home_url}}/product-category/d00-desk/d03-one-seater-tables/d03c-study-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Study Table
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Storage</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03a-full-height-closed-cabinets-double-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Double Door Wadrobes + Full Height Closed Cabinet
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st03-closed-cabinets-wadrobes/st03b-openable-swing-door-wardrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Openable Swing Door Wardrobe
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st04-sliding-door-wadrobes/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sliding Door Wadrobe
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st02-lockers-trunks/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Locker/Trunk
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Table</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Dining Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t05-folding-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Folding Dining Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Cafeteria/Outdoor Pantry Tables
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/c00-chairs/c02-study-dinning-chair/c02b-study-dinning-chair-dn/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Chair</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c02-study-dinning-chair/c02b-study-dinning-chair-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Dining Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bench with Storage
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Ottomans/Bench without Storage
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Bedroom Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
                   </a>
                 </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Storage</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01d-crockery-unit-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Full Height Open Cabinet + Crockery Unit
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st07-low-hieght-storages/st07c-low-height-credenzas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Low Height Cabinets
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/st00-storages/st06-wall-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Wall Cabinet
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac12-bar-counters-cabinets/ac08a-bar-counters-cabinets-dn/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Bar Counter</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08a-bar-counters-cabinets-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bar Cabinet/Counter
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bar Stool
-                  </a>
-                </div>
-              </div>
+
             </div>
-
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="5">
+              
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
+                
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/set02-set-house/set03b-skbt-kids-single-bedside-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Bed with Side Table Sets
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b11-twin-single-beds/b11b-twin-single-beds-kf/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b12-baby-cots/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Baby Cots
+                    </a>
+                    <a href="{{home_url}}/product-category/b00-beds/b09-bunk-beds/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bunk Bed
+                    </a>
+                    <a href="{{home_url}}/product-category/m00-mattress/m04-kids-mattress/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Mattress
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac07-bedside-tables-night-stands/ac07b-bedside-tables-night-stands-kd/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bedside Table
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st07-low-hieght-storages/st07d-nursing-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Nursing Table
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st05-kids-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/d00-desk/d03-one-seater-tables/d03d-study-tables-kf/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Study Table
+                    </a>
+                    <a href="{{home_url}}/product-category/c00-chairs/c02-study-dinning-chair/c02a-study-dinning-chair-st/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Kids Study Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bean Bags
+                    </a>
+                    <a href="{{home_url}}/product-category/d00-desk/d07-sit-stand-desk/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sit & Stand Desk
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac05-wall-shelves/ac05a-alphabetic-shelves/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Alphabetic Shelf
+                    </a>
+                  </div>
                 </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Dining Furniture
-                  </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </a>
               </div>
 
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Kids Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
+            </div>
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="6">
+              
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
+                
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-01-ornet-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-01-Ornet
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-05-nova-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-05-Nova
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-09-harvey-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-09-Harvey
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-13-hali-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-13-Hali
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-17-dora-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-17-Dora
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-02-milton-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-02-Milton
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-06-niles-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-06-Niles
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-10-ramen-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-10-Ramen
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-14-hashwood-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-14-Hashwood
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-18-vitra-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-18-Vitra
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-03-mashriya-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-03-Mashriya
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-07-victor-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-07-Victor
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-11-fetro-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-11-Fetro
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-15-levina-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-15-Levina
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-19-evelin-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-19-Evelin
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-04-arra-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-04-Arra
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-08-zeehan-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-08-Zeehan
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-12-ritz-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-12-Ritz
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-16-luca-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-16-Luca
+                    </a>
+                    <a href="{{home_url}}/product-category/set01-set-house-designs/sdn-00-dining-room-set/sdn-20-dussel-series/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      SDN-20-Dussel
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Dining Room Set
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
+            </div>
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative hidden transition-all duration-300" data-index="7">
+              
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
+                
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/set02-set-house/set01a-sdn-dining-table-set/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Dining Table Set</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/set02-set-house/set01a-sdn-dining-table-set/set01b-sdn-4-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      4 Seater Dining Table Set
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set01a-sdn-dining-table-set/set01c-sdn-6-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      6 Seater Dining Table Set
+                    </a>
+                    <a href="{{home_url}}/product-category/set02-set-house/set01a-sdn-dining-table-set/set01d-sdn-8-seater-dining-table-set/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      8 Seater Dining Table Set
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Table</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Dining Table
+                    </a>
+                    <a href="{{home_url}}/product-category/t00-functional-tables/t05-folding-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Folding Dining Table
+                    </a>
+                    <a href="{{home_url}}/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Cafeteria/Outdoor Pantry Tables
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/c00-chairs/c02-study-dinning-chair/c02b-study-dinning-chair-dn/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Chair</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/c00-chairs/c02-study-dinning-chair/c02b-study-dinning-chair-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Dining Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss05-benches-ottomans/ss05a-benches-with-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bench with Storage
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss05-benches-ottomans/ss05b-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Ottomans/Bench without Storage
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/st00-storages/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Storage</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/st00-storages/st01-full-height-open-cabinet-crockery-unit/st01d-crockery-unit-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Full Height Open Cabinet + Crockery Unit
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st07-low-hieght-storages/st07c-low-height-credenzas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Low Height Cabinets
+                    </a>
+                    <a href="{{home_url}}/product-category/st00-storages/st06-wall-cabinets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Wall Cabinet
+                    </a>
+                  </div>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ac00-accent-furniture/ac12-bar-counters-cabinets/ac08a-bar-counters-cabinets-dn/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Bar Counter</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08a-bar-counters-cabinets-dn/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bar Cabinet/Counter
+                    </a>
+                    <a href="{{home_url}}/product-category/c00-chairs/c03a-modular-chairs/c3h-bar-stools/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bar Stool
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-b-home-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Dining Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
+            </div>
           </div>
+
         </div>
-
       </div>
     </div>
   </div>

@@ -10,7 +10,7 @@ if ( $related_products ) : ?>
 				if ( $heading ) :
 				?>
 				<div class="flex flex-row items-center justify-between w-full">
-					<h2 class="text-black text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold">
+					<h2 class="text-black text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-6 sm:leading-8 font-semibold">
 						<?php echo esc_html( $heading ); ?>
 					</h2>
 					<div class="flex flex-row gap-2 items-center justify-start shrink-0">

@@ -22,7 +22,7 @@ class CF_MegaMenuWalker extends Walker_Nav_Menu {
 
         if ( ! empty( $saved ) ) {
             $has_mega     = true;
-            $mega_content = do_shortcode( $saved );
+            $mega_content = do_shortcode( str_replace('{{home_url}}', home_url(''), $saved) );
         }
 
         $classes = empty( $item->classes ) ? [] : (array) $item->classes;

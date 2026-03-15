@@ -3,7 +3,7 @@
 
 <div class="relative flex flex-col gap-20">
   <div class="h-[381px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
-    <img class="h-[607px] absolute right-0 left-0 top-[calc(50%_-_392.5px)]" style="
+    <img class="h-[607px] w-full" style="
         background: linear-gradient(
           94.97deg,
           rgba(244, 244, 244, 1) 0%,
@@ -17,7 +17,7 @@
           <?php esc_html_e('Contact Us', 'creative-furniture'); ?>
         </div>
         <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch" style="opacity: 0.8">
-          <?php echo nl2br(sprintf(esc_html(__('Have a question or project in mind? We’re here to help every step %s of the way.', 'creative-furniture')), '\n')); ?>
+          <?php echo nl2br(sprintf(esc_html(__("Have a question or project in mind? We're here to help every step %s of the way.", 'creative-furniture')), "\n")); ?>
         </div>
       </div>
     </div>

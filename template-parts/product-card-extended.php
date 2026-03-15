@@ -59,7 +59,7 @@ if (!empty($rowType) && isset($rows[$rowType])) {
 
 <a href="<?php echo esc_url($permalink); ?>" class="flex relative">
   <div class="flex flex-col gap-4 items-start justify-start flex-1">
-    <div class="self-stretch shrink-0 h-[294px] relative overflow-hidden">
+    <div class="self-stretch shrink-0 min-h-[250px] md:min-h-[294px] aspect-square relative overflow-hidden">
       <div class="absolute inset-0 bg-[#f4f4f4]"></div>
       <img class="w-full h-full absolute left-[50%] top-[50%] object-contain" style="translate: -50% -50%; aspect-ratio: 1" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($title); ?>">
       <?php if ($percentage > 0) : ?>

@@ -1,132 +1,134 @@
 
   <div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
-    <div class="py-12 px-0 flex flex-col gap-10 items-start justify-start self-stretch shrink-0 w-full max-w-full md:w-[1440px] m-auto relative">
-      <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
-        
-        <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
-          <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
-            
-            <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
-              <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
-                <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
-                  Outdoor Furniture
-                </div>
-              </div>
-              <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-        </aside>
-
-        <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+  <div class="w-full max-w-full md:w-[1440px] m-auto relative">
+      <div class="2xl:max-w-[1440px] py-12 px-4 flex flex-col gap-10 items-start justify-start self-stretch shrink-0">
+        <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
           
-          <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
-            
-            <div class="columns-2 gap-x-12 gap-y-10 items-start justify-start relative">
+          <aside class="flex flex-col gap-10 items-start justify-start self-stretch shrink-0 relative sidebar-area">
+            <div class="flex flex-col gap-4 items-start justify-center self-stretch shrink-0 relative sidebar__group">
               
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Sofa Seating</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss01-sofa-sets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sofa Set
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss02-l-shape-sofas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Lshape-Sofa Set
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Sun Lounger
-                  </a>
+              <div class="flex flex-row items-center justify-between shrink-0 w-full relative cursor-pointer group sidebar__title active" data-block-index="0">
+                <div class="flex flex-row gap-2 items-center justify-start shrink-0 relative">
+                  <div class="sidebar-label text-[#222222] group-[.active]:text-[#bd262a] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex-1 transition-colors">
+                    Outdoor Furniture
+                  </div>
                 </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Seating & Chair</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c01-arm-chair/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Arm Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss06-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Ottoman
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss07-pouffes-stool/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Pouff/Stool
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/c00-chairs/c02-study-dinning-chair/c02c-study-dinning-chair-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Chair
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bean Bags
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Swing</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Single Seater Swing
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ss00-seatings/ss07-swings/ss07b-double-seater-swing/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Double Seater Swing
-                  </a>
-                </div>
-              </div>
-              <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
-                <a href="https://creativefurniture.xyz/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
-                        <span>Table</span>
-                        <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
-                      </a>
-                <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
-                  
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01c-coffee-table-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Coffee Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02c-side-end-tables-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Side & End Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Dining Table
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Cafeteria + Outdoor Pantry Tables
-                  </a>
-                  <a href="https://creativefurniture.xyz/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08b-bar-counters-cabinets-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
-                    Bar Cabinet/Counter
-                  </a>
-                </div>
+                <svg class="shrink-0 w-6 h-6 relative overflow-visible transition-transform group-[.active]:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" class="text-[#222222] group-[.active]:text-[#bd262a]" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
             </div>
+          </aside>
 
-              <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
-                <div class="shrink-0 w-full h-[328px] relative overflow-hidden rounded-[4px]">
-                  <img class="w-full h-full object-cover" src="https://creativefurniture.xyz/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+          <div class="flex flex-col gap-0 items-start justify-start flex-1 relative content-area">
+            
+            <div class="hospitality__block w-full grid grid-cols-[1fr,366px] gap-10 items-start justify-start flex-1 relative  transition-all duration-300" data-index="0">
+              
+              <div class="columns-3 gap-x-12 gap-y-10 items-start justify-start relative">
+                
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Sofa Seating</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss01-sofa-sets/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sofa Set
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss02-l-shape-sofas/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Lshape-Sofa Set
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss04-chaise-lounge-sun-lounger/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Sun Lounger
+                    </a>
+                  </div>
                 </div>
-                <a href="https://creativefurniture.xyz/product-category/ct-c-outdoor-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative">
-                  <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
-                    See All Outdoor Furniture
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Swing</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss07-swings/ss07a-single-seater-swing-bucket-swings/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Single Seater Swing
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss07-swings/ss07b-double-seater-swing/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Double Seater Swing
+                    </a>
                   </div>
-                  <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
-                    <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Seating & Chair</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/c00-chairs/c01-arm-chair/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Arm Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss06-ottomans-bench-without-storage/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Ottoman
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss07-pouffes-stool/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Pouff/Stool
+                    </a>
+                    <a href="{{home_url}}/product-category/c00-chairs/c02-study-dinning-chair/c02c-study-dinning-chair-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Chair
+                    </a>
+                    <a href="{{home_url}}/product-category/ss00-seatings/ss08-bean-bags/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bean Bags
+                    </a>
                   </div>
-                </a>
+                </div>
+                <div class="break-inside-avoid flex flex-col gap-4 items-start justify-start min-relative border-l border-[#D1D1D1] pl-4 pb-4" style="border-left: 1px solid #D1D1D1; padding-left: 16px; padding-bottom: 16px;">
+                  <a href="{{home_url}}/product-category/ct-c-outdoor-furniture/" class="text-[#222222] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-5 font-semibold relative flex flex-row items-center justify-between w-full hover:text-[#bd262a] transition-colors group/item">
+                          <span>Table</span>
+                          <svg class="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18L15 12L9 6" /></svg>
+                        </a>
+                  <div class="flex flex-col gap-2.5 items-start justify-start shrink-0 relative opacity-80">
+                    
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac01-coffee-tables/ac01c-coffee-table-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Coffee Table
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac02-side-end-tables/ac02c-side-end-tables-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Side & End Table
+                    </a>
+                    <a href="{{home_url}}/product-category/t00-functional-tables/t06-dining-table/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Dining Table
+                    </a>
+                    <a href="{{home_url}}/product-category/t00-functional-tables/t07-cafeteria-outdoor-pantry-tables/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Cafeteria + Outdoor Pantry Tables
+                    </a>
+                    <a href="{{home_url}}/product-category/ac00-accent-furniture/ac08-bar-counters-cabinets/ac08b-bar-counters-cabinets-ou/" class="text-[#222222] text-left font-['Raleway-Regular',_sans-serif] text-base leading-5 font-normal relative hover:text-[#bd262a] transition-colors">
+                      Bar Cabinet/Counter
+                    </a>
+                  </div>
+                </div>
               </div>
 
-          </div>
-        </div>
+                <div class="flex flex-col gap-6 items-start justify-start shrink-0 relative p-6" style="background: #F4F4F4;">
+                  <div class="shrink-0 w-full relative overflow-hidden rounded-[4px]" style="aspect-ratio: 5/4;">
+                    <img class="w-full h-full object-cover" src="{{home_url}}/wp-content/themes/creative-furniture/dist/images/v2/rectangle-346243760.png" alt="Promo" />
+                  </div>
+                  <a href="{{home_url}}/product-category/ct-c-outdoor-furniture/" class="flex flex-row gap-2 items-center justify-around shrink-0 w-full relative" target="_blank">
+                    <div class="text-[#3f3f3f] text-right font-['Raleway-SemiBold',_sans-serif] text-xl leading-6 font-semibold relative">
+                      See All Outdoor Furniture
+                    </div>
+                    <div class="bg-[#bd262a] rounded-[25px] p-0.5 flex flex-row gap-2.5 items-center justify-start">
+                      <svg class="shrink-0 w-7 h-7 relative overflow-visible" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.16663 19.8332L19.8333 8.1665M19.8333 8.1665H8.16663M19.8333 8.1665V19.8332" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
 
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>

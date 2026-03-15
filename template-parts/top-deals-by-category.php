@@ -3,62 +3,62 @@ $deals = [
   [
     'title'    => __('Office Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453422.png',
-    'link'     => home_url('/product-category/office/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/office/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Living Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45340.png',
-    'link'     => home_url('/product-category/office/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/office/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Dining Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45341.png',
-    'link'     => home_url('/product-category/office/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/office/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Outdoor Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45342.png',
-    'link'     => home_url('/product-category/office/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/office/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Washroom Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-453426.png',
-    'link'     => home_url('/product-category/washroom/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/washroom/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Hotel Bedroom', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45344.png',
-    'link'     => home_url('/product-category/bedroom/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/bedroom/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Hospitality Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45345.png',
-    'link'     => home_url('/product-category/hospitality/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/hospitality/')),
     'discount' => '30%'
   ],
   [
     'title'    => __('Kids Furniture', 'creative-furniture'),
     'banner'   => get_template_directory_uri() . '/dist/images/v2/rectangle-45346.png',
-    'link'     => home_url('/product-category/kids/'),
+    'link'     => add_query_arg('discount_max', '30', home_url('/product-category/kids/')),
     'discount' => '30%'
   ],
 ];
 ?>
 
-<div class="flex flex-col gap-6 items-center justify-start px-4 mb-12 w-full md:max-w-[1440px] m-auto relative">
+<div class="flex flex-col gap-6 items-center justify-start px-4 mb-12 w-full max-w-full md:w-[1440px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
         <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl md:text-2xl leading-8 font-semibold relative flex items-center justify-start">
             <?php esc_html_e('Top Deals By Category', 'creative-furniture'); ?>
         </div>
-        <div class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start cursor-pointer hover:opacity-80 transition-opacity" style="text-decoration: underline">
-            Explore more
-        </div>
+        <a href="<?php echo esc_url(add_query_arg('discount_max', '100', wc_get_page_permalink('shop'))); ?>" class="text-[#161616] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start cursor-pointer hover:opacity-80 transition-opacity" style="text-decoration: underline">
+          Explore more
+        </a>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 self-stretch">

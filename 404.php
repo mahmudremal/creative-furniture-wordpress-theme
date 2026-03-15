@@ -16,7 +16,7 @@
             <?php echo esc_html__( 'Oops! Page Not Found', 'creative-furniture' ); ?>
         </h2>
         <p class="text-[#484848] text-lg md:text-xl mb-12 max-w-lg mx-auto leading-relaxed opacity-80">
-            <?php echo esc_html__( 'The page you are looking for doesn’t exist or has been moved. Please return to the homepage or search for what you need.', 'creative-furniture' ); ?>
+            <?php echo esc_html__( "The page you are looking for doesn't exist or has been moved. Please return to the homepage or search for what you need.", 'creative-furniture' ); ?>
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">

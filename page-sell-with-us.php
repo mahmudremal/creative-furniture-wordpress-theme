@@ -2,16 +2,9 @@
 
 
 <div class="relative flex flex-col gap-20">
-  <div class="h-[456px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
-    <img class="h-[607px] absolute right-0 left-0 top-[calc(50%_-_336px)]" style="
-        background: linear-gradient(
-          94.97deg,
-          rgba(244, 244, 244, 1) 0%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        object-fit: cover;
-      " src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45320.png'); ?>">
-    <div class="flex flex-col gap-14 items-start justify-center w-[476px] absolute left-[calc(50%_-_696px)] top-[50%]" style="translate: 0 -50%">
+  <div class="relative w-full max-w-full md:w-[1440px] mx-auto overflow-hidden">
+    <img class="absolute right-0 top-0 w-full h-full" style="background: linear-gradient(94.97deg,rgba(244, 244, 244, 1) 0%,rgba(255, 255, 255, 0) 100%);object-fit: cover;" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45320.png'); ?>">
+    <div class="py-20 lg:py-25 mx-4 md:ml-20 lg:ml-36 flex flex-col gap-6 md:gap-14 w-[90%] max-w-[476px]">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-[38px] leading-[48px] font-semibold relative self-stretch">
           <?php esc_html_e('Sell Your Furniture on Creative Furniture', 'creative-furniture'); ?>
@@ -20,24 +13,21 @@
           <?php esc_html_e('Showcase your designs to a wider audience. We handle the marketing, you focus on creating quality furniture.', 'creative-furniture'); ?>
         </div>
       </div>
-      <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-        <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+      <a href="#formsectiontosell" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+        <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
           <?php esc_html_e('Start Selling', 'creative-furniture'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col gap-7 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <div class="text-[#242424] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        <?php esc_html_e('Why Sell With Us', 'creative-furniture'); ?>
-      </div>
-      <a href="/shop" class="text-[#161616] text-left font-['Lato-Regular',_sans-serif] text-lg leading-6 font-normal relative flex items-center justify-start" style="text-decoration: underline; opacity: 0">
-        <?php esc_html_e('Explore more', 'creative-furniture'); ?>
+        </span>
       </a>
     </div>
-    <div class="flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
-      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+  </div>
+  <div class="flex flex-col gap-7 items-start justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row items-center justify-center self-stretch shrink-0 relative">
+      <div class="text-[#242424] font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative flex items-center text-center">
+        <?php esc_html_e('Why Sell With Us', 'creative-furniture'); ?>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-4 items-start justify-start self-stretch shrink-0 relative justify-center">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 md:w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5910" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5910)"></rect>
@@ -61,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start shrink-0 md:w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5918" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5918)"></rect>
@@ -85,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 md:w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5926" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5926)"></rect>
@@ -109,7 +99,7 @@
           </div>
         </div>
       </div>
-      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 w-[336px] relative">
+      <div class="-rounded-xl flex flex-col gap-6 items-center justify-start self-stretch shrink-0 md:w-[336px] relative">
         <svg class="shrink-0 w-9 h-9 relative overflow-visible" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_2488_5934" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
             <rect width="36" height="36" fill="url(#pattern0_2488_5934)"></rect>
@@ -129,39 +119,39 @@
             <?php esc_html_e('Support Team', 'creative-furniture'); ?>
           </div>
           <div class="text-[#4a4a4a] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative w-[266px]" style="opacity: 0.8">
-            <?php esc_html_e('we’re here to help you every step of the way.', 'creative-furniture'); ?>
+            <?php esc_html_e("we're here to help you every step of the way.", 'creative-furniture'); ?>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="flex flex-row gap-0 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="bg-[#797979] shrink-0 w-[658px] h-[455px] relative overflow-hidden">
-      <img class="absolute right-0 left-0 bottom-[-1px] top-0" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45450.png'); ?>">
+  <div class="flex flex-wrap gap-0 items-center justify-center px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="bg-[#797979] shrink-0 w-full lg:w-[658px] md:h-[455px] relative overflow-hidden">
+      <img class="w-full" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45450.png'); ?>">
       <div class="bg-[#d9d9d9] w-[757px] h-[155px] absolute left-[658px] top-[348px]"></div>
     </div>
-    <div class="pr-[70px] pl-[70px] flex flex-col gap-10 items-center justify-start shrink-0 w-[758px] relative">
+    <div class="px-4 py-6 lg:px-[70px] flex flex-col gap-10 items-center justify-start shrink-0 w-full lg:w-[758px] relative">
       <div class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
           <?php esc_html_e('Together, We Build Beautiful Spaces', 'creative-furniture'); ?>
         </div>
         <div class="text-[#525252] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch flex items-center justify-center">
-          <?php echo nl2br(sprintf(esc_html(__('At Creative Furniture, we believe furniture is more than function — it’s a statement of style and comfort. We’ve helped people design their dream spaces with high-quality, timeless pieces.%s Now, we’re opening our platform to talented furniture makers and brands who share our passion for craftsmanship, sustainability, and design excellence.', 'creative-furniture')), '\n\n')); ?>
+          <?php echo nl2br(sprintf(esc_html(__("At Creative Furniture, we believe furniture is more than function — it's a statement of style and comfort. We've helped people design their dream spaces with high-quality, timeless pieces.%s Now, we're opening our platform to talented furniture makers and brands who share our passion for craftsmanship, sustainability, and design excellence.", 'creative-furniture')), "\n\n")); ?>
         </div>
       </div>
-      <div class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-        <div class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+      <a href="#formsectiontosell" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+        <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
           <?php esc_html_e('Start Selling Today', 'creative-furniture'); ?>
-        </div>
-      </div>
+        </span>
+      </a>
     </div>
   </div>
-  <div class="flex flex-col gap-7 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
+  <!-- <div class="flex flex-col gap-7 items-center justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
     <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
       <?php esc_html_e('Trusted by Leading Furniture Brands', 'creative-furniture'); ?>
     </div>
     <div class="flex flex-row items-center justify-start self-stretch relative select-none">
-      <div class="blaze-slider" data-slider="clients" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 7, 'slidesToScroll' => 1, 'slideGap' => '70.14px', 'enableAutoplay' => !true, 'OnInteraction' => true, 'autoplayInterval' => 3000, 'autoplayDirection' => 'to left',]])); ?>">
+      <div class="blaze-slider" data-slider="clients" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 7, 'slidesToScroll' => 1, 'slideGap' => '70.14px', 'enableAutoplay' => !true, 'OnInteraction' => true, 'autoplayInterval' => 3000, 'autoplayDirection' => 'to left'], '(max-width: 900px)' => ['slidesToShow' => 5, 'slideGap' => '30px'], '(max-width: 500px)' => ['slidesToShow' => 2.5, 'slideGap' => '16px']])); ?>">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
@@ -171,7 +161,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0752 34.1505C26.5057 34.1505 34.1505 26.5056 34.1505 17.0752C34.1505 7.64484 26.5057 0 17.0752 0C7.64484 0 0 7.64484 0 17.0752C0 26.5056 7.64484 34.1505 17.0752 34.1505ZM19.7108 13.1928C21.1663 11.7372 21.1663 9.37735 19.7108 7.92177C18.2552 6.46621 15.8953 6.46621 14.4397 7.92177C12.9842 9.37735 12.9842 11.7372 14.4397 13.1928L17.0752 15.8283L19.7108 13.1928ZM20.9577 19.7108C22.4133 21.1664 24.7732 21.1664 26.2287 19.7108C27.6842 18.2552 27.6842 15.8953 26.2287 14.4397C24.7732 12.9842 22.4133 12.9842 20.9577 14.4397L18.3222 17.0753L20.9577 19.7108ZM19.7108 26.2287C21.1663 24.7732 21.1663 22.4133 19.7108 20.9577L17.0752 18.3222L14.4397 20.9577C12.9842 22.4133 12.9842 24.7732 14.4397 26.2287C15.8953 27.6843 18.2552 27.6843 19.7108 26.2287ZM7.92174 19.7108C6.46622 18.2552 6.46622 15.8953 7.92174 14.4397C9.37735 12.9842 11.7372 12.9842 13.1928 14.4397L15.8283 17.0753L13.1928 19.7108C11.7372 21.1664 9.37735 21.1664 7.92174 19.7108Z" fill="#525252"></path>
                   </svg>
                   <div class="text-[#525252] text-left font-['Aspekta-600',_sans-serif] text-[17.075246810913086px] font-normal relative">
-                    Pupper’s
+                    Pupper's
                   </div>
                 </div>
               </div>
@@ -303,9 +293,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="flex flex-row gap-[105px] items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-col gap-7 items-start justify-center shrink-0 w-[716px] relative">
+  </div> -->
+  <div class="flex flex-wrap gap-7 lg:gap-[105px] items-center justify-center px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-col gap-7 items-start justify-center shrink-0 w-full lg:w-[716px] relative">
       <div class="flex flex-col gap-[18px] items-center justify-center self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
           <?php esc_html_e('Frequently Asked Questions', 'creative-furniture'); ?>
@@ -336,7 +326,7 @@
         <?php foreach ($questions as $index => $q): ?>
           <div class="faq-item <?php echo $index !== 0 ? 'border-solid border-[#cacaca] border-t' : ''; ?> pt-4 flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative cursor-pointer">
             <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative faq-trigger">
-              <div class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-start">
+              <div class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold relative flex items-center justify-start">
                 <?php echo esc_html($q['title']); ?>
               </div>
               <div class="shrink-0 w-7 h-7 relative faq-icon">
@@ -374,13 +364,13 @@
       });
       </script>
     </div>
-    <img class="shrink-0 w-[595px] h-[436px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45460.png'); ?>">
+    <img class="shrink-0 w-full lg:w-[595px] md:h-[436px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/v2/rectangle-45460.png'); ?>">
   </div>
   
-  <div class="flex flex-col gap-12 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-col gap-4 items-center justify-center shrink-0 w-[794px] relative">
+  <div class="flex flex-col gap-12 items-center justify-center px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-col gap-4 items-center justify-center shrink-0 w-full lg:w-[794px] relative">
       <div class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
-        <?php echo nl2br(sprintf(esc_html(__('Grow Your Furniture Business with %s Creative Furniture', 'creative-furniture')), '\n'));; ?>
+        <?php echo nl2br(sprintf(esc_html(__('Grow Your Furniture Business with %s Creative Furniture', 'creative-furniture')), "\n")); ?>
       </div>
       <div class="text-[#525252] text-center font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal relative self-stretch flex items-center justify-center">
         <?php esc_html_e('Tell us about your products and business. Our team will review your application and get back to you within 3-5 business days.', 'creative-furniture'); ?>
@@ -396,27 +386,27 @@
         </div>
     <?php endif; ?>
 
-    <form method="POST" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="flex flex-col gap-10 items-start justify-start shrink-0 w-[794px] relative">
+    <form id="formsectiontosell" method="POST" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="flex flex-col gap-10 items-start justify-start shrink-0 w-full lg:w-[794px] relative">
       <input type="hidden" name="action" value="register_seller">
       <?php wp_nonce_field('register_seller_action', 'seller_reg_nonce'); ?>
       <div class="flex flex-col gap-5 items-start justify-start self-stretch shrink-0 relative">
-        <div class="flex flex-row gap-5 items-start justify-start self-stretch shrink-0 relative">
-          <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
+        <div class="flex flex-wrap gap-5 items-start justify-start self-stretch shrink-0 relative">
+          <div class="flex flex-col gap-2 items-start justify-start w-full md:flex-1 relative">
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
               <span>
-                <span class="title-span"><?php esc_html_e('Full Name / Company Name', 'creative-furniture'); ?></span>
-                <span class="title-span2">*</span>
+                <span class="title-span whitespace-nowrap"><?php esc_html_e('Full Name / Company Name', 'creative-furniture'); ?></span>
+                <span class="text-[#bd262a]">*</span>
               </span>
             </div>
             <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
                 <input type="text" name="fullname" placeholder="<?php esc_attr_e('Donald Smith', 'creative-furniture'); ?>" required class="w-full bg-transparent border-none focus:ring-0 px-4 py-3.5 text-[#525252] font-['Raleway-Regular',_sans-serif] text-sm leading-5">
             </div>
           </div>
-          <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
+          <div class="flex flex-col gap-2 items-start justify-start w-full md:flex-1 relative">
             <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
               <span>
-                <span class="title-span"><?php esc_html_e('Business Email', 'creative-furniture'); ?></span>
-                <span class="title-span2">*</span>
+                <span class="title-span whitespace-nowrap"><?php esc_html_e('Business Email', 'creative-furniture'); ?></span>
+                <span class="text-[#bd262a]">*</span>
               </span>
             </div>
             <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start self-stretch shrink-0 relative">
@@ -424,9 +414,9 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-5 items-start justify-start self-stretch shrink-0 relative">
+        <div class="flex flex-wrap gap-5 items-start justify-start self-stretch shrink-0 relative">
           <div class="flex flex-row gap-8 items-start justify-start flex-1 relative">
-            <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
+            <div class="flex flex-col gap-2 items-start justify-start w-full md:flex-1 relative">
               <div class="text-text-and-icon-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 Phone Number
               </div>
@@ -436,11 +426,11 @@
             </div>
           </div>
           <div class="flex flex-row gap-8 items-start justify-start flex-1 relative">
-            <div class="flex flex-col gap-2 items-start justify-start flex-1 relative">
+            <div class="flex flex-col gap-2 items-start justify-start w-full md:flex-1 relative">
               <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
                 <span>
-                  <span class="title-span"><?php esc_html_e('Product Category', 'creative-furniture'); ?></span>
-                  <span class="title-span2">*</span>
+                  <span class="title-span whitespace-nowrap"><?php esc_html_e('Product Category', 'creative-furniture'); ?></span>
+                  <span class="text-[#bd262a]">*</span>
                 </span>
               </div>
               <div class="w-full bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-center justify-start">
@@ -465,8 +455,8 @@
         <div class="pt-px pb-px flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
           <div class="text-left font-['Raleway-SemiBold',_sans-serif] text-sm leading-5 font-semibold relative self-stretch">
             <span>
-              <span class="title-span"><?php esc_html_e('Tell Us About Your Business', 'creative-furniture'); ?></span>
-              <span class="title-span2">*</span>
+              <span class="title-span whitespace-nowrap"><?php esc_html_e('Tell Us About Your Business', 'creative-furniture'); ?></span>
+              <span class="text-[#bd262a]">*</span>
             </span>
           </div>
           <div class="bg-[#f6f6f6] -rounded-lg flex flex-row gap-4 items-start justify-start self-stretch shrink-0 relative">
@@ -485,7 +475,7 @@
           </label>
 
           <!-- <input type="checkbox" required name="agree_terms" id="agree_terms" class="bg-[#212121] rounded-[54px] border-solid border-[#212121] border shrink-0 w-5 h-5 cursor-pointer"> -->
-          <label for="agree_terms" class="flex flex-col gap-0.5 items-start justify-center shrink-0 relative cursor-pointer">
+          <label for="agree_terms" class="flex flex-col gap-0.5 items-start justify-center md:shrink-0 relative cursor-pointer">
             <div class="text-[#0a0909] text-left font-['-',_sans-serif] text-sm leading-5 font-normal relative flex items-center justify-start">
               <span>
                 <?php esc_html_e('Subscribe By submitting, you agree to our Terms &amp; Conditions and Privacy Policy.', 'creative-furniture'); ?>
@@ -505,39 +495,3 @@
 
 
 <?php get_footer(); ?>
-<script>
-  const input = document.querySelector("input[name='phone']");
-  window.intlTelInput(input, {
-    initialCountry: 'ae',
-    countryNameLocale: "ae",
-    onlyCountries: ['ae', 'sa', 'kw', 'om', 'bh', 'qa', 'bd'],
-    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.7.6/build/js/utils.js"),
-    containerClass: 'w-full',
-    i18n: {
-      noCountrySelected: "Select country",
-      countryListAriaLabel: "List of countries",
-      searchPlaceholder: "Search",
-      clearSearchAriaLabel: "Clear search",
-      searchEmptyState: "No results found",
-    }
-  });
-</script>
-<style>
-  .iti__arrow {
-    border: none;
-  }
-  .iti__arrow::after {
-    content: " ";
-    height: 10px;
-    width: 20px;
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-5px);
-    background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic2hyaW5rLTAgdy01IGgtNSByZWxhdGl2ZSBvdmVyZmxvdy12aXNpYmxlIiBzdHlsZT0iYXNwZWN0LXJhdGlvOiAxIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiM4QzhDOEMiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
-    background-position: center;
-}
-.iti__country-container + input {
-  padding-left: 52px !important;
-}
-</style>

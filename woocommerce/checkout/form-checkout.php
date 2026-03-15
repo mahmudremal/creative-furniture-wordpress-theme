@@ -46,7 +46,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     <form name="checkout" method="post" class="checkout woocommerce-checkout flex flex-col gap-7 px-4 w-full max-w-full md:w-[1440px] m-auto relative" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
         <div class="flex flex-row md:grid md:grid-cols-[2fr_1fr] gap-7 flex-wrap gap-0 items-start justify-start w-full max-w-full md:w-[1440px] mx-auto relative">
             <!-- Left Side: Checkout Details -->
-            <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-4 items-start justify-start shrink-0 w-full md:w-[805px] relative">
+            <div class="bg-[#ffffff] md:pr-10 flex flex-col gap-4 items-start justify-start shrink-0 w-full md:w-[805px] 2xl:w-full relative">
                 <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
                     <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
                         <?php esc_html_e('Checkout', 'creative-furniture'); ?>

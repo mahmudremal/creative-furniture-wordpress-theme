@@ -70,11 +70,11 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item border-b border-[#dbdbdb] cf-accordion-active">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">Description</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">Description</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5">
-                        <div class="text-[#282828] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal flex flex-col gap-4">
+                        <div class="text-[#282828] text-left font-['Raleway-Regular',_sans-serif] text-xs sm:text-sm leading-5 font-normal flex flex-col gap-4">
                             <?php echo wp_kses_post(wpautop($product->get_description())); ?>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item border-b border-[#dbdbdb]">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">Additional information</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">Additional information</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5 hidden">
@@ -92,7 +92,7 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item border-b border-[#dbdbdb]">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">Care & Instructions</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">Care & Instructions</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5 hidden">
@@ -104,7 +104,7 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item border-b border-[#dbdbdb]">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">Warranty & Installation</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">Warranty & Installation</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5 hidden">
@@ -116,7 +116,7 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item border-b border-[#dbdbdb]">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">T&C</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">T&C</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5 hidden">
@@ -128,7 +128,7 @@ if ( post_password_required() ) {
 
                 <div class="cf-accordion-item">
                     <button type="button" class="cf-accordion-header w-full py-5 flex flex-row items-center justify-between group">
-                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold">Reviews</span>
+                        <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold">Reviews</span>
                         <?php echo $plus_minus_icons; ?>
                     </button>
                     <div class="cf-accordion-content pb-5 hidden">

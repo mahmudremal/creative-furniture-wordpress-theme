@@ -65,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
 
     <!-- Discount Code Section -->
     <div class="grid grid-cols-[1fr_80px] gap-3 md:gap-5 items-start justify-start self-stretch shrink-0 relative coupon-section-custom">
-        <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border px-4 flex flex-row gap-6 items-center justify-start shrink-0 w-full md:w-[359px] h-14 relative -rounded-md">
+        <div class="bg-[#ffffff] border-solid border-[#e9eaf0] border px-4 flex flex-row gap-6 items-center justify-start shrink-0 w-full md:w-[359px] 2xl:w-full h-14 relative -rounded-md">
             <input type="text" name="coupon_code" class="bg-transparent border-none outline-none w-full font-['Raleway-Regular'] text-base text-[#111111] p-0 focus:ring-0" id="coupon_code" value="" placeholder="<?php esc_attr_e('Discount Code', 'creative-furniture'); ?>">
         </div>
         <button type="submit" class="bg-[#000000] -rounded-md pt-3 pr-5 pb-3 pl-5 flex flex-row gap-2.5 items-center justify-center self-stretch flex-1 relative" name="apply_coupon" value="<?php esc_attr_e('Apply', 'creative-furniture'); ?>">

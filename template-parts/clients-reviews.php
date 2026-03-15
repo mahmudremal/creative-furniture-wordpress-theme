@@ -44,7 +44,7 @@
                 'name' => 'Michael Carter',
                 'verified' => true,
                 'rating' => 5,
-                'comment' => 'Great customer service and high-quality furniture. The installation team was very professional and everything was more than expected.',
+                'comment' => 'An Outstanding Experience with Exceptional Customer Service, Premium High-Quality Furniture, and a Highly Professional Installation Team That Delivered Results Far Beyond My Expectations',
                 'date' => '5 days ago',
                 'glink' => '#'
               ],
@@ -52,7 +52,7 @@
                 'name' => 'Michael Carter',
                 'verified' => true,
                 'rating' => 5,
-                'comment' => 'Great customer service and high-quality furniture. The installation team was very professional and everything was more than expected.',
+                'comment' => 'An Outstanding Experience with Exceptional Customer Service, Premium High-Quality Furniture, and a Highly Professional Installation Team That Delivered Results Far Beyond My Expectations',
                 'date' => '5 days ago',
                 'glink' => '#'
               ],
@@ -60,7 +60,7 @@
                 'name' => 'Michael Carter',
                 'verified' => true,
                 'rating' => 3,
-                'comment' => 'Great customer service and high-quality furniture. The installation team was very professional and everything was more than expected.',
+                'comment' => 'An Outstanding Experience with Exceptional Customer Service, Premium High-Quality Furniture, and a Highly Professional Installation Team That Delivered Results Far Beyond My Expectations',
                 'date' => '5 days ago',
                 'glink' => '#'
               ],
@@ -68,7 +68,7 @@
                 'name' => 'Michael Carter',
                 'verified' => true,
                 'rating' => 5,
-                'comment' => 'Great customer service and high-quality furniture. The installation team was very professional and everything was more than expected.',
+                'comment' => 'An Outstanding Experience with Exceptional Customer Service, Premium High-Quality Furniture, and a Highly Professional Installation Team That Delivered Results Far Beyond My Expectations',
                 'date' => '5 days ago',
                 'glink' => '#'
               ],
@@ -76,7 +76,7 @@
                 'name' => 'Michael Carter',
                 'verified' => true,
                 'rating' => 5,
-                'comment' => 'Great customer service and high-quality furniture. The installation team was very professional and everything was more than expected.',
+                'comment' => 'An Outstanding Experience with Exceptional Customer Service, Premium High-Quality Furniture, and a Highly Professional Installation Team That Delivered Results Far Beyond My Expectations',
                 'date' => '5 days ago',
                 'glink' => '#'
               ],
@@ -85,7 +85,7 @@
             ?>
             <?php foreach ($reviews as $index => $review): ?>
             <div>
-              <a href="<?php echo esc_url($review['glink']); ?>" class="rounded-2xl border-solid border-[#dadada] border p-4 flex flex-col gap-[57px] items-start justify-start h-full relative">
+              <div href="<?php echo esc_url($review['glink']); ?>" class="rounded-2xl border-solid border-[#dadada] border p-4 flex flex-col gap-[57px] items-start justify-start h-full relative">
                 <div class="flex flex-col gap-7 items-start justify-start self-stretch shrink-0 relative">
                   <div class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 relative">
                     <div class="flex flex-col gap-1 items-start justify-start flex-1 relative">
@@ -140,10 +140,10 @@
                   <div class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative">
                     <div class="text-left font-['Raleway-Medium',_sans-serif] text-sm leading-[22px] font-medium relative self-stretch">
                       <span>
-                        <span class="the-quality-of-the-sofa-exceeded-my-expectations-the-design-fits-perfectly-in-our-living-room-and-the-comfort-level-is-more-span">
-                          <?php echo esc_html($review['comment']); ?>....
+                        <span class="">
+                          <?php echo esc_html(wp_trim_words($review['comment'], 18)); ?>....
                         </span>
-                        <span class="the-quality-of-the-sofa-exceeded-my-expectations-the-design-fits-perfectly-in-our-living-room-and-the-comfort-level-is-more-span2">
+                        <span class="text-[#bd262a] cursor-pointer review-show-more" data-full="<?php echo esc_attr($review['comment']); ?>">
                           <?php esc_html_e('More', 'creative-furniture'); ?>
                         </span>
                       </span>
@@ -178,7 +178,7 @@
                     </svg>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
             <?php endforeach; ?>
           </div>
@@ -187,3 +187,12 @@
     </div>
   </div>
   
+  <script>
+    document.querySelectorAll('.review-show-more').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        button.previousElementSibling.innerHTML = button.dataset.full;
+        button.remove();
+      });
+    });
+  </script>

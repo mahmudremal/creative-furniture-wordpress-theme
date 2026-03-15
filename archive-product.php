@@ -1,7 +1,7 @@
 <?php
 add_filter( 'woocommerce_product_loop_start', 'custom_woocommerce_loop_start' );
 function custom_woocommerce_loop_start( $loop_start ) {
-    $custom_classes = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-6 items-center justify-start self-stretch relative';
+    $custom_classes = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-6 gap-x-4 gap-y-6 items-center justify-start self-stretch relative';
     return '<ul class="-products ' . esc_attr($custom_classes) . '">';
 }
 
@@ -102,17 +102,17 @@ $price_range = $wpdb->get_row("
     WHERE meta_key = '_price' AND meta_value > 0 AND post_id IN (" . implode(',', array_map('intval', $current_post_ids)) . ")
 ", ARRAY_A);
 $filter_data['price'] = [
-    'min' => (float) $price_range['min_price'],
-    'max' => (float) $price_range['max_price'],
+    'min' => (float) ($price_range ? $price_range['min_price'] : 0),
+    'max' => (float) ($price_range ? $price_range['max_price'] : 0),
 ];
 
 $filter_data['sorting'] = [
-    ['value' => 'menu_order', 'label' => 'Default sorting'],
-    ['value' => 'popularity', 'label' => 'Sort by popularity'],
-    ['value' => 'rating', 'label' => 'Sort by average rating'],
-    ['value' => 'date', 'label' => 'Sort by latest'],
-    ['value' => 'price', 'label' => 'Sort by price: low to high'],
-    ['value' => 'price-desc', 'label' => 'Sort by price: high to low'],
+    ['value' => 'menu_order', 'label' => __('Default sorting', 'creative-furniture')],
+    ['value' => 'popularity', 'label' => __('Sort by popularity', 'creative-furniture')],
+    ['value' => 'rating', 'label' => __('Sort by average rating', 'creative-furniture')],
+    ['value' => 'date', 'label' => __('Sort by latest', 'creative-furniture')],
+    ['value' => 'price', 'label' => __('Sort by price: low to high', 'creative-furniture')],
+    ['value' => 'price-desc', 'label' => __('Sort by price: high to low', 'creative-furniture')],
 ];
 
 $filter_data['current'] = [
@@ -156,7 +156,7 @@ $filter_arrays = wp_json_encode($filter_data);
     </div>
     <div class="border-solid border-[#d3d3d3] border-b">
         <div class="pb-5 px-4 flex flex-col gap-3 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-            <h1 class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-5xl leading-[48px] font-semibold relative self-stretch">
+            <h1 class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-3xl md:text-5xl leading-[48px] font-semibold relative self-stretch">
                 <?php echo esc_html($title); ?>
             </h1>
             <?php if (!empty($description)) : ?>

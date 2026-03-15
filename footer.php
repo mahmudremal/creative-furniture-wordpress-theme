@@ -12,7 +12,7 @@
         <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10 lg:px-4">
             <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 w-full max-w-full md:w-[1440px] m-auto relative">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
-                    <h3 class="text-[#0c0c0c] font-semibold text-xl md:text-2xl leading-tight uppercase tracking-tight">
+                    <h3 class="text-[#0c0c0c] font-semibold text-lg sm:text-xl md:text-2xl leading-tight uppercase tracking-tight">
                         <?php echo esc_html__( 'Subscribe Up To Newsletter', 'creative-furniture' ); ?>
                     </h3>
                     <div class="relative w-full max-w-[400px] m-auto md:m-0">
@@ -205,7 +205,7 @@
 
             foreach ($footer_menus as [$title, $items]) : ?>
                 <div class="flex flex-col gap-5">
-                    <h4 class="text-[#121212] font-semibold text-base">
+                    <h4 class="text-[#121212] font-semibold text-sm sm:text-base">
                         <?php echo esc_html__($title, 'creative-furniture'); ?>
                     </h4>
                     <ul class="flex flex-col gap-3">
@@ -251,6 +251,7 @@
   background-position: center;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJzaHJpbmstMCB3LTUgaC01IHJlbGF0aXZlIG92ZXJmbG93LXZpc2libGUiIHN0eWxlPSJhc3BlY3QtcmF0aW86IDEiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiMxOTE5MTkiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
 }
+@media (min-width: 768px) {.md\:w-\[1440px\] {width: 1920px;}}
 </style>
 
 <?php wp_footer(); ?>

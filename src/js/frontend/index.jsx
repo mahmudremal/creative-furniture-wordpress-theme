@@ -2,10 +2,6 @@ import axios from 'axios';
 import { lazy, Suspense } from 'react';
 // import { __, tailwind_install } from '@js/utils';
 import { createRoot } from 'react-dom/client';
-// import CartSidebar from './CartSidebar';
-// import FiltersBar from './FiltersBar';
-// import QuickView from './QuickView';
-// import OrderView from './OrderView';
 import Slider from './slider';
 import setup_sliders from './cards4slider';
 const simpleslider = require('simple-slider');
@@ -202,7 +198,7 @@ class SiteCore {
                                 } else {
                                     $btn.attr('aria-label', 'Add to wishlist');
                                 }
-
+                                this.update_wishlist_count(response?.total);
                                 $(document).trigger('wishlist_updated', [productId, isActive, response]);
                             }
                         },
@@ -211,18 +207,6 @@ class SiteCore {
                         }
                     });
                 })
-            });
-            $(document).on('wishlist_updated', function (e, productId, isActive, response) {
-                const { total = null } = response;
-                if (total !== null) {
-                    const counter = document.querySelector('.wishlist-total-qty');
-                    if (total === 0) {
-                        counter.classList.add('hidden');
-                    } else {
-                        counter.innerHTML = total;
-                        counter.classList.remove('hidden');
-                    }
-                }
             });
         }
 
@@ -252,6 +236,32 @@ class SiteCore {
             initWishlist();
             loadWishlistState();
         });
+    }
+
+    update_cart_count(total) {
+        if (total >= 0) {
+            document.querySelectorAll('.cart-total-qty').forEach(counter => {
+                if (total === 0) {
+                    counter.classList.add('hidden');
+                } else {
+                    counter.innerHTML = total;
+                    counter.classList.remove('hidden');
+                }
+            });
+        }
+    }
+    update_wishlist_count(total) {
+        const count = parseInt(total);
+        if (count >= 0) {
+            document.querySelectorAll('.wishlist-total-qty').forEach(counter => {
+                if (count === 0) {
+                    counter.classList.add('hidden');
+                } else {
+                    counter.innerHTML = count;
+                    counter.classList.remove('hidden');
+                }
+            });
+        }
     }
 
     init_single_product() {
@@ -376,14 +386,11 @@ class SiteCore {
 
             axios.post(cfStore.ajax_url, postData)
                 .then(response => response.data)
-                .then(data => {
-                    if (data.success) {
+                .then(({ success = 0, data = {} }) => {
+                    if (success) {
                         addToCartBtn.textContent = '✓ Added';
 
-                        const cartCount = document.querySelector('.cart-total-qty');
-                        if (cartCount) {
-                            cartCount.textContent = data.data.cart_count;
-                        }
+                        this.update_cart_count(data?.cart_count);
 
                         document.querySelector('.header-icon.cart')?.classList?.add?.('shake');
                         setTimeout(() => document.querySelector('.header-icon.cart')?.classList?.remove?.('shake'), 1000);
@@ -393,7 +400,7 @@ class SiteCore {
                             addToCartBtn.disabled = false;
                         }, 2000);
                     } else {
-                        throw new Error(data.data.message);
+                        throw new Error(data.message);
                     }
                 })
                 .then(() =>
@@ -539,7 +546,6 @@ class SiteCore {
     }
 
     init_filters() {
-        console.log(document.querySelectorAll('.filters-toggle'))
         if (!document.querySelectorAll('.filters-toggle')?.length) return;
         const container = document.createElement('div');
         document.body.appendChild(container);
@@ -709,6 +715,7 @@ class SiteCore {
 
     init_wishlist() {
         const _this = this;
+
         // Generic Wishlist Toggle (like from product cards)
         document.querySelectorAll('button.product-wishlist-btn').forEach(button => {
             button.addEventListener('click', (e) => {
@@ -729,6 +736,7 @@ class SiteCore {
                     .then(r => r.json())
                     .then(res => {
                         const { product_title = '' } = res;
+                        if (res?.total) this.update_wishlist_count(res?.total);
                         if (res.status === 'added') {
                             button.classList.add('active');
                             toast.success(`Product <strong>${product_title}</strong> Added to wishlist`, { enableHtml: true });
@@ -994,17 +1002,17 @@ class SiteCore {
     }
 
     init_myaccount() {
-        if (!document.querySelectorAll('.woocommerce-orders-table__cell-order-actions .woocommerce-button.view')?.length) return;
-        const container = document.createElement('div');
-        document.body.appendChild(container);
-        setTimeout(() => {
-            const root = createRoot(container);
-            root.render(
-                <Suspense fallback={<div>{__('Loading...')}</div>}>
-                    <OrderView />
-                </Suspense>
-            );
-        }, 1000);
+        // if (!document.querySelectorAll('.woocommerce-orders-table__cell-order-actions .woocommerce-button.view')?.length) return;
+        // const container = document.createElement('div');
+        // document.body.appendChild(container);
+        // setTimeout(() => {
+        //     const root = createRoot(container);
+        //     root.render(
+        //         <Suspense fallback={<div>{__('Loading...')}</div>}>
+        //             <OrderView />
+        //         </Suspense>
+        //     );
+        // }, 1000);
     }
 
     init_review_actions() {

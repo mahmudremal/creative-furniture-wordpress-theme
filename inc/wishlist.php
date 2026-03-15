@@ -129,7 +129,7 @@ class CF_Wishlist {
 
     public function get_items() {
         global $wpdb;
-        $uid = get_current_user_id();
+        $uid = is_user_logged_in() ? get_current_user_id() : null;
         if ($uid) {
             return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE user_id=%d ORDER BY created_at DESC", $uid));
         } else {
@@ -141,9 +141,9 @@ class CF_Wishlist {
     public function render_page() {
         $items = !empty($_GET['wishlist']) ? explode(',', $_GET['wishlist']) : $this->get_items();
         ?>
-        <div class="flex flex-col md:flex-row gap-10 py-10 min-h-[600px] max-w-[1440px] mx-auto px-4">
-            <div class="w-full md:w-[65%]">
-                <h2 class="text-2xl font-bold mb-6 text-black uppercase tracking-tight">
+        <div class="grid grid-cols-1 md:grid-cols-[65fr_35fr] gap-10 px-4 py-10 w-full max-w-full md:w-[1440px] m-auto relative my-0">
+            <div class="w-full">
+                <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black uppercase tracking-tight">
                     <?php echo (!empty($_GET['wishlist']) ? __('Shared Wishlist','creative-furniture') : __('Your Wishlist','creative-furniture')) . ' (' . count($items) . ')'; ?>
                 </h2>
                 
@@ -160,23 +160,25 @@ class CF_Wishlist {
                                 <div class="flex gap-5 border-b border-gray-100 pb-6 group items-center">
                                     <div class="shrink-0">
                                         <a href="<?php echo get_permalink($pid); ?>" class="block overflow-hidden -rounded-xl border border-gray-100">
-                                            <?php echo get_the_post_thumbnail($pid, 'medium', ['class' => 'w-[140px] h-auto object-cover transform transition-transform group-hover:scale-105']); ?>
+                                            <?php echo get_the_post_thumbnail($pid, 'medium', ['class' => 'w-[140px] lg:w-[180px] 2xl:w-[220px] h-auto aspect-square object-cover transform transition-transform group-hover:scale-105']); ?>
                                         </a>
                                     </div>
-                                    <div class="flex flex-col justify-center flex-1">
-                                        <a class="text-black text-lg font-bold no-underline hover:text-[#bd262a] transition-colors mb-1" href="<?php echo get_permalink($pid); ?>">
-                                            <?php echo $p->get_name(); ?>
-                                        </a>
-                                        <div class="text-base font-black text-[#bd262a]">
-                                            <?php echo $p->get_price_html(); ?>
+                                    <div class="flex flex-col flex-wrap justify-center 2xl:flex-row 2xl:justify-between flex-1">
+                                        <div class="flex flex-col">
+                                            <a class="text-black text-base sm:text-lg font-bold no-underline hover:text-[#bd262a] transition-colors mb-1" href="<?php echo get_permalink($pid); ?>">
+                                                <?php echo $p->get_name(); ?>
+                                            </a>
+                                            <div class="text-base font-black text-[#bd262a]">
+                                                <?php echo $p->get_price_html(); ?>
+                                            </div>
                                         </div>
                                         <div class="flex flex-wrap items-center gap-4 mt-4">
-                                            <div class="flex items-center border border-gray-200 rounded-full overflow-hidden bg-white h-10">
+                                            <div class="flex items-center border border-gray-200 -rounded-full overflow-hidden bg-white h-10">
                                                 <button class="qty-minus px-3 text-black hover:bg-gray-100 transition-colors h-full flex items-center justify-center">-</button>
                                                 <input type="number" value="1" min="1" class="w-10 text-center border-none focus:ring-0 text-sm font-bold p-0 bg-transparent h-full qty-input" readonly>
                                                 <button class="qty-plus px-3 text-black hover:bg-gray-100 transition-colors h-full flex items-center justify-center">+</button>
                                             </div>
-                                            <button class="cf-wishlist-add-to-cart px-8 h-10 bg-black text-white text-xs font-bold rounded-full hover:bg-[#bd262a] transition-all transform active:scale-95 shadow-md hover:shadow-[#bd262a]/20 uppercase tracking-wider" data-product-id="<?php echo $pid; ?>">
+                                            <button class="cf-wishlist-add-to-cart px-8 h-10 bg-black text-white text-xs font-bold -rounded-full hover:bg-[#bd262a] transition-all transform active:scale-95 shadow-md hover:shadow-[#bd262a]/20 uppercase tracking-wider" data-product-id="<?php echo $pid; ?>">
                                                 <?php _e('Add to Cart', 'creative-furniture'); ?>
                                             </button>
                                             <button class="cf-wishlist-remove p-0 border-none text-gray-400 hover:text-[#d00] text-xs font-bold cursor-pointer bg-transparent transition-colors flex items-center gap-1 group/remove" data-product-id="<?php echo $pid; ?>">
@@ -200,18 +202,18 @@ class CF_Wishlist {
             }
             ?>
 
-            <div class="w-full md:w-[35%] sticky top-10 self-start">
+            <div class="w-full lg:sticky lg:top-10 self-start">
                 <div class="border border-gray-200 p-8 rounded-2xl bg-gray-50/50">
-                    <h3 class="text-xl font-bold mb-6 uppercase tracking-tight"><?php _e('Wishlist Summary','creative-furniture'); ?></h3>
+                    <h3 class="text-base sm:text-xl font-bold mb-4 sm:mb-6 uppercase tracking-tight"><?php _e('Wishlist Summary','creative-furniture'); ?></h3>
                     <div class="flex justify-between mb-4 text-base font-medium">
                         <span><?php _e('Total Items','creative-furniture'); ?></span>
                         <span class="font-bold"><?php echo count($items); ?></span>
                     </div>
-                    <div class="flex justify-between mb-6 text-lg font-bold text-black border-t border-gray-200 pt-4">
+                    <div class="flex justify-between mb-4 sm:mb-6 text-base sm:text-lg font-bold text-black border-t border-gray-200 pt-4">
                         <span><?php _e('Total Cost','creative-furniture'); ?></span>
                         <span class="text-[#bd262a]"><?php echo wc_price($total); ?></span>
                     </div>
-                    <button class="w-full py-4 bg-black text-white text-base font-bold rounded-full hover:bg-[#bd262a] transition-all duration-300 transform active:scale-95 shadow-lg shadow-black/10" id="cf-wishlist-share-btn">
+                    <button class="w-full py-2 sm:py-4 bg-black text-white text-base font-bold hover:bg-[#bd262a] transition-all duration-300 transform active:scale-95 shadow-lg shadow-black/10" id="cf-wishlist-share-btn">
                         <?php _e('Share Wishlist','creative-furniture'); ?>
                     </button>
                     

@@ -19,19 +19,19 @@ $demoVariations = true;
 
 ?>
 
-<div class="max-w-[1440px] mx-auto px-4 py-6 lg:py-10">
+<div class="px-4 py-6 lg:py-10 w-full max-w-full md:w-[1440px] m-auto relative">
     <?php while (have_posts()) : the_post(); $product = wc_get_product(get_the_ID()); ?>
-        <div class="flex flex-col lg:flex-row gap-10 items-start justify-between">
-            <div class="w-full lg:w-[789px] shrink-0">
+        <div class="grid grid-cols-1 xl:grid-cols-[1.38fr_1fr] gap-10 items-start justify-between">
+            <div class="w-full">
                 <?php wc_get_template('single-product/product-image.php'); ?>
             </div>
-            <div class="w-full lg:w-[571px] flex flex-col gap-6">
+            <div class="w-full flex flex-col gap-6">
                 <form class="cart cf-cart-form flex flex-col gap-6" action="<?php echo esc_url( admin_url('admin-ajax.php?action=cf_add_to_cart') ); ?>" method="post" enctype='multipart/form-data'>
                     <input type="hidden" name="action" value="cf_add_to_cart">
                     <?php wp_nonce_field( 'cf_add_to_cart_nonce' ); ?>
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-row items-start justify-between gap-4">
-                            <h1 class="text-[#1a1a1a] text-left font-['Raleway-Bold',_sans-serif] text-2xl leading-[30px] font-bold flex-1">
+                            <h1 class="text-[#1a1a1a] text-left font-['Raleway-Bold',_sans-serif] text-xl sm:text-2xl leading-[30px] font-bold flex-1">
                                 <?php the_title(); ?>
                             </h1>
                             <button type="button" class="bg-[#f6f6f6] rounded-full p-2.5 flex items-center justify-center shrink-0 product-wishlist-btn <?php echo esc_attr(function_exists('cf_wishlist_is_in_wishlist') && cf_wishlist_is_in_wishlist($product->get_id()) ? 'active' : ''); ?>" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
@@ -216,7 +216,7 @@ $demoVariations = true;
                     foreach ($accordion_items as $item) : ?>
                         <div class="cf-accordion-item border-b border-[#dbdbdb] <?php echo $item['active'] ? 'cf-accordion-active' : ''; ?>">
                             <button type="button" class="cfr-accordion-header w-full py-4 flex flex-row items-center justify-between group">
-                                <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold"><?php echo esc_html($item['title']); ?></span>
+                                <span class="text-[#1f1f1f] text-left font-['Raleway-SemiBold',_sans-serif] text-sm sm:text-base leading-6 font-semibold"><?php echo esc_html($item['title']); ?></span>
                                 <span class="cf-accordion-icons">
                                     <svg class="cf-accordion-icon-minus w-7 h-7 <?php echo $item['active'] ? '' : 'hidden'; ?>" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.8335 14H22.1668" stroke="#737373" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -227,7 +227,7 @@ $demoVariations = true;
                                 </span>
                             </button>
                             <div class="cf-accordion-content <?php echo $item['active'] ? 'pb-5' : 'h-0 overflow-hidden'; ?>">
-                                <div class="text-[#282828] text-left font-['Raleway-Regular',_sans-serif] text-sm leading-5 font-normal flex flex-col gap-4">
+                                <div class="text-[#282828] text-left font-['Raleway-Regular',_sans-serif] text-xs sm:text-sm leading-5 font-normal flex flex-col gap-4">
                                     <?php echo $item['content']; ?>
                                 </div>
                             </div>
