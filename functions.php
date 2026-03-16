@@ -1,4 +1,7 @@
 <?php
+
+include "demos/data/terms.php";
+
 /**
  * Creative Furniture functions and definitions
  *
@@ -167,6 +170,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/reviews.php';
 	require_once get_template_directory() . '/inc/checkout.php';
 	require_once get_template_directory() . '/inc/reward-points.php';
+	require_once get_template_directory() . '/inc/language.php';
 // }
 
 
@@ -308,6 +312,9 @@ function creative_furniture_search_filter($query) {
     return $query;
 }
 add_filter('pre_get_posts', 'creative_furniture_search_filter');
+
+
+
 function get_id_by_postmeta($value) {
     global $wpdb;
 

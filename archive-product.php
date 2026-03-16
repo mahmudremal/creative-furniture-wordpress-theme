@@ -14,7 +14,8 @@ $breadcrumbs[] = ['label' => __('Home', 'creative-furniture'), 'url' => home_url
 if (is_shop()) {
     $breadcrumbs[] = ['label' => $title, 'url' => ''];
     $description = get_post_field('post_content', $shop_page_id);
-} elseif (is_product_category()) {
+}
+if (is_product_category()) {
     $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
     $term = get_queried_object();
     $title = $term->name;
@@ -26,7 +27,8 @@ if (is_shop()) {
         $breadcrumbs[] = ['label' => $ancestor->name, 'url' => get_term_link($ancestor)];
     }
     $breadcrumbs[] = ['label' => $title, 'url' => ''];
-} elseif (is_product_tag()) {
+}
+if (is_product_tag()) {
     $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
     $term = get_queried_object();
     $title = $term->name;
@@ -35,6 +37,7 @@ if (is_shop()) {
 } else {
     $breadcrumbs[] = ['label' => $title, 'url' => ''];
 }
+
 
 $current_per_page = isset($_GET['per_page']) ? intval($_GET['per_page']) : 20;
 $current_orderby = isset($_GET['orderby']) ? sanitize_text_field($_GET['orderby']) : 'menu_order';
@@ -160,7 +163,7 @@ $filter_arrays = wp_json_encode($filter_data);
                 <?php echo esc_html($title); ?>
             </h1>
             <?php if (!empty($description)) : ?>
-                <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative w-[630px]" style="opacity: 0.8">
+                <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative <?php echo esc_attr(str_word_count($description) <= 100 ? 'w-[630px]' : 'w-full'); ?>" style="opacity: 0.8">
                     <?php echo wp_kses_post($description); ?>
                 </div>
             <?php endif; ?>

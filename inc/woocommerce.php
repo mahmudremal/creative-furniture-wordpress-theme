@@ -652,7 +652,7 @@ function cf_apply_custom_product_filters($query) {
     if (is_admin() || !$query->is_main_query()) return;
     if (!is_post_type_archive('product') && !is_tax(get_object_taxonomies('product'))) return;
 
-    if (isset($_GET['query']) && $_GET['query'] !== '') {
+    if (!empty($_GET['query'])) {
         $query->set('s', sanitize_text_field($_GET['query']));
     }
 
@@ -702,8 +702,8 @@ function cf_apply_custom_product_filters($query) {
         $query->set('tax_query', $tax_query);
     }
 
-    $min_price = isset($_GET['min_price']) ? floatval($_GET['min_price']) : '';
-    $max_price = isset($_GET['max_price']) ? floatval($_GET['max_price']) : '';
+    $min_price = !empty($_GET['min_price']) ? floatval($_GET['min_price']) : '';
+    $max_price = !empty($_GET['max_price']) ? floatval($_GET['max_price']) : '';
 
     if ($min_price !== '' || $max_price !== '') {
         $price_query = ['relation' => 'AND'];
@@ -730,7 +730,7 @@ function cf_apply_custom_product_filters($query) {
         $query->set('meta_query', $meta_query);
     }
 
-    if (isset($_GET['orderby'])) {
+    if (!empty($_GET['orderby'])) {
         $orderby = sanitize_text_field($_GET['orderby']);
         
         switch ($orderby) {
@@ -765,8 +765,8 @@ function cf_apply_custom_product_filters($query) {
         }
     }
 
-    $min = isset($_GET['discount_min']) ? floatval($_GET['discount_min']) : 0.1;
-    $max = isset($_GET['discount_max']) ? floatval($_GET['discount_max']) : 100;
+    $min = !empty($_GET['discount_min']) ? floatval($_GET['discount_min']) : (!empty($_GET['discount_max']) ? 0.1 : 0);
+    $max = !empty($_GET['discount_max']) ? floatval($_GET['discount_max']) : 100;
     if (!empty($min) && !empty($max)) {
         global $wpdb;
         $ids = $wpdb->get_col($wpdb->prepare("

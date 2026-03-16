@@ -53,12 +53,13 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                         <div class="flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
                             <div class="currency-switcher desktop-only">
                                 <?php
-                                wp_nav_menu([
-                                    'theme_location' => 'language-switcher-menu',
-                                    'menu_id'        => 'language-switcher-menu',
-                                    'container'      => false,
-                                    'fallback_cb'    => false,
-                                ]);
+                                cf_language_menu();
+                                // wp_nav_menu([
+                                //     'theme_location' => 'language-switcher-menu',
+                                //     'menu_id'        => 'language-switcher-menu',
+                                //     'container'      => false,
+                                //     'fallback_cb'    => false,
+                                // ]);
                                 ?>
                             </div>
                         </div>
@@ -154,12 +155,13 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                                 <div class="hidden sm:flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
                                     <div class="currency-switcher desktop-only">
                                         <?php
-                                        wp_nav_menu([
-                                            'theme_location' => 'language-switcher-menu',
-                                            'menu_id'        => 'language-switcher-menu',
-                                            'container'      => false,
-                                            'fallback_cb'    => false,
-                                        ]);
+                                        cf_language_menu();
+                                        // wp_nav_menu([
+                                        //     'theme_location' => 'language-switcher-menu',
+                                        //     'menu_id'        => 'language-switcher-menu',
+                                        //     'container'      => false,
+                                        //     'fallback_cb'    => false,
+                                        // ]);
                                         ?>
                                     </div>
                                 </div>
