@@ -28,7 +28,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
 
     <header id="masthead" class="site-header relative z-50">
         <div class="flex flex-col items-center justify-start w-full gap-0">
-            <?php if (is_front_page()): ?>
+            <?php // if (is_front_page()): ?>
             <div class="w-full bg-[#eaeaea]">
                 <div class="px-4 py-2 md:py-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto relative">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full gap-2 md:gap-4">
@@ -53,7 +53,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                         <div class="flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
                             <div class="currency-switcher desktop-only">
                                 <?php
-                                cf_language_menu();
+                                function_exists('cf_language_menu') && cf_language_menu();
                                 // wp_nav_menu([
                                 //     'theme_location' => 'language-switcher-menu',
                                 //     'menu_id'        => 'language-switcher-menu',
@@ -100,7 +100,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                     </div>
                 </div>
             </div>
-            <?php endif; ?>
+            <?php // endif; ?>
             <div class="w-full py-4 px-4 --md:px-0 relative flex">
                 <div class="flex flex-wrap items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto">
 
@@ -155,7 +155,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
                                 <div class="hidden sm:flex flex-row gap-0.5 items-center justify-start relative cursor-pointer group">
                                     <div class="currency-switcher desktop-only">
                                         <?php
-                                        cf_language_menu();
+                                        function_exists('cf_language_menu') && cf_language_menu();
                                         // wp_nav_menu([
                                         //     'theme_location' => 'language-switcher-menu',
                                         //     'menu_id'        => 'language-switcher-menu',

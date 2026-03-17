@@ -163,9 +163,12 @@ $filter_arrays = wp_json_encode($filter_data);
                 <?php echo esc_html($title); ?>
             </h1>
             <?php if (!empty($description)) : ?>
-                <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative <?php echo esc_attr(str_word_count($description) <= 100 ? 'w-[630px]' : 'w-full'); ?>" style="opacity: 0.8">
+                <div class="text-[#2f2f2f] text-left font-['Raleway-Regular',_sans-serif] text-base leading-6 font-normal relative <?php echo esc_attr(str_word_count($description) <= 100 ? 'w-[630px]' : 'w-full line-clamp-5'); ?>" style="opacity: 0.8">
                     <?php echo wp_kses_post($description); ?>
                 </div>
+                <?php if (str_word_count($description) > 100) : ?>
+                    <button type="button" class="text-sm font-semibold hover:underline" onclick="this.previousElementSibling.classList.remove('line-clamp-5'); this.remove()"><?php esc_html_e('Show More', 'creative-furniture'); ?></button>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>

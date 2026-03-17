@@ -5,8 +5,11 @@
 
   > li {
     // position: relative;
-    padding: 15px 5px;
+    padding: 0 5px;
     display: inline-block;
+    & > a {
+      padding: 15px 0;
+    }
     &.menu-item {
         &:last-child {
             padding: 0;
@@ -36,10 +39,9 @@
 
         // opacity: 0;
         // visibility: hidden;
-        // transform: translateY(15px);
+        transform: translateY(15px);
         // transition: 0.25s ease;
         display: none;
-
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 
         // .mega-content {

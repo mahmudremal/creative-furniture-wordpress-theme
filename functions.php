@@ -161,6 +161,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Load WooCommerce compatibility file.
  */
 // if ( class_exists( 'WooCommerce' ) ) {
+	require_once get_template_directory() . '/inc/front-page.php';
 	require_once get_template_directory() . '/inc/woocommerce.php';
 	require_once get_template_directory() . '/inc/multi-currency.php';
 	require_once get_template_directory() . '/inc/wishlist.php';

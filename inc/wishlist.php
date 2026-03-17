@@ -90,7 +90,7 @@ class CF_Wishlist {
                 $wpdb->insert($this->table_items, ['user_id' => $uid, 'session_key' => null, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
                 wp_send_json(['status' => 'added', 'product_title' => $product_title, 'total' => $this->get_total()]);
             }
-        } else {
+        } elseif (!empty($session)) {
             $row = $wpdb->get_row($wpdb->prepare("SELECT id FROM {$this->table_items} WHERE product_id=%d AND session_key=%s", $pid, $session));
             if ($row) {
                 $wpdb->delete($this->table_items, ['id' => $row->id]);
@@ -99,6 +99,8 @@ class CF_Wishlist {
                 $wpdb->insert($this->table_items, ['user_id' => null, 'session_key' => $session, 'product_id' => $pid, 'created_at' => current_time('mysql')]);
                 wp_send_json(['status' => 'added', 'product_title' => $product_title, 'total' => $this->get_total()]);
             }
+        } else {
+            wp_send_json_error('Failed to add product to wishlist');
         }
     }
 
@@ -120,10 +122,10 @@ class CF_Wishlist {
         global $wpdb;
         $uid = is_user_logged_in() ? get_current_user_id() : null;
         if ($uid) {
-            return $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$this->table_items} WHERE user_id=%d ORDER BY created_at DESC", $uid));
+            return $wpdb->get_var($wpdb->prepare("SELECT COUNT(ti.id) FROM {$this->table_items} ti LEFT JOIN {$wpdb->posts} tp ON ti.product_id = tp.ID WHERE ti.user_id=%d AND tp.post_status='publish' ORDER BY ti.created_at DESC", $uid));
         } else {
             $session = $this->get_session();
-            return $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$this->table_items} WHERE session_key=%s ORDER BY created_at DESC", $session));
+            return !empty($session) ? $wpdb->get_var($wpdb->prepare("SELECT COUNT(ti.id) FROM {$this->table_items} ti LEFT JOIN {$wpdb->posts} tp ON ti.product_id = tp.ID WHERE ti.session_key=%s AND tp.post_status='publish' ORDER BY ti.created_at DESC", $session)) : 0;
         }
     }
 
@@ -131,10 +133,10 @@ class CF_Wishlist {
         global $wpdb;
         $uid = is_user_logged_in() ? get_current_user_id() : null;
         if ($uid) {
-            return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE user_id=%d ORDER BY created_at DESC", $uid));
+            return $wpdb->get_col($wpdb->prepare("SELECT ti.product_id FROM {$this->table_items} ti LEFT JOIN {$wpdb->posts} tp ON ti.product_id = tp.ID WHERE ti.user_id=%d AND tp.post_status='publish' ORDER BY ti.created_at DESC", $uid));
         } else {
             $session = $this->get_session();
-            return $wpdb->get_col($wpdb->prepare("SELECT product_id FROM {$this->table_items} WHERE session_key=%s ORDER BY created_at DESC", $session));
+            return !empty($session) ? $wpdb->get_col($wpdb->prepare("SELECT ti.product_id FROM {$this->table_items} ti LEFT JOIN {$wpdb->posts} tp ON ti.product_id = tp.ID WHERE ti.session_key=%s AND tp.post_status='publish' ORDER BY ti.created_at DESC", $session)) : [];
         }
     }
 

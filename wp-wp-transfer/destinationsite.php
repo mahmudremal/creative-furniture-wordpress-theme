@@ -406,7 +406,7 @@ log(type+' error '+e.message,'error');
 
     }
 
-    private function import_product_item($item){
+    public function import_product_item($item){
 
         $pid=wp_insert_post([
 
@@ -502,4 +502,5 @@ log(type+' error '+e.message,'error');
 
 }
 
-new EximEnd_Destination_Site_V2();
+global $eximDestinations;
+$eximDestinations = new EximEnd_Destination_Site_V2();

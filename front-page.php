@@ -22,14 +22,7 @@
             </div>
           </div>
         </div>
-        <?php
-          $categories = get_terms([
-            'taxonomy'   => 'product_cat',
-            'hide_empty' => false,
-            'number'     => 5,
-            'slug'       => explode(',', 'home,office,hospitality,unique,outdoor')
-          ]);
-        ?>
+        <?php $categories = get_front_page_shop_categories(); ?>
         <div class="w-full block relative">
           <div class="blaze-track-container">
             <div class="blaze-track">
@@ -223,7 +216,7 @@
                         <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
                           <?php esc_html_e('Top Picks', 'creative-furniture'); ?>
                         </div>
-                        <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
+                        <div class="text-center font-['Raleway-Bold',_sans-serif] text-2xl sm:text-[28px] leading-8 sm:leading-10 font-bold relative self-stretch">
                           <span>
                             <span class="text-[#BD262A]"><?php echo esc_html(sprintf(__('%s Off', 'creative-furniture'), '15%')); ?></span>
                             <span class="">
@@ -235,7 +228,7 @@
                           <?php esc_html_e('Premium furniture engineered for style, performance, and long-term durability.', 'creative-furniture'); ?>
                         </div>
                       </div>
-                      <a href="<?php echo esc_url(add_query_arg('query', 'outdoor', add_query_arg('discount_min', '15', wc_get_page_permalink('shop')))); ?>" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative cursor-pointer">
+                      <a href="<?php echo esc_url(add_query_arg('query', 'outdoor', add_query_arg('discount_min', '15', wc_get_page_permalink('shop')))); ?>" class="bg-[#000000] border-solid border-[transparent] border py-2 sm:py-3.5 px-6 sm:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative cursor-pointer">
                         <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
                           <?php esc_html_e('View Details', 'creative-furniture'); ?>
                         </span>
@@ -332,7 +325,7 @@
             <a href="<?php echo esc_url(add_query_arg('discount_max', '60', wc_get_page_permalink('shop'))); ?>" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative">
                     <?php esc_html_e('Maximum', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
@@ -350,7 +343,7 @@
             <a href="<?php echo esc_url(add_query_arg('discount_min', '0.1', wc_get_page_permalink('shop'))); ?>" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative">
                     Decor on
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
@@ -368,7 +361,7 @@
             <a href="<?php echo esc_url(add_query_arg('max_price', '10000', wc_get_page_permalink('shop'))); ?>" class="bg-[#fef6ee] shrink-0 h-[156px] relative overflow-hidden" target="_blank">
               <div class="flex flex-row gap-2 items-center justify-start absolute left-6 top-[50%]" style="translate: 0 -50%">
                 <div class="flex flex-col gap-2 items-start justify-center shrink-0 relative">
-                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative">
+                  <div class="text-[#000000] text-right font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative">
                     <?php esc_html_e('Best Buys', 'creative-furniture'); ?>
                   </div>
                   <div class="text-[#bd262a] text-right font-['Raleway-SemiBold',_sans-serif] text-lg leading-[26px] font-semibold relative">
@@ -403,11 +396,11 @@
         <div class="blaze-track-container">
           <div class="blaze-track">
             <?php for ($i = 1;$i <= 5; $i++): ?>
-            <div class="bg-[#f9f9f9] flex flex-col md:flex-row md:flex-wrap items-center justify-between 2xl:justify-start self-stretch -flex-1 relative">
+            <div class="bg-[#f9f9f9] flex flex-col md:flex-row md:flex-wrap items-center gap-6 sm:gap-0 justify-start sm:justify-between 2xl:justify-start self-stretch -flex-1 relative">
               <img class="shrink-0 w-full md:max-w-full md:w-[808px] h-[250px] md:h-[433px] 2xl:w-[1000px] 2xl:h-[500px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-45411.png">
-              <div class="flex flex-col gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-7 md:py-10 px-7 2xl:ml-[120px] relative">
+              <div class="flex flex-col gap-6 sm:gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-7 md:py-10 px-7 2xl:ml-[120px] relative">
                 <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
-                  <div class="text-center font-['Raleway-Bold',_sans-serif] text-[28px] leading-10 font-bold relative self-stretch">
+                  <div class="text-center font-['Raleway-Bold',_sans-serif] text-2xl sm:text-[28px] leading-8 sm:leading-10 font-bold relative self-stretch">
                     <span>
                       <span class="limited-time-deals-on-shoe-rack-span">
                         <?php esc_html_e('Limited-time deals on', 'creative-furniture'); ?>
@@ -419,15 +412,15 @@
                     </span>
                   </div>
                   <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
-                    <div class="text-[#bd262a] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative" style="opacity: 0.8">
+                    <div class="text-[#bd262a] text-center font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-6 sm:leading-8 font-semibold relative" style="opacity: 0.8">
                       AED3,575.00
                     </div>
-                    <div class="text-[#171717] text-center font-['Raleway-Regular',_sans-serif] text-2xl leading-8 font-normal relative" style="text-decoration: line-through; opacity: 0.8">
+                    <div class="text-[#171717] text-center font-['Raleway-Regular',_sans-serif] text-xl sm:text-2xl leading-6 sm:leading-8 font-normal relative" style="text-decoration: line-through; opacity: 0.8">
                       AED3,575.00
                     </div>
                   </div>
                 </div>
-                <a href="<?php echo esc_url('#'); ?>" class="bg-[#000000] border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                <a href="<?php echo esc_url('#'); ?>" class="bg-[#000000] border-solid border-[transparent] border py-2 sm:py-3.5 px-6 sm:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
                   <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
                     <?php esc_html_e('View Details', 'creative-furniture'); ?>
                   </span>
@@ -453,11 +446,11 @@
     <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333380 100%);"></div>
     <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
-        <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[32px] leading-[44px] font-bold relative self-stretch" >
+        <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[28px] sm:text-[32px] leading-8 sm:leading-[44px] font-bold relative self-stretch" >
           <?php echo nl2br(esc_html(sprintf(__('Ready to Upgrade Your %s Interior?', 'creative-furniture'), "\n"))); ?>
         </div>
       </div>
-      <a href="<?php echo esc_url(add_query_arg('query', 'interior', wc_get_page_permalink('shop'))); ?>" class="border-solid border-[transparent] border pt-3.5 pr-8 pb-3.5 pl-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative bg-[#ffffff] text-[#000000] hover:bg-[#000000] hover:text-white" >
+      <a href="<?php echo esc_url(add_query_arg('query', 'interior', wc_get_page_permalink('shop'))); ?>" class="border-solid border-[transparent] border px-6 sm:px-8 py-2 sm:py-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative bg-[#ffffff] text-[#000000] hover:bg-[#000000] hover:text-white" >
         <span class="text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center" >
           <?php esc_html_e('Start Shopping', 'creative-furniture'); ?>
         </span>
