@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
 
 <div class="relative flex flex-col gap-10 pb-20">
     <!-- Breadcrumbs -->
-    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative pt-10">
+    <div class="flex flex-row gap-2 items-center justify-start px-4 md:px-0 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative pt-10">
         <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e('Home', 'creative-furniture'); ?></a>
         </div>
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     </div>
 
     <?php if (!$order) : ?>
-    <div class="h-[381px] overflow-hidden px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="h-[381px] overflow-hidden px-4 md:px-0 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
       <img class="h-[607px] w-full w-full w-full" style="
           object-fit: cover;
         " src="<?php echo get_template_directory_uri(); ?>/dist/images/v2/rectangle-453201.png">
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset(
     </div>
     <?php else : ?>
 
-    <div class="flex flex-col gap-10 py-5 px-4 md:px-0 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-col gap-10 py-5 px-4 md:px-0 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
         <div class="flex flex-col gap-3 items-start justify-start w-full md:w-[461px] relative">
             <h1 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
                 <?php esc_html_e('Order ID:', 'creative-furniture'); ?> <?php echo esc_html($order->get_order_number()); ?>

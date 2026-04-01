@@ -1,6 +1,6 @@
 <?php $theme_directory_uri = get_template_directory_uri(); ?>
 
-  <div class="w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <div class="blaze-slider" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
       <div class="blaze-container">
         <div class="blaze-track-container">

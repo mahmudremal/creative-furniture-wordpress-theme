@@ -6,7 +6,7 @@
 defined('ABSPATH') || exit;
 ?>
 
-<section class="w-full max-w-full md:w-[1440px] m-auto px-4 md:px-0 py-20 md:py-32 flex flex-col items-center justify-center text-center">
+<section class="w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative px-4 md:px-0 py-20 md:py-32 flex flex-col items-center justify-center text-center">
     <div class="max-w-[640px] w-full flex flex-col items-center">
         <!-- SVG Icon -->
         <div class="mb-10 text-black/10">

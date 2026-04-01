@@ -2,7 +2,7 @@
 
 
 <div class="relative flex flex-col gap-20">
-  <div class="h-[381px] w-full max-w-full md:w-[1440px] m-auto relative overflow-hidden">
+  <div class="h-[381px] w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative overflow-hidden">
     <img class="h-[607px] w-full" style="
         background: linear-gradient(
           94.97deg,
@@ -22,7 +22,7 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row items-center justify-between w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="flex flex-row items-center justify-between w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <div class="flex flex-col gap-[60px] items-start justify-start shrink-0 w-[821px] relative">
       <div class="border-solid border-[transparent] border-b pr-[120px] pl-[120px] flex flex-col gap-7 items-start justify-start self-stretch shrink-0 relative">
         <div class="text-[#151515] text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
@@ -84,8 +84,8 @@
     </div>
     <img class="shrink-0 w-[595px] h-[522px] relative" style="object-fit: cover" src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/images/v2/rectangle-45460.png">
   </div>
-  <div class="flex flex-col gap-0 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
-    <div id="contact-form" class="flex flex-col gap-10 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative py-20 px-6">
+  <div class="flex flex-col gap-0 items-start justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
+    <div id="contact-form" class="flex flex-col gap-10 items-center justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative py-20 px-6">
       <div class="flex flex-col gap-3 items-center justify-start shrink-0 w-[794px] relative">
         <h2 class="text-[#151515] text-center font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch">
           <?php esc_html_e('Send Us a Message', 'creative-furniture'); ?>

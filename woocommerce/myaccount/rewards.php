@@ -21,7 +21,7 @@ $logs = $cf_reward_points->get_user_logs($user_id);
         <div class="text-[#2f2f2f] font-['Raleway-Regular',_sans-serif] text-sm opacity-80">Total Available Points</div>
         <div class="text-[#2f2f2f] font-['Raleway-Regular',_sans-serif] text-xs opacity-60 mt-2">1000 points = <?php echo wc_price(1); ?> discount at checkout!</div>
     </div> -->
-    <div class="flex flex-wrap gap-6 items-center justify-start w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-wrap gap-6 items-center justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
       <div class="bg-[#f9f9f9] flex flex-col gap-6 items-center justify-start flex-1 h-[147px] relative overflow-hidden">
         <div class="flex flex-row gap-[111px] items-center justify-center self-stretch flex-1 relative">
           <div class="flex flex-col gap-1 items-center justify-start shrink-0 w-[476px] relative">

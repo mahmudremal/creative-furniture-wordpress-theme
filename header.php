@@ -30,7 +30,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
         <div class="flex flex-col items-center justify-start w-full gap-0">
             <?php // if (is_front_page()): ?>
             <div class="w-full bg-[#eaeaea]">
-                <div class="px-4 py-2 md:py-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto relative">
+                <div class="px-4 py-2 md:py-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full gap-2 md:gap-4">
                         <div class="text-black text-center md:text-left font-normal text-sm sm:text-xs md:text-sm leading-5 text-nowrap">
                             <?php echo esc_html__( 'Free shipping - orders above AED 1500', 'creative-furniture' ); ?>
@@ -102,7 +102,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
             </div>
             <?php // endif; ?>
             <div class="w-full py-4 px-4 --md:px-0 relative flex">
-                <div class="flex flex-wrap items-center justify-between gap-2 w-full max-w-full md:w-[1440px] m-auto">
+                <div class="flex flex-wrap items-center justify-between gap-2 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
 
                     <nav class="hidden md:flex flex-row gap-6 lg:gap-8 items-center justify-start flex-1 h-full">
                         <?php
@@ -327,4 +327,3 @@ add_filter('nav_menu_link_attributes', 'add_menu_anchor_class', 10, 3);
         #mobile-menu-toggle + a + .flex #language-switcher-menu > li > a > span {display: none;}
         #mobile-menu-toggle + a + .flex #language-switcher-menu > li > a + ul.sub-menu {min-width: 120px;}
     </style>
-

@@ -143,7 +143,7 @@ class CF_Wishlist {
     public function render_page() {
         $items = !empty($_GET['wishlist']) ? explode(',', $_GET['wishlist']) : $this->get_items();
         ?>
-        <div class="grid grid-cols-1 md:grid-cols-[65fr_35fr] gap-10 px-4 py-10 w-full max-w-full md:w-[1440px] m-auto relative my-0">
+        <div class="grid grid-cols-1 md:grid-cols-[65fr_35fr] gap-10 px-4 py-10 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative my-0">
             <div class="w-full">
                 <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black uppercase tracking-tight">
                     <?php echo (!empty($_GET['wishlist']) ? __('Shared Wishlist','creative-furniture') : __('Your Wishlist','creative-furniture')) . ' (' . count($items) . ')'; ?>

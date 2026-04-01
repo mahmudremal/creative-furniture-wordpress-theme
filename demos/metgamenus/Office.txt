@@ -1,6 +1,6 @@
 
   <div class="bg-[#ffffff] flex flex-col gap-0 items-start justify-start relative hospitality-menu" data-menu-id="0">
-  <div class="w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
       <div class="2xl:max-w-[1440px] py-12 px-4 flex flex-col gap-10 items-start justify-start self-stretch shrink-0">
         <div class="flex flex-row gap-10 items-start justify-start self-stretch shrink-0 min-h-[600px] relative">
           

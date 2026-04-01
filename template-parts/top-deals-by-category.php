@@ -51,7 +51,7 @@ $deals = [
 ];
 ?>
 
-<div class="flex flex-col gap-6 items-center justify-start px-4 mb-12 w-full max-w-full md:w-[1440px] m-auto relative">
+<div class="flex flex-col gap-6 items-center justify-start px-4 mb-12 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
         <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl md:text-2xl leading-8 font-semibold relative flex items-center justify-start">
             <?php esc_html_e('Top Deals By Category', 'creative-furniture'); ?>

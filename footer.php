@@ -10,7 +10,7 @@
     <div class="">
         <!-- Newsletter Section -->
         <div class="bg-[#f4f4f4] py-4 md:py-6 border-b border-black/10 lg:px-4">
-            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+            <div class="flex flex-col md:flex-row gap-8 items-center justify-between px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
                 <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-auto">
                     <h3 class="text-[#0c0c0c] font-semibold text-lg sm:text-xl md:text-2xl leading-tight uppercase tracking-tight">
                         <?php echo esc_html__( 'Subscribe Up To Newsletter', 'creative-furniture' ); ?>
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Main Footer Links -->
-        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+        <div class="py-10 md:py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
             <!-- Brand Info -->
             <div class="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col gap-6">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-1">
@@ -243,7 +243,7 @@
 #mymc-switcher::after {
   top: 50%;
   width: 20px;
-  right: -10px;
+  right: -5px;
   height: 10px;
   content: " ";
   position: absolute;
@@ -251,7 +251,6 @@
   background-position: center;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJzaHJpbmstMCB3LTUgaC01IHJlbGF0aXZlIG92ZXJmbG93LXZpc2libGUiIHN0eWxlPSJhc3BlY3QtcmF0aW86IDEiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTUgNy41TDEwIDEyLjVMMTUgNy41IiBzdHJva2U9IiMxOTE5MTkiIHN0cm9rZS13aWR0aD0iMS42NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=");
 }
-@media (min-width: 768px) {.md\:w-\[1440px\] {width: 1920px;}}
 </style>
 
 <?php wp_footer(); ?>

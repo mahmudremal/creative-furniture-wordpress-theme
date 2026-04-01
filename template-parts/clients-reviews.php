@@ -1,4 +1,4 @@
-  <div class="bg-[#ffffff] flex flex-col gap-6 items-center justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+  <div class="bg-[#ffffff] flex flex-col gap-6 items-center justify-start px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <div class="blaze-slider w-full" data-slider="customer-stories" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => true, 'slidesToShow' => 5, 'slidesToScroll' => 1, 'slideGap' => '16px'], '(max-width: 900px)' => ['slidesToShow' => 3], '(max-width: 500px)' => ['slidesToShow' => 1]])); ?>">
       <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative mb-6">
         <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">

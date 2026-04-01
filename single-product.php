@@ -19,7 +19,7 @@ $demoVariations = true;
 
 ?>
 
-<div class="px-4 py-6 lg:py-10 w-full max-w-full md:w-[1440px] m-auto relative">
+<div class="px-4 py-6 lg:py-10 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <?php while (have_posts()) : the_post(); $product = wc_get_product(get_the_ID()); ?>
         <div class="grid grid-cols-1 xl:grid-cols-[1.38fr_1fr] gap-10 items-start justify-between">
             <div class="w-full">

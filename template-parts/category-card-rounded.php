@@ -14,7 +14,7 @@ $link = get_term_link( $category );
   </div>
   <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
     <div class="flex flex-row gap-2 items-start justify-start shrink-0 relative">
-      <div class="text-[#3f3f3f] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex-1">
+      <div class="text-[#3f3f3f] text-center font-['Raleway-SemiBold',_sans-serif] text-xs sm:text-base leading-6 font-semibold relative flex-1">
         <?php echo esc_html( get_term_meta($category->term_id, 'shorthand', true) ?: $category->name ); ?>
       </div>
     </div>

@@ -16,7 +16,7 @@ $page_title = ( 'billing' === $load_address ) ? esc_html__( 'Billing address', '
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 <?php if ( ! $load_address ) : ?>
-    <div class="flex flex-col gap-10 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-col gap-10 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
         <div class="flex flex-row items-start justify-between self-stretch shrink-0 relative">
             <div class="flex flex-col gap-3 items-start justify-start shrink-0 relative">
                 <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold relative self-stretch flex items-center justify-start">
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
         </div>
     </div>
 <?php else : ?>
-    <div class="bg-[#f4f4f4] p-10 -rounded-xl w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="bg-[#f4f4f4] p-10 -rounded-xl w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
         <form method="post" class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
                 <h3 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-2xl leading-8 font-semibold">

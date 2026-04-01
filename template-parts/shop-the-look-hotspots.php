@@ -46,75 +46,135 @@ $tippyContent = function ($spot) {
 }
 ?>
 
-  <div class="flex flex-col gap-7 items-start justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
-    <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
-      <h3 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
-        <?php esc_html_e('Shop the Look', 'creative-furniture'); ?>
-      </h3>
-      <div class="flex sm:hidden flex-row gap-1 items-center justify-start shrink-0 relative">
-        <svg class="blaze-prev shrink-0 w-4 h-4 relative overflow-visible" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 12L6 8L10 4" stroke="#BFBFBF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <div class="blaze-next flex flex-row gap-[5.71px] items-center justify-start shrink-0 relative">
-          <svg class="shrink-0 w-4 h-4 relative overflow-visible" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="var(--ui-light-black-primary, #111111)" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row flex-wrap gap-4 items-start justify-start self-stretch shrink-0 relative">
-      <div class="hidden sm:flex flex-col gap-4 items-start justify-start w-full md:w-auto shrink-0 relative">
-        <div class="shrink-0 w-full md:w-[431px] h-[415px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692210.png) center;background-size: cover;background-repeat: no-repeat;">
-          <?php foreach ($hotspots->top_left as $spot) : ?>
-          <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
-               style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;"
-               data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
-            <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-        <div class="shrink-0 w-full md:w-[431px] h-[315px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692200.png) center;background-size: cover;background-repeat: no-repeat;">
-          <?php foreach ($hotspots->bottom_left as $spot) : ?>
-          <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
-               style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;"
-               data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
-            <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div class="hidden sm:flex flex-col gap-4 items-start justify-center self-stretch flex-1 w-full relative">
-        <div class="self-stretch shrink-0 h-[303px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692251.png) center;background-size: cover;background-repeat: no-repeat;">
-          <?php foreach ($hotspots->top_right as $index => $spot) : ?>
-          <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
-               style="backdrop-filter: blur(4px); top: <?php echo esc_attr(esc_attr($spot['top'])); ?>; left: <?php echo esc_attr(esc_attr($spot['left'])); ?>;"
-               data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
-            <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 items-start justify-start self-stretch flex-1 relative">
-          <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692220.png) center;background-size: cover;background-repeat: no-repeat;">
-            <?php foreach ($hotspots->bottom_middle as $spot) : ?>
-            <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
-                 style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;"
-                 data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
-              <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+  <div class="flex flex-col gap-7 items-start justify-start px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
+    
+    <div class="blaze-slider shop-by-hotspot w-full" data-slider="hero" data-config="<?php echo esc_attr(json_encode(['all' => ['loop' => false, 'slidesToShow' => 1, 'slidesToScroll' => 1]])); ?>">
+      <div class="blaze-container">
+        <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
+          <h3 class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
+            <?php esc_html_e('Shop the Look', 'creative-furniture'); ?>
+          </h3>
+          <div class="flex sm:hidden flex-row gap-1 items-center justify-start shrink-0 relative">
+            <svg class="blaze-prev shrink-0 w-4 h-4 relative overflow-visible" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L6 8L10 4" stroke="#BFBFBF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <div class="blaze-next flex flex-row gap-[5.71px] items-center justify-start shrink-0 relative">
+              <svg class="shrink-0 w-4 h-4 relative overflow-visible" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12L10 8L6 4" stroke="var(--ui-light-black-primary, #111111)" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </div>
-            <?php endforeach; ?>
-          </div>
-          <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692261.png) center;background-size: cover;background-repeat: no-repeat;">
-            <?php foreach ($hotspots->bottom_right as $spot) : ?>
-            <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" 
-                 style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;"
-                 data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
-              <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
-            </div>
-            <?php endforeach; ?>
           </div>
         </div>
-      </div>
-      
+        
+        <div class="flex sm:hidden flex-col w-full relative">
+          <!-- <div class="grid grid-cols-1 md:grid-cols-29 gap-4 auto-rows-[100px]">
+            <div class="md:col-span-9 md:row-span-5 bg-gray-200"></div>
+            <div class="md:col-span-20 md:row-span-4 bg-gray-200"></div>
+            <div class="md:col-span-10 md:row-span-5 bg-gray-200"></div>
+            <div class="md:col-span-10 md:row-span-5 bg-gray-200"></div>
+            <div class="md:col-span-9 md:row-span-4 bg-gray-200"></div>
+          </div> -->
+          
+          <div class="blaze-track-container">
+            <div class="blaze-track">
+              <div>
+                <div class="relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692210.png);aspect-ratio: 431/415">
+                  <?php foreach ($hotspots->top_left as $spot) : ?>
+                  <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                    <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <div>
+                <div class="relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692200.png);aspect-ratio: 431/415">
+                  <?php foreach ($hotspots->bottom_left as $spot) : ?>
+                  <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                    <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <div>
+                <div class="relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692251.png);aspect-ratio: 431/415">
+                  <?php foreach ($hotspots->top_right as $index => $spot) : ?>
+                  <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr(esc_attr($spot['top'])); ?>; left: <?php echo esc_attr(esc_attr($spot['left'])); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                    <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <div>
+                <div class="relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692220.png);aspect-ratio: 431/415">
+                  <?php foreach ($hotspots->bottom_middle as $spot) : ?>
+                  <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                    <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <div>
+                <div class="relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692261.png);aspect-ratio: 431/415">
+                  <?php foreach ($hotspots->bottom_right as $spot) : ?>
+                  <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                    <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="hidden sm:flex flex-col md:flex-row flex-wrap gap-4 items-start justify-start self-stretch shrink-0 relative">
+          <div class="flex flex-col gap-4 items-start justify-start w-full md:w-auto shrink-0 relative">
+            <div class="shrink-0 w-full md:w-[431px] h-[415px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692210.png) center;background-size: cover;background-repeat: no-repeat;">
+              <?php foreach ($hotspots->top_left as $spot) : ?>
+              <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="shrink-0 w-full md:w-[431px] h-[315px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692200.png) center;background-size: cover;background-repeat: no-repeat;">
+              <?php foreach ($hotspots->bottom_left as $spot) : ?>
+              <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 items-start justify-center self-stretch flex-1 w-full relative">
+            <div class="self-stretch shrink-0 h-[303px] relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692251.png) center;background-size: cover;background-repeat: no-repeat;">
+              <?php foreach ($hotspots->top_right as $index => $spot) : ?>
+              <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr(esc_attr($spot['top'])); ?>; left: <?php echo esc_attr(esc_attr($spot['left'])); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 items-start justify-start self-stretch flex-1 relative">
+              <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692220.png) center;background-size: cover;background-repeat: no-repeat;">
+                <?php foreach ($hotspots->bottom_middle as $spot) : ?>
+                <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                  <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                </div>
+                <?php endforeach; ?>
+              </div>
+              <div class="self-stretch flex-1 w-full h-[300px] sm:h-auto relative overflow-hidden" style="background: url(<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/frame-16100692261.png) center;background-size: cover;background-repeat: no-repeat;">
+                <?php foreach ($hotspots->bottom_right as $spot) : ?>
+                <div class="bg-[rgba(255,255,255,0.11)] rounded-[26px] p-2.5 flex flex-row gap-2.5 items-center justify-start absolute hotspot-indicator" style="backdrop-filter: blur(4px); top: <?php echo esc_attr($spot['top']); ?>; left: <?php echo esc_attr($spot['left']); ?>;" data-tippy-content="<?php echo esc_attr($tippyContent($spot)); ?>">
+                  <div class="bg-[#ffffff] rounded-[50%] shrink-0 w-3 h-3 relative"></div>
+                </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
     </div>
+    
   </div>
+  
+  <style>.shop-by-hotspot .tippy-arrow {color: #fff;}</style>

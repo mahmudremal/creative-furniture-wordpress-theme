@@ -14,8 +14,7 @@ $breadcrumbs[] = ['label' => __('Home', 'creative-furniture'), 'url' => home_url
 if (is_shop()) {
     $breadcrumbs[] = ['label' => $title, 'url' => ''];
     $description = get_post_field('post_content', $shop_page_id);
-}
-if (is_product_category()) {
+} else if (is_product_category()) {
     $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
     $term = get_queried_object();
     $title = $term->name;
@@ -27,8 +26,7 @@ if (is_product_category()) {
         $breadcrumbs[] = ['label' => $ancestor->name, 'url' => get_term_link($ancestor)];
     }
     $breadcrumbs[] = ['label' => $title, 'url' => ''];
-}
-if (is_product_tag()) {
+} else if (is_product_tag()) {
     $breadcrumbs[] = ['label' => __('Shop', 'creative-furniture'), 'url' => get_permalink($shop_page_id)];
     $term = get_queried_object();
     $title = $term->name;
@@ -138,27 +136,27 @@ $filter_arrays = wp_json_encode($filter_data);
 <?php get_header(); ?>
 
 <div class="relative flex flex-col gap-10 px-4 md:px-0">
-    <div class="flex flex-row gap-2 items-center justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-wrap gap-1 sm:gap-2 items-center justify-start px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
         <?php foreach ($breadcrumbs as $index => $crumb) : ?>
             <?php if (!empty($crumb['url'])) : ?>
-                <a href="<?php echo esc_url($crumb['url']); ?>" class="text-[#989898] hover:text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start transition-colors">
+                <a href="<?php echo esc_url($crumb['url']); ?>" class="text-[#989898] hover:text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-xs sm:text-base leading-6 font-medium relative flex items-center justify-start transition-colors">
                     <?php echo esc_html($crumb['label']); ?>
                 </a>
             <?php else : ?>
-                <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                <div class="text-[#000000] text-left font-['Raleway-Medium',_sans-serif] text-xs sm:text-base leading-6 font-medium relative flex items-center justify-start">
                     <?php echo esc_html($crumb['label']); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ($index < count($breadcrumbs) - 1) : ?>
-                <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-base leading-6 font-medium relative flex items-center justify-start">
+                <div class="text-[#989898] text-left font-['Raleway-Medium',_sans-serif] text-xs sm:text-base leading-6 font-medium relative flex items-center justify-start">
                     /
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
     <div class="border-solid border-[#d3d3d3] border-b">
-        <div class="pb-5 px-4 flex flex-col gap-3 items-start justify-start w-full max-w-full md:w-[1440px] m-auto relative">
+        <div class="pb-5 px-4 flex flex-col gap-3 items-start justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
             <h1 class="text-[#010101] text-left font-['Raleway-SemiBold',_sans-serif] text-3xl md:text-5xl leading-[48px] font-semibold relative self-stretch">
                 <?php echo esc_html($title); ?>
             </h1>
@@ -172,7 +170,7 @@ $filter_arrays = wp_json_encode($filter_data);
             <?php endif; ?>
         </div>
     </div>
-    <div class="flex flex-row gap-2 items-center justify-between px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+    <div class="flex flex-row gap-2 items-center justify-between px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
         <div class="filters-toggle bg-[#222222] pt-2 pr-3.5 pb-2 pl-3.5 flex flex-row gap-2 items-center justify-start cursor-pointer transition-colors hover:bg-[#333333] select-none" data-filters="<?php echo esc_attr($filter_arrays); ?>">
             <svg class="shrink-0 w-5 h-5 relative overflow-visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -225,7 +223,7 @@ $filter_arrays = wp_json_encode($filter_data);
 <?php
 if ( woocommerce_product_loop() ) {
     ?>
-        <div class="shop-container flex flex-col gap-6 items-start justify-start px-4 w-full max-w-full md:w-[1440px] m-auto relative">
+        <div class="shop-container flex flex-col gap-6 items-start justify-start px-4 w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
             <div class="w-full">
                 <div class="shop-content -container-fluid p-0">
 

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 do_action( 'woocommerce_before_account_navigation' );
 ?>
-<nav class="bg-[#f6f6f6] flex items-center h-[42px] overflow-hidden w-full max-w-full md:w-[1440px] m-auto relative" aria-label="<?php esc_html_e( 'Account pages', 'woocommerce' ); ?>">
+<nav class="bg-[#f6f6f6] flex items-center h-[42px] overflow-hidden w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative" aria-label="<?php esc_html_e( 'Account pages', 'woocommerce' ); ?>">
 	<div class="flex flex-row gap-7 items-center justify-start px-6 overflow-x-auto">
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<?php if (in_array($endpoint, ['edit-account'])) continue; ?>

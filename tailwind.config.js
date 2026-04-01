@@ -19,6 +19,14 @@ module.exports = {
       screens: {
         "3xl": "1920px",
       },
+      gridColumn: {
+        "span-9": "span 9 / span 9",
+        "span-10": "span 10 / span 10",
+        "span-20": "span 20 / span 20",
+      },
+      gridTemplateColumns: {
+        29: "repeat(29, minmax(0, 1fr))",
+      },
     },
   },
   // plugins: [require("daisyui")],
