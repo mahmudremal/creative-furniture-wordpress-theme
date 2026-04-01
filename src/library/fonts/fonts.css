@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('./Raleway/static/Raleway-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   font-family: 'Raleway-Regular', sans-serif;
   font-weight: 400;

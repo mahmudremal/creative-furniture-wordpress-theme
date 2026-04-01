@@ -47,7 +47,7 @@
           <div class="blaze-track-container">
             <div class="blaze-track">
               <?php // for ($i = 1; $i <= 5; $i++): ?>
-                <div class="bg-[#f9f9f9] xl:pl-[100px] flex">
+                <div class="bg-[#f4f4f4] xl:pl-[100px] flex">
                   <div class="flex flex-wrap items-center justify-between self-stretch flex-1 relative px-4 md:px-0 pb-6 sm:pb-0 gap-7">
                     <div class="flex flex-col gap-6 sm:gap-10 items-center md:items-start justify-start shrink-0 w-full md:w-[476px] md:px-7 pt-5 md:py-10 relative">
                       <div class="flex flex-col gap-3 items-center md:items-start justify-start self-stretch shrink-0 relative">
@@ -83,7 +83,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-7 px-4 md:p-4 items-start justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
+  <div class="flex flex-col gap-3 sm:gap-7 px-4 md:p-4 items-start justify-start w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
     <div class="flex flex-row items-center justify-between self-stretch shrink-0 relative">
       <div class="text-black-primary text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative flex items-center justify-start">
         <?php esc_html_e('New Arrivals', 'creative-furniture'); ?>
@@ -97,7 +97,7 @@
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
-              <a href="<?php echo esc_url(add_query_arg('query', 'lounge', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="bg-[#f4f4f4] p-2 md:p-6 flex flex-col gap-4 items-center justify-between md:justify-center -flex-1 relative">
+              <a href="<?php echo esc_url(add_query_arg('query', 'lounge', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="sm:bg-[#f4f4f4] sm:p-2 md:p-6 flex flex-col gap-1 sm:gap-4 items-center justify-between md:justify-center -flex-1 relative">
                 <div class="relative overflow-hidden w-full 2xl:h-[400px]">
                   <img class="w-full h-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453430.png">
                 </div>
@@ -110,7 +110,7 @@
                   </div>
                 </div>
               </a>
-              <a href="<?php echo esc_url(add_query_arg('query', 'dining', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="bg-[#f4f4f4] p-2 md:p-6 flex flex-col gap-4 items-center justify-between md:justify-center -flex-1 relative">
+              <a href="<?php echo esc_url(add_query_arg('query', 'dining', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="sm:bg-[#f4f4f4] sm:p-2 md:p-6 flex flex-col gap-1 sm:gap-4 items-center justify-between md:justify-center -flex-1 relative">
                 <div class="relative overflow-hidden w-full 2xl:h-[400px]">
                   <img class="w-full h-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453431.png">
                 </div>
@@ -123,7 +123,7 @@
                   </div>
                 </div>
               </a>
-              <a href="<?php echo esc_url(add_query_arg('query', 'living', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="bg-[#f4f4f4] p-2 md:p-6 flex flex-col gap-4 items-center justify-between md:justify-center -flex-1 relative">
+              <a href="<?php echo esc_url(add_query_arg('query', 'living', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="sm:bg-[#f4f4f4] sm:p-2 md:p-6 flex flex-col gap-1 sm:gap-4 items-center justify-between md:justify-center -flex-1 relative">
                 <div class="relative overflow-hidden w-full 2xl:h-[400px]">
                   <img class="w-full h-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453432.png">
                 </div>
@@ -136,7 +136,7 @@
                   </div>
                 </div>
               </a>
-              <a href="<?php echo esc_url(add_query_arg('query', 'dining', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="bg-[#f4f4f4] p-2 md:p-6 flex flex-col gap-4 items-center justify-between md:justify-center -flex-1 relative">
+              <a href="<?php echo esc_url(add_query_arg('query', 'dining', add_query_arg('orderby', 'date', wc_get_page_permalink('shop')))); ?>" class="sm:bg-[#f4f4f4] sm:p-2 md:p-6 flex flex-col gap-1 sm:gap-4 items-center justify-between md:justify-center -flex-1 relative">
                 <div class="relative overflow-hidden w-full 2xl:h-[400px]">
                   <img class="w-full h-full" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-453431.png">
                 </div>
@@ -151,7 +151,7 @@
               </a>
             </div>
           </div>
-          <div class="blaze-pagination flex sm:hidden items-center justify-center gap-2 mt-5"></div>
+          <div class="blaze-pagination flex sm:hidden items-center justify-center gap-2 mt-3"></div>
         </div>
       </div>
     </div>
@@ -162,7 +162,7 @@
   </div>
 
   <div class="w-full lg:px-4">
-    <div class="flex flex-col gap-7 items-start justify-start sm:bg-[#f4f4f4] w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
+    <div class="flex flex-col gap-7 items-start justify-start bg-[#f4f4f4] w-full max-w-full md:w-[1440px] 2xl:w-[1920px] m-auto relative">
       <div class="flex flex-col sm:flex-row gap-4 md:gap-7 justify-between p-4 pb-8 sm:pb-4 items-center w-full">
         <div class="flex flex-col gap-2 items-start justify-start p-4 pb-0 sm:pb-4">
           <div class="text-[#010101] text-center sm:text-left font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-2xl leading-8 font-semibold relative self-stretch" >
@@ -205,10 +205,10 @@
                     <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(244,244,244,1)_20%,rgba(255,255,255,0)_100%)] sm:bg-[linear-gradient(96.56deg,rgba(244,244,244,1)_15%,rgba(255,255,255,0)_100%)]"></div>
                     <div class="flex flex-col gap-10 items-center justify-center shrink-0 px-4 w-full md:w-[476px] relative">
                       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative">
-                        <div class="text-[#000000] text-left font-['Raleway-Bold',_sans-serif] text-lg leading-[26px] font-bold relative">
+                        <div class="text-[#000000] text-left font-['Raleway-SemiBold',_sans-serif] sm:font-['Raleway-Bold',_sans-serif] text-sm sm:text-lg leading-5 sm:leading-[26px] sm:font-bold relative">
                           <?php esc_html_e('Top Picks', 'creative-furniture'); ?>
                         </div>
-                        <div class="text-center font-['Raleway-Bold',_sans-serif] text-xl sm:text-2xl md:text-[28px] leading-6 sm:leading-8 md:leading-10 font-bold relative self-stretch">
+                        <div class="text-center font-['Raleway-SemiBold',_sans-serif] sm:font-['Raleway-Bold',_sans-serif] text-base sm:text-xl sm:text-2xl md:text-[28px] leading-6 sm:leading-8 md:leading-10 sm:font-bold relative self-stretch">
                           <span>
                             <span class="text-[#BD262A]"><?php echo esc_html(sprintf(__('%s Off', 'creative-furniture'), '15%')); ?></span>
                             <span class="">
@@ -220,8 +220,8 @@
                           <?php esc_html_e('Premium furniture engineered for style, performance, and long-term durability.', 'creative-furniture'); ?>
                         </div>
                       </div>
-                      <a href="<?php echo esc_url(add_query_arg('query', 'outdoor', add_query_arg('discount_min', '15', wc_get_page_permalink('shop')))); ?>" class="bg-[#000000] border-solid border-[transparent] border py-2 sm:py-3.5 px-6 sm:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative cursor-pointer">
-                        <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                      <a href="<?php echo esc_url(add_query_arg('query', 'outdoor', add_query_arg('discount_min', '15', wc_get_page_permalink('shop')))); ?>" class="bg-[#000000] border-solid border-[transparent] border py-1 sm:py-2 md:py-3.5 px-3 sm:px-6 md:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative cursor-pointer">
+                        <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-xs sm:text-base leading-6 font-semibold relative flex items-center justify-center">
                           <?php esc_html_e('View Details', 'creative-furniture'); ?>
                         </span>
                       </a>
@@ -388,11 +388,11 @@
         <div class="blaze-track-container">
           <div class="blaze-track">
             <?php for ($i = 1;$i <= 5; $i++): ?>
-            <div class="bg-[#f9f9f9] flex flex-col md:flex-row md:flex-wrap items-center gap-0 sm:gap-6 justify-start sm:justify-between 2xl:justify-start self-stretch -flex-1 relative">
+            <div class="bg-[#f9f9f9] flex flex-col-reverse flex-col md:flex-row md:flex-wrap items-center gap-0 sm:gap-6 justify-start sm:justify-between 2xl:justify-start self-stretch -flex-1 relative">
               <img class="shrink-0 w-full md:max-w-full md:w-[808px] h-[250px] md:h-[433px] 2xl:w-[1000px] 2xl:h-[500px] relative" style="object-fit: cover" src="<?php echo esc_url($theme_directory_uri); ?>/dist/images/v2/rectangle-45411.png">
               <div class="flex flex-col gap-6 sm:gap-10 items-center justify-center shrink-0 w-full md:w-[476px] py-7 md:py-10 px-7 2xl:ml-[120px] relative">
                 <div class="flex flex-col gap-4 items-center justify-start self-stretch shrink-0 relative">
-                  <div class="text-center font-['Raleway-Bold',_sans-serif] text-xl sm:text-[28px] md:text-2xl leading-6 sm:leading-8 md:leading-10 font-bold relative self-stretch">
+                  <div class="text-center font-['Raleway-SemiBold',_sans-serif] text-xl sm:text-[28px] md:text-2xl leading-6 sm:leading-8 md:leading-10 font-bold relative self-stretch">
                     <span>
                       <span>
                         <?php esc_html_e('Limited-time deals on', 'creative-furniture'); ?>
@@ -412,8 +412,8 @@
                     </div>
                   </div>
                 </div>
-                <a href="<?php echo esc_url('#'); ?>" class="bg-[#000000] border-solid border-[transparent] border py-2 sm:py-3.5 px-6 sm:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-                  <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                <a href="<?php echo esc_url('#'); ?>" class="bg-[#000000] border-solid border-[transparent] border py-1 sm:py-2 md:py-3.5 px-3 sm:px-6 md:px-8 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                  <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-xs sm:text-base leading-6 font-semibold relative flex items-center justify-center">
                     <?php esc_html_e('View Details', 'creative-furniture'); ?>
                   </span>
                 </a>
@@ -438,7 +438,7 @@
     <div class="w-full h-full absolute right-0 bottom-0 overflow-visible" style="background: linear-gradient(0deg, #ffffff20 0%, #33333380 100%);"></div>
     <div class="flex flex-col gap-5 items-center justify-center w-full md:w-[476px] absolute left-[50%] top-[50%]" style="translate: -50% -50%" >
       <div class="flex flex-col gap-2 items-center justify-center self-stretch shrink-0 relative" >
-        <div class="text-[#ffffff] text-center font-['Lato-Bold',_sans-serif] text-[28px] sm:text-[32px] leading-8 sm:leading-[44px] font-bold relative self-stretch" >
+        <div class="text-[#ffffff] text-center font-['Raleway-Bold',_sans-serif] text-2xl sm:text-[32px] leading-8 sm:leading-[44px] font-bold relative self-stretch" >
           <?php echo nl2br(esc_html(sprintf(__('Ready to Upgrade Your %s Interior?', 'creative-furniture'), "\n"))); ?>
         </div>
       </div>

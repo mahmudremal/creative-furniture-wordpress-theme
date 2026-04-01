@@ -17,8 +17,8 @@
                     <?php esc_html_e('Design, supply, and installation services for startups, enterprises, and commercial spaces.', 'creative-furniture'); ?>
                   </div>
                 </div>
-                <a href="/shop" class="bg-[#000000] border-solid border-[transparent] border px-4 py-1.5 md:px-8 md:py-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-                  <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-base leading-6 font-semibold relative flex items-center justify-center">
+                <a href="/shop" class="bg-[#000000] border-solid border-[transparent] border px-3 sm:px-4 py-1 sm:py-1.5 md:px-8 md:py-3.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
+                  <span class="text-[#ffffff] text-center font-['Raleway-SemiBold',_sans-serif] text-xs sm:text-base leading-6 font-semibold relative flex items-center justify-center">
                     <?php esc_html_e('Shop Furniture', 'creative-furniture'); ?>
                   </span>
                 </a>
